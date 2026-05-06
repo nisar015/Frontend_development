@@ -87,6 +87,7 @@ a {
     color: #232323;
     background-color: #FFFF;
 }
-#container #homepage{
-    padding: 30px 0;
+#container #homepage #services {
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #DEDEDE;
 }
