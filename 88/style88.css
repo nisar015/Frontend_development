@@ -21,10 +21,14 @@ div.wrapper{
 
 }
 #header{
-    width: 960px;
-    margin:0 auto;
+    /* width: 960px; */
+    /* margin:0 auto; */
     padding: 20px 0;
     overflow: auto;
+}
+#header, #container{
+    width: 960px;
+    margin: 0 auto;
 }
 #header #hgroup{
     float: left;
@@ -65,5 +69,12 @@ a{
 }
 #header nav  a{
     color: #c0bab0;
-    background-color: #131313;
+    background-color: #232323;
+}
+.row2{
+    color: #131313;
+    background-color: #FFFFFF;
+}
+#container{
+    padding: 30px 0 0 0;
 }
