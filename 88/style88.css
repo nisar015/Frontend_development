@@ -3,13 +3,13 @@
     padding: 0;
 }
 body{
-    display: block;
     color: #919191;
     background-color: #131313;
     font-size: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 div.wrapper{
+    display: block;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -34,13 +34,36 @@ a{
     outline: none;
     text-decoration: none;
 }
+#header #hgroup h1{
+    font-size: 36px
+}
 #header #hgroup h1,#header #hgroup h2{
     font-weight: normal;
     text-transform: none;
 }
-#header #hgroup h1{
-    font-size: 36px;
+#header #hgroup h2{
+    font-size: 13px;
 }
 #header nav{
     float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #c0bab0;
+    background-color: #232323;
+}
+#header nav ul{
+    padding: 0 20px;
+    list-style: none;
+}
+#header nav ul li{
+    display: inline;
+    margin-right:  25px;
+    text-transform: uppercase;
+}
+#header li.last{
+    margin-right: 0;
+}
+#header nav  a{
+    color: #c0bab0;
+    background-color: #131313;
 }
