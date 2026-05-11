@@ -24,16 +24,22 @@ div.wrapper{
     /* width: 960px; */
     /* margin:0 auto; */
     padding: 20px 0;
-    overflow: auto;
+    
 }
 #header, #container , #copyright{
     width: 960px;
     margin: 0 auto;
 }
-#header #hgroup{
-    float: left;
+/* #headpart{
+    display: flex;
+    align-items: end;
+} */
+#header #hgroup {
+    /* display: flex; */
     margin: 0 0 20px 0;
+    /* flex-direction: column; */
 }
+
 a{
     outline: none;
     text-decoration: none;
@@ -49,7 +55,8 @@ a{
     font-size: 13px;
 }
 #header nav{
-    float: right;
+    /* float: right; */
+    
     margin: 10px 0 0 0;
     padding: 20px 0;
     color: #c0bab0;
