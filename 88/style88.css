@@ -20,6 +20,9 @@ div.wrapper{
     background-color: #333;
 
 }
+#hgroup_nav{
+    display: flex;
+}
 #header{
     /* width: 960px; */
     /* margin:0 auto; */
