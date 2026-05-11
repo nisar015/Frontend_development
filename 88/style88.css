@@ -92,7 +92,7 @@ a{
 }
 #container section{
     margin: 0 0 30px 0;
-    overflow: auto;
+    display: flex;
 }
 .one_third{
     width: 300px;
