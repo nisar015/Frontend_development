@@ -167,40 +167,21 @@ a {
     background-color: #FFFFFF;
 }
 
-#services .last,
-#latest .last {
+#services .last {
     margin-right: 0;
 }
 
-#container #homepage #latest {
+#container #homepage #services {
     padding: 0 0 30px 0;
     border-bottom: 1px solid #DEDEDE;
 }
 
 
-.one_third,
-.two_third,
-.three_third {
-    display: block;
+.one_third {
+    width: 300px;
     float: left;
     margin: 0 30px 0 0;
 }
-
-.one_third {
-    width: 300px;
-}
-
-.two_third {
-    width: 630px;
-}
-
-.three_third {
-    width: 960px;
-    float: none;
-    margin-right: 0;
-    clear: both;
-}
-
 .lastbox {
     margin-right: 0;
 }
