@@ -24,12 +24,13 @@ div.wrapper {
     background-color: #333333;
 }
 
-#header{
+#header {
     padding: 20px 0;
     overflow: auto;
 }
 
-#header , #container{
+#header,
+#container {
     width: 960px;
     margin: 0 auto;
 }
@@ -67,45 +68,79 @@ a {
     color: #C0BAB6;
     background-color: #232323;
 }
-#header nav ul{
+
+#header nav ul {
     padding: 0 20px;
     list-style: none;
 }
+
 #header nav ul li {
     display: inline;
     margin-right: 25px;
     text-transform: uppercase;
 }
-#header nav li a{
- color: #C0BAB6;
-    background-color: #232323;    
+
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #232323;
 }
-#header nav li.last{
-     margin-right: 0;
+
+#header nav li.last {
+    margin-right: 0;
 }
-.row2{  
+
+.row2 {
     color: #232323;
     background-color: #FFFF;
-}
-#container{
+} 
+
+#container {
     padding: 30px 0;
     overflow: auto;
 }
-.one_quarter{
+#container #homepage #services{
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #DEDEDE;
+}
+#container section{
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+/* #container #homepage #slider {
+    margin: 0 0 40px 0;
+} */
+
+.one_quarter {
     width: 225px;
 }
-.one_quarter{
+
+.one_quarter {
     float: left;
     margin: 0 20px 0 0;
 }
-#container section{
-    margin: 0 0 20px 0;
+
+#container #slider {
+    margin-bottom: 50px;
 }
-#container #homepage #services figure{
+
+#container #homepage {
+    width: 100%;
+    line-height: 1.6em;
+    
+    
+}
+#container #homepage #services{
+    margin: 0 0 30px 0;
+}
+
+#container #homepage #services figure {
     float: left;
     display: inline;
 }
-#container #homepage #services strong{
+
+#container #homepage #services strong {
     float: left;
     margin: 8px 0 0 10px;
     padding: 0;
@@ -113,19 +148,24 @@ a {
     font-weight: bold;
     text-transform: uppercase;
 }
-#container #homepage #services p{
+
+#container #homepage #services p {
     padding: 3px 0 0 0;
     clear: both;
     line-height: 1.6em;
 }
-#container .more{
+
+#container .more {
     text-align: right;
 }
+
 .row2 a {
     color: #FF9900;
     background-color: #FFFFFF;
 }
-#services .last ,#latest .last {
+
+#services .last,
+#latest .last {
     margin-right: 0;
 }
 
