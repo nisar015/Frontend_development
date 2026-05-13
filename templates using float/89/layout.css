@@ -114,12 +114,12 @@ a {
     padding: 30px 0;
     overflow: auto;
 }
-#container section {
+/* #container section {
     display: block;
     width: 100%;
     margin: 0 0 30px 0;
     padding: 0;
-}
+} */
 #container #slider{
     margin-bottom: 50px;
 }
@@ -157,9 +157,18 @@ a{
 .one_third{
     width: 300px;
     float: left;
-    margin-right:20px ;
+    margin-right:30px ;
 }
 .one_third img{
     padding: 4px;
     border: 1px solid #919191;
 }
+#container #latest .last{
+    margin-right: 0;
+
+}
+#container #homepage #latest article figure figcaption {
+    margin-top: 20px;
+    text-align: right;
+}
+#container #content #
