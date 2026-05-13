@@ -114,15 +114,16 @@ a {
     padding: 30px 0;
     overflow: auto;
 }
-#container section{
+#container section {
+    display: block;
+    width: 100%;
     margin: 0 0 30px 0;
+    padding: 0;
 }
 #container #slider{
     margin-bottom: 50px;
 }
-#container #homepage #services{
-    display: block;
-    width: 100%;
+#container #homepage{
     line-height: 1.6em;
 }
 
@@ -150,6 +151,15 @@ a{
     color: orangered;
     background-color: #FFFFFF;
 }
-#container #homepage #services{
-    padding: 0 0 30px 0;
+#container #homepage #latest ul li{
+    list-style: none;
+}
+.one_third{
+    width: 300px;
+    float: left;
+    margin-right:20px ;
+}
+.one_third img{
+    padding: 4px;
+    border: 1px solid #919191;
 }
