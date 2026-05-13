@@ -125,3 +125,7 @@ a {
     padding: 0;
    
 }
+
+#container #slider img{
+    width: 960px;
+}
