@@ -121,6 +121,10 @@ a {
     padding: 30px 0;
     overflow: auto;
 }
+#container #homepage{
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}
 
 #container #homepage #latest {
     
@@ -132,9 +136,6 @@ a {
     border-bottom: 1px solid #DEDEDE;
 }
 
-#container #latest article figcaption{
-    border-bottom: 1px solid #919191;
-}
 #container #slider {
     margin-bottom: 50px;
 }
@@ -193,7 +194,6 @@ a {
 }
 
 #container #homepage #latest article figure figcaption {
-    margin-top: 20px;
     text-align: right;
 }
 /* 
@@ -229,6 +229,10 @@ a {
 #container #content #posts article figcaption {
     width: 390px;
 } */
+#content{
+    float: left;
+    width: 630px;
+}
 #posts article{
     overflow: auto;
 }
@@ -245,4 +249,18 @@ a {
     width: 390px;
     float: left;
     margin-left: 20px;
+}
+#right_col{
+    float: right;
+    width: 280px;
+}
+#right_col .title{
+    border-bottom: 1px solid;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+}
+#right_col ul li{
+    padding:5px;
+    margin: 0 0 3px 0;
+    border-bottom: 1px solid;
 }
