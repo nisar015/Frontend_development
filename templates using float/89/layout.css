@@ -196,39 +196,6 @@ a {
 #container #homepage #latest article figure figcaption {
     text-align: right;
 }
-/* 
-#container #content #posts {
-    overflow: auto;
-
-}
-
-#posts article {
-    overflow: auto;
-}
-
-#posts article figure figcaption {
-    float: left;
-    margin-left: 20px;
-}
-
-#container #content #posts .clear {
-    width: 630px;
-    line-height: 1.6em;
-}
-
-#container #content #posts article figure img {
-    float: left;
-    padding: 4px;
-    border: 1px solid #D6D6D6;
-}
-
-#container #content #posts article {
-    margin-bottom: 30px;
-}
-
-#container #content #posts article figcaption {
-    width: 390px;
-} */
 #content{
     float: left;
     width: 630px;
