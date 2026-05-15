@@ -22,11 +22,12 @@ body{
 #header{
     width: 960px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 20px 0;
     overflow: auto;
 }
 #hgroup{
     float: left;
+    margin: 0 0 20px 0;
 }
 #hgroup h2{
     font-size: 36px;
@@ -48,25 +49,52 @@ body{
 #header form legend{
     display: none;
 }
-#header form input{
+#header form fieldset #sf_search{
     width: 200px;
-    padding: 5px;
-    font-size: 10px;
+    padding: 6px;
+    font-size: 13px;
 color: #C0BAB6;
     background-color: #232323;
     border: 1px solid #666666;
 }
 
-#header form #sf_submit{
+
+   #header form #sf_submit {
+  
+    float: right;
     width: 70px;
-    padding: 5ox;
-    
+    padding: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FF9900;
+    border: none;
+    cursor: pointer;
 }
+    
 #header nav{
     width: 100%;
     padding: 20px 0;
     color: white;
     background-color: #232323;
     clear: both;
+    /* margin: 10px 0 0 0; */
+}
+#header nav ul{
+    list-style: none;
+    margin: 0 20px;
+}
+#header .lst{
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+
+}
+a{
+    color: #C0BAB6;
+    background-color: #232323;
+    outline: none;
+    text-decoration: none;
 }
 
