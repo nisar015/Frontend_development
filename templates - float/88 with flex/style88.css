@@ -25,12 +25,20 @@ div.wrapper {
 
 }
 
-#hgroup_nav {
+#hgroup{
+    float: left;
+
+}
+#header nav{
+    float: right;
+}
+/* #hgroup_nav {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 #header {
+    overflow: auto;
     /* width: 960px; */
     /* margin:0 auto; */
     padding: 20px 0;
@@ -113,7 +121,7 @@ a {
 }
 
 #container #homepage #services {
-    display: flex;
+    float: left;
 }
 
 #container section {
@@ -121,13 +129,13 @@ a {
     /* display: flex; */
 }
 
-.one_third {
-    width: 300px;
-}
+/* .one_third {
+} */
 
 .one_third {
+    width: 300px;
     display: block;
-    /* float: left; */
+    float: left;
     margin: 0 30px 0 0;
 }
 
