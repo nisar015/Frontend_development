@@ -181,9 +181,10 @@ a {
     margin: 0 0 40px 0;
 }
 
-#container #homepage #intro {
-    display: flex;
-    justify-content: space-between;
+#container #homepage #intro  img{
+    /* display: flex;
+    justify-content: space-between; */
+    float: right;
 }
 
 #container #homepage #intro figure img {
