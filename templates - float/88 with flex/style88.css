@@ -266,11 +266,15 @@ footer section a{
 
 #copyright {
     padding: 20px 0;
+    margin-bottom:15px
 }
 
 #copyright p {
     margin: 0;
     padding: 0;
+}
+#copyright .rgt{
+    float: left;
 }
 #copyright .lft{
     float: right;
