@@ -227,20 +227,23 @@ a {
 }
 
 #footer {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     width: 960px;
     padding: 30px 0;
     margin: 0 auto;
     font-size: 12px;
     line-height: 1.4em;
-    /* overflow: auto; */
+    overflow: auto;
 }
-
+footer section a{
+    color: orange;
+    background-color: #131313;
+}
 .one_quarter {
     width: 225px;
-    /* float: left; */
-    /* line-height: 1.6em; */
+    float: left;
+    line-height: 1.6em;
     margin: 0 10px 0 0;
 }
 
@@ -268,8 +271,4 @@ a {
 #copyright p {
     margin: 0;
     padding: 0;
-}
-#copyright{
-    display: flex;
-    justify-content: space-between;
 }
