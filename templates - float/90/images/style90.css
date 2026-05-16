@@ -168,7 +168,7 @@ a {
     background-color: #464646;
 }
 #intro section article{
-    /* float: left; */
+    float: left;
     width: 470px;
 }
 #intro section article h2{
@@ -183,6 +183,10 @@ a{
     color: orange;
     background: white;
 }
-#intro section article figure ul li img{
-    
+.list{
+    float: left;
+}
+.imag{
+    padding: 5px;
+    border: 1px solid;
 }
