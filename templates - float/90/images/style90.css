@@ -167,8 +167,17 @@ a {
     color: orange;
     background-color: #464646;
 }
-#intro section article{
+#intro section{
+    overflow: auto;
+}
+.one_quarter{
+    margin-right: 20px;
+}
+.one_quarter , .two_quarter{
+
     float: left;
+}
+#intro section article{
     width: 470px;
 }
 #intro section article h2{
@@ -178,6 +187,9 @@ a {
 #intro section article p{
     line-height: 1.4em;
     padding: 8px 0;
+}
+#intro ul{
+    list-style: none;
 }
 a{
     color: orange;
@@ -189,4 +201,5 @@ a{
 .imag{
     padding: 5px;
     border: 1px solid;
+    margin-right: 20px;
 }
