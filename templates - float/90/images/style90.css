@@ -168,6 +168,7 @@ a {
     background-color: #464646;
 }
 #intro section article{
+    float: left;
     width: 470px;
 }
 #intro section article h2{
