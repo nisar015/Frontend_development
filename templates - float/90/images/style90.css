@@ -127,6 +127,7 @@ a {
 }
 #slider{
     overflow: auto;
+    margin-bottom: 30px;
 }
 
 #container #slider figure img {
@@ -165,4 +166,19 @@ a {
 .more a {
     color: orange;
     background-color: #464646;
+}
+#intro section article{
+    width: 470px;
+}
+#intro section article h2{
+    font-size: 21px;
+    padding: 12px 0;
+}
+#intro section article p{
+    line-height: 1.4em;
+    padding: 8px 0;
+}
+a{
+    color: orange;
+    background-color: white;
 }
