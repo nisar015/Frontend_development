@@ -191,7 +191,7 @@ a {
 #intro ul{
     list-style: none;
 }
-a{
+#intro a{
     color: orange;
     background: white;
 }
@@ -202,4 +202,7 @@ a{
     padding: 5px;
     border: 1px solid;
     margin-right: 20px;
+}
+#intro .imag .lst{
+    margin-right: 0;
 }
