@@ -220,3 +220,31 @@ a {
     padding: 14px;
     font-weight: bolder;
 }
+#homepage{
+    line-height: 1.6em;
+}
+#homepage a{
+    color: orange;
+    background-color: white;
+    outline: none;
+    text-decoration: none;
+}
+.home_quarter{
+    width: 225px;
+}
+.title{
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.home_quarter article header h2{
+    font-weight: bold;
+    font-size: 13px;
+}
+.home_quarter article p{
+    padding: 5px 0 0 0;
+    margin: 10px 0 10px 0;
+}
+.home_quarter article{
+    float
+}
