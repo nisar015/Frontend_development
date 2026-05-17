@@ -178,7 +178,7 @@ a {
 .one_quarter{
     margin-right: 20px;
 }
-.one_quarter , .two_quarter{
+.one_quarter , .two_quarter, .nome_quarter{
 
     float: left;
 }
@@ -264,4 +264,19 @@ font-weight: bold;
 }
 .lt{
     margin-bottom: 0;
+}
+.nome_quarter{
+    width: 470px;
+}
+.nome_quarter p{
+    margin: 10px 0 10px 0;
+}
+.last_img{
+    float: left;
+    padding: 5px;
+    margin:0 10px 10px 0;
+    border:1px solid lightgrey;
+}
+.nome_quarter footer{
+    text-align: right;
 }
