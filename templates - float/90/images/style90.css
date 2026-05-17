@@ -233,14 +233,18 @@ a {
 .home_quarter{
     float: left;
     width: 225px;
+    margin-right: 20px;
 }
+/* .home_quarter article{
+} */
 .title{
     padding-bottom: 8px;
     margin-bottom: 25px;
-    font-weight: 18px;
+    font-size: 18px;
+font-weight: bold;
     text-transform: uppercase;
 }
-.home_quarter article header h2{
+.pt{
     font-weight: bold;
     font-size: 13px;
 }
@@ -250,6 +254,14 @@ a {
 }
 .home_quarter ul{
     list-style: circle;
-    padding: 18px;
+    margin: 5px;
 }
 
+.home_quarter .lit{
+    margin:0 0 8px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid lightgrey;
+}
+.lt{
+    margin-bottom: 0;
+}
