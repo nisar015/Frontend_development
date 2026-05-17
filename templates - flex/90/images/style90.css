@@ -192,12 +192,12 @@ a {
     margin-right: 20px;
 }
 
-.one_quarter,
+/* .one_quarter,
 .two_quarter,
 .nome_quarter {
     /* display: flex; */
     /* float: left; */
-}
+} */
 
 #intro section article {
     width: 470px;
@@ -324,11 +324,13 @@ a {
     padding: 30px 0 30px 0;
 }
 
-.footer {
+#footer {
     display: flex;
     justify-content: space-between;
 }
-
+#img_p{
+    display: flex;
+}
 /* .fl_left{
     float: left;
 }
