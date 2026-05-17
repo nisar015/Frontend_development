@@ -248,4 +248,8 @@ a {
     padding: 5px 0 0 0;
     margin: 10px 0 10px 0;
 }
+.home_quarter ul{
+    list-style: circle;
+    padding: 18px;
+}
 
