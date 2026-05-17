@@ -222,6 +222,7 @@ a {
 }
 #homepage{
     line-height: 1.6em;
+    overflow: auto;
 }
 #homepage a{
     color: orange;
@@ -230,11 +231,13 @@ a {
     text-decoration: none;
 }
 .home_quarter{
+    float: left;
     width: 225px;
 }
 .title{
     padding-bottom: 8px;
     margin-bottom: 25px;
+    font-weight: 18px;
     text-transform: uppercase;
 }
 .home_quarter article header h2{
@@ -245,6 +248,4 @@ a {
     padding: 5px 0 0 0;
     margin: 10px 0 10px 0;
 }
-.home_quarter article{
-    float
-}
+
