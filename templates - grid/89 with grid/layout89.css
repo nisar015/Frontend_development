@@ -215,28 +215,32 @@ a {
 }
 #content{
     /* float: left; */
-    
+display: grid;
+grid-template-columns: auto auto;
     width: 630px;
 }
-#posts article{
-    overflow: auto;
+#posts article figure{
+    /* overflow: auto; */
+    display: grid;
+    grid-template-columns: auto auto;
 }
 #posts .clear{
     margin-bottom: 20px;
     width: 630px;
 }
 #posts article figure img{
-    float: left;
+    /* float: left; */
     padding: 5px;
     border: 1px solid #919191;
 }
 #posts article figure figcaption{
     width: 390px;
-    float: left;
+    /* float: left; */
     margin-left: 20px;
 }
 #right_col{
-    float: right;
+    margin-left: 50px;
+    /* float: right; */
     width: 280px;
 }
 #right_col .title{
@@ -257,6 +261,13 @@ a {
     background-color: #131313;
     
 }
-.wrapper footer{
+#footer{
+    width: 960px;
+    margin: 0 auto;
     padding: 10px 0;
+}
+#footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
 }
