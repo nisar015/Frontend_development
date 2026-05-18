@@ -184,7 +184,10 @@ a {
     color: orangered;
     background-color: #FFFFFF;
 }
-
+#homepage #latest ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
 #container #homepage #latest ul li {
     list-style: none;
 }
@@ -211,7 +214,8 @@ a {
     text-align: right;
 }
 #content{
-    float: left;
+    /* float: left; */
+    
     width: 630px;
 }
 #posts article{
