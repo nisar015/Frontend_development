@@ -61,9 +61,8 @@ div.wrapper {
 }
 
 #header #hgroup {
-    /* float: left; */
-    display: flex;
-    flex-direction: column;
+    /* float: left;
+    display: grid; */
     margin: 0 0 20px 0;
 }
 
@@ -82,8 +81,9 @@ a {
     text-decoration: none;
 }
 #hgroup_nav{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* justify-content: space-between; */
 }
 
 #header #hgroup h2 {
@@ -137,9 +137,13 @@ a {
     margin: 0 0 30px 0;
     
 }
+#homepage #serve{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
 #container #homepage #services {
     padding: 0 0 30px 0;
-    display: flex;
+    display: grid;
     border-bottom: 1px solid #DEDEDE;
 }
 
@@ -153,7 +157,7 @@ a {
 
 #container #homepage #services article figure {
     /* float: left; */
-    display: flex;
+    display: grid;
 
 }
 
@@ -166,7 +170,8 @@ a {
 
 #container .one_quarter {
     width: 225px;
-    float: left;
+    /* display: grid; */
+    /* float: left; */
     /* display: flex; */
     margin: 0 15px 0 0;
 }
@@ -186,7 +191,7 @@ a {
 
 .one_third {
     width: 300px;
-    float: left;
+    /* float: left; */
     margin-right: 30px;
 }
 
