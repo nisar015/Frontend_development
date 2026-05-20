@@ -330,4 +330,7 @@ footer section a {
         float: none;
         margin: 0 10px 0 10px;
     }
+    .one_third figcaption{
+        text-align: center;
+    }
 }
