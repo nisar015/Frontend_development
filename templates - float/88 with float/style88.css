@@ -339,7 +339,7 @@ footer section a {
     .one_third figcaption{
         text-align: center;
     }
-    .row2{
+    #container #homepage #intro article figure figcaption {
         text-align: center;
     }
 }
