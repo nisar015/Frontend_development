@@ -319,10 +319,15 @@ footer section a {
 
     #intro article img {
         width: 100%;
+        float: none;
+        margin: 0;
     }
     #container #homepage #services{
         float: none;
     }
+    /* #homepage #intro img{
+        
+    } */
     #container #homepage #intro figcaption {
         width: 100%;
     }
