@@ -25,13 +25,15 @@ div.wrapper {
 
 }
 
-#hgroup{
+#hgroup {
     float: left;
 
 }
-#header nav{
+
+#header nav {
     float: right;
 }
+
 /* #hgroup_nav {
     display: flex;
     justify-content: space-between;
@@ -181,7 +183,7 @@ a {
     margin: 0 0 40px 0;
 }
 
-#container #homepage #intro  img{
+#container #homepage #intro img {
     /* display: flex;
     justify-content: space-between; */
     float: right;
@@ -236,10 +238,12 @@ a {
     line-height: 1.4em;
     overflow: auto;
 }
-footer section a{
+
+footer section a {
     color: orange;
     background-color: #131313;
 }
+
 .one_quarter {
     width: 225px;
     float: left;
@@ -266,16 +270,58 @@ footer section a{
 
 #copyright {
     padding: 20px 0;
-    margin-bottom:15px
+    margin-bottom: 15px
 }
 
 #copyright p {
     margin: 0;
     padding: 0;
 }
-#copyright .rgt{
+
+#copyright .rgt {
     float: left;
 }
-#copyright .lft{
+
+#copyright .lft {
     float: right;
+}
+
+@media screen and (max-width:425px) {
+    #hgroup {
+        float: none;
+        text-align: center;
+    }
+
+    #header nav {
+        float: none;
+    }
+
+    #header,
+    #container {
+        width: 100%;
+    }
+
+    #header nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #header nav ul li {
+        /* display: inline; */
+        margin-right: 0;
+        margin: 5px 0;
+        /* text-transform: uppercase; */
+    }
+
+    #slider img {
+        width: 100%;
+    }
+
+    #intro article img {
+        width: 100%;
+    }
+
+    #container #homepage #intro figcaption {
+        width: 100%;
+    }
 }
