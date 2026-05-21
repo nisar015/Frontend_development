@@ -358,9 +358,11 @@ footer section a {
     }
     #copyright{
         width: 100%;
-        mar
+        padding: 15px 0;
+        margin-bottom: 0;
     }
     #copyright .rgt , #copyright .lft{
+        padding: 3px;
         float: none;
         text-align: center;
     }
