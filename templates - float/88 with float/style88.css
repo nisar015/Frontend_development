@@ -358,8 +358,9 @@ footer section a {
     }
     #copyright{
         width: 100%;
+        mar
     }
-    .rgt , .lft{
+    #copyright .rgt , #copyright .lft{
         float: none;
         text-align: center;
     }
