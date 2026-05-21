@@ -316,7 +316,10 @@ footer section a {
     #slider img {
         width: 100%;
     }
-
+    #container #homepage #services article figure img{
+        width: 100%;
+        padding: 0;
+    }
    #container #homepage #intro figure img {
         width: 100%;
         float: none;
@@ -333,8 +336,9 @@ footer section a {
         width: 100%;
     }
     .one_third{
+        width: 100%;
         float: none;
-        margin: 0 10px 0 10px;
+        margin: 0 10px 0 0;
     }
     .one_third figcaption{
         text-align: center;
