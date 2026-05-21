@@ -346,4 +346,7 @@ footer section a {
     #container #homepage #intro article figure figcaption {
         text-align: center;
     }
+    #footer , .one_quarter{
+        width: 100%;
+    }
 }
