@@ -340,10 +340,7 @@ footer section a {
         float: none;
         margin: 0 10px 0 0;
     }
-    .one_third figcaption{
-        text-align: center;
-    }
-    #container #homepage #intro article figure figcaption {
+    #container #homepage #intro article figure figcaption , .one_third figcaption{
         text-align: center;
     }
     #footer{
@@ -352,5 +349,7 @@ footer section a {
     .one_quarter{
         width: 100%;
         float: none;
+        text-align: center;
+        margin: 0 0 35px 0;
     }
 }
