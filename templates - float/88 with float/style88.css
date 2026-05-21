@@ -286,7 +286,7 @@ footer section a {
     float: right;
 }
 
-@media screen and (max-width:424px) {
+@media screen and (max-width:426px) {
     #hgroup {
         float: none;
         text-align: center;
