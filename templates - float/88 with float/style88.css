@@ -345,6 +345,7 @@ footer section a {
     }
     #footer{
         width: 100%;
+        padding: 0;
     }
     .one_quarter{
         width: 100%;
@@ -354,5 +355,12 @@ footer section a {
     }
     .title{
         margin: 0 0 10px 0;
+    }
+    #copyright{
+        width: 100%;
+    }
+    .rgt , .lft{
+        float: none;
+        text-align: center;
     }
 }
