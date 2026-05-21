@@ -352,4 +352,7 @@ footer section a {
         text-align: center;
         margin: 0 0 35px 0;
     }
+    .title{
+        margin: 0 0 10px 0;
+    }
 }
