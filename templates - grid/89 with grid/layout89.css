@@ -275,11 +275,15 @@ grid-template-columns: auto auto;
     #hgroup_nav{
         display: block;
         text-align: center;
+    
     }
-    #group nav ul li{
+    #header{
+        width: 100%;
+    }
+    #header nav ul li{
         display: block;
     }
-    .last{
+    #header nav .last{
         margin-right: 25px;
     }
     
