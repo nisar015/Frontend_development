@@ -310,6 +310,9 @@ grid-template-columns: auto auto;
     #posts article figure{
         display: block;
     } 
+    .one_third img{
+        margin: 9px;
+    }
     .one_third, #posts .clear{
         width: 100%;
     }
@@ -323,6 +326,13 @@ grid-template-columns: auto auto;
     #posts article figure figcaption{
         width: 100%;
         margin-left: 0;
+    }
+    #right_col{
+        /* width: 100%; */
+        margin-left: 20px;
+    }
+    #right_col nav ul li{
+        display: block;
     }
     
 }
