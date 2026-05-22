@@ -292,5 +292,30 @@ font-weight: bold;
     float: right;
 }
 @media screen and (max-width:426px) {
-    
+    #header, #header form fieldset{
+        width: 100%;
+    }
+    #hgroup{
+        float: none;
+        margin: 0;
+        text-align: center;
+    }
+    #header form{
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    } 
+    #header form fieldset #sf_search{
+        width: 50%;
+    }
+    #header form fieldset #sf_submit{
+        float: none;
+        width: 46%;
+    }
+    #header nav ul{
+        margin: 0;
+    }
+    #header nav .lst{
+        margin:0 5px 0 5px;
+    }
 }
