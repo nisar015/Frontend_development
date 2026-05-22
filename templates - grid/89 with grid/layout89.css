@@ -306,11 +306,23 @@ grid-template-columns: auto auto;
     .one_quarter .more{
         margin-right: 10px;
     }
-    #homepage #latest ul{
+    #homepage #latest ul, 
+    #posts article figure{
         display: block;
     } 
-    .one_third{
+    .one_third, #posts .clear{
         width: 100%;
+    }
+    #content{
+        display: block;
+        width: 100%;
+    }
+    #posts article figure img{
+        margin: 0 63px 0 63px;
+    }
+    #posts article figure figcaption{
+        width: 100%;
+        margin-left: 0;
     }
     
 }
