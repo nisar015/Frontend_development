@@ -271,3 +271,16 @@ grid-template-columns: auto auto;
     grid-template-columns: auto auto;
     justify-content: space-between;
 }
+@media screen and (max-width:426px){
+    #hgroup_nav{
+        display: block;
+        text-align: center;
+    }
+    #group nav ul li{
+        display: block;
+    }
+    .last{
+        margin-right: 25px;
+    }
+    
+}
