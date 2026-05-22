@@ -310,12 +310,29 @@ font-weight: bold;
     }
     #header form fieldset #sf_submit{
         float: none;
-        width: 46%;
+        width: 44%;
     }
     #header nav ul{
-        margin: 0;
+        text-align: center;
     }
     #header nav .lst{
-        margin:0 5px 0 5px;
+        display: block;
+        /* align-items: ;  */
+    }
+    #container #slider figure img{
+        float: none;
+        width: 85%;
+    }
+    #container #slider figure figcaption{
+        float: none;
+        width: 85%;
+        padding: 0;
+        height: 100%;
+        margin-left: 64px;
+    }
+    #intro .one_quarter{
+        float: none;
+        width: 100%;
+        margin-right: 0;
     }
 }
