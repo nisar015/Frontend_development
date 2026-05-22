@@ -286,5 +286,31 @@ grid-template-columns: auto auto;
     #header nav .last{
         margin-right: 25px;
     }
+    #container{
+        width: 100%;
+    }
+    #container #slider img{
+        width: 100%;
+    }
+    #homepage article figure strong, #container #homepage #latest article figure figcaption{
+        text-align: center;
+    }
+    #container #homepage #services, #homepage #serve , #homepage #serve , #homepage #services #serve article figure{
+        display: block;
+    }
+    #homepage #services #serve .one_quarter{
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .one_quarter .more{
+        margin-right: 10px;
+    }
+    #homepage #latest ul{
+        display: block;
+    } 
+    .one_third{
+        width: 100%;
+    }
     
 }
