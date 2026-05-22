@@ -334,5 +334,13 @@ grid-template-columns: auto auto;
     #right_col nav ul li{
         display: block;
     }
+    #footer{
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .fl_left , .fl_right{
+        text-align: center;
+    }
     
 }
