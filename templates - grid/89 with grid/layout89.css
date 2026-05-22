@@ -311,7 +311,9 @@ grid-template-columns: auto auto;
         display: block;
     } 
     .one_third img{
-        margin: 9px;
+        width: 100%;
+        margin: 0;
+        border: none;
     }
     .one_third, #posts .clear{
         width: 100%;
@@ -326,6 +328,7 @@ grid-template-columns: auto auto;
     #posts article figure figcaption{
         width: 100%;
         margin-left: 0;
+    
     }
     #right_col{
         /* width: 100%; */
