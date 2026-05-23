@@ -314,4 +314,10 @@ a {
         float: none;
         margin-left: 0;
     }
+    #footer {
+        padding: 0;
+    }
+    #footer .fl_right, #footer .fl_left{
+        text-align: center;
+    }
 }
