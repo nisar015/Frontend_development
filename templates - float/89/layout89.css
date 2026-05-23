@@ -121,16 +121,18 @@ a {
     padding: 30px 0;
     overflow: auto;
 }
-#container #homepage{
+
+#container #homepage {
     border-bottom: 1px solid;
     margin-bottom: 20px;
 }
 
 #container #homepage #latest {
-    
+
     margin: 0 0 30px 0;
-    
+
 }
+
 #container #homepage #services {
     padding: 0 0 30px 0;
     border-bottom: 1px solid #DEDEDE;
@@ -185,9 +187,11 @@ a {
     padding: 4px;
     border: 1px solid #919191;
 }
-#homepage #latest{
+
+#homepage #latest {
     margin-bottom: 20px;
 }
+
 #container #latest .last {
     margin-right: 0;
 
@@ -196,49 +200,118 @@ a {
 #container #homepage #latest article figure figcaption {
     text-align: right;
 }
-#content{
+
+#content {
     float: left;
     width: 630px;
 }
-#posts article{
+
+#posts article {
     overflow: auto;
 }
-#posts .clear{
+
+#posts .clear {
     margin-bottom: 20px;
     width: 630px;
 }
-#posts article figure img{
+
+#posts article figure img {
     float: left;
     padding: 5px;
     border: 1px solid #919191;
 }
-#posts article figure figcaption{
+
+#posts article figure figcaption {
     width: 390px;
     float: left;
     margin-left: 20px;
 }
-#right_col{
+
+#right_col {
     float: right;
     width: 280px;
 }
-#right_col .title{
+
+#right_col .title {
     border-bottom: 1px solid;
     padding: 0 0 10px 0;
     margin: 0 0 10px 0;
 }
-#right_col ul li{
-    padding:5px;
+
+#right_col ul li {
+    padding: 5px;
     margin: 0 0 3px 0;
     border-bottom: 1px solid;
 }
-.row3{
+
+.row3 {
     overflow: auto;
 }
-.row3 a{
-    color:#919191;
+
+.row3 a {
+    color: #919191;
     background-color: #131313;
-    
+
 }
-.wrapper footer{
+
+.wrapper footer {
     padding: 10px 0;
+}
+
+@media screen and (max-width:426px) {
+
+    #header,
+    #container,
+    #slider img,
+    #posts .clear {
+        width: 100%;
+    }
+
+    #header #hgroup {
+        float: none;
+        text-align: center;
+    }
+
+    #header nav,
+    #homepage #services figure img {
+        float: none;
+    }
+
+    #header nav ul {
+        text-align: center;
+    }
+
+    #header nav ul li {
+        display: block;
+    }
+
+    #header nav ul li.last {
+        margin-right: 25px;
+    }
+
+    #homepage #services .one_quarter {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    #container #homepage,
+    #container #homepage #services {
+        border-bottom: 0;
+    }
+    .one_third img{
+        width: 100%;
+    }
+    #container #homepage #latest ul li,
+    #container #content,
+    #container #content #right_col,
+    #posts article figure figcaption {
+        width: 100%;
+        float: none;
+    }
+    #posts article figure figcaption {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
 }
