@@ -292,3 +292,81 @@ font-weight: bold;
 .fl_right{
     float: right;
 }
+@media screen and (max-width:426px) {
+
+    #header {
+        width: 100%;
+    }
+
+    #header #hgroup {
+        float: none;
+        text-align: center;
+    }
+    #header form{
+        width: 100%;
+        float: none;
+    }
+    /* #header form fieldset{
+        width: 100%;
+    } */
+    #header form fieldset #sf_search{
+        width: 50%;
+    }
+    #header form #sf_submit{
+        float: none;
+        width: 44%;
+    }
+    #header nav {
+        float: none;
+    }
+
+    #header nav ul {
+        text-align: center;
+    }
+
+    #header nav ul li.lst {
+        display: block;
+    }
+
+    #header nav ul li.last {
+        margin-right: 25px;
+    }
+     #container #slider figure img{
+        float: none;
+        width: 85%;
+        height: 100%;
+    }
+    #container #slider figure figcaption{
+        float: none;
+        width: 85%;
+        padding: 0;
+        height: 100%;
+        margin-left: 64px;
+    }
+    #intro .one_quarter{
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+    #intro section article , .nome_quarter{
+        width: 100%;
+        float: none;
+    }
+    #intro section figure ul li a img{
+        margin:0 0 0 5px;
+
+        padding: 0;
+    }
+    /* #intro .list{
+        display: block;
+    } */
+    #intro section article figure ul li a img{
+        width: 30%;
+    }
+    #homepage .home_quarter{
+        float: none;
+        width: 100%;
+        margin:0 0 20px 0;
+    }
+
+}
