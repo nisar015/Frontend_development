@@ -264,3 +264,34 @@ a {
     display: flex;
     justify-content: space-between;
 }
+@media screen and (max-width:426px) {
+
+    #header,
+    #container,
+    #slider img,
+    #posts .clear {
+        width: 100%;
+    }
+
+    #header #hgroup {
+        float: none;
+        text-align: center;
+    }
+
+    #header nav,
+    #homepage #services figure img {
+        float: none;
+    }
+
+    #header nav ul {
+        text-align: center;
+    }
+
+    #header nav ul li {
+        display: block;
+    }
+
+    #header nav ul li.last {
+        margin-right: 25px;
+    }
+}
