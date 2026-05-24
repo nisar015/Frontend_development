@@ -272,8 +272,8 @@ a {
     #container,
     #container #slider img,
     #homepage #services .one_third figure img,
-    #homepage #intro article figure figcaption,
-    #footer .one_quarter  {
+    #container #homepage #intro article figure figcaption,
+    #footer .one_quarter {
         width: 100%;
     }
 
@@ -291,31 +291,36 @@ a {
         width: 100%;
         margin: 0;
     }
-#container #homepage #intro figure img{
-    padding: 0;
-}
+
+    #container #homepage #intro figure img {
+        padding: 0;
+        width: 100%;
+    }
+
     #header nav ul,
     #copyright p {
         text-align: center;
     }
 
     #header nav ul li,
-    #container #homepage #services , #intro{
+    #container #homepage #services,
+    #container #homepage #intro {
         display: block;
     }
 
     #header nav ul li.last {
         margin-right: 25px;
     }
-    #footer{
+
+    #footer {
         display: block;
         width: 100%;
     }
-    #copyright{
+
+    #copyright {
         display: block;
         width: 100%;
-        padding: 10%;
     }
-    
+
 
 }
