@@ -294,7 +294,7 @@ font-weight: bold;
 }
 @media screen and (max-width:426px) {
 
-    #header {
+    #header , #container{
         width: 100%;
     }
 
@@ -341,7 +341,10 @@ font-weight: bold;
         width: 85%;
         padding: 0;
         height: 100%;
-        margin-left: 64px;
+        margin-left: 48px;
+    }
+    #intro{
+        margin-bottom: 20px;
     }
     #intro .one_quarter{
         float: none;
