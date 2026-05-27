@@ -196,7 +196,7 @@ a {
 .two_quarter,
 .nome_quarter {
     /* display: flex; */
-    /* float: left; */
+/* float: left; */
 
 
 #intro section article {
@@ -328,75 +328,116 @@ a {
     display: flex;
     justify-content: space-between;
 }
-#img_p{
+
+#img_p {
     display: flex;
 }
+
 /* .fl_left{
     float: left;
 }
 .fl_right{
     float: right;
 } */
- @media screen and (max-width:426px) {
+@media screen and (max-width:426px) {
+    .row3{
+        width: 100%;
+    }
+    #header #hgroup_nav,
+    #homepage, 
+    #homepage section article #img_p{
+        display: block;
+    }
 
     #header,
-    #container,
-    #slider img,
-    #posts .clear {
+    #hgroup_nav form,
+    #container {
         width: 100%;
     }
 
-    #header #hgroup {
+    #hgroup {
         float: none;
+        margin: 0;
         text-align: center;
     }
 
-    #header nav,
-    #homepage #services figure img {
+    #header form {
+        width: 100%;
         float: none;
+        margin: 10px 0;
+    }
+
+    #header form fieldset #sf_search {
+        width: 50%;
+    }
+
+    #header form fieldset #sf_submit {
+        float: none;
+        width: 44%;
     }
 
     #header nav ul {
         text-align: center;
     }
 
-    #header nav ul li {
+    #header nav .lst,
+    #container #slider figure,
+    #container #intro section {
         display: block;
+        /* align-items: ;  */
     }
 
-    #header nav ul li.last {
-        margin-right: 25px;
+    #container #slider figure img {
+        float: none;
+        width: 85%;
+        height: 100%;
     }
 
-    #homepage #services .one_quarter {
-        width: 100%;
+    #container #slider figure figcaption {
         float: none;
-        text-align: center;
+        width: 85%;
+        padding: 0;
+        height: 100%;
+        margin-left: 49px;
     }
 
-    #container #homepage,
-    #container #homepage #services {
-        border-bottom: 0;
-    }
-    .one_third img{
+    #intro .one_quarter {
+        float: none;
         width: 100%;
+        margin-right: 0;
     }
-    #container #homepage #latest ul li,
-    #container #content,
-    #container #content #right_col,
-    #posts article figure figcaption {
+
+    #intro section article,
+    .nome_quarter {
         width: 100%;
         float: none;
     }
-    #posts article figure figcaption {
+    #homepage section article #img_p .last_img{
         width: 100%;
-        float: none;
-        margin-left: 0;
+        padding: 0;
+        margin: 0;
     }
-    #footer {
+
+    #intro section figure ul li a img {
+        margin: 0 0 0 5px;
+
         padding: 0;
     }
-    #footer .fl_right, #footer .fl_left{
+
+    /* #intro .list{
+        display: block;
+    } */
+    #intro section article figure ul li a img {
+        width: 30%;
+    }
+
+    #homepage .home_quarter {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    #footer{
+        display: block;
         text-align: center;
     }
 }
