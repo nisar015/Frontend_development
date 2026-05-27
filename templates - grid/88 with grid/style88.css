@@ -276,7 +276,8 @@ a {
         float: none;
     }
 
-    #header{
+    #header,
+    #container {
         width: 100%;
     }
 
@@ -291,7 +292,7 @@ a {
         margin: 5px 0;
         /* text-transform: uppercase; */
     }
-/* 
+
     #slider img {
         width: 100%;
     }
@@ -308,16 +309,14 @@ a {
     #container #homepage #services{
         float: none;
     }
-    /* #homepage #intro img{
-        
-    } */
-    /* #container #homepage #intro figcaption {
+  
+    #container #homepage #intro figcaption {
         width: 100%;
     }
     .one_third{
         width: 100%;
         float: none;
         margin: 0 10px 0 0;
-    } */
+    }
     
 }
