@@ -276,8 +276,7 @@ a {
         float: none;
     }
 
-    #header,
-    #container {
+    #header{
         width: 100%;
     }
 
