@@ -337,3 +337,66 @@ a {
 .fl_right{
     float: right;
 } */
+ @media screen and (max-width:426px) {
+
+    #header,
+    #container,
+    #slider img,
+    #posts .clear {
+        width: 100%;
+    }
+
+    #header #hgroup {
+        float: none;
+        text-align: center;
+    }
+
+    #header nav,
+    #homepage #services figure img {
+        float: none;
+    }
+
+    #header nav ul {
+        text-align: center;
+    }
+
+    #header nav ul li {
+        display: block;
+    }
+
+    #header nav ul li.last {
+        margin-right: 25px;
+    }
+
+    #homepage #services .one_quarter {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    #container #homepage,
+    #container #homepage #services {
+        border-bottom: 0;
+    }
+    .one_third img{
+        width: 100%;
+    }
+    #container #homepage #latest ul li,
+    #container #content,
+    #container #content #right_col,
+    #posts article figure figcaption {
+        width: 100%;
+        float: none;
+    }
+    #posts article figure figcaption {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+    #footer {
+        padding: 0;
+    }
+    #footer .fl_right, #footer .fl_left{
+        text-align: center;
+    }
+}
