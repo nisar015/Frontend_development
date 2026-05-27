@@ -267,6 +267,9 @@ a {
     justify-content: space-between;
 }
 @media screen and (max-width:426px) {
+    #hgroup_nav , #container #homepage #intro{
+        display: block;
+    }
     #hgroup {
         float: none;
         text-align: center;
@@ -308,6 +311,7 @@ a {
     }
     #container #homepage #services{
         float: none;
+        display: block;
     }
   
     #container #homepage #intro figcaption {
@@ -318,5 +322,18 @@ a {
         float: none;
         margin: 0 10px 0 0;
     }
-    
+    #footer , #copyright{
+        display: block;
+        width: 100%;
+    }
+    #footer .one_quarter{
+        width: 50%;
+        margin:0 0 20px 100px;
+    }
+    #footer .one_quarter .title {
+        margin: 0;
+    }
+    #copyright p{
+        text-align: center;
+    }
 }
