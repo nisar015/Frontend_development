@@ -97,23 +97,36 @@
                 timestamp: "4:30 PM"
             },
             unreadMessagesCount: 20,
-            sendMessage:function(sender, receiver, message){},
-            deleteMessage:function(messageID){},
-            searchMessages:function(keyword){}
+            sendMessage: function (sender, receiver, message) { },
+            deleteMessage: function (messageID) { },
+            searchMessages: function (keyword) { }
         }
         console.log(ChatApplication)
         // 6. Inventory Management System
-        var InventoryManagementSystem={
-            products:["id", "name", "category", "quantity", "price", "supplier", "reorderLevel"],
-            lowStockProducts:10,
-            totalInventoryValue:500000,
-            categories:["category1","category2"],
-            mostSoldProducts:["product1","product2","product3"],
-            addProduct:function(product){},
-            updateQuantity:function(productName, quantity){},
-            removeProduct:function(productName){}
+        var InventoryManagementSystem = {
+            products: ["id", "name", "category", "quantity", "price", "supplier", "reorderLevel"],
+            lowStockProducts: 10,
+            totalInventoryValue: 500000,
+            categories: ["category1", "category2"],
+            mostSoldProducts: ["product1", "product2", "product3"],
+            addProduct: function (product) { },
+            updateQuantity: function (productName, quantity) { },
+            removeProduct: function (productName) { }
         }
         console.log(InventoryManagementSystem)
+        // 7. Calendar Appointments
+        var CalendarAppointments={
+            appointments:["id", "eventName", "date", "time", "location", "description", "participants"],
+            upcomingEvents:["event1","event2"],
+            missedEvents:["missedevent1","missedevent2"],
+            eventCategories:["categorie1","category2"],
+            holidays:25,
+            addAppointment:function(appointment){},
+            updateAppointment:function(appointmentID, updates){},
+            deleteAppointment:function(appointmentID){}
+        }
+        console.log(CalendarAppointments)
+
     </script>
 </body>
 
