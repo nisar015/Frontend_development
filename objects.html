@@ -43,8 +43,7 @@
         console.log(Object.keys(studentenroll));
         console.log(Object.values(studentenroll));
         console.log(Object.entries(studentenroll));
-        console.log()
-        console.log(studentenroll)
+        console.log(studentenroll);
 
         //studentenroll using new Object() method
         var studentenroll = new Object({
@@ -151,6 +150,9 @@
         MusicPlayer.currentSongmoviename="dhurandhar";
         MusicPlayer.currentSong={"title":"galliya","artist":"unknown","duration":"4","album":"tum ho"};
         delete MusicPlayer.shuffleMode;
+        for(key in MusicPlayer){
+            console.log(MusicPlayer[key])
+        }
         console.log(MusicPlayer)
 
         // musicplayer using obj.create method
