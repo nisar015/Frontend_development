@@ -28,6 +28,7 @@
 
             }
         };
+        Object.freeze(studentenroll);
         studentenroll.loan = "five";
         studentenroll["pan"] = "five";
         for(key in studentenroll){
@@ -42,6 +43,7 @@
         console.log(Object.keys(studentenroll));
         console.log(Object.values(studentenroll));
         console.log(Object.entries(studentenroll));
+        console.log()
         console.log(studentenroll)
 
         //studentenroll using new Object() method
