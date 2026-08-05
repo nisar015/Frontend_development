@@ -193,16 +193,14 @@
         console.log(Weatherapp)
         // 13. Hotel Reservation System
         var Weatherapp={
-            Properties:
-            reservations(array of objects with id, roomNumber, guestName, checkInDate, checkOutDate, roomType, status)
-            availableRooms
-            occupiedRooms
-            canceledReservations
-            roomCategories
-            Methods:
-            addReservation(reservation)
-            cancelReservation(reservationID)
-            checkAvailability(roomNumber, date)
+            reservations:["id", "roomNumber", "guestName", "checkInDate", "checkOutDate", "roomType", "statu"],
+            availableRooms:150,
+            occupiedRooms:145,
+            canceledReservations:5,
+            roomCategories:"AC ,NONAC",
+            addReservation:function(reservation){},
+            cancelReservation:function(reservationID){},
+            checkAvailability:function(roomNumber, date){}
         }
 
 
