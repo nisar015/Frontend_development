@@ -31,6 +31,26 @@
         studentenroll.loan = "five";
         studentenroll["pan"] = "five";
         console.log(studentenroll)
+
+        //studentenroll using new Object() method
+        var studentenroll = new Object({
+            students:
+                ["id", "name", "age", "gender", "courseEnrolled", "enrollmentDate"],
+            maxEnrollmentLimit: 50,
+            currentEnrollmentCount: 4,
+            coursesOffered: "html css JS",
+            batchDetails: null,
+            academicYear: 2026,
+            addStudent: function (student) {
+            },
+            removeStudent: function (studentID) {
+
+            },
+            updateCourses: function (studentID, courses) {
+
+            }
+        });
+        console.log(studentenroll)
         // 2. Music Player
         var MusicPlayer = {
             currentSong:
