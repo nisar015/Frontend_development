@@ -28,6 +28,9 @@
 
             }
         };
+        for(x in studentenroll){
+            console.log(studentenroll[x])
+        }
         studentenroll.loan = "five";
         studentenroll["pan"] = "five";
         console.log(studentenroll)
@@ -138,6 +141,37 @@
         MusicPlayer.currentSong={"title":"galliya","artist":"unknown","duration":"4","album":"tum ho"};
         delete MusicPlayer.shuffleMode;
         console.log(MusicPlayer)
+
+        // musicplayer using obj.create method
+         var MusicPlayer ={
+            currentSong:
+            {
+                "title": "aur tum",
+                "artist": "JAsline sandlass",
+                "duration": "5:00",
+                "album": "dhurandhar"
+            },
+            playlist: ["song1", "song2", "song3"],
+            volume: 5,
+            repeatMode: "yes",
+            shuffleMode: "yes",
+            totalDuration: "5min",
+            isPlaying: "yes",
+            play: function () {
+
+            },
+            pause: function () {
+
+            },
+            skip: function () {
+
+            },
+            shuffle: function () {
+
+            }
+        };
+        var music=Object.create(MusicPlayer);
+        console.log(music);
 
         // 3. Recipe Book
         var RecipeBook = {
