@@ -159,38 +159,52 @@
         }
         console.log(commercecart)
         // 10.Language Learning app
-        var languageLearning={
-            vocabulary:["word", "definition", "exampleSentence", "synonyms", "antonyms"],
-            language:["hindi","English","Telugu"],
-            progress:"90%",
-            dailyGoal:"10 topics each",
-            achievements:"master english grammar in 50days",
-            learningHistory:"20% telugu completed 50% hindi completed"
+        var languageLearning = {
+            vocabulary: ["word", "definition", "exampleSentence", "synonyms", "antonyms"],
+            language: ["hindi", "English", "Telugu"],
+            progress: "90%",
+            dailyGoal: "10 topics each",
+            achievements: "master english grammar in 50days",
+            learningHistory: "20% telugu completed 50% hindi completed"
         }
         console.log(languageLearning)
         // task tracker
-        var tasktracker={
-            tasks:["id", "name", "description", "dueDate", "priority", "status", "category"],
-            completedTasks:5,
-            pendingTasks:2,
-            highPriorityTasks:4,
-            categories:["moderate","medium","high"],
-            addTask:function(task){},
-            markComplete:function(taskID){},
-            filterTasks:function(priority){}
+        var tasktracker = {
+            tasks: ["id", "name", "description", "dueDate", "priority", "status", "category"],
+            completedTasks: 5,
+            pendingTasks: 2,
+            highPriorityTasks: 4,
+            categories: ["moderate", "medium", "high"],
+            addTask: function (task) { },
+            markComplete: function (taskID) { },
+            filterTasks: function (priority) { }
         }
         console.log(tasktracker)
         // 12. Weather App
-        var Weatherapp={
-            location:"kurnool",
-            temperature:"24'C",
-            humidity:"5%",
-            windSpeed:"600 km/s",
+        var Weatherapp = {
+            location: "kurnool",
+            temperature: "24'C",
+            humidity: "5%",
+            windSpeed: "600 km/s",
             forecast: ["05-08-2026", "tempHigh", "tempLow", "description"],
-            lastUpdated:"1hr ago",
-            updateWeather:function(location){}
+            lastUpdated: "1hr ago",
+            updateWeather: function (location) { }
         }
         console.log(Weatherapp)
+        // 13. Hotel Reservation System
+        var Weatherapp={
+            Properties:
+            reservations(array of objects with id, roomNumber, guestName, checkInDate, checkOutDate, roomType, status)
+            availableRooms
+            occupiedRooms
+            canceledReservations
+            roomCategories
+            Methods:
+            addReservation(reservation)
+            cancelReservation(reservationID)
+            checkAvailability(roomNumber, date)
+        }
+
 
     </script>
 </body>
