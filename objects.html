@@ -50,7 +50,28 @@
 
             }
         });
+        studentenroll.id=1;
         console.log(studentenroll)
+
+        // studentenroll using Object().create method
+        var studentenroll = {
+            students:
+                ["id", "name", "age", "gender", "courseEnrolled", "enrollmentDate"],
+            maxEnrollmentLimit: 50,
+            currentEnrollmentCount: 4,
+            coursesOffered: "html css JS",
+            batchDetails: null,
+            academicYear: 2026,
+            addStudent: function (student) {
+            },
+            removeStudent: function (studentID) {
+
+            },
+            updateCourses: function (studentID, courses) {
+
+            }
+        };
+        var student=Object.create(studentenroll);
         // 2. Music Player
         var MusicPlayer = {
             currentSong:
