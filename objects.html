@@ -147,11 +147,13 @@
                 
             }
         });
-        // var user={name:"nisar"};
+        // destructuring objs
         var {playlist,volume,songtype="love song"}=MusicPlayer;
         console.log(playlist)
         console.log(volume)
         console.log(songtype)
+
+        // shorthand prop 
         var fullname="nisar ahmmed";
         var course="frontend";
         var student={
@@ -160,7 +162,11 @@
         }
         console.log(fullname)
         console.log(course)
+
+        // built in methods
         Object.freeze(MusicPlayer);
+
+        // adding,deleting and updating objs
         MusicPlayer.currentSongmoviename="dhurandhar";
         MusicPlayer.currentSong={"title":"galliya","artist":"unknown","duration":"4","album":"tum ho"};
         delete MusicPlayer.shuffleMode;
