@@ -300,6 +300,18 @@
         console.log(recipes)
         console.log(favoriteRecipes)
         console.log(mostCookedRecipes)
+
+        // spread ops with objs
+        var user={
+            nam:"name",
+            ages:45
+        }
+        var users={
+            namse:"ads",
+            ages:46
+        };
+        var newuser={...user,...users};
+        console.log(newuser)
         // 4.Movie Database
         var MovieDatabase = {
             movies: ["bahubali", "rajamouli", "2015", "Action/fantacy", "5", ["praboss", "rana", "anushka", "tamanna", "rajamouli"]],
