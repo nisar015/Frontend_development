@@ -461,6 +461,14 @@
             dietaryPreferences:null,
             generateRecipe:function(preferences){}
         }
+
+        // accessing objs
+        console.log(recipegenerator.ingredients);
+        console.log(recipegenerator["ingredients"]);
+        var key="recipes";
+        console.log(recipegenerator[key])
+        console.log(recipegenerator.ingredients);
+
         console.log(recipegenerator);
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
