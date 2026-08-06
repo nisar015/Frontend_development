@@ -489,6 +489,17 @@
         console.log(Object.freeze(recipegenerator));
         console.log(recipegenerator);
 
+        // shorthand props
+        var user="users";
+        var id=24;
+        var objs={
+            user,
+            id
+        };
+        console.log(user);
+        console.log(id)
+
+
         // checking props existence
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
