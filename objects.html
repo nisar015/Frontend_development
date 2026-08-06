@@ -481,12 +481,12 @@
         for(key in recipegenerator){
             console.log(key,":",recipegenerator[key])
         }
+        
+        // builtin methods
         console.log(Object.keys(recipegenerator));
         console.log(Object.values(recipegenerator));
         console.log(Object.entries(recipegenerator));
-
-        // builtin methods
-        console.log(object.keys(recipegenerator));
+        console.log(Object.freeze(recipegenerator));
         console.log(recipegenerator);
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
