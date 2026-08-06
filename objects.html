@@ -33,6 +33,8 @@
         console.log(Object.values(studentenroll));
         console.log(Object.entries(studentenroll));
         Object.freeze(studentenroll);
+        var sources=Object.assign({},studentenroll,{batchDetails:"asfd"});
+        console.log(sources);
 
         // adding prop using dot and square bracket
         studentenroll.loan = "five";
@@ -46,11 +48,6 @@
             console.log(studentenroll[x])
         }
         
-        var sources=Object.assign({},studentenroll,{batchDetails:"asfd"});
-        console.log(sources);
-        console.log(Object.keys(studentenroll));
-        console.log(Object.values(studentenroll));
-        console.log(Object.entries(studentenroll));
         console.log(studentenroll);
 
         //studentenroll using new Object() method
