@@ -269,6 +269,13 @@
         RecipeBook.cuisineTypes="cursisf";
         delete RecipeBook.cuisineTypes;
 
+        // looping through objs
+        for(x in RecipeBook){
+            console.log(RecipeBook[x])
+        }
+        for(key in RecipeBook){
+            console.log(key + RecipeBook[key])
+        }
         // 4.Movie Database
         var MovieDatabase = {
             movies: ["bahubali", "rajamouli", "2015", "Action/fantacy", "5", ["praboss", "rana", "anushka", "tamanna", "rajamouli"]],
