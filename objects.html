@@ -371,14 +371,22 @@
             dietaryPreferences:null,
             generateRecipe:function(preferences){}
         }
-        console.log(recipegenerator)
-        
-        function Student(name,age){
-            this.name;
-            this.age;
+        console.log(recipegenerator);
+        console.log(recipegenerator.hasOwnProperty("recipes"));
+        // function Student(name,age){
+        //     this.name;
+        //     this.age;
+        // }
+        class Student{
+            constructor(name,age,surname){
+                this.name;
+                this.age;
+                this.surname
+            }
         }
-        var student1=new Student("nisar",24)
+        var student1=new Student("nisar",24,"acc")
         console.log(student1);
+        
     </script>
 </body>
 
