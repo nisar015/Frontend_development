@@ -482,8 +482,11 @@
             console.log(key,":",recipegenerator[key])
         }
         console.log(Object.keys(recipegenerator));
-        console.log(object.values(recipegenerator));
-        console.log(object.entries(recipegenerator));
+        console.log(Object.values(recipegenerator));
+        console.log(Object.entries(recipegenerator));
+
+        // builtin methods
+        console.log(object.keys(recipegenerator));
         console.log(recipegenerator);
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
