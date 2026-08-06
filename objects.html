@@ -134,8 +134,8 @@
             shuffleMode: "yes",
             totalDuration: "5min",
             isPlaying: "yes",
-            play: function () {
-                
+            play: function (a,b) {
+                return a+b
             },
             pause: function () {
                 
@@ -170,10 +170,12 @@
         for(y in MusicPlayer){
             console.log(MusicPlayer[y])
         }
+
         console.log(Object.keys(MusicPlayer));
         console.log(Object.values(MusicPlayer));
         console.log(Object.entries(MusicPlayer));
         console.log(MusicPlayer)
+        console.log(MusicPlayer.play(2,5))
 
         // musicplayer using obj.create method
          var MusicPlayer ={
