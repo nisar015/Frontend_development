@@ -498,12 +498,22 @@
         };
         console.log(user);
         console.log(id)
+
         // destructuring
         var {ingredient,dietaryPreferences}=recipegenerator;
         console.log(ingredient);
         console.log(dietaryPreferences)
 
-
+        // spread ops with objs
+        var user1={
+            user:"name",
+            ids:45
+        }
+        var user2={
+            username:"numa",
+            id:33333
+        }
+        var newusers{...user1,...user2}
         // checking props existence
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
