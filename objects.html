@@ -469,6 +469,19 @@
         console.log(recipegenerator[key])
         console.log(recipegenerator.ingredients);
 
+        // add,update and delete
+        recipegenerator.dietaryPreferences="sweets";
+        recipegenerator["cookingtimeneeded"]="45min";
+        delete recipegenerator.generateRecipe
+
+        // looping through objs
+        for(y in recipegenerator){
+            console.log(recipegenerator[y]);
+        }
+        for(key in recipegenerator){
+            console.log(key,":",recipegenerator[key])
+        }
+
         console.log(recipegenerator);
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
