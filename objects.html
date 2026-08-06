@@ -250,7 +250,6 @@
             removeRecipe: function (recipeName) { },
             searchRecipes: function (ingredient) { }
         }
-        console.log(RecipeBook)
         // creating objs
         // var recipebook=({});
         // var recipebook={};
@@ -264,11 +263,11 @@
         
         // add update and delete props
         RecipeBook.restaurantname="cafe bahr";
-        RecipeBook[resta]="cafe bahr";
-        RecipeBook.cuisineTypes="cursisf";
+        RecipeBook["cuisineTypes"]="cafe bahr";
         RecipeBook.cuisineTypes="cursisf";
         delete RecipeBook.cuisineTypes;
-
+        
+        console.log(RecipeBook)
         // looping through objs
         for(x in RecipeBook){
             console.log(RecipeBook[x])
