@@ -465,8 +465,8 @@
         var obj=({});
         var obj={};
         var objcreate=Object.create(obj);
-
         // looping through objs
+
         for(x in EmployeeTimeTracker){
             console.log(EmployeeTimeTracker[x])
         }
@@ -478,6 +478,17 @@
         console.log(Object.keys(EmployeeTimeTracker))
         console.log(Object.values(EmployeeTimeTracker))
         console.log(Object.entries(EmployeeTimeTracker))
+
+        // shorthand props
+        var animalname="lion";
+        var gender="male";
+        var category="king of the jungle";
+        var animal={
+            animalname,
+            gender,
+            category
+        }
+
         console.log(EmployeeTimeTracker)
         // 15. Recipe Generator
         var recipegenerator={
