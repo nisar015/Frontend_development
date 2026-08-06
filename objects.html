@@ -268,13 +268,22 @@
         delete RecipeBook.cuisineTypes;
         
         console.log(RecipeBook)
+
         // looping through objs
         for(x in RecipeBook){
             console.log(RecipeBook[x])
         }
         for(key in RecipeBook){
-            console.log(key + RecipeBook[key])
+            console.log(key,":", RecipeBook[key])
         }
+
+        //builtin methods 
+        console.log(Object.keys(RecipeBook))
+        console.log(Object.values(RecipeBook))
+        console.log(Object.entries(RecipeBook))
+        console.log(Object.freeze(RecipeBook))
+
+
         // 4.Movie Database
         var MovieDatabase = {
             movies: ["bahubali", "rajamouli", "2015", "Action/fantacy", "5", ["praboss", "rana", "anushka", "tamanna", "rajamouli"]],
