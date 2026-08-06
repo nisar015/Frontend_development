@@ -441,6 +441,7 @@
             cancelReservation: function (reservationID) { },
             checkAvailability: function (roomNumber, date) { }
         }
+
         console.log(Weatherapp)
         // 14.Employee Time Tracker
         var EmployeeTimeTracker={
@@ -451,7 +452,11 @@
             clockIn:function(employeeName){},
             clockOut:function(employeeName){},
             calculateHours:function(employeeName){}
-        }
+        } 
+
+        // accessing objs
+        console.log(EmployeeTimeTracker.hoursWorked);
+        EmployeeTimeTracker.activeEmployees=4500;
         console.log(EmployeeTimeTracker)
         // 15. Recipe Generator
         var recipegenerator={
@@ -515,6 +520,7 @@
         };
         var newusers={...user1, ...user2};
         console.log(newusers)
+
         // checking props existence
         console.log(recipegenerator.hasOwnProperty("recipes"));
         console.log(recipegenerator.name == undefined)
