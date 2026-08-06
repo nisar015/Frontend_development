@@ -207,7 +207,13 @@
             }
         };
         var music=Object.create(MusicPlayer);
+        // accessing props
+        MusicPlayer.singer="arjit singh";
+        MusicPlayer["singer from"]="punjab";
+        var key="volume";
+        console.log(MusicPlayer[key])
         console.log(music);
+
 
         // 3. Recipe Book
         var RecipeBook = {
