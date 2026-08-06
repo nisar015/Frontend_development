@@ -164,12 +164,18 @@
         console.log(course)
 
         // built in methods
+        
+        console.log(Object.keys(MusicPlayer));
+        console.log(Object.values(MusicPlayer));
+        console.log(Object.entries(MusicPlayer));
         Object.freeze(MusicPlayer);
 
         // adding,deleting and updating objs
         MusicPlayer.currentSongmoviename="dhurandhar";
         MusicPlayer.currentSong={"title":"galliya","artist":"unknown","duration":"4","album":"tum ho"};
         delete MusicPlayer.shuffleMode;
+
+        // looping through obj
         for(key in MusicPlayer){
             console.log(MusicPlayer[key])
         }
@@ -177,9 +183,6 @@
             console.log(MusicPlayer[y])
         }
 
-        console.log(Object.keys(MusicPlayer));
-        console.log(Object.values(MusicPlayer));
-        console.log(Object.entries(MusicPlayer));
         console.log(MusicPlayer);
         console.log(MusicPlayer.play(2,5));
         
