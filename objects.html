@@ -540,10 +540,22 @@
         tasktracker["pendingTasks"]=4;
         tasktracker.signature="signature";
 
+        // dynamic key
+        var key = "pendingTasks";
+        console.log(tasktracker[key]);
+
         // add,update,delete
         tasktracker.numoftasks=54;
         tasktracker["tasks"]="sequence of work to do";
         delete tasktracker.pendingTasks;
+
+        // lopping through objs
+        for(c in tasktracker){
+            console.log(tasktracker[c]);
+        }
+        for(key in tasktracker){
+            console.log(key,"=",tasktracker[key])
+        }
         console.log(tasktracker)
         // 12. Weather App
         var Weatherapp = {
