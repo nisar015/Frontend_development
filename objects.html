@@ -358,9 +358,12 @@
             removeProduct: function (productName) { }
         }
 
-        // accessing objs
+        // accessing objs and add,update,delete objs
+        console.log(InventoryManagementSystem.lowStockProducts);
+        console.log(InventoryManagementSystem[categories]);
         InventoryManagementSystem.name="nisar";
         InventoryManagementSystem["age"]=50;
+        delete InventoryManagementSystem.addProduct;
 
         console.log(InventoryManagementSystem)
 
