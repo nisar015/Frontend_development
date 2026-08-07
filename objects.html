@@ -538,7 +538,12 @@
         // accessing obj
         tasktracker.completedTasks=10;
         tasktracker["pendingTasks"]=4;
+        tasktracker.signature="signature";
 
+        // add,update,delete
+        tasktracker.numoftasks=54;
+        tasktracker["tasks"]="sequence of work to do";
+        delete tasktracker.pendingTasks;
         console.log(tasktracker)
         // 12. Weather App
         var Weatherapp = {
