@@ -11,7 +11,7 @@
     <div style="width: 444PX;
     HEIGHT: 150PX;
     margin: 0 AUTO;">
-        <p style="font-family: sans-serif;
+    <p style="font-family: sans-serif;
     font-size: 55PX;">OPEN CONSOLE</p>
     </div>
     <script>
@@ -536,25 +536,25 @@
             filterTasks: function (priority) { }
         }
         // accessing obj
-        tasktracker.completedTasks=10;
-        tasktracker["pendingTasks"]=4;
-        tasktracker.signature="signature";
+        tasktracker.completedTasks = 10;
+        tasktracker["pendingTasks"] = 4;
+        tasktracker.signature = "signature";
 
         // dynamic key
         var key = "pendingTasks";
         console.log(tasktracker[key]);
 
         // add,update,delete
-        tasktracker.numoftasks=54;
-        tasktracker["tasks"]="sequence of work to do";
+        tasktracker.numoftasks = 54;
+        tasktracker["tasks"] = "sequence of work to do";
         delete tasktracker.pendingTasks;
 
         // lopping through objs
-        for(c in tasktracker){
+        for (c in tasktracker) {
             console.log(tasktracker[c]);
         }
-        for(key in tasktracker){
-            console.log(key,"=",tasktracker[key])
+        for (key in tasktracker) {
+            console.log(key, "=", tasktracker[key])
         }
         console.log(tasktracker)
         // 12. Weather App
@@ -570,24 +570,24 @@
         // console.log(Weatherapp)
 
         // accessing objs
-        Weatherapp.forecast=["city","humity","temp","deg","cel"];
-        Weatherapp["availableRooms"]=200;
+        Weatherapp.forecast = ["city", "humity", "temp", "deg", "cel"];
+        Weatherapp["availableRooms"] = 200;
 
         // add,update and delete
-        Weatherapp.app="checktemp";
-        Weatherapp["developedby"]="fun tech";
-        Weatherapp.humidity="250";
+        Weatherapp.app = "checktemp";
+        Weatherapp["developedby"] = "fun tech";
+        Weatherapp.humidity = "250";
         delete Weatherapp.humidity;
 
         // looping through obj
-        for(x in Weatherapp){
+        for (x in Weatherapp) {
             console.log(Weatherapp[x])
         }
-        for(key in Weatherapp){
-            console.log(key,"=",Weatherapp[key])
+        for (key in Weatherapp) {
+            console.log(key, "=", Weatherapp[key])
         }
 
-         // builtin methods
+        // builtin methods
         console.log(Object.keys(Weatherapp));
         console.log(Object.values(Weatherapp));
         console.log(Object.entries(Weatherapp));
