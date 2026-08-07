@@ -577,6 +577,39 @@
             console.log(key,"=",Weatherapp[key])
         }
 
+         // builtin methods
+        console.log(Object.keys(Weatherapp));
+        console.log(Object.values(Weatherapp));
+        console.log(Object.entries(Weatherapp));
+
+        // shorthand props
+        var home = "sweethome";
+        var hno = "17-150-16";
+        var home_no = {
+            home,
+            hno
+        }
+        // spreads ops with objs
+        var user = {
+            nam: "name",
+            ages: 45
+        }
+        var users = {
+            namse: "ads",
+            aes: 46
+        };
+        var newuser = { ...user, ...users };
+        console.log(home, hno)
+
+        // destructuring
+        var { products, totalInventoryValue, categories } = InventoryManagementSystem;
+        console.log(products, totalInventoryValue, categories)
+
+        // prop existence
+        console.log(InventoryManagementSystem.hasOwnProperty("mostSoldProducts"));
+        console.log(InventoryManagementSystem.mostSoldProducts !== undefined);
+        console.log(InventoryManagementSystem)
+
 
         console.log(Weatherapp)
         // 14.Employee Time Tracker
