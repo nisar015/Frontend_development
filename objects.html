@@ -546,18 +546,7 @@
             lastUpdated: "1hr ago",
             updateWeather: function (location) { }
         }
-        console.log(Weatherapp)
-        // 13. Hotel Reservation System
-        var HotelResrvationSystem = {
-            reservations: ["id", "roomNumber", "guestName", "checkInDate", "checkOutDate", "roomType", "statu"],
-            availableRooms: 150,
-            occupiedRooms: 145,
-            canceledReservations: 5,
-            roomCategories: "AC ,NONAC",
-            addReservation: function (reservation) { },
-            cancelReservation: function (reservationID) { },
-            checkAvailability: function (roomNumber, date) { }
-        }
+        // console.log(Weatherapp)
 
         // accessing objs
         Weatherapp.reservations=["city","humity","temp","deg","cel"];
@@ -612,6 +601,18 @@
 
 
         console.log(Weatherapp)
+
+        // 13. Hotel Reservation System
+        var HotelResrvationSystem = {
+            reservations: ["id", "roomNumber", "guestName", "checkInDate", "checkOutDate", "roomType", "statu"],
+            availableRooms: 150,
+            occupiedRooms: 145,
+            canceledReservations: 5,
+            roomCategories: "AC ,NONAC",
+            addReservation: function (reservation) { },
+            cancelReservation: function (reservationID) { },
+            checkAvailability: function (roomNumber, date) { }
+        }
         // 14.Employee Time Tracker
         var EmployeeTimeTracker = {
             employeeRecords: ["id", "name", ["date", "startTime", "endTime"], "totalHours"],
