@@ -555,8 +555,8 @@
         // add,update and delete
         Weatherapp.app="checktemp";
         Weatherapp["developedby"]="fun tech";
-        Weatherapp.occupiedRooms=250;
-        delete Weatherapp.addReservation;
+        Weatherapp.humidity="250";
+        delete Weatherapp.humidity;
 
         // looping through obj
         for(x in Weatherapp){
@@ -591,8 +591,8 @@
         console.log(home, hno)
 
         // destructuring
-        var { products, totalInventoryValue, categories } = InventoryManagementSystem;
-        console.log(products, totalInventoryValue, categories)
+        var { location, temperature, humidity } = Weatherapp;
+        console.log(location, temperature, humidity)
 
         // prop existence
         console.log(InventoryManagementSystem.hasOwnProperty("mostSoldProducts"));
