@@ -524,7 +524,7 @@
             learningHistory: "20% telugu completed 50% hindi completed"
         }
         console.log(languageLearning)
-        // task tracker
+        // 11.task tracker
         var tasktracker = {
             tasks: ["id", "name", "description", "dueDate", "priority", "status", "category"],
             completedTasks: 5,
@@ -535,6 +535,10 @@
             markComplete: function (taskID) { },
             filterTasks: function (priority) { }
         }
+        // accessing obj
+        tasktracker.completedTasks=10;
+        tasktracker["pendingTasks"]=4;
+
         console.log(tasktracker)
         // 12. Weather App
         var Weatherapp = {
