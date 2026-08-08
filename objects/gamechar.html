@@ -25,24 +25,24 @@
             levelUp: function () { }
         }
         GameChar.strength = "100%";
-        languageLearning["dailyGoal"] = "45";
-        languageLearning.signature = "signature";
+        GameChar["dailyGoal"] = "45";
+        GameChar.name = "signature";
 
         // dynamic key
-        var key = "pendingTasks";
-        console.log(languageLearning[key]);
+        var key = "agility";
+        console.log(GameChar[key]);
 
         // add,update,delete
-        languageLearning.numoflanguages = 54;
-        languageLearning["tasks"] = "sequence of work to do";
-        delete languageLearning.learningHistory;
+        GameChar.manaPoints = 54;
+        GameChar["inventory"] = "sequence of work to do";
+        delete GameChar.levelUp;
 
         // lopping through objs
-        for (c in languageLearning) {
-            console.log(languageLearning[c]);
+        for (c in GameChar) {
+            console.log(GameChar[c]);
         }
-        for (key in languageLearning) {
-            console.log(key, "=", languageLearning[key])
+        for (key in GameChar) {
+            console.log(key, "=", GameChar[key])
         }
         
         // spread ops with objs
@@ -58,13 +58,13 @@
         console.log(home, hno)
 
         // destructuring
-        var { language, progress, dailyGoal } = languageLearning;
-        console.log(language, progress, dailyGoal)
+        var { name, level, healthPoints } = GameChar;
+        console.log(name, level, healthPoints)
 
         // prop existence
-        console.log(languageLearning.hasOwnProperty("vocabulary"));
-        console.log(languageLearning.language !== undefined);
-        console.log(languageLearning)
+        console.log(GameChar.hasOwnProperty("level"));
+        console.log(GameChar.level !== undefined);
+        console.log(GameChar)
 
         console.log(GameChar)
     </script>
