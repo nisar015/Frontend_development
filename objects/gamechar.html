@@ -24,6 +24,48 @@
             defend: function () { },
             levelUp: function () { }
         }
+        GameChar.strength = "100%";
+        languageLearning["dailyGoal"] = "45";
+        languageLearning.signature = "signature";
+
+        // dynamic key
+        var key = "pendingTasks";
+        console.log(languageLearning[key]);
+
+        // add,update,delete
+        languageLearning.numoflanguages = 54;
+        languageLearning["tasks"] = "sequence of work to do";
+        delete languageLearning.learningHistory;
+
+        // lopping through objs
+        for (c in languageLearning) {
+            console.log(languageLearning[c]);
+        }
+        for (key in languageLearning) {
+            console.log(key, "=", languageLearning[key])
+        }
+        
+        // spread ops with objs
+        var user = {
+            nam: "name",
+            ages: 45
+        }
+        var users = {
+            namse: "ads",
+            aes: 46
+        };
+        var newuser = { ...user, ...users };
+        console.log(home, hno)
+
+        // destructuring
+        var { language, progress, dailyGoal } = languageLearning;
+        console.log(language, progress, dailyGoal)
+
+        // prop existence
+        console.log(languageLearning.hasOwnProperty("vocabulary"));
+        console.log(languageLearning.language !== undefined);
+        console.log(languageLearning)
+
         console.log(GameChar)
     </script>
 </body>
