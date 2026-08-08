@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 11.task tracker
+        var tasktracker = {
+            tasks: ["id", "name", "description", "dueDate", "priority", "status", "category"],
+            completedTasks: 5,
+            pendingTasks: 2,
+            highPriorityTasks: 4,
+            categories: ["moderate", "medium", "high"],
+            addTask: function (task) { },
+            markComplete: function (taskID) { },
+            filterTasks: function (priority) { }
+        }
+        // accessing obj
+        tasktracker.completedTasks = 10;
+        tasktracker["pendingTasks"] = 4;
+        tasktracker.signature = "signature";
+
+        // dynamic key
+        var key = "pendingTasks";
+        console.log(tasktracker[key]);
+
+        // add,update,delete
+        tasktracker.numoftasks = 54;
+        tasktracker["tasks"] = "sequence of work to do";
+        delete tasktracker.pendingTasks;
+
+        // lopping through objs
+        for (c in tasktracker) {
+            console.log(tasktracker[c]);
+        }
+        for (key in tasktracker) {
+            console.log(key, "=", tasktracker[key])
+        }
+        console.log(tasktracker)
+    </script>
+</body>
+</html>
