@@ -51,13 +51,13 @@
         console.log(home, hno)
 
         // destructuring
-        var { pendingTasks, highPriorityTasks, categories } = tasktracker;
-        console.log(pendingTasks, highPriorityTasks, categories)
+        var { language, progress, dailyGoal } = languageLearning;
+        console.log(language, progress, dailyGoal)
 
         // prop existence
-        console.log(tasktracker.hasOwnProperty("highPriorityTasks"));
-        console.log(tasktracker.categories !== undefined);
-        console.log(tasktracker)
+        console.log(languageLearning.hasOwnProperty("vocabulary"));
+        console.log(languageLearning.language !== undefined);
+        console.log(languageLearning)
 
         console.log(languageLearning)
     </script>
