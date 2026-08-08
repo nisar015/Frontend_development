@@ -62,7 +62,18 @@
         // destructuring
         var { availableRooms, occupiedRooms } = HotelResrvationSystem;
         console.log(availableRooms)
-        console.log(hoursWorked)
+        console.log(occupiedRooms)
+
+        // spread ops with objs
+        var animal = { type1: "lion" };
+        var wildanimal = { type2: "tiger" };
+        var forestanimals = { ...animal, ...wildanimal }
+        console.log(forestanimals)
+
+        // props existence
+        console.log(HotelResrvationSystem.hasOwnProperty("availableRooms"));
+        console.log(HotelResrvationSystem.occupiedRooms !== undefined);
+        console.log(HotelResrvationSystem)
     </script>
 </body>
 
