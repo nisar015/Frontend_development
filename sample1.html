@@ -30,70 +30,7 @@
         
 
         
-        // 14.Employee Time Tracker
-        var EmployeeTimeTracker = {
-            employeeRecords: ["id", "name", ["date", "startTime", "endTime"], "totalHours"],
-            activeEmployees: 1120,
-            hoursWorked: "8hrs",
-            overtimeRecords: "20000 hrs",
-            clockIn: function (employeeName) { },
-            clockOut: function (employeeName) { },
-            calculateHours: function (employeeName) { }
-        }
-
-        // accessing objs & update delete and add props
-        console.log(EmployeeTimeTracker.hoursWorked);
-        EmployeeTimeTracker.activeEmployees = 4500;
-        EmployeeTimeTracker["overtimeRecords"] = "5444 hrs";
-        delete EmployeeTimeTracker.clockIn
-
-        // obj methods
-        var obj = {};
-        var obj = ({});
-        var obj = {};
-        var objcreate = Object.create(obj);
-        // looping through objs
-
-        for (x in EmployeeTimeTracker) {
-            console.log(EmployeeTimeTracker[x])
-        }
-        for (key in EmployeeTimeTracker) {
-            console.log(key, ":", EmployeeTimeTracker[key])
-        }
-
-        // builtin methods
-        console.log(Object.keys(EmployeeTimeTracker))
-        console.log(Object.values(EmployeeTimeTracker))
-        console.log(Object.entries(EmployeeTimeTracker))
-
-        // shorthand props
-        var animalname = "lion";
-        var gender = "male";
-        var category = "king of the jungle";
-        var animal = {
-            animalname,
-            gender,
-            category
-        };
-        console.log(animalname);
-        console.log(gender);
-        console.log(category);
-
-        // destructuring
-        var { activeEmployees, hoursWorked } = EmployeeTimeTracker;
-        console.log(activeEmployees)
-        console.log(hoursWorked)
-
-        // spread ops with objs
-        var animal = { type1: "lion" };
-        var wildanimal = { type2: "tiger" };
-        var forestanimals = { ...animal, ...wildanimal }
-        console.log(forestanimals)
-
-        // props existence
-        console.log(EmployeeTimeTracker.hasOwnProperty("overtimeRecords"));
-        console.log(EmployeeTimeTracker.overtimeRecords !== undefined);
-        console.log(EmployeeTimeTracker)
+        
         // 15. Recipe Generator
         var recipegenerator = {
             ingredients: ["milk", "ghee", "sugar"],
