@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 12. Weather App
+        var Weatherapp = {
+            location: "kurnool",
+            temperature: "24'C",
+            humidity: "5%",
+            windSpeed: "600 km/s",
+            forecast: ["05-08-2026", "tempHigh", "tempLow", "description"],
+            lastUpdated: "1hr ago",
+            updateWeather: function (location) { }
+        }
+        // console.log(Weatherapp)
+
+        // accessing objs
+        Weatherapp.forecast = ["city", "humity", "temp", "deg", "cel"];
+        Weatherapp["availableRooms"] = 200;
+
+        // add,update and delete
+        Weatherapp.app = "checktemp";
+        Weatherapp["developedby"] = "fun tech";
+        Weatherapp.humidity = "250";
+        delete Weatherapp.humidity;
+
+        // looping through obj
+        for (x in Weatherapp) {
+            console.log(Weatherapp[x])
+        }
+        for (key in Weatherapp) {
+            console.log(key, "=", Weatherapp[key])
+        }
+
+        // builtin methods
+        console.log(Object.keys(Weatherapp));
+        console.log(Object.values(Weatherapp));
+        console.log(Object.entries(Weatherapp));
+
+        // shorthand props
+        var home = "sweethome";
+        var hno = "17-150-16";
+        var home_no = {
+            home,
+            hno
+        }
+        // spreads ops with objs
+        var user = {
+            nam: "name",
+            ages: 45
+        }
+        var users = {
+            namse: "ads",
+            aes: 46
+        };
+        var newuser = { ...user, ...users };
+        console.log(home, hno)
+
+        // destructuring
+        var { location, temperature, humidity } = Weatherapp;
+        console.log(location, temperature, humidity)
+
+        // prop existence
+        console.log(Weatherapp.hasOwnProperty("temperature"));
+        console.log(Weatherapp.humidity !== undefined);
+        console.log(Weatherapp)
+
+
+        // console.log(Weatherapp)
+    </script>
+</body>
+</html>
