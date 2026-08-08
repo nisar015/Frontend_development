@@ -16,6 +16,49 @@
             achievements: "master english grammar in 50days",
             learningHistory: "20% telugu completed 50% hindi completed"
         }
+        // accessing obj
+        languageLearning.progress = "10";
+        languageLearning["dailyGoal"] = "45";
+        languageLearning.signature = "signature";
+
+        // dynamic key
+        var key = "pendingTasks";
+        console.log(languageLearning[key]);
+
+        // add,update,delete
+        languageLearning.numoflanguages = 54;
+        languageLearning["tasks"] = "sequence of work to do";
+        delete languageLearning.learningHistory;
+
+        // lopping through objs
+        for (c in tasktracker) {
+            console.log(tasktracker[c]);
+        }
+        for (key in tasktracker) {
+            console.log(key, "=", tasktracker[key])
+        }
+        
+        // spread ops with objs
+        var user = {
+            nam: "name",
+            ages: 45
+        }
+        var users = {
+            namse: "ads",
+            aes: 46
+        };
+        var newuser = { ...user, ...users };
+        console.log(home, hno)
+
+        // destructuring
+        var { pendingTasks, highPriorityTasks, categories } = tasktracker;
+        console.log(pendingTasks, highPriorityTasks, categories)
+
+        // prop existence
+        console.log(tasktracker.hasOwnProperty("highPriorityTasks"));
+        console.log(tasktracker.categories !== undefined);
+        console.log(tasktracker)
+
         console.log(languageLearning)
     </script>
 </body>
