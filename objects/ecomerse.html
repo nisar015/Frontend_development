@@ -19,6 +19,48 @@
             removeItem: function (itemName) { },
             updateQuantity: function (itemName, quantity) { }
         }
+        commercecart.totalItems = 5000;
+        commercecart["taxes"] = 450;
+        commercecart.appliedCoupons = 12;
+
+        // dynamic key
+        var key = "totalPrice";
+        console.log(commercecart[key]);
+
+        // add,update,delete
+        commercecart.subtotal = 54;
+        commercecart["tasks"] = "sequence of work to do";
+        delete commercecart.updateQuantity;
+
+        // lopping through objs
+        for (c in commercecart) {
+            console.log(commercecart[c]);
+        }
+        for (key in commercecart) {
+            console.log(key, "=", commercecart[key])
+        }
+        
+        // spread ops with objs
+        var user = {
+            nam: "name",
+            ages: 45
+        }
+        var users = {
+            namse: "ads",
+            aes: 46
+        };
+        var newuser = { ...user, ...users };
+        console.log(home, hno)
+
+        // destructuring
+        var { totalItems, subtotal, taxes } = commercecart;
+        console.log(totalItems, subtotal, taxes)
+
+        // prop existence
+        console.log(commercecart.hasOwnProperty("subtotal"));
+        console.log(commercecart.subtotal !== undefined);
+        console.log(commercecart)
+
     </script>
 </body>
 </html>
