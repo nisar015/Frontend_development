@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var studentenroll = {
+            students:
+                ["id", "name", "age", "gender", "courseEnrolled", "enrollmentDate"],
+            maxEnrollmentLimit: 50,
+            currentEnrollmentCount: 4,
+            coursesOffered: "html css JS",
+            batchDetails: null,
+            academicYear: 2026,
+            addStudent: function (student) {
+            },
+            removeStudent: function (studentID) {
+
+            },
+            updateCourses: function (studentID, courses) {
+
+            }
+        };
+
+        // obj builtin methods
+        console.log(Object.keys(studentenroll));
+        console.log(Object.values(studentenroll));
+        console.log(Object.entries(studentenroll));
+        Object.freeze(studentenroll);
+        var sources = Object.assign({}, studentenroll, { batchDetails: "asfd" });
+        console.log(sources);
+
+        // adding prop using dot and square bracket
+        studentenroll.loan = "five";
+        studentenroll["pan"] = "five";
+
+        // looping through obj
+        for (key in studentenroll) {
+            console.log(key)
+        }
+        for (x in studentenroll) {
+            console.log(studentenroll[x])
+        }
+        
+        // 
+
+        console.log(studentenroll);
+
+        //studentenroll using new Object() method
+        var studentenroll = new Object({
+            students:
+                ["id", "name", "age", "gender", "courseEnrolled", "enrollmentDate"],
+            maxEnrollmentLimit: 50,
+            currentEnrollmentCount: 4,
+            coursesOffered: "html css JS",
+            batchDetails: null,
+            academicYear: 2026,
+            addStudent: function (student) {
+            },
+            removeStudent: function (studentID) {
+
+            },
+            updateCourses: function (studentID, courses) {
+
+            }
+        });
+        // adding prop using dot and square bracket
+        studentenroll.id = 1;
+        studentenroll["name"] = "nisar";
+
+        // dynamic key 
+        var key = "coursesOffered";
+        console.log(studentenroll[key])
+        console.log(studentenroll)
+
+        // studentenroll using Object().create method
+        var studentenroll = {
+            students:
+                ["id", "name", "age", "gender", "courseEnrolled", "enrollmentDate"],
+            maxEnrollmentLimit: 50,
+            currentEnrollmentCount: 4,
+            coursesOffered: "html css JS",
+            batchDetails: null,
+            academicYear: 2026,
+            addStudent: function (student) {
+            },
+            removeStudent: function (studentID) {
+
+            },
+            updateCourses: function (studentID, courses) {
+
+            }
+        };
+        var student = Object.create(studentenroll);
+        console.log(student);
+    </script>
+</body>
+</html>
