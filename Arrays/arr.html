@@ -15,10 +15,15 @@
         arr.push("45");
         arr.unshift(45);
         arr.splice(2,1,"");
-        
+        arr[0]=95;
+        for(i in arr){
+            console.log(arr[i])
+        }
         // arr.splice(2,0,"hlo");
         console.log(arr.length);
         // arr.pop();
+        // arr.shift();
+        arr.splice(1,2);
         console.log(arr)
 
     </script>
