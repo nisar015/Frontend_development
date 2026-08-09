@@ -11,7 +11,7 @@
         console.log(array)
         var ar=Array.of(1,2,3,4);
         console.log(ar[2]);
-        var arr=[15,4,25];
+        var arr=[15,4,25,4];
         arr.push("45");
         arr.unshift(45);
         arr.splice(2,1,"");
@@ -25,6 +25,9 @@
         // arr.shift();
         // arr.splice(1,2,"asd");
         arr[0]=85;
+        var finding=arr.find(function(val){
+            return val==4;
+        })
         console.log(arr)
 
     </script>
