@@ -39,6 +39,28 @@
         for (key in tasktracker) {
             console.log(key, "=", tasktracker[key])
         }
+        
+        // spread ops with objs
+        var user = {
+            nam: "name",
+            ages: 45
+        }
+        var users = {
+            namse: "ads",
+            aes: 46
+        };
+        var newuser = { ...user, ...users };
+        console.log(home, hno)
+
+        // destructuring
+        var { pendingTasks, highPriorityTasks, categories } = tasktracker;
+        console.log(pendingTasks, highPriorityTasks, categories)
+
+        // prop existence
+        console.log(tasktracker.hasOwnProperty("highPriorityTasks"));
+        console.log(tasktracker.categories !== undefined);
+        console.log(tasktracker)
+
         console.log(tasktracker)
     </script>
 </body>
