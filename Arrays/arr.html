@@ -22,6 +22,9 @@
         arr.forEach((itm,indx)=>{
             console.log(indx,itm);
         })
+        arr.forEach(function(val){
+            document.writeln(val)
+        })
         // arr.splice(2,0,"hlo");
         console.log(arr.length);
         // arr.pop();
@@ -43,14 +46,14 @@
         // var items=item1.concat(item2)
         // console.log(items)
         var item1=["nisar","ahmmed","nisar"]
-        item1.map(
-            x=>x*2
-        )
+        var newarr=item1.map(function(val){
+            return val+"new_arr";
+        })
         // item1.splice(0,1,"45");
-        console.log(item1.indexOf("nisar"));
-        console.log(item1.lastIndexOf("nisar"))
-        console.log(item1.includes("ahmed"))
-        console.log(item1)
+        // console.log(item1.indexOf("nisar"));
+        // console.log(item1.lastIndexOf("nisar"))
+        // console.log(item1.includes("ahmed"))
+        console.log(newarr)
 
 
     </script>
