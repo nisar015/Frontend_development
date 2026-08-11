@@ -10,3 +10,4 @@ language='python'
 course='programming'
 print(language+' '+course)
 print(language +' ' + 'language')
+print(language[-1])
