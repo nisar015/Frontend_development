@@ -7,3 +7,4 @@ print('nisar'*20)
 print('nisar\docx\nname')
 print(r'nisar\docx\nname')
 language='python'
+course='programming'
