@@ -9,3 +9,4 @@ print(r'nisar\docx\nname')
 language='python'
 course='programming'
 print(language+' '+course)
+print(language + 'language')
