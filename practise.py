@@ -1,0 +1,7 @@
+# variables
+print(4**3)
+print("nisar")
+print('nisar "name"')
+print('nisar\'s "name"')
+print('nisar'*20)
+print('nisar\docx\nname')
