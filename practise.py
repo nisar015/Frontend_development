@@ -32,7 +32,7 @@ nums.sort()
 nums.remove(41)
 del nums[2:]
 nums.extend(["nisar","ahmmed"])
-min(nums)
+# min(nums)
 max(nums)
 print(nums)
 
