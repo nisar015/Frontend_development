@@ -1,3 +1,4 @@
+# strings are immutable
 # variables
 print(4**3)
 print("nisar")
@@ -11,10 +12,11 @@ course='programming'
 print(language+' '+course)
 print(language +' ' + 'language')
 print(language[-1])
-print(language[2:4])
+print(language[2:4])           
 print(language[2:])
 print(language[:3])
-print("which" + language)
+print("which" + language)  
+print('Hacka'+language[2:])  
 print(len(language))
 nums=[1,2,41,32]
 nums.append(4)
