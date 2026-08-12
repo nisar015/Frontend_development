@@ -40,7 +40,7 @@ print(nums)
 # iteration in tuple is faster than list
 tup=(1,2,4,4,6,16,564,64)
 print(type(tup))
-print(tup[2])
+print(tup[1])
 print(tup.count(1))
 print(tup)
 
