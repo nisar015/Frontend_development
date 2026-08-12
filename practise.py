@@ -16,3 +16,4 @@ print(language[2:])
 print(language[:3])
 print("which" + language)
 print(len(language))
+nums=[1,2,41,32]
