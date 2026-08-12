@@ -37,6 +37,7 @@ max(nums)
 print(nums)
 
 # tuple immutable
+# iteration in tuple is faster than list
 tup=(1,2,4,6,16,564,64)
 print(type(tup))
 print(tup[2])
