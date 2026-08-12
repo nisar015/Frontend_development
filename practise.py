@@ -44,3 +44,6 @@ print(tup[2])
 print(tup)
 
 # set  collection of unique elements
+# not maintain the sequence
+#  doesnt support duplicate vals
+s={1,25,4,2,1}
