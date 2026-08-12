@@ -19,7 +19,7 @@ print("which" + language)
 print('Hacka'+language[2:])  
 print(len(language))
 
-# Lists
+# Lists mutable
 str1=["nisar","ahmmed","achukatla"]
 str2=["firstname","lastname","surname"]
 comb=[str1,str2]
@@ -35,3 +35,7 @@ nums.extend(["nisar","ahmmed"])
 min(nums)
 max(nums)
 print(nums)
+
+# tuple immutable
+tup=(1,2,4,6,16,564,64)
+print(type(tup))
