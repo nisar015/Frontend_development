@@ -18,6 +18,7 @@ print(language[:3])
 print("which" + language)  
 print('Hacka'+language[2:])  
 print(len(language))
+
 # Lists
 str1=["nisar","ahmmed","achukatla"]
 str2=["firstname","lastname","surname"]
@@ -29,4 +30,5 @@ nums.insert(1,456)
 nums.pop(2) 
 nums.sort()
 nums.remove(41)
+del nums[2:]
 print(nums)
