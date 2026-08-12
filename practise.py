@@ -41,6 +41,7 @@ print(nums)
 tup=(1,2,4,6,16,564,64)
 print(type(tup))
 print(tup[2])
+print(tup.count(1))
 print(tup)
 
 # set  collection of unique elements and mutable
