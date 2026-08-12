@@ -18,3 +18,4 @@ print("which" + language)
 print(len(language))
 nums=[1,2,41,32]
 nums.append(4)
+print(nums)
