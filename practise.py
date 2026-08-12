@@ -49,4 +49,5 @@ print(tup)
 s={45,1,25,4,2,1}
 s.add(455)
 s.remove(1)
+s.pop()
 print(s)
