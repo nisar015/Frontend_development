@@ -48,4 +48,5 @@ print(tup)
 #  doesnt support duplicate vals
 s={45,1,25,4,2,1}
 s.add(455)
+s.remove(1)
 print(s)
