@@ -47,3 +47,4 @@ print(tup)
 # not maintain the sequence
 #  doesnt support duplicate vals
 s={1,25,4,2,1}
+print(s)
