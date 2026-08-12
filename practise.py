@@ -43,7 +43,7 @@ print(type(tup))
 print(tup[2])
 print(tup)
 
-# set  collection of unique elements
+# set  collection of unique elements and mutable
 # not maintain the sequence
 #  doesnt support duplicate vals
 s={45,1,25,4,2,1}
