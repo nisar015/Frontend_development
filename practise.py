@@ -19,5 +19,5 @@ print(len(language))
 nums=[1,2,41,32]
 nums.append(4)
 nums.insert(1,456)
-nums.pop()
+nums.pop(2)
 print(nums)
