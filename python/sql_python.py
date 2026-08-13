@@ -7,7 +7,7 @@ mydb = mysql.connector.connect(
     password="SqL#@123"
 )
 mycursor=mydb.cursor()
-# mycursor.execute("show databases")
+mycursor.execute("show databases")
 for i in mycursor:
     print(i)
 print("Connected successfully!")
