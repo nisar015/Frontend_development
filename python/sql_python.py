@@ -4,7 +4,6 @@ mydb = mysql.connector.connect(
     host="127.0.0.1",
     port=3306,
     user="root",
-    password="SqL#@123"
+    password="SqL#@1234"
 )
-
 print("Connected successfully!")
