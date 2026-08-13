@@ -6,5 +6,5 @@ mydb = mysql.connector.connect(
     user="root",
     password="SqL#@123"
 )
-# mydb
+mycursor=mydb.cursor()
 print("Connected successfully!")
