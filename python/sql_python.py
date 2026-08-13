@@ -9,6 +9,8 @@ mydb = mysql.connector.connect(
 )
 mycursor=mydb.cursor()
 mycursor.execute("select * from student")
-for i in mycursor:
+# res=mycursor.fetchall()
+res=mycursor.fetchone()
+for i in res:
     print(i)
 print("Connected successfully!")
