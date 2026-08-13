@@ -1,2 +1,0 @@
-print('ho')
-print('hds')
