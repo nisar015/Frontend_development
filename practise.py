@@ -20,6 +20,7 @@ print('Hacka'+language[2:])
 print(len(language))
 
 # Lists mutable
+# ordered sequence elements
 str1=["nisar","ahmmed","achukatla"]
 str2=["firstname","lastname","surname"]
 comb=[str1,str2]
@@ -52,3 +53,5 @@ s.add(455)
 s.remove(1)
 s.pop()
 print(s)
+
+# dictionary
