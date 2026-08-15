@@ -57,3 +57,4 @@ print(s)
 # dictionary
 dic={1:"nisar",6:"ahmmed",4:"ak"}
 print(dic)
+dic.get(6)
