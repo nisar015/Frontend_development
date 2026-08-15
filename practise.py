@@ -65,4 +65,5 @@ dic=dict(zip(keys,values))
 print(dic['ahmmed'])
 dic['name']='waste'
 del dic['name']
+dik={1:'name',4:'age','some':'anything','frontend':['html','css','JS'],}
 print(dic)
