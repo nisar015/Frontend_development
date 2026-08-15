@@ -64,4 +64,5 @@ values=['waste1','waste2','waste3']
 dic=dict(zip(keys,values))
 print(dic['ahmmed'])
 dic['name']='waste'
+del dic['name']
 print(dic)
