@@ -59,3 +59,5 @@ dic={1:"nisar",6:"ahmmed",4:"ak"}
 print(dic)
 print(dic.get(6))
 print(dic.get(2,"not found"))
+keys=["nisar","ahmmed","ak"]
+values=["waste1"]
