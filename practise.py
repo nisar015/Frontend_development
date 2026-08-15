@@ -63,4 +63,4 @@ keys=['nisar','ahmmed','ak']
 values=['waste1','waste2','waste3']
 dic=dict(zip(keys,values))
 print(dic['ahmmed'])
-dic['name']
+dic['name']='waste'
