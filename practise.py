@@ -60,4 +60,4 @@ print(dic)
 print(dic.get(6))
 print(dic.get(2,"not found"))
 keys=["nisar","ahmmed","ak"]
-values=["waste1"]
+values=["waste1","waste2"]
