@@ -22,7 +22,7 @@ a=10
 b=a
 k=10
 print(id(k)) #tagging
-a=k
+a=6
 print(id(a)) #tagging
 
 print(len(language))
