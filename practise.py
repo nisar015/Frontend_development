@@ -24,7 +24,7 @@ k=10
 print(id(k)) #tagging
 a=6
 print(id(a))
-a=k
+k=a
 print(id(a)) #tagging
 
 print(len(language))
