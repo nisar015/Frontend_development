@@ -95,6 +95,3 @@ print(d)
 # decimal
 # octal
 # hexadecimal
-ms
-s
-ddscfdazs
