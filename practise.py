@@ -22,6 +22,7 @@ a=10
 b=a
 k=10
 print(id(k)) #tagging
+a=k
 print(len(language))
 
 # Lists mutable
