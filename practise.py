@@ -80,4 +80,5 @@ dik={1:'name',4:'age','some':'anything','frontend':['html','css','JS'],'IT':{'so
 print(dik)
 
 # range
-print(range(0,10))
+d=range(0,10)
+print(d)
