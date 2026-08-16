@@ -92,3 +92,4 @@ print(d)
 
 # number system conversion
 # binary
+# decimal
