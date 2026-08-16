@@ -25,7 +25,8 @@ print(id(k)) #tagging
 a=6
 print(id(a))
 k=a
-print(id(a)) #tagging
+b=25
+print(id(b)) #tagging
 
 print(len(language))
 # Lists mutable
