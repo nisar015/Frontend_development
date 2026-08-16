@@ -96,3 +96,4 @@ print(d)
 # octal
 # hexadecimal
 m
+s
