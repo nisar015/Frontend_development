@@ -1,3 +1,4 @@
+# Data types
 # strings are immutable
 # variables
 print(4**3)
@@ -77,3 +78,6 @@ dic['name']='waste'
 del dic['name']
 dik={1:'name',4:'age','some':'anything','frontend':['html','css','JS'],'IT':{'software':'frontend','system-engineer':'networking'}}
 print(dik)
+
+# range
+print(range(0,10))
