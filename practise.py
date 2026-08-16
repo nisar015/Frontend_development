@@ -17,7 +17,7 @@ print(language[2:])
 print(language[:3])
 print("which" + language)  
 print('Hacka'+language[2:])  
-print(id(language))  #address
+# print(id(language))  #address
 a=10
 b=a
 k=10
