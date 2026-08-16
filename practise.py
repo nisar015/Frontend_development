@@ -21,7 +21,7 @@ print(id(language))  #address
 a=10
 b=a
 k=10
-print(id(k))
+print(id(k)) #tagging
 print(len(language))
 
 # Lists mutable
