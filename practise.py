@@ -82,3 +82,11 @@ print(dik)
 # range
 d=range(10)
 print(d)
+
+#operators
+# arthmetic 
+# assignment
+# relational
+# logical
+# uranary n=1,n=-n,n=-1
+
