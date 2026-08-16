@@ -80,7 +80,7 @@ dik={1:'name',4:'age','some':'anything','frontend':['html','css','JS'],'IT':{'so
 print(dik)
 
 # range
-d=range(10)
+d=range(0,10)
 print(d)
 
 #operators
