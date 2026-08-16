@@ -23,10 +23,9 @@ b=a
 k=10
 print(id(k)) #tagging
 a=6
-print(id(a)) #tagging
-
+print(id(a))
+a=k #tagging
 print(len(language))
-
 # Lists mutable
 # ordered sequence elements
 str1=["nisar","ahmmed","achukatla"]
