@@ -94,3 +94,4 @@ print(d)
 # binary
 # decimal
 # octal
+# hexadecimal
