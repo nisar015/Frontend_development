@@ -17,6 +17,7 @@ print(language[2:])
 print(language[:3])
 print("which" + language)  
 print('Hacka'+language[2:])  
+print(id(language))
 print(len(language))
 
 # Lists mutable
