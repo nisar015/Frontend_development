@@ -18,6 +18,10 @@ print(language[:3])
 print("which" + language)  
 print('Hacka'+language[2:])  
 print(id(language))  #address
+a=10
+b=a
+k=10
+print(id(k))
 print(len(language))
 
 # Lists mutable
