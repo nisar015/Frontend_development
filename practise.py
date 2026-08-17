@@ -91,4 +91,5 @@ print(dik)
 # decimal
 # octal
 # hexadecimal
-bin(15)
+a=bin(15)
+print()
