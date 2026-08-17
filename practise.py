@@ -88,7 +88,7 @@ print(dik)
 
 # number system conversion
 # binary
-decimal
+# decimal
 octal
 # hexadecimal
 a=bin(15)
