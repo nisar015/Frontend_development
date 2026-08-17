@@ -79,7 +79,8 @@ del dic['name']
 dik={1:'name',4:'age','some':'anything','frontend':['html','css','JS'],'IT':{'software':'frontend','system-engineer':'networking'}}
 print(dik)
 # range
-
+for i in range(0,10):
+    
 #operators
 # arthmetic 
 # assignment
