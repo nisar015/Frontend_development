@@ -89,7 +89,7 @@ print(dik)
 # number system conversion
 # binary
 # decimal
-octal
+# octal
 # hexadecimal
 a=bin(15)
 print(a)
