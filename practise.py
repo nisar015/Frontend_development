@@ -92,7 +92,7 @@ print(dik)
 # octal
 # hexadecimal
 a=bin(15)
-# print(a)
+print(a)
 # b=hex(150)
 # print(b)
 # c=0xf
