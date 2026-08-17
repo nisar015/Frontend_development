@@ -1,5 +1,6 @@
 # Data types
 # strings are immutable
+strng='thos os a string'
 # variables
 print(4**3)
 print("nisar")
@@ -83,6 +84,7 @@ print(dik)
 # range
 for i in range(0,10):
     print[i]
+
 #operators
 # arthmetic 
 # assignment
