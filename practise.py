@@ -93,3 +93,4 @@ print(dik)
 # hexadecimal
 a=bin(15)
 print(a)
+b=hex(150)
