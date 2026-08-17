@@ -2,6 +2,7 @@
 # strings are immutable
 strng='thos os a string'
 combine=strng+'combined'
+print(combine)
 # variables
 print(4**3)
 print("nisar")
