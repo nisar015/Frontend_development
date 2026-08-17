@@ -92,4 +92,4 @@ print(dik)
 # octal
 # hexadecimal
 a=bin(15)
-print()
+print(a)
