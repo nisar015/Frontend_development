@@ -98,4 +98,4 @@ print(dik)
 # c=0xf
 # print(c)
 # d=0b0101
-print(d)
+# print(d)
