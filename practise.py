@@ -90,7 +90,7 @@ print(dik)
 # binary
 # decimal
 # octal
-hexadecimal
+# hexadecimal
 a=bin(15)
 print(a)
 b=hex(150)
