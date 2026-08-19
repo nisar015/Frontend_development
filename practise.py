@@ -109,4 +109,4 @@ d=0b0101
 print(d)
 
 # Bitwise operators
-print(a&b)
+print(10&25)
