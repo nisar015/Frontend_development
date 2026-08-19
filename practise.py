@@ -118,3 +118,4 @@ print(10<<2)
 import math
 x=2.22454
 print(math.floor(x))
+print(math.ceil(x))
