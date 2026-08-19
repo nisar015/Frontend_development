@@ -112,4 +112,6 @@ print(d)
 print(10&25)
 print(10|25)
 print(10^25)
-print(10<<2)
+print(10<<2)   
+
+# import math func
