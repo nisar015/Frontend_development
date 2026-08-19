@@ -115,3 +115,6 @@ print(10^25)
 print(10<<2)   
 
 # import math func
+import math
+x=2.22454
+print(math.floor(x))
