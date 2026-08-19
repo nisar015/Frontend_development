@@ -126,4 +126,4 @@ print(m.sqrt(25))
 
 from math import pow,sqrt
 print(pow(2,2))
-print(sqrt(64))
+print(int(sqrt(64)))
