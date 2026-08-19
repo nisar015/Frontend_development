@@ -115,10 +115,11 @@ print(10^25)
 print(10<<2)   
 
 # import math func
-import math
+import math as m
 x=2.22454
 print(math.floor(x))
 print(math.ceil(x))
 print(math.pow(3,15))
 print(math.pi)
 print(math.e)
+print(math.sqrt)
