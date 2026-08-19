@@ -117,9 +117,9 @@ print(10<<2)
 # import math func
 import math as m
 x=2.22454
-print(math.floor(x))
-print(math.ceil(x))
-print(math.pow(3,15))
-print(math.pi)
-print(math.e)
-print(math.sqrt)
+print(m.floor(x))
+print(m.ceil(x))
+print(m.pow(3,15))
+print(m.pi)
+print(m.e)
+print(m.sqrt(5))
