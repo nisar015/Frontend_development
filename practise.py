@@ -123,3 +123,5 @@ print(m.pow(3,15))
 print(m.pi)
 print(m.e)
 print(m.sqrt(25))
+from math import pow,sqrt
+print(pow(2,2))
