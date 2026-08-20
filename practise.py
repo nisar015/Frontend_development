@@ -154,6 +154,6 @@ a=a-b
 # x=int(input("enter x val:"))  #by default string so we add int()
 print(type(x))
 # y=int(input("enter y val:"))
-print(x+y)
+# print(x+y)
 ch=input('enter:')[0]
 print(ch)
