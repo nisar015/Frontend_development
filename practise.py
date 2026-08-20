@@ -146,6 +146,6 @@ a,b=b,a
 # swaps the two top most stack items with rot-two concecpt
 a=a+b
 b=a-b
-a=a-b
+b=a-b
 print(a)
 print(b)
