@@ -151,6 +151,7 @@ b=a-b
 a=a-b
 
 # user input
+
 # x=int(input("enter x val:"))  #by default string so we add int()
 # print(type(x))
 # y=int(input("enter y val:"))
@@ -159,3 +160,7 @@ a=a-b
 # print(ch)
 # res=eval(input('enter'))
 # print(res)
+import sys
+x=int(sys.argv[1])
+x=int(sys.argv[2])
+
