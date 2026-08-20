@@ -113,8 +113,9 @@ print(10&25)
 print(10|25)
 print(10^25)
 print(10<<2) 
-# left shift 1010.00 means 101000.0  
-print(10>>2)   
+# left shift 1010.00... means 101000.0  
+print(10>>2) 
+#right shift 1010.000...  means 10.10000
 
 # import math func
 import math as m
