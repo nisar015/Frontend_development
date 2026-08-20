@@ -1,1 +1,2 @@
-ahmmed
+print(a)
+print(b)
