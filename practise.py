@@ -153,4 +153,4 @@ a=a-b
 # user input
 x=input("enter x val:")
 y=input("enter y val:")
-print(x)
+print(x+y)
