@@ -160,10 +160,12 @@ a=a-b
 # print(ch)
 # res=eval(input('enter'))
 # print(res)
-import sys
-x=int(sys.argv[0])
-y=int(sys.argv[1])
-z=x+y
-print(z)
+
+# the below code works in cmd
+# import sys
+# x=int(sys.argv[0])
+# y=int(sys.argv[1])
+# z=x+y
+# print(z)
 
 
