@@ -161,7 +161,7 @@ a=a-b
 # res=eval(input('enter'))
 # print(res)
 import sys
-x=int(sys.argv[1])
-y=int(sys.argv[2])
+x=int(sys.argv[0])
+y=int(sys.argv[1])
 
 
