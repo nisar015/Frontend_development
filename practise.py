@@ -127,3 +127,7 @@ print(m.sqrt(25))
 from math import pow,sqrt
 print(pow(2,2))
 print(int(sqrt(64)))
+
+# cmd for python after you dwn python go into path that you saved your python code.
+# then "cd python filename.py".
+# then you have your code
