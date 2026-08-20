@@ -143,3 +143,4 @@ a=5
 b=6
 a,b=b,a  
 #in this the right part will be executed b and a values go into the stack.
+# swaps the two top most stack items
