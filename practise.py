@@ -156,3 +156,4 @@ print(type(x))
 y=int(input("enter y val:"))
 print(x+y)
 ch=input('enter:')[0]
+print(ch)
