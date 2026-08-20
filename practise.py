@@ -112,6 +112,9 @@ print(d)
 print(10&25)
 print(10|25)
 print(10^25)
+#  1010
+# 11001
+# 10011
 print(10<<2) 
 # left shift 1010.00... means 101000.0  
 print(10>>2) 
