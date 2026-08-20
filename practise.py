@@ -145,3 +145,4 @@ a,b=b,a
 #in this the right part will be executed b and a values go into the stack.
 # swaps the two top most stack items with rot-two concecpt
 a=a+b
+b=a-b
