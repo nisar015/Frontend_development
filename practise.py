@@ -152,5 +152,6 @@ a=a-b
 
 # user input
 x=int(input("enter x val:"))
+print(type(x))
 y=input("enter y val:")
 print(x+y)
