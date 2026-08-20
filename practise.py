@@ -151,4 +151,5 @@ b=a-b
 a=a-b
 
 # user input
+x=input("enter x val:")
 
