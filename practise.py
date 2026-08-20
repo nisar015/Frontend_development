@@ -157,3 +157,4 @@ print(type(x))
 # print(x+y)
 # ch=input('enter:')[0]
 # print(ch)
+res=eval(input('enter'))
