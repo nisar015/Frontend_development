@@ -142,10 +142,10 @@ print(int(sqrt(64)))
 a=5
 b=6
 a,b=b,a  
+print(a)
+print(b)
 #in this the right part will be executed b and a values go into the stack.
 # swaps the two top most stack items with rot-two concecpt
 a=a+b
 b=a-b
 a=a-b
-print(a)
-print(b)
