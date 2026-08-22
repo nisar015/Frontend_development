@@ -14,19 +14,20 @@
             { name: "Mouse", price: 1500 },
             { name: "Keyboard", price: 3000 } 
         ]
+        var tot_price=0
         for(var i of products){
-            var tot_price=0
             tot_price += i.price
         }
+        console.log(tot_price)
         function productsdiscount(amount){
-            if (tot_price>50000){
-                return tot_price -= tot_price*0.5
+            if (amount>50000){
+                return amount -= amount*0.2
             }
-            else if(tot_price>20000){
-                return tot_price -= tot_price*0.1
+            else if(amount>20000){
+                return amount -= amount*0.1
             }
             else{
-                return tot_price
+                return amount
             }
         }
         
