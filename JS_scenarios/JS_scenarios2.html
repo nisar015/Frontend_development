@@ -25,8 +25,11 @@
             // else if()
         }
         for(emp in Employee){
-            var bonus=calculateSalary(Employee[emp][2])
-            console.log(bonus)
+            if(emp==="experience"){
+                var bonus=calculateSalary(Employee[emp])
+                console.log(bonus)
+
+            }
         }
         
     </script>
