@@ -15,6 +15,12 @@
         { name: "Priya", marks: 72 },
         { name: "Kumar", marks: 45 }
         ];
+        calculateGrade(student){
+            var stu;
+            for(stu in student){
+                console.log(stu[0].name)
+            }
+        }
         func=calculateGrade(marks)
         console.log(func)
 
