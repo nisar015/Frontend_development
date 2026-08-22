@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        var cart = [
+            { name: "Laptop", price: 60000, quantity: 1 },
+            { name: "Mouse", price: 1500, quantity: 2 },
+            { name: "Keyboard", price: 3000, quantity: 1 }
+        ];
+        for(var i in cart){
+            console.log(i.name)
+            item_tot=i.price*i.quantity
+        }
     </script>
 </body>
+
 </html>
