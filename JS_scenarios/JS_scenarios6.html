@@ -14,11 +14,14 @@
             { name: "Mouse", price: 1500, quantity: 2 },
             { name: "Keyboard", price: 3000, quantity: 1 }
         ];
-        for(var i in cart){
-            console.log(i.name)
+        cart_tot=0
+        for(var i of cart){
+            // console.log(i.price)
             item_tot=i.price*i.quantity
+            cart_tot += item_tot
+            console.log(cart_tot)
         }
-    </script>
+        </script>
 </body>
 
 </html>
