@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            even:[],
+            odd:[]
+        }
+        function even_odd(nums){
+            for(var i of nums){
+                if(i%2===0){
+                    obj.even.push(i)
+                }
+                else{
+                    obj.odd.push(i)
+                }
+            }
+            return [obj.even,obj.odd]
+            
+        }
+        var arr=[10, 23, 44, 51, 67, 82, 90] 
+        console.log(even_odd(arr))
+    </script>
+</body>
+</html>
