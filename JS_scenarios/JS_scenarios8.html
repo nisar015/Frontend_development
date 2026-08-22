@@ -12,7 +12,7 @@
         function celsiusToFahrenheit(temperature){
             C2F = (temperature*9/5)+32
             if (C2F<67){
-                return "Very cold"+" "+C2F
+                return "Very cold"+" "+C2F+ "C"
             }
             else if(temperature<30){19
                 return "cold"
@@ -28,7 +28,7 @@
             }
         }
         function fahrenheitToCelsius(){}
-        var temp = prompt("enter temp:")
+        var temp = prompt("enter temperature in Celcius: ")
         console.log(celsiusToFahrenheit(temp))
     </script>
 </body>
