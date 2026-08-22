@@ -13,17 +13,18 @@
         Employee = {
             name: "John",
             salary: 50000,
-            experience: 6
+            experience: 2
         }
         
-        var bonus5=Employee.salary+5%
+        // console.log(bonus5)
         function calculateSalary(employee){
-            if (experience<3){
+            var bonus5=Employee["salary"]*1.05
+            if (employee<3){
                 return bonus5;
             }
         }
-        for(var emp of Employee){
-            var bonus=calculateSalary(emp.salary)
+        for(var emp in Employee){
+            var bonus=calculateSalary(emp["salary"])
             console.log(bonus)
         }
         
