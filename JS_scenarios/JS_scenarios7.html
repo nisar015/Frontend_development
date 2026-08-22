@@ -9,10 +9,17 @@
 
 <body>
     <script>
+        function login(un,pass){
+            if(un===user.username && pass===user.password){
+                return "Login Scuccessful"
+            }
+            
+        }
         var user = {
             username: "admin",
             password: "admin123"
         }
+        console.log(login(user.username,user.password))
     </script>
 </body>
 
