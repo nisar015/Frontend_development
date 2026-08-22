@@ -9,10 +9,13 @@
 
 <body>
     <script>
-        function findEmployeeById(Eid){
-            if(Eid===employee.id){
-                return [employee.name,employee.department]
-            }
+        function findEmployeeById(id){
+            // if(Eid===employee.id){
+            return [id.name,id.department]
+            
+        }
+        function findEmployeesByDepartment(department){
+            return [department.id,department.name]
         }
         var employee = [
             { id: 101, name: "Arun", department: "IT" },
@@ -20,8 +23,9 @@
             { id: 103, name: "John", department: "IT" }
         ];
         for(var i of employee){
-            var ans=findEmployeeById(i.id)
-            console.log(ans)
+            // console.log(i.id)
+            console.log(findEmployeeById(i))
+            console.log(findEmployeesByDepartment(i))
         }
     </script>
 </body>
