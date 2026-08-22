@@ -23,8 +23,8 @@
                 return bonus5;
             }
         }
-        for(var emp in Employee){
-            var bonus=calculateSalary(emp["salary"])
+        for(var emp of Employee){
+            var bonus=calculateSalary(Employee[emp])
             console.log(bonus)
         }
         
