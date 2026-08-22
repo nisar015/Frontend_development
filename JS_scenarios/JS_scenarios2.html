@@ -15,11 +15,16 @@
             salary: 50000,
             experience: 6
         }
+        
+        var bonus5=Employee.salary+5%
         function calculateSalary(employee){
-            var bonus5=(salary+5%)
             if (experience<3){
                 return bonus5;
             }
+        }
+        for(var emp of Employee){
+            var bonus=calculateSalary(emp.salary)
+            console.log(bonus)
         }
         
     </script>
