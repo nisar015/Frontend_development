@@ -15,20 +15,21 @@
             salary: 50000,
             experience: 6
         }
-        
-        // console.log(bonus5)
-        var bonus5=Employee['salary']*1.05
-        function calculateSalary(employee){
+        function calculateSalary(employee){ 
             if (employee<3){
-                return bonus5;
+                return Employee.salary += Employee.salary*(0.05);;
             }
-            // else if()
+            else if(employee>3 && employee<5){
+                return Employee.salary += Employee.salary*(0.1);
+            }
+            else{
+                return Employee.salary += Employee.salary*(0.15);
+            }
         }
         for(var emp in Employee){
             if(emp === "experience"){
                 var bonus=calculateSalary(Employee[emp])
                 console.log(bonus)
-
             }
         }
         
