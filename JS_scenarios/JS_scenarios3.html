@@ -9,11 +9,30 @@
 
 <body>
     <script>
-        var arr=[
+        var products=[
             { name: "Laptop", price: 60000 },
             { name: "Mouse", price: 1500 },
             { name: "Keyboard", price: 3000 } 
         ]
+        for(var i of products){
+            var tot_price=0
+            tot_price += i.price
+        }
+        function productsdiscount(amount){
+            if (tot_price>50000){
+                return tot_price -= tot_price*0.5
+            }
+            else if(tot_price>20000){
+                return tot_price -= tot_price*0.1
+            }
+            else{
+                return tot_price
+            }
+        }
+        
+        var func=productsdiscount(tot_price)
+        console.log(func)
+        
     </script>
 </body>
 
