@@ -10,7 +10,7 @@
 <body>
     <script>
         function login(un,pass){
-            if(un==="admin" && pass==="admin123"){
+            if(un===user.username && pass===user.password){
                 return "Login Scuccessful"
             }
             else if(un===user.username || pass !== user.password){
