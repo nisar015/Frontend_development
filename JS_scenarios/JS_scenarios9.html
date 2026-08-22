@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findEmployeeById(Eid){
+            if(Eid===employee.id){
+                return [employee.name,employee.department]
+            }
+        }
+        var employee = [
+            { id: 101, name: "Arun", department: "IT" },
+            { id: 102, name: "Priya", department: "HR" },
+            { id: 103, name: "John", department: "IT" }
+        ];
+        for(var i of employee){
+            var ans=findEmployeeById(i.id)
+            console.log(ans)
+        }
+    </script>
+</body>
+
+</html>
