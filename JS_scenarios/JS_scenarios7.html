@@ -10,8 +10,14 @@
 <body>
     <script>
         function login(un,pass){
-            if(un===user.username && pass===user.password){
+            if(un==="admin" && pass==="admin123"){
                 return "Login Scuccessful"
+            }
+            else if(un===user.username || pass !== user.password){
+                return "Invalid Password"
+            }
+            else{
+                return "User not found"
             }
             
         }
@@ -19,6 +25,7 @@
             username: "admin",
             password: "admin123"
         }
+        // console.log(user.password)
         console.log(login(user.username,user.password))
     </script>
 </body>
