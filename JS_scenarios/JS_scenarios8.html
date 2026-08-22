@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function celsiusToFahrenheit(temperature){
+            C2F = (temperature*9/5)+32
+            if (C2F<67){
+                return "Very cold"+" "+C2F
+            }
+            else if(temperature<30){19
+                return "cold"
+            }
+            else if(temperature>35 && temperature<40){
+                return "Normal"
+            }
+            else if(temperature>40 && temperature<47){
+                return "Hot"
+            }
+            else{
+                return "Very Hot"
+            }
+        }
+        function fahrenheitToCelsius(){}
+        var temp = prompt("enter temp:")
+        console.log(celsiusToFahrenheit(temp))
+    </script>
+</body>
+
+</html>
