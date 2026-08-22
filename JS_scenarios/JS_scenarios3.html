@@ -10,7 +10,7 @@
 <body>
     <script>
         var products=[
-            { name: "Laptop", price: 60000 },
+            { name: "Laptop", price: 17000 },
             { name: "Mouse", price: 1500 },
             { name: "Keyboard", price: 3000 } 
         ]
@@ -19,6 +19,7 @@
             tot_price += i.price
         }
         console.log(tot_price)
+
         function productsdiscount(amount){
             if (amount>50000){
                 return amount -= amount*0.2
