@@ -20,9 +20,14 @@
         }
 
     }
+    function getOutOfStockProducts(st){
+        if(st===0){
+            return st
+        }
+    }
     for(var i of inventory){
         console.log(checkStock(i.stock))
-        c
+        console.log(getOutOfStockProducts(i.stock))
         
     }
     </script>
