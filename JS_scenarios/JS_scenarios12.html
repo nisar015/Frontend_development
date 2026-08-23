@@ -9,11 +9,6 @@
 
 <body>
     <script>
-        tot_amnt=0
-        function calculateTotal(tot_amnt){
-            tot_amnt += tot_amnt
-            return tot_amnt
-        }
         var Tracker = [
             { category: "Food", amount: 500 },
             { category: "Travel", amount: 1000 },
@@ -33,9 +28,24 @@
             if(i.category==="Shopping"){
                 Shopping_tot += i.amount
             }
-            console.log(calculateTotal(i.amount))
         }
-        console.log(Travel_tot)
+        tot_amnt=0
+        function calculateTotal(Track){
+            for(i of Track){
+                tot_amnt += i.amount
+            }
+            return tot_amnt
+        }
+        console.log(calculateTotal(Tracker))
+        Food
+        function getFoodExpenses(Food_track){
+            for(i of Food_track){
+            if(i.category==="Food"){
+                Food_tot += i.amount
+            }
+            return Food_tot
+        }
+        console.log(getFoodExpenses(Tracker))
     </script>
 </body>
 
