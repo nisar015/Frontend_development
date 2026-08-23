@@ -23,10 +23,13 @@
 
         }
         var depo=prompt("Enter the amount you want to deposit: ");
-        account.transactions=depo;
+        account.transactions[0]=depo;
         console.log(account.transactions)
-        var bls=account.balance+depo
-        var draw=bls-prompt("enter the amount you want to withdraw: ");
+        console.log(account.balance)
+        var bls=account.balance +account.transactions[0]
+        console.log(bls)
+        // var withdraw_amnt=prompt("enter the amount you want to withdraw: ");
+        var draw=bls-withdraw_amnt
         console.log(deposit(account.transactions));
         console.log(withdraw(draw))
     </script>
