@@ -16,9 +16,13 @@
             { category: "Shopping", amount: 2000 }
         ];
         Food_tot=0;
+        Travel_tot=0;
         for(i of Tracker){
             if(i.category==="Food"){
                 Food_tot += i.amount
+            }
+            if(i.category==="Travel"){
+                Travel_tot += i.amount
             }
         }
         console.log(Food_tot)
