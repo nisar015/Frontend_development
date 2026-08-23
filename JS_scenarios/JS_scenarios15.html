@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script></script>
+    <script>
+        function getOrderMessage(stat) {
+            if (stat === "shipped") {
+                return "Order is on the way ";
+            }
+            else if (stat === "pending") {
+                return "Order is being processed"
+            }
+            else if (stat === "delivered") {
+                return "Order is successfully delivered"
+            }
+            else if(stat==="cancelled"){
+                return "Order cancelled";
+            }
+        }
+        var orders = [
+            { id: 1, customer: "Arun", status: "shipped" },
+            { id: 2, customer: "Priya", status: "pending" },
+            { id: 3, customer: "John", status: "delivered" }
+        ]
+        for (i of orders) {
+            if (i.status === "shipped") {
+                console.log(getOrderMessage(i.status))
+            }
+            else if (i.status === "pending") {
+                console.log(getOrderMessage(i.status))
+            }
+            else if (i.status === "delivered") {
+                console.log(getOrderMessage(i.status))
+            }
+            else if (i.status==="cancelled"){
+                console.log(getOrderMessage(i.status))
+            }
+        }
+    </script>
 </body>
+
 </html>
