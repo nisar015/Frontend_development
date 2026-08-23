@@ -24,8 +24,8 @@
         return st
     }
     for(var i of inventory){
-        console.log(checkStock(i.stock))
         if(i.stock===0){
+            console.log(checkStock(i.stock))
             console.log(getOutOfStockProducts(i.name))
         }
         
