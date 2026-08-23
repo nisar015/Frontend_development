@@ -18,8 +18,13 @@
             return "Amount deposited is: " + dep
             
         }
+        function withdraw(Wdraw){
+
+
+        }
         var depo=prompt("Enter the amount you want to deposit: ");
         account.transactions=depo;
+        console.log(account.transactions)
         var bls=account.balance+depo
         var draw=bls-prompt("enter the amount you want to withdraw: ");
         console.log(deposit(account.transactions));
