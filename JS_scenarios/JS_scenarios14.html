@@ -10,11 +10,11 @@
 <body>
     <script>
         function findByCategory(pro_cat){
-            for(i of pro_cat){
-                if(i.category==="Mobile"){
-                    return [i.name,i.price]
+            for(var i=0;i<pro_cat.length;i++){
+                if(pro_cat[i].category==="Mobile"){
+                    return [pro_cat[i].name,pro_cat[i].price]
                 }
-                else if(i.category==="Laptop"){
+                else if(pro_cat[i].category==="Laptop"){
                     return [i.name,i.price]
                 }
             }
