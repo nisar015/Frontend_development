@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findByCategory(pro_cat){
+            for(i of pro_cat){
+                if(i.category==="Mobile"){
+                    return [i.name,i.price]
+                }
+            }
+        }
+        function findByPriceRange(){
+
+        }
+        function findProductByName(){
+
+        }
+        var pro_search = [
+            { name: "iPhone", category: "Mobile", price: 80000 },
+            { name: "Samsung", category: "Mobile", price: 60000 },
+            { name: "Dell", category: "Laptop", price: 70000 },
+            { name: "HP", category: "Laptop", price: 50000 }
+        ];
+        console.log(findByCategory(pro_search))
+        console.log(findByPriceRange(pro_search))
+        console.log(findProductByName(pro_search))
+
+    </script>
+</body>
+
+</html>
