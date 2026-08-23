@@ -38,9 +38,8 @@
             return Travel_tot
         }
         console.log(Traveltot(Tracker))
-
+        var ele=0
         function getHighestExpense(High_expense){
-            var ele=0;
             for(i of High_expense){
                 if(i.amount>ele){
                     ele=i.amount
@@ -48,7 +47,7 @@
             }
             return ele
         }
-        console.log(Tracker)
+        console.log(getHighestExpense(Tracker))
         function calculateTotal(Track) {
             for (i of Track) {
                 tot_amnt += i.amount
