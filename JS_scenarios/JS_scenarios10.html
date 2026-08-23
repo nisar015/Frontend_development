@@ -23,12 +23,17 @@
     function getOutOfStockProducts(st){
         return st
     }
+    function getLowStockProducts(LSP){
+        return LSP
+    }
     for(var i of inventory){
         if(i.stock===0){
             console.log(checkStock(i.stock))
             console.log(getOutOfStockProducts(i.name))
         }
-        
+        if(i.stock<=5){
+            console.log(getLowStockProducts(i.name))
+        }
     }
     </script>
 </body>
