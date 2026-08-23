@@ -46,6 +46,15 @@
         }
     };
         console.log(getFoodExpenses(Tracker));
+        function Traveltot(Trav_track){
+            for(i of Trav_track){
+                if(i.category==="Travel"){
+                    Travel_tot += i.amount
+                }
+            }
+            return Travel_tot
+        }
+        console.log(Traveltot(Tracker))
     </script>
 </body>
 
