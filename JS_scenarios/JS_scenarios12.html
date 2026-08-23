@@ -19,14 +19,6 @@
         Travel_tot = 0;
         Shopping_tot = 0;
         tot_amnt = 0
-        function calculateTotal(Track) {
-            for (i of Track) {
-                tot_amnt += i.amount
-            }
-            return tot_amnt
-        }
-        console.log(calculateTotal(Tracker))
-
         function getFoodExpenses(Food_track) {
             for (i of Food_track) {
                 if (i.category === "Food") {
@@ -46,6 +38,26 @@
             return Travel_tot
         }
         console.log(Traveltot(Tracker))
+
+        function getHighestExpense(High_expense){
+            var ele=0;
+            for(i of High_expense){
+                if(i.amount>ele){
+                    ele=i.amount
+                }
+            }
+            return ele
+        }
+        console.log(Tracker)
+        function calculateTotal(Track) {
+            for (i of Track) {
+                tot_amnt += i.amount
+            }
+            return tot_amnt
+        }
+        console.log(calculateTotal(Tracker))
+
+
     </script>
 </body>
 
