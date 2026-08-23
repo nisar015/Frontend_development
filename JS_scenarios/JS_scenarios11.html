@@ -15,13 +15,14 @@
             transactions: []
         };
         function deposit(dep){
-            return dep
+            return "Amount deposited is: " + dep
             
         }
         var depo=prompt("Enter the amount you want to deposit: ");
         account.transactions=depo;
+        var bls=account.balance+depo
         console.log(deposit(account.transactions));
-
+        console.log(withdraw())
     </script>
 </body>
 
