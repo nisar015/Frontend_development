@@ -56,6 +56,24 @@
             }
             obj["lowest"]=ele
         }
+        function calculateGrade(stu_grade){
+            if(obj.average>90){
+                return obj["Grade"]="A+";
+            }
+            else if(obj.average>80){
+                return obj["Grade"]="A";
+            }
+            else if(obj.average>70){
+                return obj["Grade"]="B";
+            }
+            else if(obj.average>60){
+                return obj["Grade"]="C";
+            }
+            else if(obj.average<50){
+                return obj["Grade"]="Fail";
+            }
+            
+        }
         var students =
             [
                 {
@@ -70,6 +88,7 @@
         console.log(calculateAverage(students))
         findHighestMark(students)
         findLowestMark(students)
+        calculateGrade(students)
     </script>
 </body>
 
