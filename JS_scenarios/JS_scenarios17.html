@@ -26,15 +26,18 @@
             return obj
         }
         function findHighestMark(stu_high){
-            ele=0
             for(var k of stu_high){
-                for(var l=0;l<stu_high.length;l++){
-                    if(stu_high[l]>ele){
-                        ele=stu_high[l];
+                if(k.name==="Arun"){
+                    ele=0
+                    for(var l=0;l<k.marks.length;l++){
+                        if(k.marks[l]>ele){
+                            // console.log(k.marks[l])
+                            ele=k.marks[l];
+                        }
                     }
                 }
             }
-            return ele
+            obj["highest"]=ele
         }
         var students =
             [
@@ -47,8 +50,8 @@
                     marks: [60, 70, 65, 72]
                 }
             ]
-            console.log(calculateAverage(students))
-            console.log(findHighestMark(students))
+        console.log(calculateAverage(students))
+        console.log(findHighestMark(students))
     </script>
 </body>
 
