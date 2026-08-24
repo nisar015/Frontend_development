@@ -16,13 +16,12 @@
                 if(i.name==="Arun"){
                     for(var j of i.marks){
                         avg +=j 
-                        // console.log(avg)
+                        obj["name"]=i.name
                     }
                 }
                 
             }
             // console.log(avg)
-            obj["name"]=i.name
             obj["average"]=avg/(i.marks.length)
             return obj
         }
