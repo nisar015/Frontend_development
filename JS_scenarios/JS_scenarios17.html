@@ -12,12 +12,16 @@
         avg=0
         function calculateAverage(stu){
             for(var i of stu){
-                for(var j of i.marks){
-                    avg +=j 
-                    console.log(avg)
+                if(i.name==="Arun"){
+                    for(var j of i.marks){
+                        avg +=j 
+                        // console.log(avg)
+                    }
                 }
+                
             }
-            return avg
+            console.log(avg)
+            return avg/(i.marks.length)
         }
         var students =
             [
