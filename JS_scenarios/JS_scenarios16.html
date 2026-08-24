@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        function validateCart(shopcart){
+            for(var i of shopcart){
+                if(i.quantity>0 && i.price>0 && i.name !== " "){
+                    returni.name
+                }
+            }
+
+        }
+        var shopping_cart = [
+            { name: "Laptop", price: 60000, quantity: 1 },
+            { name: "Mouse", price: 1500, quantity: 0 },
+            { name: "Keyboard", price: 3000, quantity: 2 }
+        ]
+        console.log(validateCart(shopping_cart))
     </script>
 </body>
+
 </html>
