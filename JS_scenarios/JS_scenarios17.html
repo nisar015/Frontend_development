@@ -25,6 +25,17 @@
             obj["average"]=avg/(i.marks.length)
             return obj
         }
+        function findHighestMark(stu_high){
+            ele=0
+            for(var k of stu_high){
+                for(var l=0;l<stu_high.length;l++){
+                    if(stu_high[l]>ele){
+                        ele=stu_high[l];
+                    }
+                }
+            }
+            return ele
+        }
         var students =
             [
                 {
@@ -37,6 +48,7 @@
                 }
             ]
             console.log(calculateAverage(students))
+            console.log(findHighestMark(students))
     </script>
 </body>
 
