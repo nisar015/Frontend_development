@@ -13,11 +13,13 @@
         cart_tot=0
         function validateCart(shopcart){
             for(var i of shopcart){
-                console.log(i)
-                if(i.price ){
+                // console.log(first)
+                if(i.quantity>0 && i.price>0 && i.name !== ""){
                     cart_tot += i.price
-                    console.log(cart_tot)
+                    // console.log(cart_tot)
                 }
+                // if(i.price ){
+                // }
             }
             return cart_tot
 
