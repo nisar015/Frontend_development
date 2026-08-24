@@ -7,12 +7,16 @@
     <title>Document</title>
 </head>
 
-<body>
+<body>     
     <script>
+        // how to do cart tot for the item aded in cart
         function validateCart(shopcart){
             for(var i of shopcart){
                 if(i.quantity>0 && i.price>0 && i.name !== " "){
-                    returni.name
+                    return i.name
+                }
+                else{
+                    return i.name
                 }
             }
 
