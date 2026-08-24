@@ -43,15 +43,18 @@
             for(var n of stu_low){
                 if(n.name==="Arun"){
                     ele=n.marks[0]
-                    for(var m=1;l<n.marks.length;m++){
+                    for(var m=1;m<n.marks.length;m++){
                         if(n.marks[m]>ele){
                             // console.log(k.marks[l])
                             ele=n.marks[m];
                         }
+                        else{
+                            ele=ele;
+                        }
                     }
                 }
             }
-            obj["highest"]=ele
+            obj["lowest"]=ele
         }
         var students =
             [
@@ -66,6 +69,7 @@
             ]
         console.log(calculateAverage(students))
         findHighestMark(students)
+        findLowestMark(students)
     </script>
 </body>
 
