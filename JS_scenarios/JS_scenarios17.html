@@ -22,7 +22,9 @@
                 
             }
             // console.log(avg)
-            return avg/(i.marks.length)
+            obj["name"]=i.name
+            obj["average"]=avg/(i.marks.length)
+            return obj
         }
         var students =
             [
