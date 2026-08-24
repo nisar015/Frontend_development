@@ -9,6 +9,16 @@
 
 <body>
     <script>
+        avg=0
+        function calculateAverage(stu){
+            for(var i of stu){
+                for(var j of i.marks){
+                    avg +=j 
+                    console.log(avg)
+                }
+            }
+            return avg
+        }
         var students =
             [
                 {
@@ -20,6 +30,7 @@
                     marks: [60, 70, 65, 72]
                 }
             ]
+            console.log(calculateAverage(students))
     </script>
 </body>
 

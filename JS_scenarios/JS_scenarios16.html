@@ -10,15 +10,16 @@
 <body>     
     <script>
         // how to do cart tot for the item aded in cart
+        cart_tot=0
         function validateCart(shopcart){
             for(var i of shopcart){
-                if(i.quantity>0 && i.price>0 && i.name !== " "){
-                    return i.name
-                }
-                else{
-                    return i.name
+                console.log(i)
+                if(i.price ){
+                    cart_tot += i.price
+                    console.log(cart_tot)
                 }
             }
+            return cart_tot
 
         }
         var shopping_cart = [
