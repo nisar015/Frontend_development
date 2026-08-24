@@ -39,6 +39,20 @@
             }
             obj["highest"]=ele
         }
+        function findLowestMark(stu_low){
+            for(var n of stu_low){
+                if(n.name==="Arun"){
+                    ele=n.marks[0]
+                    for(var m=1;l<n.marks.length;m++){
+                        if(n.marks[m]>ele){
+                            // console.log(k.marks[l])
+                            ele=n.marks[m];
+                        }
+                    }
+                }
+            }
+            obj["highest"]=ele
+        }
         var students =
             [
                 {
