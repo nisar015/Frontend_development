@@ -11,14 +11,17 @@
     <script>
         // how to retrieve else category===Laptop
         function findByCategory(pro_cat){
-            for(var i=0;i<pro_cat.length;i++){
-                if(pro_cat[i].category==="Mobile"){
-                    return [pro_cat[i].name,pro_cat[i].price]
-                }
-                else{
-                    return [pro_cat[i].name,pro_cat[i].price]
-                }
-            }
+            // for(var i=0;i<pro_cat.length;i++){
+            //     if(pro_cat[i].category==="Mobile"){
+            //         return [pro_cat[i].name,pro_cat[i].price]
+            //     }
+            //     else{
+            //         return [pro_cat[i].name,pro_cat[i].price]
+            //     }
+            // }
+            return pro_search.filter(function(product){
+                return product.category===pro_cat
+            })
         }
         // here only prop is iterating
         function findByPriceRange(pro_price,a,b){
@@ -45,7 +48,8 @@
             { name: "Dell", category: "Laptop", price: 70000 },
             { name: "HP", category: "Laptop", price: 50000 }
         ];
-        console.log(findByCategory(pro_search))
+        console.log(findByCategory('Mobile'))
+        console.log(findByCategory('Mobile'))
         console.log(findByPriceRange(pro_search,50000,70000))
         console.log(findProductByName(pro_search))
 

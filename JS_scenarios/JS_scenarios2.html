@@ -10,29 +10,32 @@
 <body>
     <script>
         // 2.. Employee Salary Calculator 
+        // use ternary operator to achive this
         var Employee = {
             name: "John",
             salary: 50000,
-            experience: 6
+            experience: 2
         }
-        function calculateSalary(employee){ 
-            if (employee<3){
-                return Employee.salary += Employee.salary*(0.05);;
+        50000 * 0.05
+        function calculateSalary(employee) {
+            if (employee < 3) {
+                return Employee.salary = Employee.salary + Employee.salary * (0.05);
             }
-            else if(employee>3 && employee<5){
-                return Employee.salary += Employee.salary*(0.1);
+            else if (employee > 3 && employee < 5) {
+                return Employee.salary += Employee.salary * (0.1);
             }
-            else{
-                return Employee.salary += Employee.salary*(0.15);
-            }
-        }
-        for(var emp in Employee){
-            if(emp === "experience"){
-                var bonus=calculateSalary(Employee[emp])
-                console.log(bonus)
+            else {
+                return Employee.salary += Employee.salary * (0.15);
             }
         }
-        
+        var bonus = calculateSalary(Employee.experience)
+        console.log(bonus)
+        // for(var emp in Employee){
+        //     if(emp === "experience"){
+        //         console.log(bonus)
+        //     }
+        // }
+
     </script>
 </body>
 
