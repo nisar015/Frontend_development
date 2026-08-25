@@ -37,7 +37,7 @@
 
             // method 3
             return Attendance.filter(function(val){
-                if(val.name===employee){
+                if(val.name==employee){
                     atten_per=(val.presentDays/val.totalDays)*100
                     // console.log(atten_per)
                     if(atten_per===90){
