@@ -19,10 +19,11 @@
             //         return [pro_cat[i].name,pro_cat[i].price]
             //     }
             // }
-            return pro_search.filter(function(product){
+            var res= pro_search.filter(function(product){
                 // console.log(product)
                 return product.category===pro_cat
             })
+            return res
         }
         // here only prop is iterating
         function findByPriceRange(pro_price,a,b){
