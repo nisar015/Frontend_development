@@ -42,16 +42,16 @@
         console.log(arr)
         
         // var arr=[15,4,"ram",25,4,"ram"];
-        var finding=arr.find(function(val){
+        var finding=arr.find(function(val){    //returns the val we needed if multiple same values into one
             return val==4;
         })
         console.log(finding)
-        var findo=arr.filter(function(val){
+        var findo=arr.filter(function(val){    //returns all the vals we need even multiple same values present
             return val=="ram";
         })
         console.log(findo)
         var nums=[2,4,55,45,4]
-        var reduced=nums.reduce(function(a,b){
+        var reduced=nums.reduce(function(a,b){  //gives a single val
             return a+b
         })
         console.log(reduced)
