@@ -10,50 +10,52 @@
 <body>
     <script>
         //doubt how to run priya prop or iterate throuh all indexes
-        function calculateAttendance(employee){
+        function calculateAttendance(employee) {
             //for(i of atten){
-                // method 1
-                // console.log(i)
-                // attendancepercentage=(i.presentDays/i.totalDays)*100
-                // console.log(attendancepercentage)
-                // i.atten_percentage=attendancepercentage
-                // console.log(i.atten_percentage)
+            // method 1
+            // console.log(i)
+            // attendancepercentage=(i.presentDays/i.totalDays)*100
+            // console.log(attendancepercentage)
+            // i.atten_percentage=attendancepercentage
+            // console.log(i.atten_percentage)
 
-                // method 2
-                // if(Attendance_percen>=90){
-                //     return "Excellent";
-                // }
-                // else if(Attendance_percen>=75){
-                //     return "Good";
-                // }
-                // else if(Attendance_percen>=60){
-                //     return "Average";
-                // }
-                // else{
-                //     return "Poor";
-                // }
+            // method 2
+            // if(Attendance_percen>=90){
+            //     return "Excellent";
+            // }
+            // else if(Attendance_percen>=75){
+            //     return "Good";
+            // }
+            // else if(Attendance_percen>=60){
+            //     return "Average";
+            // }
+            // else{
+            //     return "Poor";
+            // }
 
             //}
 
             // method 3
-            return Attendance.find(function(val){
-                if(val.name===employee){
-                    atten_per=(val.presentDays/val.totalDays)*100
-                    // console.log(atten_per)
-                    if(atten_per===90){
-                        return "Excellent"
-                    }
-                    else if(atten_per>=75){
-                        return "Good"
-                    }
-                    else if(atten_per>=60){
-                        return "Average"
-                    }
-                    else if(atten_per<60){
-                        return "Poor"
-                    }
+            var emp= Attendance.find(function (val) {
+
+                return val.name === employee;
+            });
+            if(emp){
+                atten_per = (emp.presentDays / emp.totalDays) * 100
+                // console.log(atten_per)
+                if (atten_per === 90) {
+                    return "Excellent"
                 }
-            })
+                else if (atten_per >= 75) {
+                    return "Good"
+                }
+                else if (atten_per >= 60) {
+                    return "Average"
+                }
+                else if (atten_per < 60) {
+                    return "Poor"
+                }
+        }
             
         }
         var Attendance = [
