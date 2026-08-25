@@ -19,13 +19,13 @@
         for(i in arr){         //this loop is same as for(i=0;i<n;i++){}
             console.log(arr[i])
         }
-        arr.forEach((itm,indx)=>{
-            console.log(indx,itm);
+        arr.forEach((itm,indx)=>{        //------|>>>
+            console.log(indx,itm);             //|
         })
-        arr.forEach(function(val){
+        arr.forEach(function(val){       //------|     same as for(i=0;i<n;i++){}
             console.log(val)
         })
-        arr.forEach(function(val){
+        arr.forEach(function(val){       //------|>>>
             document.writeln(val)
         })
         // arr.splice(2,0,"hlo");
@@ -43,7 +43,7 @@
         
         // var arr=[15,4,"ram",25,4,"ram"];
         var finding=arr.find(function(val){
-            return val===4;
+            return val==4;
         })
         console.log(finding)
         var findo=arr.filter(function(val){
