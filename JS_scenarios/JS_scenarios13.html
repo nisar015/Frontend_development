@@ -11,14 +11,15 @@
     <script>
         //doubt how to run priya prop or iterate throuh all indexes
         function calculateAttendance(atten){
-            console.log(atten)
-            for(i of atten){
-
+            //for(i of atten){
+                // method 1
                 // console.log(i)
                 // attendancepercentage=(i.presentDays/i.totalDays)*100
                 // console.log(attendancepercentage)
                 // i.atten_percentage=attendancepercentage
                 // console.log(i.atten_percentage)
+
+                // method 2
                 // if(Attendance_percen>=90){
                 //     return "Excellent";
                 // }
@@ -31,14 +32,15 @@
                 // else{
                 //     return "Poor";
                 // }
-            }
-            // console.log(atten)
+
+            //}
+            
         }
         var Attendance = [
             { name: "Arun", presentDays: 22, totalDays: 25 },
             { name: "Priya", presentDays: 10, totalDays: 25 }
         ];
-        console.log(calculateAttendance(Attendance))
+        console.log(calculateAttendance('Arun'))
 
     </script>
 </body>
