@@ -32,9 +32,9 @@
             //         return i.price
             //     }
             // }
-            return pro_search.filter(function(low,high){
+            return pro_search.filter(function(low){
                 // console.log(a)
-                return low.price>=a && high.price<=b
+                return low.price>=a && low.price<=b
             })
         }
         // same
