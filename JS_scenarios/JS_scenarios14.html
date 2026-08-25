@@ -47,6 +47,9 @@
             //         return j.category
             //     }
             // }
+            return pro_search.filter(function(val){
+                return val.name==pro_name
+            })
         }
         var pro_search = [
             { name: "iPhone", category: "Mobile", price: 80000 },
@@ -57,6 +60,9 @@
         console.log(findByCategory('Mobile'))
         console.log(findByCategory('Laptop'))
         console.log(findByPriceRange(50000,70000))
+        console.log(findProductByName('iPhone'))
+        console.log(findProductByName('Samsung'))
+        console.log(findProductByName('Dell'))
         console.log(findProductByName('iPhone'))
 
     </script>
