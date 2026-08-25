@@ -19,42 +19,43 @@
         Travel_tot = 0;
         Shopping_tot = 0;
         tot_amnt = 0
-        function getFoodExpenses(Food_track) {
-            for (i of Food_track) {
-                if (i.category === "Food") {
-                    Food_tot += i.amount
-                }
-            }
-            return Food_tot
-        };
-        console.log(getFoodExpenses(Tracker));
 
-        function Traveltot(Trav_track) {
-            for (i of Trav_track) {
-                if (i.category === "Travel") {
-                    Travel_tot += i.amount
-                }
-            }
-            return Travel_tot
-        }
-        console.log(Traveltot(Tracker))
-        var ele=0
-        function getHighestExpense(High_expense){
-            for(i of High_expense){
-                if(i.amount>ele){
-                    ele=i.amount
-                }
-            }
-            return ele
-        }
-        console.log(getHighestExpense(Tracker))
-        function calculateTotal(Track) {
-            for (i of Track) {
-                tot_amnt += i.amount
-            }
-            return tot_amnt
-        }
-        console.log(calculateTotal(Tracker))
+        // function getFoodExpenses(Food_track) {
+        //     for (i of Food_track) {
+        //         if (i.category === "Food") {
+        //             Food_tot += i.amount
+        //         }
+        //     }
+        //     return Food_tot
+        // };
+        // console.log(getFoodExpenses(Tracker));
+
+        // function Traveltot(Trav_track) {
+        //     for (i of Trav_track) {
+        //         if (i.category === "Travel") {
+        //             Travel_tot += i.amount
+        //         }
+        //     }
+        //     return Travel_tot
+        // }
+        // console.log(Traveltot(Tracker))
+        // var ele=0
+        // function getHighestExpense(High_expense){
+        //     for(i of High_expense){
+        //         if(i.amount>ele){
+        //             ele=i.amount
+        //         }
+        //     }
+        //     return ele
+        // }
+        // console.log(getHighestExpense(Tracker))
+        // function calculateTotal(Track) {
+        //     for (i of Track) {
+        //         tot_amnt += i.amount
+        //     }
+        //     return tot_amnt
+        // }
+        // console.log(calculateTotal(Tracker))
 
 
     </script>
