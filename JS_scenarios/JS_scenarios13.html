@@ -36,10 +36,22 @@
             //}
 
             // method 3
-            atten_per=(Attendance.presentDays/Attendance.totalDays)*100
             return Attendance.filter(function(val){
-                if(atten_per===90){
-                    return "Excellent"
+                if(val.name===employee){
+                    atten_per=(val.presentDays/val.totalDays)*100
+                    // console.log(atten_per)
+                    if(atten_per===90){
+                        return "Excellent"
+                    }
+                    else if(atten_per>=75){
+                        return "Good"
+                    }
+                    else if(atten_per>=60){
+                        return "Average"
+                    }
+                    else if(atten_per<60){
+                        return "Poor"
+                    }
                 }
             })
             
