@@ -18,13 +18,13 @@
         Food_tot = 0;
         Travel_tot = 0;
         Shopping_tot = 0;
-        tot_amnt = 0
-        
-        var tot_amnt = Tracker.reduce(function(a,b){
-            return a+b
-            
-            })
-        
+        sum = 0
+
+        var tot_amnt = Tracker.reduce(function (a, b) {
+            return a + b.amount
+
+        },0)
+
         console.log(tot_amnt)
         // function getFoodExpenses(Food_track) {
         //     for (i of Food_track) {
