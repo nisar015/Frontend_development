@@ -21,17 +21,21 @@
             // }
             var res= pro_search.filter(function(product){
                 // console.log(product)
-                return product.category===pro_cat
+                return product.category==pro_cat
             })
             return res
         }
         // here only prop is iterating
-        function findByPriceRange(pro_price,a,b){
-            for(var i of pro_price){
-                if(i.price>=a && i.price<=b){
-                    return i.price
-                }
-            }
+        function findByPriceRange(a,b){
+            // for(var i of pro_price){
+            //     if(i.price>=a && i.price<=b){
+            //         return i.price
+            //     }
+            // }
+            return pro_search.filter(function(low,high){
+                // console.log(a)
+                return low.price>=a && high.price<=b
+            })
         }
         // same
         function findProductByName(pro_name){
@@ -52,7 +56,7 @@
         ];
         console.log(findByCategory('Mobile'))
         console.log(findByCategory('Laptop'))
-        console.log(findByPriceRange(pro_search,50000,70000))
+        console.log(findByPriceRange(50000,70000))
         console.log(findProductByName(pro_search))
 
     </script>
