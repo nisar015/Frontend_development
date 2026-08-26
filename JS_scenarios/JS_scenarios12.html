@@ -11,11 +11,11 @@
     <script>
         Food_tot = 0;
         function getFoodExpenses(cat){
-            var expense= Tracker.filter(function(val){
+            var Food_tot= Tracker.filter(function(val){
                 return val.category===cat;
             })
             // console.log(expense)
-            if(expense){
+            if(Food_tot){
                 // console.log(expense)
                 
                 return expense.reduce(function(a,b){
