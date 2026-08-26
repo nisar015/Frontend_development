@@ -14,9 +14,9 @@
             var expense= Tracker.filter(function(val){
                 return val.category===cat;
             })
-            // console.log(expense)
+            console.log(expense)
             if(expense){
-                console.log(expense.category)
+                console.log(expense)
                 
                 return expense.reduce(function(a,b){
                     return a+expense.amount
