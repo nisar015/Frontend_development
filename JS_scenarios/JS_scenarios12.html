@@ -17,9 +17,13 @@
             // console.log(expense)
             if(expense){
                 console.log(expense.amount)
-                Food_tot += expense.amount
+                
+                return expense.reduce(function(a,b){
+                    return a+expense.amount
+                },0)
+                // Food_tot += expense.amount
             }
-            return Food_tot
+            // return Food_tot
         }
         var Tracker = [
             { category: "Food", amount: 500 },
