@@ -9,23 +9,32 @@
 
 <body>
     <script>
+        Food_tot = 0;
+        function getFoodExpenses(cat){
+            var expense= Tracker.find(function(val){
+                return val.category===cat;
+            })
+            if(expense){
+                console.log(expense)
+                Food_tot += expense.amount
+            }
+            return Food_tot
+        }
         var Tracker = [
             { category: "Food", amount: 500 },
             { category: "Travel", amount: 1000 },
             { category: "Food", amount: 700 },
             { category: "Shopping", amount: 2000 }
         ];
-        Food_tot = 0;
         Travel_tot = 0;
         Shopping_tot = 0;
-        sum = 0
-
         var tot_amnt = Tracker.reduce(function (a, b) {
             return a + b.amount
 
         },0)
 
         console.log(tot_amnt)
+        console.log(getFoodExpenses('Food'))
         // function getFoodExpenses(Food_track) {
         //     for (i of Food_track) {
         //         if (i.category === "Food") {
@@ -62,8 +71,6 @@
         //     return tot_amnt
         // }
         // console.log(calculateTotal(Tracker))
-
-
     </script>
 </body>
 
