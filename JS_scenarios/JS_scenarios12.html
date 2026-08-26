@@ -35,11 +35,24 @@
             return a + b.amount
 
         },0)
-
+        function getHighestExpense(FT,TT,ST){
+            Highest=FT;
+            if(Highest<TT){
+                Highest=FT;
+            }
+            else if(Highest<ST){
+                Highest=ST;
+            }
+            else{
+                Highest=Highest;
+            }
+            return Highest
+        }
         console.log(tot_amnt)
         console.log(getFoodExpenses('Food'))
         console.log(getFoodExpenses('Travel'))
         console.log(getFoodExpenses('Shopping'))
+        console.log(getHighestExpense(Food_tot,Travel_tot,Shopping_tot))
         // function getFoodExpenses(Food_track) {
         //     for (i of Food_track) {
         //         if (i.category === "Food") {
