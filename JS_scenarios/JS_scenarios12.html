@@ -14,6 +14,7 @@
             var expense= Tracker.find(function(val){
                 return val.category===cat;
             })
+            console.log(expense)
             if(expense){
                 console.log(expense)
                 Food_tot += expense.amount
