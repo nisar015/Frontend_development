@@ -7,20 +7,16 @@
     <title>Document</title>
 </head>
 
-<body>     
+<body>
     <script>
         // how to do cart tot for the item aded in cart
-        cart_tot=0
-        function validateCart(shopcart){
-            for(var i of shopcart){
-                // console.log(first)
-                if(i.quantity>0 && i.price>0 && i.name !== ""){
-                    cart_tot += i.price
-                    console.log(cart_tot)
-                }
-                
+        cart_tot = 0
+        function validateCart(shopcart_name) {
+            if (i.quantity > 0 && i.price > 0 && i.name !== "") {
+                cart_tot += i.price
+                console.log(cart_tot)
             }
-            return cart_tot
+
 
         }
         var shopping_cart = [
