@@ -12,15 +12,16 @@
         // how to do cart tot for the item aded in cart
         cart_tot = 0
         function validateCart(shopcart_name) {
-            return shopping_cart.find(function(val){
+            var item_valid= shopping_cart.find(function(val){
                 if(val.name===shopcart_name){
                     if ( val.quantity > 0 && val.price > 0 && val.name !== "") {
                         console.log("item is valid")
                     }
                 }
-                return cart_tot += (val.price*val.quantity)
             })
-
+            if(item_valid){
+                return cart_tot += (val.price*val.quantity)
+            }
 
         }
         var shopping_cart = [
