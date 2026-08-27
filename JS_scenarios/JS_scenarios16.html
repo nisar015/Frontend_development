@@ -15,8 +15,8 @@
             var item_valid= shopping_cart.find(function(val){
                 if(val.name===shopcart_name){
                     if ( val.quantity > 0 && val.price > 0 && val.name !== "") {
-                        return "item is valid";
                         console.log("item is valid")
+                        return "item is valid";
                     }
                 }
             })
