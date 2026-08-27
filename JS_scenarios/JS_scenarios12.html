@@ -9,7 +9,16 @@
 
 <body>
     <script>
-        Food_tot = 0;
+        function getHighestExpense(comp){
+            var val=0
+            for(i of comp){
+                if(comp[i]>val){
+                    val=comp[i]
+                }
+            }
+            return val
+        }
+        // Food_tot = 0;
         function getFoodExpenses(cat){
             var Food_tot= Tracker.filter(function(val){
                 return val.category===cat;
@@ -29,30 +38,19 @@
             { category: "Food", amount: 700 },
             { category: "Shopping", amount: 2000 }
         ];
-        Travel_tot = 0;
-        Shopping_tot = 0;
+        // Travel_tot = 0;
+        // Shopping_tot = 0;
         var tot_amnt = Tracker.reduce(function (a, b) {
             return a + b.amount
 
         },0)
-        function getHighestExpense(FT,TT,ST){
-            Highest=FT;
-            if(Highest<TT){
-                Highest=FT;
-            }
-            else if(Highest<ST){
-                Highest=ST;
-            }
-            else{
-                Highest=Highest;
-            }
-            return Highest
-        }
+        var compare=[]
+        compare.push(Food_tot,Travel_tot,Shopping_tot)
         console.log(tot_amnt)
         console.log(getFoodExpenses('Food'))
         console.log(getFoodExpenses('Travel'))
         console.log(getFoodExpenses('Shopping'))
-        console.log(getHighestExpense(Food_tot,Travel_tot,Shopping_tot))
+        console.log(getHighestExpense(compare))
         // function getFoodExpenses(Food_track) {
         //     for (i of Food_track) {
         //         if (i.category === "Food") {
