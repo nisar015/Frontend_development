@@ -11,9 +11,11 @@
     <script>
         function calculateAverage(student) {
             return students.reduce(function(a,b){
-                console.log(b)
-                return a + b.student
-            },0)
+
+                console.log(a.marks)
+                console.log(b.marks)
+                return a + b.marks
+            })
         }
         var students =
             [
