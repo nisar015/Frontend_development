@@ -13,12 +13,12 @@
         cart_tot = 0
         function validateCart(shopcart_name) {
             return shopping_cart.find(function(val){
-                
+                if(val.name===shopcart_name){
+                    if ( val.quantity > 0 && val.price > 0 && val.name !== "") {
+                        console.log("item is valid")
+                    }
+                }
             })
-            if ( > 0 && i.price > 0 && i.name !== "") {
-                cart_tot += i.price
-                console.log(cart_tot)
-            }
 
 
         }
