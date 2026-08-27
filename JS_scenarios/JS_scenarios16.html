@@ -18,7 +18,7 @@
         cart_tot = 0
         function validateCart(shopcart_name) {
             var item_valid = shopping_cart.find(function (val) {
-
+                return val.name===shopcart_name
             })
             if (item_valid.name === shopcart_name) {
                 if (item_valid.quantity > 0 && item_valid.price > 0 && item_valid.name !== "") {
