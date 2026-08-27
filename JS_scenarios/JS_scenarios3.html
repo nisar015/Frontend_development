@@ -11,8 +11,8 @@
     <script>
         function apply_discount(totalamount) {
             if (totalamount > 50000) {
-                
-                return totalamount -= totalamount * 0.2
+                totalamount -= totalamount * 0.2
+                return "discount: " + totalamount
             }
             else if (totalamount > 20000) {
                 return totalamount -= totalamount * 0.1
@@ -31,8 +31,9 @@
             // console.log(a)
             return a + b.price
         }, 0)
-        console.log(tot_amount)
+        console.log( "total amount" +tot_amount)
         console.log(apply_discount(tot_amount))
+        console.log(final_amount())
 
 
     </script>
