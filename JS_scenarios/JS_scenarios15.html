@@ -10,10 +10,13 @@
 <body>
     <script>
         function getOrderMessage(stat) {
-            if (stat === "shipped") {
+            var stats= orders.find(function(val){
+                return 
+            })
+            if (stats === "shipped") {
                 return "Order is on the way ";
             }
-            else if (stat === "pending") {
+            else if (stats === "pending") {
                 return "Order is being processed"
             }
             else if (stat === "delivered") {
