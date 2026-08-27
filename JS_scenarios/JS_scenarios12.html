@@ -9,15 +9,6 @@
 
 <body>
     <script>
-        function getHighestExpense(comp){
-            var val=0
-            for(i of comp){
-                if(comp[i]>val){
-                    val=comp[i]
-                }
-            }
-            return val
-        }
         // Food_tot = 0;
         function getFoodExpenses(cat){
             var Food_tot= Tracker.filter(function(val){
@@ -45,13 +36,13 @@
             return a + b.amount
 
         },0)
-        var compare=[]
+        // var compare=[]
         // compare.push(Food_tot,Travel_tot,Shopping_tot)
         console.log(tot_amnt)
         console.log(getFoodExpenses('Food'))
         console.log(getFoodExpenses('Travel'))
         console.log(getFoodExpenses('Shopping'))
-        console.log(getHighestExpense(compare))
+        // console.log(getHighestExpense(compare))
         // function getFoodExpenses(Food_track) {
         //     for (i of Food_track) {
         //         if (i.category === "Food") {

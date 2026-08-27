@@ -10,9 +10,10 @@
 <body>
     <script>
         function getOrderMessage(stat) {
-            var stats= orders.find(function(val){
+            var check = orders.find(function(val){
                 return val.id===stat
             })
+            console.log(check)
             if (stats.status === "shipped") {
                 return "Order is on the way ";
             }
