@@ -11,18 +11,18 @@
     <script>
         function getOrderMessage(stat) {
             var stats= orders.find(function(val){
-                return 
+                return val.id===stat
             })
-            if (stats === "shipped") {
+            if (stats.status === "shipped") {
                 return "Order is on the way ";
             }
-            else if (stats === "pending") {
+            else if (stats.status === "pending") {
                 return "Order is being processed"
             }
-            else if (stats === "delivered") {
+            else if (stats.status === "delivered") {
                 return "Order is successfully delivered"
             }
-            else if(stats==="cancelled"){
+            else if(stats.status ==="cancelled"){
                 return "Order cancelled";
             }
         }
