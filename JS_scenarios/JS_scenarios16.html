@@ -26,14 +26,14 @@
                     return cart_tot += (item_valid.price * item_valid.quantity)
                     // return "item";
                 }
+                else {
+                    return getInvalidItems(shopcart_name)
+                    // console.log("item is Invalid");
+                }
 
             }
             // if (item_valid) {
             // }
-            else {
-                return getInvalidItems(shopcart_name)
-                // console.log("item is Invalid");
-            }
 
         }
         var shopping_cart = [
