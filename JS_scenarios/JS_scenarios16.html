@@ -15,12 +15,12 @@
 
 
         }
+        carttot = 0
         function calculateCartTotal(cart_tot,item_val){
             cart_tot += (item_val.price * item_val.quantity)
             console.log(cart_tot)
             return cart_tot
         }
-        carttot = 0
         function validateCart(shopcart_name) {
             var item_valid = shopping_cart.find(function (val) {
                 return val.name===shopcart_name
