@@ -16,7 +16,7 @@
 
         }
         carttot = 0
-        function calculateCartTotal(cart_tot,item_val){
+        function calculateCartTotal(item_val){
             cart_tot += (item_val.price * item_val.quantity)
             console.log(cart_tot)
             return cart_tot
@@ -28,7 +28,7 @@
             if (item_valid.name === shopcart_name) {
                 if (item_valid.quantity > 0 && item_valid.price > 0 && item_valid.name !== "") {
                     console.log(item_valid.name + ": item is valid")
-                    return "cart total :"+calculateCartTotal(carttot,item_valid)
+                    return "cart total :"+calculateCartTotal(item_valid)
                     
                 }
                 else {
