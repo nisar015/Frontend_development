@@ -20,8 +20,8 @@
             console.log(cart_tot)
             return cart_tot
         }
+        carttot = 0
         function validateCart(shopcart_name) {
-            carttot = 0
             var item_valid = shopping_cart.find(function (val) {
                 return val.name===shopcart_name
             })
