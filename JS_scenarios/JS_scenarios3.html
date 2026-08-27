@@ -16,7 +16,9 @@
                 return val.name===pro_name
             })
             if(pro){
-                tot_amount += pro.price
+                return pro.reduce(function(a,b){
+                    return a+b.price
+                },0)
             }
             // return tot_amount
         }
@@ -40,6 +42,8 @@
         
 
         console.log(tot_price('Laptop'))
+        console.log(tot_price('Mouse'))
+        console.log(tot_price('Keyboard'))
         
     </script>
 </body>
