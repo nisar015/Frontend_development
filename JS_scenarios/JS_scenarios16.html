@@ -16,19 +16,20 @@
 
         }
         function calculateCartTotal(item_total) {
-            if (item_total.quantity > 0 && item_total.price > 0 && item_total.name !== "") {
-                cart_tot += (item_total.price * item_total.quantity)
-                console.log(item_total.name + ": item is valid")
-                return "cart total :" + cart_tot
-            }
+            cart_tot += (item_total.price * item_total.quantity)
+            console.log(item_total.name + ": item is valid")
+            return "cart total :" + cart_tot
         }
+        
         cart_tot = 0
         function validateCart(shopcart_name) {
             var item_valid = shopping_cart.find(function (val) {
                 return val.name === shopcart_name
             })
             if (item_valid.name === shopcart_name) {
-                return calculateCartTotal(item_valid.name)
+                if (item_valid.quantity > 0 && item_valid.price > 0 && item_valid.name !== "") {
+                    return calculateCartTotal(item_valid.name)
+                }
             }
             else {
                 return getInvalidItems(shopcart_name)
