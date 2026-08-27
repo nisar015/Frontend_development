@@ -9,38 +9,19 @@
 
 <body>
     <script>
-        // achive reduce statements to calc to tot_price
-        function tot_price(pro_name){
-            var pro= products.reduce(function(val){
-                // console.log(val.price)
-                return val.name===pro_name
-            })
-            if(pro){
-                return pro.reduce(function(a,b){
-                    return a+b.price
-                },0)
-            }
-            // return tot_amount
-        }
-        function productsdiscount(amount){
-            if (amount>50000){
-                return amount -= amount*0.2
-            }
-            else if(amount>20000){
-                return amount -= amount*0.1
-            }
-            else{
-                return amount
-            } 
-        }
-        var tot_amount=0
+        
+        
         var products=[
             { name: "Laptop", price: 17000 },
             { name: "Mouse", price: 1500 },
             { name: "Keyboard", price: 3000 } 
-        ]
-        
+        ];
 
+        var tot_amount= products.reduce(function(a,b){
+            console.log(a)
+            return a+b.price
+        },0)
+        console.log(tot_amount)
         console.log(tot_price('Laptop'))
         console.log(tot_price('Mouse'))
         console.log(tot_price('Keyboard'))
