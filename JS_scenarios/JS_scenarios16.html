@@ -11,21 +11,24 @@
     <script>
         // how to do cart tot for the item aded in cart
         function getInvalidItems(invalid_item) {
-            return  invalid_item + ": Item is invalid";
+            return invalid_item + ": Item is invalid";
 
 
+        }
+        function calculateCartTotal() {
+            if (item_valid.quantity > 0 && item_valid.price > 0 && item_valid.name !== "") {
+                cart_tot += (item_valid.price * item_valid.quantity)
+                console.log(item_valid.name + ": item is valid")
+                return "cart total :" + cart_tot
+            }
         }
         cart_tot = 0
         function validateCart(shopcart_name) {
             var item_valid = shopping_cart.find(function (val) {
-                return val.name===shopcart_name
+                return val.name === shopcart_name
             })
             if (item_valid.name === shopcart_name) {
-                if (item_valid.quantity > 0 && item_valid.price > 0 && item_valid.name !== "") {
-                    cart_tot += (item_valid.price * item_valid.quantity)
-                    console.log(item_valid.name + ": item is valid")
-                    return "cart total :"+cart_tot
-                }
+                return calculateCartTotal(item_valid.name)
                 else {
                     return getInvalidItems(shopcart_name)
                     // console.log("item is Invalid");
