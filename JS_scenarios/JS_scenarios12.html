@@ -30,6 +30,7 @@
                 return Food_tot.reduce(function(a,b){
                     return a+b.amount
                 },0)
+                compare.push(Food_tot)
             }
         }
         var Tracker = [
@@ -45,7 +46,7 @@
 
         },0)
         var compare=[]
-        compare.push(Food_tot,Travel_tot,Shopping_tot)
+        // compare.push(Food_tot,Travel_tot,Shopping_tot)
         console.log(tot_amnt)
         console.log(getFoodExpenses('Food'))
         console.log(getFoodExpenses('Travel'))
