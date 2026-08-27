@@ -9,22 +9,28 @@
 
 <body>
     <script>
-        function findEmployeeById(id){
-            return [id.name,id.department]
+        function findEmployeeById(iden){
+            return employee.filter(function(val){
+                return val.id===iden
+            })
             
         }
         function findEmployeesByDepartment(department){
-            return [department.id,department.name]
+            return employee.filter(function(val){
+                return val.department===department
+            })
         }
         var employee = [
             { id: 101, name: "Arun", department: "IT" },
             { id: 102, name: "Priya", department: "HR" },
             { id: 103, name: "John", department: "IT" }
         ];
-        for(var i of employee){
-            console.log(findEmployeeById(i))
-            console.log(findEmployeesByDepartment(i))
-        }
+        console.log(findEmployeeById(101))
+        console.log(findEmployeeById(102))
+        console.log(findEmployeeById(103))
+        
+        console.log(findEmployeesByDepartment('IT'))
+        console.log(findEmployeesByDepartment('HR'))
     </script>
 </body>
 
