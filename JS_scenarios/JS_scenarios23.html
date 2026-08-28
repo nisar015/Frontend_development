@@ -11,9 +11,9 @@
     <script>
         var bon;
         var final_salary;
-        function calculateFinalSalary(emp_sal,bons){
+        function calculateFinalSalary(empname, emp_sal,bons){
             final_salary = emp_sal+bons
-            return "Final salary:"+final_salary
+            return "Final salary "+ empname + " "+final_salary
         }
         function calculateBonus(emp){
             var emp_name= Employee.find(function(val){
@@ -22,7 +22,7 @@
             if(emp_name){
                 if(emp_name.performance.rating === 5){
                     bon = emp_name.salary * 0.2
-                    console.log((calculateFinalSalary(emp_name.salary,bon)))
+                    console.log((calculateFinalSalary(emp_name.name, emp_name.salary,bon)))
                     return "bonus of " + emp_name.name + " " + bon
                 }
                 else if(emp_name.performance.rating === 4){
