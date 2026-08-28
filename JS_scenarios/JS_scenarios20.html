@@ -9,10 +9,19 @@
 
 <body>
     <script>
+        tot_cred=0
+        function totalCredits(tot_cred){
+            tot_cred += tot_cred
+            return tot_cred
+        }
         function credit_or_debit(cred_debt){
-            return check=transactions.filter(function(val){
+            var check=transactions.filter(function(val){
                 return val.type===cred_debt
             })
+            if(check.type==="credit"){
+                console.log(check.amount)
+                return totalCredits(check.amount);
+            }
 
         }
         var transactions = [
