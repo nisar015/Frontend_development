@@ -22,8 +22,8 @@
             if(emp_name){
                 if(emp_name.performance.rating === 5){
                     bon = emp_name.salary * 0.2
-                    calculateFinalSalary(emp_name.salary,bon)
-                    return "bonus:" + bon
+                    console.log((calculateFinalSalary(emp_name.salary,bon)))
+                    return "bonus of " + emp_name.name + " " + bon
                 }
                 else if(emp_name.performance.rating === 4){
                     bon = emp_name.salary * 0.15
@@ -66,7 +66,7 @@
         // console.log(Employee[0])
         console.log(calculateBonus('Arun'));
         console.log(calculateBonus('Priya'));
-        console.log(calculateFinalSalary());
+        // console.log(calculateFinalSalary());
 
     </script>
 </body>
