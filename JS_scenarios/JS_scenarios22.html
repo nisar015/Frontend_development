@@ -9,6 +9,18 @@
 
 <body>
     <script>
+        function generateReorderList(proname,proquantity){
+            Neworderlst.push(proname)
+            Neworderlst.push(proquantity)
+            // return Neworderlst
+        }
+        function check_stock(pro_data){
+            if(pro_data.stock<=pro_data.reorderLevel){
+                generateReorderList(pro_data.name,pro_data.reorderQuantity) 
+            }
+            return Neworderlst
+        }
+        var Neworderlst=[]
         var reorder_lst=[
             {
                 name: "Laptop",
@@ -22,8 +34,11 @@
                 reorderLevel: 5,
                 reorderQuantity: 10
             }
-        ] 
-        console.log(first)
+        ]
+        reorder_lst.forEach(function(val){
+            // console.log(val)
+            console.log(check_stock(val))
+        })
     </script>
 </body>
 
