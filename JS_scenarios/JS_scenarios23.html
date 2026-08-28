@@ -58,6 +58,11 @@
             }
             
         }
+        function Highbonus(HB){
+            HB.forEach(function(val,i){
+                console.log(val,i)
+            })
+        }
         var High_bonus=[]
         var Employee=[
             {
@@ -80,7 +85,7 @@
         // console.log(Employee[0])
         console.log(calculateBonus('Arun'));
         console.log(calculateBonus('Priya'));
-        console.log(High_bonus)
+        console.log(Highbonus(High_bonus));
         // console.log(calculateFinalSalary());
 
     </script>
