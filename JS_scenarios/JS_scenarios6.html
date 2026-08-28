@@ -16,7 +16,9 @@
         ];
         cart_tot=0
         for(var i of cart){
+            
             item_tot=i.price*i.quantity
+            console.log("item's total :",item_tot)
             cart_tot += item_tot
             
         }
