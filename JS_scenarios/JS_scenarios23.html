@@ -22,13 +22,13 @@
             if(emp_name){
                 if(emp_name.performance.rating === 5){
                     bon = emp_name.salary * 0.2
-                    High_bonus.push(bon)
+                    High_bonus.push({bon})
                     console.log((calculateFinalSalary(emp_name.name, emp_name.salary,bon)))
                     return "bonus of " + emp_name.name + " " + bon
                 }
                 else if(emp_name.performance.rating === 4){
                     bon = emp_name.salary * 0.15
-                    High_bonus.push(bon)
+                    High_bonus.push({bon})
                     console.log((calculateFinalSalary(emp_name.salary,bon)))
                     
                     return "bonus of " + emp_name.name + " " + bon
@@ -36,7 +36,7 @@
                 }
                 else if(emp_name.performance.rating === 3){
                     bon = emp_name.salary * 0.1
-                    High_bonus.push(bon)
+                    High_bonus.push({bon})
                     // bon += emp_name.salary
                     // return bon
                     console.log((calculateFinalSalary(emp_name.name,emp_name.salary,bon)))
@@ -61,6 +61,7 @@
         function Highbonus(HB){
             HB.forEach(function(val,i){
                 console.log(val,i)
+                // if(val)
             })
         }
         var High_bonus=[]
