@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        totalcreds=0
+        var totalcreds=0
         function totalCredits(tot_cred){
             totalcreds += tot_cred
             return totalcreds
@@ -20,9 +20,9 @@
             })
             // why find func doesnt works here
             check.forEach(function(val){
-                totalCredits(val.amount)
+                totalCredits(val.amount);
             });
-            
+            r
 
         }
         var transactions = [
