@@ -16,13 +16,12 @@
         }
         function credit_or_debit(cred_debt){
             var check=transactions.filter(function(val){
+                // why find func doesnt works here
                 return val.type===cred_debt
             })
-            // why find func doesnt works here
             check.forEach(function(val){
                 // console.log(val.amount);
                 totalCredits(val.amount);
-                
 
                 
             });
