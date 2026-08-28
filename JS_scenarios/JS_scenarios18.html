@@ -9,7 +9,14 @@
 
 <body>
     <script>
-        var order={
+        function validate_order(valid) {
+            var check_valid = order.find(function (val) {
+                console.log(val)
+                return val.customer === valid
+            })
+            // console.log(check_valid)
+        }
+        var order = {
             customer: {
                 name: "Murali",
                 city: "Bangalore"
@@ -20,7 +27,7 @@
             ],
             paymentMethod: "UPI"
         }
-        console.log(validate_order())
+        console.log(validate_order('Murali'))
     </script>
 </body>
 
