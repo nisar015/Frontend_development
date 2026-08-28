@@ -36,8 +36,9 @@
                 }
                 else if(emp_name.performance.rating === 3){
                     bon = emp_name.salary * 0.1
-                    var name=emp_name.name
-                    High_bonus.push({name:bon})
+                    // var name=emp_name.name
+                    // how push bon along with employee name
+                    High_bonus.push({bon})
                     // bon += emp_name.salary
                     // return bon
                     console.log((calculateFinalSalary(emp_name.name,emp_name.salary,bon)))
