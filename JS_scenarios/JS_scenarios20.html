@@ -18,11 +18,11 @@
             var check=transactions.filter(function(val){
                 return val.type===cred_debt
             })
-            // console.log(check.type)
-            if(check.type===cred_debt){
-                // console.log(check.amount)
-                return totalCredits(check.amount);
-            }
+            // why find func doesnt works here
+            check.forEach(function(val){
+                totalCredits(val.amount)
+            });
+            
 
         }
         var transactions = [
@@ -31,9 +31,6 @@
             { type: "credit", amount: 10000 },
             { type: "debit", amount: 3000 }
         ] 
-        for(var i of transactions){
-            console.log(i)
-        }
         console.log(credit_or_debit('credit'));
     </script>
 </body>
