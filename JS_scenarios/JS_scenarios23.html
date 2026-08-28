@@ -9,6 +9,18 @@
 
 <body>
     <script>
+        var bon=0
+        function calculateBonus(rate){
+            var bon= Employee.find(function(val){
+                return val.rating===rate
+            })
+            console.log(bon.rating)
+            if(emp.rating===5){
+                bon = emp.salary * 0.2;
+                bon += emp.salary
+                return bon
+            }
+        }
         var Employee=[
             {
                 name: "Arun",
