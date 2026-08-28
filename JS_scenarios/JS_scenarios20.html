@@ -9,17 +9,18 @@
 
 <body>
     <script>
-        tot_cred=0
+        totalcreds=0
         function totalCredits(tot_cred){
-            tot_cred += tot_cred
-            return tot_cred
+            totalcreds += tot_cred
+            return totalcreds
         }
         function credit_or_debit(cred_debt){
-            var check=transactions.filter(function(val){
+            var check=transactions.find(function(val){
                 return val.type===cred_debt
             })
-            if(check.type==="credit"){
-                console.log(check.amount)
+            // console.log(check.type)
+            if(check.type===cred_debt){
+                // console.log(check.type)
                 return totalCredits(check.amount);
             }
 
@@ -30,11 +31,7 @@
             { type: "credit", amount: 10000 },
             { type: "debit", amount: 3000 }
         ] 
-        for(var i of transactions){
-            console.log(i.type)
-            var func=credit_or_debit(i.type);
-            console.log(func)
-        }
+        console.log(credit_or_debit('credit'));
     </script>
 </body>
 
