@@ -10,16 +10,35 @@
 <body>
     <script>
         var bon=0
-        function calculateBonus(rate){
-            var bon= Employee.find(function(val){
-                return val.rating===rate
+        function calculateBonus(emp){
+            var emp_name= Employee.find(function(val){
+                return val.name===emp
             })
-            console.log(bon)
-            if(emp.rating===5){
-                bon = emp.salary * 0.2;
-                bon += emp.salary
-                return bon
+            if(emp_name){
+                if(emp_name.performance.rating === 5){
+                    bon = emp_name.salary * 0.2
+                    bon += emp_name.salary
+                    return bon
+                }
+                else if(emp_name.performance.rating === 4){
+                    bon = emp_name.salary * 0.15
+                    bon += emp_name.salary
+                    return bon
+                }
+                else if(emp_name.performance.rating === 3){
+                    bon = emp_name.salary * 0.1
+                    bon += emp_name.salary
+                    return bon
+                }
+                else if(emp_name.performance.rating < 3){
+                    bon = emp_name.salary * 0.05
+                    bon += emp_name.salary
+                    return bon
+                }
+                
+
             }
+            
         }
         var Employee=[
             {
@@ -39,7 +58,9 @@
                 }
             }
         ];
-        console.log(calculateBonus('rating'));
+        console.log(Employee[0])
+        console.log(calculateBonus('Arun'));
+        console.log(calculateBonus('Priya'));
 
     </script>
 </body>
