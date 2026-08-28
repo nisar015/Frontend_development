@@ -14,18 +14,30 @@
             totalcreds += tot_cred
             return totalcreds
         }
+        totaldebts=0
+        function totaldebits(tot_dets){
+            totaldebts += tot_dets
+            return totaldebts
+        }
         function credit_or_debit(cred_debt){
             var check=transactions.filter(function(val){
                 // why find func doesnt works here
                 return val.type===cred_debt
             })
             check.forEach(function(val){
-                // console.log(val.amount);
-                totalCredits(val.amount);
+                if(val.type==="credit"){
+                    // console.log(val.amount);
+                    totalCredits(val.amount);
+
+                }
+                else if(val.type==="debit"{
+                    totaldebits(val.amount);
+                }
 
                 
             });
             return totalcreds
+            return totaldebts
 
         }
         var transactions = [
