@@ -10,7 +10,7 @@
 <body>
     <script>
         // how to access data objs
-        function validate_order(item) {
+        function validate_order(item,cost) {
             // var check=order.filter(function(val){
             //     console.log(val.items)
             //     return val.items
@@ -20,11 +20,13 @@
                     // if(order.items[i]>)
                     for (var j in order.items[i]) {
                         var check= order.items[i][j] === item
+                        if(order.items[i][j]===cost){
+                            return order.items[i][j]
+                        }
                         return `${item} is valid`
                     }
                 }
             }
-            return check
             // console.log(check_valid)
         }
         var order = {
@@ -38,7 +40,7 @@
             ],
             paymentMethod: "UPI"
         }
-        console.log(validate_order('Laptop'))
+        console.log(validate_order('Laptop',order.items.price))
         console.log(validate_order('Mouse'))
     </script>
 </body>
