@@ -11,10 +11,10 @@
     <script>
         // how to access data objs
         function validate_order(valid) {
-            var check_valid = order.find(function(val) {
-                console.log(val)
-                return val.customer === valid
-            })
+            for(var i in order){
+                // console.log(i)
+                if(order[i])
+            }
             // console.log(check_valid)
         }
         var order = {
