@@ -10,10 +10,11 @@
 <body>
     <script>
         // how to access data objs
-        function validate_order(valid) {
-            for(var i in order){
-                // console.log(i)
-                if(order[i])
+        function validate_order(order) {
+            if(order.items){
+                for(var i in order){
+                    console.log(order[i])
+                }
             }
             // console.log(check_valid)
         }
@@ -28,7 +29,7 @@
             ],
             paymentMethod: "UPI"
         }
-        console.log(validate_order('Murali'))
+        console.log(validate_order(order))
     </script>
 </body>
 
