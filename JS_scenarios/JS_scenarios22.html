@@ -14,11 +14,7 @@
             Neworderlst.push({orderQuantity:proquantity})
             return Neworderlst
         }
-        function justchecking(lap){
-            var check=reorder_lst.hasOwnProperty(lap)
-            return check
-
-        }
+       
         var Neworderlst=[]
         var reorder_lst=[
             {
@@ -40,7 +36,9 @@
             }
             // console.log(check_stock(val))
         })
-        console.log(justchecking('Laptop'));   
+        re={name:"name"}
+        console.log(re.hasOwnProperty("name"))
+        // console.log(justchecking(reorder_lst));   
     </script>
 </body>
 
