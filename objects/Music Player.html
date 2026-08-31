@@ -70,9 +70,13 @@
         console.log(playlist)
         console.log(volume)
         console.log(songtype)
-        console.log(MusicPlayer.playlist['song1'])
+        console.log(MusicPlayer.playlist[0])
+        MusicPlayer.playlist.forEach(function(val){
+            console.log(val)
+        })
         // we can access obj inside obj with dot notation
         // we cannot "    "    "     array with nor dot or square bracket
+        // we can access obj with index numbers,forloop,forEach
 
         // shorthand prop 
         var fullname = "nisar ahmmed";
