@@ -10,6 +10,16 @@
 <body>
     
     <script>
+        function addProduct(pro_name){
+            var check= cart.find(function(val){
+                return val.product.name===pro_name
+
+            })
+            if(check){
+                minicart.push(pro_name)
+            }
+            return minicart
+        }
         var cart = [
             {
                 product: {
@@ -29,10 +39,7 @@
             }
         ];
         var minicart=[]
-        cart.forEach(function(val){
-            // console.log(val)
-            // console.log(val.product.id)
-        })
+        console.log(addProduct('Laptop'))
     </script>
 </body>
 
