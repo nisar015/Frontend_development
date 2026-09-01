@@ -22,7 +22,7 @@
             deleteMessage: function (messageID) { },
             searchMessages: function (keyword) { }
         }
-        console.log(ChatApplication.blockedUsers);
+        console.log(ChatApplication.lastSeen.timestamp);
         console.log(ChatApplication["lastSeen"])
         var key = "conversations";
         console.log(ChatApplication[key]);
@@ -31,7 +31,7 @@
         ChatApplication.activeUsers = "wattsapp";
         // ChatApplication["sendMessage"] = ;
         ChatApplication.activeUsers = 85;
-        delete ChatApplication.deleteMessage;
+        // delete ChatApplication.deleteMessage;
 
 
         // looping through objs
