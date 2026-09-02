@@ -20,7 +20,7 @@
                 return
             }
             var checkitem = cart.find(function (val) {
-                return val.product.id === pro_id
+                return val.product.name === product
 
             })
             if (checkitem) {
@@ -30,11 +30,11 @@
             }
             else{
                 cart.push({
-                    productId: pro_id,
+                    productName: product,
                     quantity: quan
                 })
             }
-            console.log(`${checkitem.product.name} aded successfully`)
+            console.log(`${product} aded successfully`)
             // return checkitem
         }
         function removeProduct(){
@@ -60,7 +60,7 @@
         ];
         
         // addProduct(1, 3)
-        addProduct(keyboard, 1)
+        addProduct("keyboard", 1)
         // console.log(minicart)
     </script>
 </body>
