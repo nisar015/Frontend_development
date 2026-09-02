@@ -24,7 +24,11 @@
 
             })
             if (checkitem) {
-                minicart.push({
+                checkitem.quantity += quan;
+                
+            }
+            else{
+                cart.push({
                     productId: pro_id,
                     quantity: quan
                 })
@@ -49,7 +53,7 @@
                 quantity: 2
             }
         ];
-        var minicart = []
+        // var minicart = []
 
         console.log(addProduct(1, 1))
         console.log(addProduct(2, 2))
