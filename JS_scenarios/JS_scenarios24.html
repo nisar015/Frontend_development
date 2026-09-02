@@ -8,21 +8,25 @@
 </head>
 
 <body>
-    
+
     <script>
-        function addProduct(pro_name,quan){
-            if(quan<=0){
+        function addProduct(pro_name, quan) {
+            cart.forEach(function (val) {
+                // console.log(val.quantity)
+
+            })
+            if (quan <= 0) {
                 console.log("invalid quantity");
                 return
             }
-            var check= cart.find(function(val){
-                return val.product.name===pro_name
+            var check = cart.find(function (val) {
+                return val.product.name === pro_name
 
             })
-            if(check){
+            if (check) {
                 minicart.push({
-                    product:pro_name,
-                    quantity:quan
+                    product: pro_name,
+                    quantity: quan
                 })
             }
             console.log("product aded successfully")
@@ -45,12 +49,10 @@
                 quantity: 2
             }
         ];
-        var minicart=[]
-        cart.forEach(function(val){
-            // console.log(val.quantity)
-        })
-        console.log(addProduct('Laptop',0))
-        console.log(addProduct('Mouse',2))
+        var minicart = []
+
+        console.log(addProduct('Laptop', 0))
+        console.log(addProduct('Mouse', 2))
         console.log(minicart)
     </script>
 </body>
