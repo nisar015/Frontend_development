@@ -11,6 +11,10 @@
     
     <script>
         function addProduct(pro_name,quan){
+            if(quantity<=0){
+                console.log("invalid quantity");
+                return
+            }
             var check= cart.find(function(val){
                 return val.product.name===pro_name
 
