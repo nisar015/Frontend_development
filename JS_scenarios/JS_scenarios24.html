@@ -41,9 +41,10 @@
         function removeProduct(pro){
             var proname=cart.find(function(val,i){
                 // console.log(val.product.id)
+                console.log(i)
                 return val.product.name === pro
             })
-            console.log(proname)
+            console.log(proname,i)
             if(proname){
                 cart.splice(proname,1)
                 console.log(cart)
