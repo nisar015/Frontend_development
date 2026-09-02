@@ -23,7 +23,7 @@
             if(emp_name){
                 if(emp_name.performance.rating === 5){
                     bon = emp_name.salary * 0.2
-                    High_bonus.push({bon})
+                    High_bonus[emp_name.name]=bon
                     console.log((calculateFinalSalary(emp_name.name, emp_name.salary,bon)))
                     return "bonus of " + emp_name.name + " " + bon
                 }
