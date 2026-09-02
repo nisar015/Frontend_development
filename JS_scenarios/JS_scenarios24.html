@@ -45,6 +45,7 @@
             })
             console.log(proname)
             if(proname){
+                delete proname.product
                 console.log(cart)
             }
         }
@@ -67,7 +68,7 @@
             }
         ];
         addProduct("keyboard", 1)
-        removeProduct('Mouse');
+        removeProduct('keyboard');
         // console.log(minicart)
     </script>
 </body>
