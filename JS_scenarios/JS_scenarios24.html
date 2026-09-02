@@ -39,14 +39,12 @@
             // return checkitem
         }
         function removeProduct(pro){
-            var proname=cart.find(function(val,i){
+            var proname=cart.find(function(val){
                 // console.log(val.product.id)
-                console.log(i)
                 return val.product.name === pro
             })
             console.log(proname)
             if(proname){
-                cart.splice(proname,1)
                 console.log(cart)
             }
         }
