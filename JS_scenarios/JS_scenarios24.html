@@ -25,7 +25,7 @@
             })
             if (checkitem) {
                 checkitem.quantity += quan;
-                // console.log(checkitem.quantity)
+                console.log(checkitem)
                 
             }
             else{
@@ -35,7 +35,7 @@
                 })
             }
             console.log(`${checkitem.product.name} aded successfully`)
-            return checkitem
+            // return checkitem
         }
         var cart = [
             {
@@ -56,7 +56,7 @@
             }
         ];
         
-        console.log(addProduct(1, 3))
+        addProduct(1, 3)
         console.log(addProduct(2, 2))
         // console.log(minicart)
     </script>
