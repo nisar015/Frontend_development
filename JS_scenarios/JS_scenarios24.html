@@ -45,8 +45,7 @@
             })
             console.log(proname)
             if(proname){
-                delete proname.product
-                delete proname.quantity
+                cart.pop(proname)
                 console.log(cart)
             }
         }
