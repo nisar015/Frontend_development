@@ -25,6 +25,7 @@
             })
             if (checkitem) {
                 checkitem.quantity += quan;
+                // console.log(checkitem.quantity)
                 
             }
             else{
@@ -33,6 +34,7 @@
                     quantity: quan
                 })
             }
+            return checkitem.quantity
             console.log("product aded successfully")
         }
         var cart = [
