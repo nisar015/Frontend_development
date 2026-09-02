@@ -19,6 +19,7 @@
             var emp_name= Employee.find(function(val){
                 return val.name===emp
             })
+            console.log(emp_name.name)
             if(emp_name){
                 if(emp_name.performance.rating === 5){
                     bon = emp_name.salary * 0.2
@@ -28,7 +29,7 @@
                 }
                 else if(emp_name.performance.rating === 4){
                     bon = emp_name.salary * 0.15
-                    High_bonus.push({bon})
+                    High_bonus[emp_name.name]=bon
                     console.log((calculateFinalSalary(emp_name.salary,bon)))
                     
                     return "bonus of " + emp_name.name + " " + bon
@@ -36,10 +37,8 @@
                 }
                 else if(emp_name.performance.rating === 3){
                     bon = emp_name.salary * 0.1
-                    var name=emp_name.name
-                    console.log(name)
                     // how push bon along with employee name
-                    High_bonus.name=bon
+                    High_bonus[emp_name.name]=bon
                     // bon += emp_name.salary
                     // return bon
                     console.log((calculateFinalSalary(emp_name.name,emp_name.salary,bon)))
