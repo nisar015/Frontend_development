@@ -38,14 +38,14 @@
             console.log(`${product} aded successfully`)
             // return checkitem
         }
-        function removeProduct(Id){
-            var proid=cart.find(function(val,i){
+        function removeProduct(pro){
+            var proname=cart.find(function(val){
                 // console.log(val.product.id)
-                return val.product.id === Id
+                return val.product.name === pro
             })
-            // console.log(proid===undefined)
-            if(proid===undefined){
-                cart.splice(proid,1)
+            console.log(proname)
+            if(proname){
+                cart.pop(proname)
                 console.log(cart)
             }
         }
@@ -68,7 +68,7 @@
             }
         ];
         addProduct("keyboard", 1)
-        removeProduct(3);
+        removeProduct('Mouse');
         // console.log(minicart)
     </script>
 </body>
