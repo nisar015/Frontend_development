@@ -10,7 +10,7 @@
 <body>
 
     <script>
-        function addProduct(pro_name, quan) {
+        function addProduct(pro_id, quan) {
             // cart.forEach(function (val) {
             //     // console.log(val.quantity)
 
@@ -20,7 +20,7 @@
                 return
             }
             var checkitem = cart.find(function (val) {
-                return val.product.name === pro_name
+                return val.product.name === pro_id
 
             })
             if (check) {
