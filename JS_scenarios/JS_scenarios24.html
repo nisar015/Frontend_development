@@ -16,8 +16,7 @@
 
             })
             if(check){
-                minicart.push(check.product.name)
-                // return minicart
+                minicart.product=check.product.name
             }
             return minicart
         }
@@ -40,6 +39,7 @@
             }
         ];
         var minicart=[]
+        console.log(minicart)
         console.log(addProduct('Laptop'))
         console.log(addProduct('Mouse'))
     </script>
