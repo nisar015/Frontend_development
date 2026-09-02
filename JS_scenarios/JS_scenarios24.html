@@ -40,8 +40,8 @@
         }
         function removeProduct(Id){
             var proid=cart.find(function(val,i){
-                // console.log(i===Id)
-                return i===Id
+                // console.log(val)
+                return val.product.id==Id
             })
             console.log(proid)
             if(!proid){
