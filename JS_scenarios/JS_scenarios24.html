@@ -10,15 +10,18 @@
 <body>
     
     <script>
-        function addProduct(pro_name){
+        function addProduct(pro_name,quan){
             var check= cart.find(function(val){
                 return val.product.name===pro_name
 
             })
             if(check){
-                minicart["pro"]=check.product.name
+                minicart.push({
+                    product:pro_name,
+                    quantity:quan
+                })
             }
-            return minicart
+            console.log("product aded successfully")
         }
         var cart = [
             {
@@ -39,8 +42,8 @@
             }
         ];
         var minicart=[]
-        console.log(addProduct('Laptop'))
-        console.log(addProduct('Mouse'))
+        console.log(addProduct('Laptop',1))
+        console.log(addProduct('Mouse',2))
         console.log(minicart)
     </script>
 </body>
