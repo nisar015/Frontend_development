@@ -156,10 +156,10 @@ a=a-b
 # print(type(x))
 # y=int(input("enter y val:"))
 # print(x+y)
-ch=input('enter:')[1]
-print(ch)
-# res=eval(input('enter'))
-# print(res)
+# ch=input('enter:')[1]
+# print(ch)
+res=eval(input('enter'))
+print(res)
 
 # the below code works in cmd
 # import sys

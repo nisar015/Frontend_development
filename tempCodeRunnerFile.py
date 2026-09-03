@@ -1,2 +1,2 @@
-ch=input('enter:')[0]
-print(ch)
+ut('enter:')[1]
+# print(ch)
