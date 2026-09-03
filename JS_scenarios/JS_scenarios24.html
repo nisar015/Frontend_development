@@ -55,6 +55,9 @@
             var check=cart.find(function(val){
                 return val.product.id==Id
             })
+            if(check){
+                check.quantity += quan
+            }
         }
         var cart = [
             {
