@@ -51,7 +51,11 @@
                 console.log("Product removed successfully")
             }
         }
-        function
+        function updateQuantity(Id,quan){
+            var check=cart.find(function(val){
+                return val.product.id==Id
+            })
+        }
         var cart = [
             {
                 product: {
