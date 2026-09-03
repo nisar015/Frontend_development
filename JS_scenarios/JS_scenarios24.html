@@ -60,7 +60,7 @@
                 check.quantity += quan
                 console.log("quantity updated successfully")
             }
-            if(check!==Id){
+            if(!check){
                 console.log("Product not found")
             }
         }
@@ -84,7 +84,7 @@
         ];
         addProduct("keyboard", 1)
         removeProduct('keyboard');
-        updateQuantity(4,3)
+        updateQuantity(2,3)
         // console.log(minicart)
     </script>
 </body>
