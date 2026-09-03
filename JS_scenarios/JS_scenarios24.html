@@ -65,8 +65,12 @@
                 console.log("Product not found")
             }
         }
+        var subtot
         function calculateSubtotal(){
-
+            cart.forEach(function(val){
+                subtot = val.product.price * val.quantity
+            })
+            console.log(subtot)
         }
         var cart = [
             {
