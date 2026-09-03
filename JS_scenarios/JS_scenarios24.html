@@ -72,9 +72,11 @@
             })
             if(check){
                 subtot += check.product.price * check.quantity
-                console.log(subtot)
+                // console.log(subtot)
+
 
             }
+            return subtot
             // cart.forEach(function(val){
             //     console.log(val.product.price)
             // })
@@ -101,7 +103,7 @@
         removeProduct('keyboard');
         updateQuantity(2,3)
         calculateSubtotal('Laptop')
-        calculateSubtotal('Mouse')
+        console.log(calculateSubtotal('Mouse'))
 
     </script>
 </body>
