@@ -10,8 +10,9 @@
 <body>
     <script>
         function generateReorderList(proname,proquantity){
-            Neworderlst.push({name:proname})
-            Neworderlst.push({orderQuantity:proquantity})
+
+            Neworderlst["name"]=proname,
+            Neworderlst["orderQuantity"]=proquantity
             return Neworderlst
         }
        

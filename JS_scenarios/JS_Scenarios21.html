@@ -10,18 +10,23 @@
 <body>
     <script>
         // how to find duplicate vals
-        function findDuplicateEmails(data){
+        st=new Set()
+        function findDuplicateEmails(){
             data.forEach(function(val){
-                if(val.email){}
+                console.log(val.email)
+                if(val.email !== st){
+                    st["email"]=val.email
+                }
                 
             });
+            console.log(st)
         }
         var data = [
             { id: 101, email: "a@test.com" },
             { id: 102, email: "b@test.com" },
             { id: 103, email: "a@test.com" }
         ]
-        console.log(findDuplicateEmails(data))
+        findDuplicateEmails()
     </script>
 </body>
 
