@@ -56,11 +56,12 @@
                 return val.product.id===Id
             })
             // console.log(check)
-            if(check != Id){
+            if(check){
                 check.quantity += quan
                 console.log("quantity updated successfully")
             }
-            else if(!check){
+
+            else{
                 console.log("Product not found")
             }
         }
