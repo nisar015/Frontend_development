@@ -65,19 +65,19 @@
                 console.log("Product not found")
             }
         }
-        var subtot
+        var subtot=0
         function calculateSubtotal(name){
             var check=cart.find(function(val){
                 return val.product.name===name
             })
             if(check){
-                subtot = check.product.price * check.quantity
+                subtot += check.product.price * check.quantity
+                console.log(subtot)
 
             }
-            cart.forEach(function(val){
-                // console.log(val.product.price)
-            })
-            console.log(subtot)
+            // cart.forEach(function(val){
+            //     // console.log(val.product.price)
+            // })
         }
         var cart = [
             {
