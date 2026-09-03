@@ -66,10 +66,16 @@
             }
         }
         var subtot
-        function calculateSubtotal(){
+        function calculateSubtotal(name){
+            var check=cart.find(function(val){
+                return val.product.name===name
+            })
+            if(check){
+                subtot = check.product.price * check.quantity
+
+            }
             cart.forEach(function(val){
                 // console.log(val.product.price)
-                return val.product.price * val.quantity
             })
             console.log(subtot)
         }
