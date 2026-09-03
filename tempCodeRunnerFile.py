@@ -1,2 +1,2 @@
-print(a)
-print(b)
+ch=input('enter:')[0]
+print(ch)
