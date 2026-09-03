@@ -158,8 +158,8 @@ a=a-b
 # print(x+y)
 # ch=input('enter:')[1]
 # print(ch)
-res=eval(input('enter'))
-print(res)
+# res=eval(input('enter'))
+# print(res)
 
 # the below code works in cmd
 # import sys
@@ -169,3 +169,13 @@ print(res)
 # print(z)
 
 
+# loops
+i=j=1
+while i<=5:
+    print("print",end=" ")
+    j=1
+    while j<=4:
+        print("paf",end=" ")
+        j += 1
+    i += 1
+    print()
