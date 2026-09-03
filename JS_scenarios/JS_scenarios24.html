@@ -69,7 +69,7 @@
         function calculateSubtotal(){
             cart.forEach(function(val){
                 // console.log(val.product.price)
-                subtot = val.product.price * val.quantity
+                return val.product.price * val.quantity
             })
             console.log(subtot)
         }
