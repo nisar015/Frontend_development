@@ -14,10 +14,10 @@
         function findDuplicateEmails(){
             data.forEach(function(val){
                 console.log(val.email)
+                // how to check if val.email is present in st
                 if(val.email !== st){
                     st["email"]=val.email
                 }
-                
             });
             console.log(st)
         }
