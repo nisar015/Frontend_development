@@ -55,12 +55,12 @@
             var check=cart.find(function(val){
                 return val.product.id===Id
             })
-            console.log(check)
-            if(check){
+            console.log(!check)
+            if(check != Id){
                 check.quantity += quan
                 console.log("quantity updated successfully")
             }
-            if(!check){
+            else if(!check){
                 console.log("Product not found")
             }
         }
@@ -84,7 +84,7 @@
         ];
         addProduct("keyboard", 1)
         removeProduct('keyboard');
-        updateQuantity(2,3)
+        updateQuantity(6,3)
         // console.log(minicart)
     </script>
 </body>
