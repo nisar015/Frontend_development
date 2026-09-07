@@ -10,14 +10,19 @@
 <body>
     <script>
         // how to find duplicate vals
-        st=new Set()
+        // st=new Set()
+        var count=0
         function findDuplicateEmails(){
             data.forEach(function(val){
-                console.log(val.email)
+                // console.log(val.email)
                 // how to check if val.email is present in st
                 if(val.hasOwnProperty("email")){
-                    st["email"]=val.email
+                    count += 1
+                    if(cout>1){
+                        console.log(val.email)
+                    }
                 }
+                
             });
             console.log(st)
         }
