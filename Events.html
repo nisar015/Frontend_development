@@ -7,11 +7,11 @@
 </head>
 <body>
     <button onclick="buttonclick()">click</button>
-    <button dbclick="buttondbclick()">dbclick</button>
+    <button id="db" dbclick="buttondbclick()">dbclick</button>
     <h1>this is a heading tag</h1>
     <script>
         function buttondbclick(){
-            document.querySelector("button").style.background="green"
+            document.getElementById("button").style.background="green"
             document.querySelector("button").style.color="white"
         }
     </script>
