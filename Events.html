@@ -7,7 +7,7 @@
 </head>
 <body>
     <button onclick=buttonclick()>click</button>
-    <button id="db" ondblclick=doubleclick() mouseover=mouse_over()>dbclick</button>
+    <button id="db" ondblclick=doubleclick() mouseover=mouseor()>dbclick</button>
     <h1>this is a heading tag</h1>
     <script>
         function buttonclick(){
@@ -19,7 +19,7 @@
             document.getElementById("db").style.color="white"
             document.querySelector("h1").style.color="red"
         }
-        function mouse_over(){
+        function mouseor(){
             document.getElementById("db").style.background="lightgreen"
         }
     </script>
