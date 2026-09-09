@@ -11,6 +11,9 @@
     <input type="text" id="inp" onmousedown=mousedown() onmouseup=mouseup()>
     <h1>this is a heading tag</h1>
     <script>
+        function mouseup(){
+            document.querySelector("input").style.color=""
+        }
         function mousedown(){
             document.querySelector("input").style.color="red"
         }
