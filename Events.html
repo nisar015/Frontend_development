@@ -11,7 +11,8 @@
     <input type="text" id="inp"
     onmousedown=mousedown() 
     onmouseup=mouseup()
-    onmouseenter=mousenter()>
+    onmouseenter=mousenter()
+    onmouseleave="mouseleave()">
     <h1>this is a heading tag</h1>
     <script>
         function mousenter(){
@@ -39,7 +40,7 @@
             document.getElementById("db").style.background="lightgreen"
         }
         function mouseleave(){
-            document.getElementById("db").style.background=""
+            document.getElementById("inp").style.background=""
         }
     </script>
 </body>
