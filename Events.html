@@ -7,14 +7,14 @@
 </head>
 <body>
     <button onclick=buttonclick()>click</button>
-    <button id="db" dblclick=buttondbclick()>dbclick</button>
+    <button id="db" ondblclick=doubleclick()>dbclick</button>
     <h1>this is a heading tag</h1>
     <script>
         function buttonclick(){
             document.querySelector("button").style.background="purple"
             document.querySelector("button").style.color="white"
         }
-        function buttondbclick(){
+        function doubleclick(){
             document.getElementById("db").style.background="green"
             // document.getElementById("db").style.color="white"
         }
