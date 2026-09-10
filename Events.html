@@ -34,7 +34,10 @@
     <script>
         // diff between onmouseout & onmouseleave
         function submit(){
-            document.querySelector("form").submit="submitted"
+            form.addEventListener("submit",function(ev){
+                ev.preventDefault();
+                console.log("first")
+            })
         }
         function keydon(){
             document.querySelector("input").style.color="blue"
