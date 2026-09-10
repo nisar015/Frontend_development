@@ -20,8 +20,15 @@
     onmousedown=mousedown()
     onmouseout="mouseout()">dbclick</button> -->
 
-    <input type="text" id="inp" onmousedown=mousedown() onmouseup=mouseup() onmouseenter=mousenter() onblur="mouseout()"
-        onmouseover="mouseor()" onkeydown="keydon()" onkeyup="keyrel()" onsubmit="submit()">
+    <input type="text" id="inp" 
+    onmousedown=mousedown() 
+    onmouseup=mouseup() 
+    onmouseenter=mousenter() 
+    onblur="mouseout()"
+    onmouseover="mouseor()" 
+    onkeydown="keydon()" 
+    onkeyup="keyrel()" 
+    onsubmit="submit()">
     <h1>this is a heading tag</h1>
     <script>
         // diff between onmouseout & onmouseleave
@@ -64,7 +71,7 @@
         }
         function mouseout() {
             // document.getElementById("inp").style.background="white"
-            document.getElementById("inp").style.color = ""
+            document.getElementById("inp").style.background = "yellow"
         }
     </script>
 </body>
