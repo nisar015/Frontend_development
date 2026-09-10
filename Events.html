@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- <button id="button"
     onclick=buttonclick() 
@@ -17,63 +19,54 @@
     
     onmousedown=mousedown()
     onmouseout="mouseout()">dbclick</button> -->
-    <form action="">
 
-        <input type="text" id="inp"
-        onmousedown=mousedown() 
-        onmouseup=mouseup()
-        onmouseenter=mousenter()
-        onblur="mouseout()"
-        onmouseover="mouseor()"
-        onkeydown="keydon()"
-        onkeyup="keyrel()"
-        onsubmit="submit()"
-        >
-    </form>
+    <input type="text" id="inp" onmousedown=mousedown() onmouseup=mouseup() onmouseenter=mousenter() onblur="mouseout()"
+        onmouseover="mouseor()" onkeydown="keydon()" onkeyup="keyrel()" onsubmit="submit()">
     <h1>this is a heading tag</h1>
     <script>
         // diff between onmouseout & onmouseleave
-        function submit(){
-            form.addEventListener("submit",function(ev){
+        function submit() {
+            form.addEventListener("submit", function (ev) {
                 ev.preventDefault();
                 console.log("first")
             })
         }
-        function keydon(){
-            document.querySelector("input").style.color="blue"
+        function keydon() {
+            document.querySelector("input").style.color = "blue"
         }
-        function keyrel(){
-            document.querySelector("input").style.color="orange"
+        function keyrel() {
+            document.querySelector("input").style.color = "orange"
         }
-        function mousenter(){
-            document.getElementById("inp").style.color="white"
+        function mousenter() {
+            document.getElementById("inp").style.color = "white"
         }
-        function mouseup(){
-            document.querySelector("input").style.background="black"
+        function mouseup() {
+            document.querySelector("input").style.background = "black"
             // document.querySelector("input").style.color="red"
-            
+
 
         }
-        function mousedown(){
-            document.querySelector("input").style.background="red"
+        function mousedown() {
+            document.querySelector("input").style.background = "red"
         }
-        function buttonclick(){
-            document.querySelector("button").style.background="purple"
-            document.querySelector("button").style.color="white"
+        function buttonclick() {
+            document.querySelector("button").style.background = "purple"
+            document.querySelector("button").style.color = "white"
         }
-        function doubleclick(){
-            document.getElementById("db").style.background="green"
-            document.getElementById("db").style.color="white"
+        function doubleclick() {
+            document.getElementById("db").style.background = "green"
+            document.getElementById("db").style.color = "white"
             // document.querySelector("h1").style.color="red"
         }
-        function mouseor(){
-            document.getElementById("inp").style.background="lightgreen"
+        function mouseor() {
+            document.getElementById("inp").style.background = "lightgreen"
             // document.getElementById("button").style.background="lightgreen"
         }
-        function mouseout(){
+        function mouseout() {
             // document.getElementById("inp").style.background="white"
-            document.getElementById("inp").style.color=""
+            document.getElementById("inp").style.color = ""
         }
     </script>
 </body>
+
 </html>
