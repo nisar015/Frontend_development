@@ -20,7 +20,8 @@
     onmousedown=mousedown()
     onmouseout="mouseout()">dbclick</button> -->
 
-    <input type="text" id="inp"  
+    <input type="text" id="inp" 
+    onmousedown=mousedown() 
     onmouseup=mouseup() 
     onfocus="focus()"
     onmouseenter=mousenter() 
@@ -34,7 +35,7 @@
     <script>
         // diff between onmouseout & onmouseleave
         function focus(){
-            document.getElementById("inp").style.background="black"
+            document.getElementById("inp").style.background="violet"
         }
         function submit() {
             form.addEventListener("submit", function (ev) {
