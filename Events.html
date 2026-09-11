@@ -22,6 +22,7 @@
 
     <input type="text" id="inp" 
     onmouseup=mouseup() 
+    onfocus="focu()"
     onmouseenter=mousenter() 
     onmouseout="mouseout()"
     onblur="mouseblur()"
@@ -34,7 +35,7 @@
     <script>
         // diff between onmouseout & onmouseleave
         function focu(){
-            document.getElementById("inp2").style.background="orange"
+            document.getElementById("inp").style.background="orange"
         }
         function submit() {
             form.addEventListener("submit", function (ev) {
