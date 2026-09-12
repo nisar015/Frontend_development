@@ -36,7 +36,7 @@
     onkeydown="keydon()" 
     onkeyup="keyrel()" 
     onsubmit="submit()">
-    <input type="text" name="" id="inp2" onfocus="focu()" onkeyup="keyrel()"
+    <input type="text" name="inpname" id="inp2" onfocus="focu()" onkeyup="keyrel()"
     onchange="handlechange()" >
     <button onclick="buttonclick()" ondblclick="doubleclick()" id="butt">click</button>
     <h1 id="head">enter min 5 chars</h1>
@@ -114,6 +114,7 @@
         }
         // document.querySelectorAll("p")[0].style.color="purple"
         document.getElementsByClassName("para")[0].style.color="purple"
+        document.getElementsByName("inpname").style.background="purple"
 
     </script>
 </body>
