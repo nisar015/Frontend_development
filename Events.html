@@ -26,6 +26,7 @@
     onmouseout="mouseout()">dbclick</button> -->
 
     <input type="text" id="inp" 
+    onchange="handlechange()"
     onmouseup=mouseup() 
     onfocus="focu()"
     onmousedown="mousedown()"
@@ -40,6 +41,9 @@
     <h1 id="head">this is a heading tag</h1>
     <script>
         // diff between onmouseout & onmouseleave
+        function handlechange(){
+
+        }
         function focu(){
             document.getElementById("inp2").style.background="orange"
             document.getElementById("head").style.display="block";
@@ -54,6 +58,7 @@
             document.querySelector("input").style.color = "blue"
         }
         function keyrel() {
+            var enteredval=document.getElementById()
             document.querySelector("input").style.color = "orange"
         }
         function mousenter() {
