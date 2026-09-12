@@ -58,8 +58,9 @@
             document.querySelector("input").style.color = "blue"
         }
         function keyrel() {
-            var enteredval=document.getElementById("inp2")
             document.querySelector("input").style.color = "orange"
+            var enteredval=document.getElementById("inp2").value
+            console.log(enteredval)
         }
         function mousenter() {
             document.getElementById("inp").style.color = "white"
