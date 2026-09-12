@@ -26,7 +26,6 @@
     onmouseout="mouseout()">dbclick</button> -->
 
     <input type="text" id="inp" 
-    onchange="handlechange()"
     onmouseup=mouseup() 
     onfocus="focu()"
     onmousedown="mousedown()"
@@ -37,7 +36,8 @@
     onkeydown="keydon()" 
     onkeyup="keyrel()" 
     onsubmit="submit()">
-    <input type="text" name="" id="inp2" onfocus="focu()" onkeyup="keyrel()">
+    <input type="text" name="" id="inp2" onfocus="focu()" onkeyup="keyrel()"
+    onchange="handlechange()" >
     <h1 id="head">this is a heading tag</h1>
     <script>
         // diff between onmouseout & onmouseleave
@@ -58,7 +58,7 @@
             document.querySelector("input").style.color = "blue"
         }
         function keyrel() {
-            var enteredval=document.getElementById()
+            // var enteredval=document.getElementById()
             document.querySelector("input").style.color = "orange"
         }
         function mousenter() {
