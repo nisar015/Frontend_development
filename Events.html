@@ -36,11 +36,17 @@
     onkeydown="keydon()" 
     onkeyup="keyrel()" 
     onsubmit="submit()">
+
     <input type="text" name="inpname" id="inp2" onfocus="focu()" onkeyup="keyrel()"
     onchange="handlechange()" >
+
     <button onclick="buttonclick()" ondblclick="doubleclick()" id="butt">click</button>
+
     <h1 id="head">enter min 5 chars</h1>
+
     <p class="para">this is a para</p>
+
+
     <script>
         // diff between onmouseout & onmouseleave
         function handlechange(){
@@ -118,6 +124,10 @@
         // document.getElementsByClassName("para")[0].style.color="purple"
         document.getElementsByName("inpname")[0].style.background="purple"
         document.getElementsByTagName("p")[0].style.color="orange"
+        function changedinnerhtml(){
+            document.getElementsByClassName("para").innerHTML="Hey i am changed billa.."
+        }
+
         
 
     </script>
