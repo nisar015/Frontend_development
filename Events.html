@@ -53,7 +53,7 @@
 
     <h1 id="head">enter min 5 chars</h1>
 
-    <p class="para">this is a para</p>
+    <p id="para">this is a para</p>
 
     <input type="text" id="innerin">
     <button onclick="setcolor()">button1</button>
@@ -161,7 +161,8 @@
         }
 
         function setcolor(){
-            var att=document.querySelector("p").getAttribute("class");
+            var att=document.querySelector("p").getAttribute("id");
+            console.log(att)
             if(att=="green"){
                 document.querySelector("p").setAttribute("id","yellow");
             }   
