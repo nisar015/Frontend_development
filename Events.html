@@ -217,15 +217,17 @@
 
         // wt is eventhandler and eventlistener here
         var ulele=document.querySelector("ul")
-        ulele.onclick=function(event){
-            console.log("first",event)
-            var clickedele=event.target
-            // console.log(clickedele)
-            // ulele.removeChild(clickedele)
-            clickedele.innerHTML="u changed me"
-        }
+        // ulele.onclick=function(event){
+        //     console.log("first",event)
+        //     var clickedele=event.target
+        //     // console.log(clickedele)
+        //     // ulele.removeChild(clickedele)
+        //     clickedele.innerHTML="u changed me"
+        // }
         // console.log(ulele)
 
+        console.log(ulele.children)
+        console.log(ulele.childNodes)
     </script>
 </body>
 
