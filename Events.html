@@ -39,6 +39,7 @@
     
     onmousedown=mousedown()
     onmouseout="mouseout()">dbclick</button> -->
+
     <ul id="ulid"></ul>
     <input type="text" id="inp" 
     onmouseup=mouseup() 
@@ -199,7 +200,16 @@
             document.querySelector("h2").classList.toggle("red")
         }
 
-
+        var students=[
+            "student1",
+            "student1",
+            "student1",
+            "student1",
+            "student1",
+        ]
+        students.forEach(function(student){
+            console.log(student)
+        })
 
         
 
