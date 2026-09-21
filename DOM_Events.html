@@ -226,7 +226,7 @@
         })
 
         // wt is eventhandler and eventlistener here
-        var ulele = document.getElementById("ulid")
+        var ulelement = document.getElementById("ulid")
         // ulele.onclick=function(event){
         //     console.log("first",event)
         //     var clickedele=event.target
@@ -237,7 +237,7 @@
         // console.log(ulele)
 
         // DOM Traversal
-        console.log(ulele.children)
+        console.log(ulelement.children)
         console.log(document.getElementById("predefined").childNodes)
         console.log(document.getElementById("predefined").parentElement)
         console.log(document.getElementById("predefined").firstElementChild)
@@ -250,9 +250,9 @@
         // console.log(ulele.children.length)
         function handleclick(event) {
             var clickedelement = event.target;
-            console.log(ulele.children.length)
-            if (ulele.children.length <= 3) {
-                ulele.removeEventListener('click', handleclick)
+            console.log(ulelement.children.length)
+            if (ulelement.children.length <= 3) {
+                ulelement.removeEventListener('click', handleclick)
                 console.log("cant remove if element length is 3")
 
             }
@@ -274,11 +274,12 @@
             console.log("page is scrolled")
         })
 
-        // event objs
+        // event obj
         document.querySelector("form").addEventListener("click",function(event){
             event.preventDefault();
             console.log("triggered prevent default")
         })
+        
 
     </script>
 </body>
