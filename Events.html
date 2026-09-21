@@ -248,11 +248,12 @@
         function handleclick(event) {
             var clickedelement = event.target;
             console.log(ulele.children.length)
+            ulele.removeChild(clickedelement)
             if (ulele.children.length <= 3) {
                 ulele.removeEventListener('click', handleclick)
                 console.log("cant remove if element length is 3")
+               
             }
-            ulele.removeChild(clickedelement)
 
         }
         ulele.addEventListener('click', handleclick)
