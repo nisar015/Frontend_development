@@ -6,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1{
+        h1 {
             display: none;
         }
-        #green{
+
+        #green {
             color: green;
         }
-        #yellow{
+
+        #yellow {
             color: yellow;
         }
-        #red{
+
+        #red {
             color: red;
         }
-        .cl{
+
+        .cl {
             color: blue;
         }
-        .red{
+
+        .red {
             background: red;
         }
     </style>
@@ -50,22 +55,13 @@
         </ul>
     </div>
     <ul id="ulid"></ul>
-    <input type="text" id="inp" 
-    onmouseup=mouseup() 
-    onfocus="focu()"
-    onmousedown="mousedown()"
-    onmouseenter=mousenter() 
-    onmouseout="mouseout()"
-    onblur="mouseblur()"
-    onmouseover="mouseor()" 
-    onkeydown="keydon()" 
-    onkeyup="keyrel()" 
-    onsubmit="submit()">
+    <input type="text" id="inp" onmouseup=mouseup() onfocus="focu()" onmousedown="mousedown()" onmouseenter=mousenter()
+        onmouseout="mouseout()" onblur="mouseblur()" onmouseover="mouseor()" onkeydown="keydon()" onkeyup="keyrel()"
+        onsubmit="submit()">
 
-    <input type="text" name="inpname" id="inp2" onfocus="focu()" onkeyup="keyrel()"
-    onchange="handlechange()" >
+    <input type="text" name="inpname" id="inp2" onfocus="focu()" onkeyup="keyrel()" onchange="handlechange()">
 
-    <button  onclick="changedinnerhtml()" ondblclick="doubleclick()" id="butt">click</button>
+    <button onclick="changedinnerhtml()" ondblclick="doubleclick()" id="butt">click</button>
 
     <h1 id="head">enter min 5 chars</h1>
 
@@ -82,11 +78,11 @@
     <button onclick="toggel()">toggle butt</button>
     <script>
         // diff between onmouseout & onmouseleave
-        function handlechange(){
+        function handlechange() {
             console.log("this is a onchange eventhandler")
         }
-        function focu(){
-            document.getElementById("inp2").style.background="orange"
+        function focu() {
+            document.getElementById("inp2").style.background = "orange"
         }
         function submit() {
             form.addEventListener("submit", function (ev) {
@@ -99,17 +95,17 @@
         }
         function keyrel() {
             // document.querySelector("input").style.color = "orange"
-            var enteredval=document.getElementById("inp2").value
-            if(enteredval.length>=5){
-                document.getElementById("head").style.display="none";
-                document.body.style.background="green";
-                
-                
+            var enteredval = document.getElementById("inp2").value
+            if (enteredval.length >= 5) {
+                document.getElementById("head").style.display = "none";
+                document.body.style.background = "green";
+
+
             }
-            else{
-                document.getElementById("head").style.display="block";
-                document.getElementById("head").style.color="black";
-                document.body.style.background="red";
+            else {
+                document.getElementById("head").style.display = "block";
+                document.getElementById("head").style.color = "black";
+                document.body.style.background = "red";
 
 
 
@@ -136,7 +132,7 @@
         function doubleclick() {
             // document.getElementById("db").style.background = "green"
             // document.getElementById("db").style.color = "white"
-            document.body.style.background=""
+            document.body.style.background = ""
         }
         function mouseor() {
             document.getElementById("inp").style.background = "lightgreen"
@@ -147,7 +143,7 @@
             document.getElementById("inp").style.background = "yellow"
         }
         function mouseblur() {
-            document.getElementById("inp").style.color="black"
+            document.getElementById("inp").style.color = "black"
 
             document.getElementById("inp").style.background = "white"
         }
@@ -155,78 +151,78 @@
         // document.querySelector("p").style.color="purple"
         // document.querySelectorAll("p")[0].style.color="purple"
         // document.getElementsByClassName("para")[0].style.color="purple"
-        document.getElementsByName("inpname")[0].style.background="purple"
+        document.getElementsByName("inpname")[0].style.background = "purple"
         // document.getElementsByTagName("p")[0].style.color="orange"
 
         // changing content inside an element
         // innerHTML,textContent,innerText all are same but when we span in textContent and innerText it prints as a text on interface.
         // we use .value to make any changes in input
-        function changedinnerhtml(){
-            document.getElementsByClassName("para")[0].innerHTML="<span>Hey i am changed billa..<span>";
+        function changedinnerhtml() {
+            document.getElementsByClassName("para")[0].innerHTML = "<span>Hey i am changed billa..<span>";
             // document.getElementsByClassName("para")[0].innerText="<span>Hey i am changed billa..<span>";
             // document.getElementsByClassName("para")[0].innerText="Hey i am changed billa..";
-            document.querySelector("p").style.color="white"
-            document.getElementById("innerin").value="this is also changed"
-            document.body.style.background="purple";
+            document.querySelector("p").style.color = "white"
+            document.getElementById("innerin").value = "this is also changed"
+            document.body.style.background = "purple";
         }
 
-        function changegreen(){
-            document.querySelector("p").setAttribute("id","green");
+        function changegreen() {
+            document.querySelector("p").setAttribute("id", "green");
         }
-        function changeyellow(){
-            document.querySelector("p").setAttribute("id","yellow");
+        function changeyellow() {
+            document.querySelector("p").setAttribute("id", "yellow");
         }
-        function changegred(){
-            document.querySelector("p").setAttribute("id","red");
+        function changegred() {
+            document.querySelector("p").setAttribute("id", "red");
         }
 
         // wt happens when i call class in place of id at line 174
-        function setcolor(){
-            var att=document.querySelector("p").getAttribute("id");
+        function setcolor() {
+            var att = document.querySelector("p").getAttribute("id");
             console.log(att)
-            if(att=="green"){
-                document.querySelector("p").setAttribute("id","yellow");
+            if (att == "green") {
+                document.querySelector("p").setAttribute("id", "yellow");
             }
-            else{
-                document.querySelector("p").setAttribute("id","green");
+            else {
+                document.querySelector("p").setAttribute("id", "green");
             }
         }
-        function removeall(){
+        function removeall() {
             document.querySelector("p").removeAttribute("id")
         }
 
         // can we on add class in the classlist ?
-        function classlist(){
+        function classlist() {
             document.querySelector("h2").classList.add("cl")
             document.querySelector("h2").classList.add("red")
             // removelist()
-            
+
         }
-        function removelist(){
+        function removelist() {
             document.querySelector("h2").classList.remove("red")
         }
-        function toggel(){
+        function toggel() {
             document.querySelector("h2").classList.toggle("red")
         }
 
         // Event Deligation
-        var students=[
+        var students = [
             "student1",
             "student2",
             "student3",
             "student4",
             "student5",
         ]
-        students.forEach(function(student){
+        students.forEach(function (student) {
             console.log(student)
-            var stuli=document.createElement("li")
-            stuli.innerHTML=student
+            var stuli = document.createElement("li")
+            stuli.innerHTML = student
             document.getElementById("ulid").appendChild(stuli)
             // document.getElementById("ulid").prepend(stuli)
         })
 
         // wt is eventhandler and eventlistener here
-        var ulele=document.getElementById("ulid")
+        var ulele = document.getElementById("ulid")
         // ulele.onclick=function(event){
         //     console.log("first",event)
         //     var clickedele=event.target
@@ -247,21 +243,22 @@
         console.log(document.getElementById("predefined").matches("#predefined"))
 
         // Add Event Listener
-        function handleclick(event){
+        function console() {
+            console.log("you cant remove if element is 3")
+
+        }
+        function handleclick(event) {
             // console.log(event)
-            var clickedelement=event.target;
+            var clickedelement = event.target;
             ulele.removeChild(clickedelement)
             console.log(ulele.children.length)
-            if(ulele.children.length<=3){
-                ulele.removeEventListener('click',handleclick)
+            if (ulele.children.length <= 3) {
+                ulele.removeEventListener('click', handleclick)
                 console();
             }
-            else if(ulele.children.length==2){
 
-                console.log("you cant remove if element is 3")
-            }
         }
-        ulele.addEventListener('click',handleclick)
+        ulele.addEventListener('click', handleclick)
     </script>
 </body>
 
