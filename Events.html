@@ -275,7 +275,10 @@
             console.log("page is scrolled")
         })
 
-
+        // event objs
+        document.querySelector("form").addEventListener("click",function(event){
+            event.defaultPrevented();
+        })
 
     </script>
 </body>
