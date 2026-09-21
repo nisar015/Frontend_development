@@ -244,11 +244,11 @@
 
         // Add Event Listener
         
-        console.log(ulele.length)
+        console.log(ulele.children.length)
         function handleclick(event) {
             var clickedelement = event.target;
-            ulele.removeChild(clickedelement)
             console.log(ulele.children.length)
+            ulele.removeChild(clickedelement)
             if (ulele.children.length <= 3) {
                 ulele.removeEventListener('click', handleclick)
                
