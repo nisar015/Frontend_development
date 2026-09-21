@@ -247,6 +247,14 @@
         console.log(document.getElementById("predefined").matches("#predefined"))
 
         // Add Event Listener
+        function handleclick(event){
+            var clickedelement=event.target;
+            ulele.removeChild(clickedelement)
+            if(ulele.children.length<=3){
+                ulele.removeEventListener('click',handleclick)
+                console.log("you cant remove if element is 3")
+            }
+        }
         ulele.addEventListener('click',handleclick())
     </script>
 </body>
