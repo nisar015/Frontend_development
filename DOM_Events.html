@@ -259,9 +259,9 @@
             ulelement.removeChild(clickedelement)
 
         }
-        ulelement.onclick=function(event){
-            console.log(event.target)
-        }
+        // ulelement.onclick=function(event){
+        //     console.log(event.target)
+        // }  same as below addEventListener
         ulelement.addEventListener('click', handleclick)
 
         document.addEventListener("DOMContentLoaded", function () {
