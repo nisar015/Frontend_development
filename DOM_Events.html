@@ -251,12 +251,12 @@
         function handleclick(event) {
             var clickedelement = event.target;
             console.log(ulelement.children.length)
+            ulelement.removeChild(clickedelement)
             if (ulelement.children.length <= 3) {
                 ulelement.removeEventListener('click', handleclick)
                 console.log("cant remove if element length is 3")
 
             }
-            ulelement.removeChild(clickedelement)
 
         }
         // ulelement.onclick=function(event){
