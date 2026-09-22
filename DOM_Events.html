@@ -485,6 +485,10 @@
         grandchild.addEventListener("click",function(){
             console.log("grandchild is called...")
         },true)
+
+        window.document.addEventListener("scrollTo(x,y)",function(){
+            console.log("window is scrolling")
+        })
         
 
     </script>
