@@ -458,7 +458,19 @@
             console.log("grandchild is called..")
         }
         var parent=document.getElementById("parent")
+        var main=document.getElementById("main")
+        var child=document.getElementById("child")
+        var grandchild=document.getElementById("grandchild")
         parent.addEventListener("click",function(){
+            console.log("paent is called...")
+        })
+        main.addEventListener("click",function(){
+            console.log("paent is called...")
+        })
+        child.addEventListener("click",function(){
+            console.log("paent is called...")
+        })
+        grandchild.addEventListener("click",function(){
             console.log("paent is called...")
         })
         
