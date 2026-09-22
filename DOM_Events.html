@@ -454,22 +454,22 @@
         // event bubbling & capturing
         // how the event listner with true works in event capturing
 
+        // function parent(){
+        //     console.log("parent is called..")
+        // }
+        // function main(){
+        //     console.log("main is called..")
+        // }
+        // function child(){
+        //     console.log("child is called..")
+        // }
+        // function grandchild(){
+        //     console.log("grandchild is called..")
+        // }
         var parent=document.getElementById("parent")
         var main=document.getElementById("main")
         var child=document.getElementById("child")
         var grandchild=document.getElementById("grandchild")
-        function parent(){
-            console.log("parent is called..")
-        }
-        function main(){
-            console.log("main is called..")
-        }
-        function child(){
-            console.log("child is called..")
-        }
-        function grandchild(){
-            console.log("grandchild is called..")
-        }
         parent.addEventListener("click",function(){
             console.log("parent is called...")
         },true)
