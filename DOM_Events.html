@@ -446,7 +446,10 @@
         })
 
         // event obj
+        // event.currentTarget
+        // event.type
         document.querySelector("form").addEventListener("click", function (event) {
+            console.log(event.target)
             event.preventDefault();
             console.log("triggered prevent default")
         })
