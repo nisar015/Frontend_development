@@ -448,8 +448,8 @@
         // event obj
         // event.currentTarget
         // event.type
+        // console.log(event.target)
         document.querySelector("form").addEventListener("click", function (event) {
-            console.log(event.target)
             event.preventDefault();
             console.log("triggered prevent default")
         })
