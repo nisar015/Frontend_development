@@ -259,6 +259,9 @@
             ulelement.removeChild(clickedelement)
 
         }
+        ulelement.onclick=function(event){
+            console.log(event.target)
+        }
         ulelement.addEventListener('click', handleclick)
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -279,7 +282,6 @@
             event.preventDefault();
             console.log("triggered prevent default")
         })
-        
 
     </script>
 </body>
