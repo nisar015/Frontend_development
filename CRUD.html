@@ -111,6 +111,7 @@
                 <td>${student.course}</td>
                 <td>${student.marks}</td>
                 <td><button onclick=handledelete(${i},${student.id})>Delete User</button></td>
+                <td><button onclick=handledit(${i})>Edit User</button></td>
                     `
                 // why student.name is not able to acess here
                 document.querySelector("tbody").appendChild(mytr)
