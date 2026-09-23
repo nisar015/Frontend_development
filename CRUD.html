@@ -124,7 +124,7 @@
                 console.log(`deleted : ${stu}`)
                 displaystudents()
             }
-            function readinputsfields(){
+            function submitformfields(){
                 var student={
                     id:document.getElementById("id").value,
                     name:document.getElementById("name").value,
@@ -132,8 +132,10 @@
                     course:document.getElementById("course").value,
                     marks:document.getElementById("marks").value
                 }
+                students.push(student)
 
             }
+            
         </script>
 </body>
 
