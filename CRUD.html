@@ -62,49 +62,49 @@
 
         <button type="button" onclick="submitformfields()">submit</button>
     </form>
-        <script>
-            var students = [
-                {
-                    id: 101,
-                    name: "Rahul",
-                    age: 20,
-                    course: "JavaScript",
-                    marks: 85
-                },
-                {
-                    id: 102,
-                    name: "Priya",
-                    age: 21,
-                    course: "Python",
-                    marks: 92
-                },
-                {
-                    id: 103,
-                    name: "Arjun",
-                    age: 19,
-                    course: "Java",
-                    marks: 78
-                },
-                {
-                    id: 104,
-                    name: "Sneha",
-                    age: 20,
-                    course: "React",
-                    marks: 88
-                },
-                {
-                    id: 105,
-                    name: "Kiran",
-                    age: 22,
-                    course: "SQL",
-                    marks: 75
-                }
-            ];
-            function displaystudents() {
-                document.querySelector("tbody").innerHTML = ""
-                students.forEach(function (student, i) {
-                    var mytr = document.createElement("tr")
-                    mytr.innerHTML = `
+    <script>
+        var students = [
+            {
+                id: 101,
+                name: "Rahul",
+                age: 20,
+                course: "JavaScript",
+                marks: 85
+            },
+            {
+                id: 102,
+                name: "Priya",
+                age: 21,
+                course: "Python",
+                marks: 92
+            },
+            {
+                id: 103,
+                name: "Arjun",
+                age: 19,
+                course: "Java",
+                marks: 78
+            },
+            {
+                id: 104,
+                name: "Sneha",
+                age: 20,
+                course: "React",
+                marks: 88
+            },
+            {
+                id: 105,
+                name: "Kiran",
+                age: 22,
+                course: "SQL",
+                marks: 75
+            }
+        ];
+        function displaystudents() {
+            document.querySelector("tbody").innerHTML = ""
+            students.forEach(function (student, i) {
+                var mytr = document.createElement("tr")
+                mytr.innerHTML = `
                 <td>${student.id}</td>
                 <td>${student.name}</td>
                 <td>${student.age}</td>
@@ -112,32 +112,39 @@
                 <td>${student.marks}</td>
                 <td><button onclick=handledelete(${i},${student.id})>Delete User</button></td>
                     `
-                    // why student.name is not able to acess here
-                    document.querySelector("tbody").appendChild(mytr)
-                    // console.log(i)
-                })
-            }
+                // why student.name is not able to acess here
+                document.querySelector("tbody").appendChild(mytr)
+                // console.log(i)
+            })
+        }
+        displaystudents()
+        function handledelete(i, stu) {
+            students.splice(i, 1)
+            // console.log(stu)
+            console.log(`deleted : ${stu}`)
             displaystudents()
-            function handledelete(i, stu) {
-                students.splice(i, 1)
-                // console.log(stu)
-                console.log(`deleted : ${stu}`)
-                displaystudents()
+        }
+        function clearformfields() {
+            document.getElementById("id").value='',
+            document.getElementById("name").value,
+            document.getElementById("age").value,
+            document.getElementById("course").value,
+            document.getElementById("marks").value
+        }
+        function submitformfields() {
+            var student = {
+                id: document.getElementById("id").value,
+                name: document.getElementById("name").value,
+                age: document.getElementById("age").value,
+                course: document.getElementById("course").value,
+                marks: document.getElementById("marks").value
             }
-            function submitformfields(){
-                var student={
-                    id:document.getElementById("id").value,
-                    name:document.getElementById("name").value,
-                    age:document.getElementById("age").value,
-                    course:document.getElementById("course").value,
-                    marks:document.getElementById("marks").value
-                }
-                students.push(student)
-                displaystudents()
+            students.push(student)
+            displaystudents()
 
-            }
-            
-        </script>
+        }
+
+    </script>
 </body>
 
 </html>
