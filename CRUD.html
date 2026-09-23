@@ -61,7 +61,7 @@
         <input type="marks" id="marks" name="marks" min="18" max="60">
         <br><br>
 
-        <button type="button" onclick="submitformfields()">submit</button>
+        <button type="button" onclick="addstudent()">submit</button>
         <button type="button" onclick="Editformfields()">Edit</button>
     </form>
     <script>
@@ -150,6 +150,8 @@
         var editindex=null
         function Editformfields(i){
             editindex=i
+            console.log(students[editindex])
+
         }
 
     </script>
