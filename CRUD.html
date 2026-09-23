@@ -7,12 +7,13 @@
     <title>Document</title>
 </head>
 <style>
-    table{
+    table {
         width: 600px;
         height: 600px;
         margin: auto;
     }
 </style>
+
 <body>
     <table border="1">
         <thead>
@@ -32,49 +33,77 @@
             </tr>
         </tbody> -->
     </table>
-    <script>
-        var students = [
-            {
-                id: 101,
-                name: "Rahul",
-                age: 20,
-                course: "JavaScript",
-                marks: 85
-            },
-            {
-                id: 102,
-                name: "Priya",
-                age: 21,
-                course: "Python",
-                marks: 92
-            },
-            {
-                id: 103,
-                name: "Arjun",
-                age: 19,
-                course: "Java",
-                marks: 78
-            },
-            {
-                id: 104,
-                name: "Sneha",
-                age: 20,
-                course: "React",
-                marks: 88
-            },
-            {
-                id: 105,
-                name: "Kiran",
-                age: 22,
-                course: "SQL",
-                marks: 75
-            }
-        ];
-        function displaystudents(){
-            document.querySelector("tbody").innerHTML=""
-            students.forEach(function(student,i){
-                var mytr=document.createElement("tr")
-                mytr.innerHTML=`
+    <form>
+
+        <!-- Text -->
+        <label for="ID">Id :</label>
+        <input type="id" id="id" name="id">
+        <br><br>
+
+        <!-- Email -->
+        <label for="name">name</label>
+        <input type="name" id="name" name="name" username="username" autocomplete="username">
+        <br><br>
+
+        <!-- Password -->
+        <label for="age">age</label>
+        <input type="age" id="age" name="age" autocomplete="current-password">
+        <br><br>
+
+        <!-- Telephone -->
+        <label for="course">course</label>
+        <input type="course" id="course" name="course">
+        <br><br>
+
+        <!-- Number -->
+        <label for="marks">marks</label>
+        <input type="marks" id="marks" name="marks" min="18" max="60">
+        <br><br>
+
+        <button type="button">submit</button>
+        <script>
+            var students = [
+                {
+                    id: 101,
+                    name: "Rahul",
+                    age: 20,
+                    course: "JavaScript",
+                    marks: 85
+                },
+                {
+                    id: 102,
+                    name: "Priya",
+                    age: 21,
+                    course: "Python",
+                    marks: 92
+                },
+                {
+                    id: 103,
+                    name: "Arjun",
+                    age: 19,
+                    course: "Java",
+                    marks: 78
+                },
+                {
+                    id: 104,
+                    name: "Sneha",
+                    age: 20,
+                    course: "React",
+                    marks: 88
+                },
+                {
+                    id: 105,
+                    name: "Kiran",
+                    age: 22,
+                    course: "SQL",
+                    marks: 75
+                }
+            ];
+            function displaystudents() {
+                document.querySelector("tbody").innerHTML = ""
+                students.forEach(function (student, i) {
+                    var mytr = document.createElement("tr")
+                    mytr.innerHTML = `
                 <td>${student.id}</td>
                 <td>${student.name}</td>
                 <td>${student.age}</td>
@@ -87,14 +116,14 @@
                     // console.log(i)
                 })
             }
-        displaystudents()
-        function handledelete(i,stu){
-            students.splice(i,1)
-            // console.log(stu)
-            console.log(`deleted : ${stu}`)
             displaystudents()
-        }
-    </script>
+            function handledelete(i, stu) {
+                students.splice(i, 1)
+                // console.log(stu)
+                console.log(`deleted : ${stu}`)
+                displaystudents()
+            }
+        </script>
 </body>
 
 </html>
