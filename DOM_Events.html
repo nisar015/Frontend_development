@@ -249,6 +249,8 @@
         </div>
     </div>
     <script>
+        
+        console.log(document.getElementById("green").value)
         // diff between onmouseout & onmouseleave
         function handlechange() {
             console.log("this is a onchange eventhandler")
@@ -418,6 +420,7 @@
         // console.log(ulele.children.length)
         function handleclick(event) {
             var clickedelement = event.target;
+            console.log(event.value)
             console.log(ulelement.children.length)
             ulelement.removeChild(clickedelement)
             if (ulelement.children.length <= 3) {
