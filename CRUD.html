@@ -7,15 +7,17 @@
     <title>Document</title>
 </head>
 <style>
-    body{
+    body {
         background: lightslategrey;
     }
+
     table {
         width: 600px;
         height: 600px;
         margin: auto;
     }
-    #updatebutton{
+
+    #updatebutton {
         display: none;
     }
 </style>
@@ -108,13 +110,13 @@
                 marks: 75
             }
         ];
-        function displaystudents(){
-            document.querySelector("tbody").innerHTML=""
-            students.forEach(function(student,i){
+        function displaystudents() {
+            document.querySelector("tbody").innerHTML = ""
+            students.forEach(function (student, i) {
                 // console.log(student)
-                var mytr=document.createElement("tr")
+                var mytr = document.createElement("tr")
                 // console.log(mytr)
-                mytr.innerHTML=`
+                mytr.innerHTML = `
                 <td>${student.id}</td>
                 <td>${student.name}</td>
                 <td>${student.age}</td>
@@ -128,17 +130,24 @@
             })
         }
         displaystudents()
-        function handledelete(index,name){
-            students.splice(index,1)
+        function handledelete(index, name) {
+            students.splice(index, 1)
             console.log(`deleted ${name}`)
             displaystudents()
             // console.log(students)
 
         }
-        function handledit(){
+        function addstudent() {
+            var student = {
+                id:document.getElementById("id").value
+                id:document.getElementById("id").value
+                id:document.getElementById("id").value
+                id:document.getElementById("id").value
+                id:document.getElementById("id").value
+            }
 
         }
-        
+
 
     </script>
 </body>
