@@ -90,9 +90,17 @@
         </ul>
     </div>
     <ul id="ulid"></ul>
-    <input type="text" id="inp" onmouseup=mouseup() onfocus="focu()" onmousedown="mousedown()" onmouseenter=mousenter()
-        onmouseout="mouseout()" onblur="mouseblur()" onmouseover="mouseor()" onkeydown="keydon()" onkeyup="keyrel()"
-        onsubmit="submit()">
+    <input type="text" id="inp" 
+    onmouseup=mouseup() 
+    onfocus="focu()" 
+    onmousedown="mousedown()" 
+    onmouseenter=mousenter()
+    
+    onblur="mouseblur()" 
+    onmouseover="mouseor()" 
+    onkeydown="keydon()" 
+    onkeyup="keyrel()"
+    onsubmit="submit()">
 
     <input type="text" name="inpname" id="inp2" onfocus="focu()" onkeyup="keyrel()" onchange="handlechange()">
 
@@ -250,7 +258,7 @@
     </div>
     <script>
         
-        console.log(document.getElementById("green").value)
+        console.log(document.getElementById("green"))
         // diff between onmouseout & onmouseleave
         function handlechange() {
             console.log("this is a onchange eventhandler")
