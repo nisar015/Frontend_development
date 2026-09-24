@@ -120,7 +120,7 @@
                 <td>${student.age}</td>
                 <td>${student.course}</td>
                 <td>${student.marks}</td>
-                <td><button onclick="handledelete(${i})">delete user</button></td>
+                <td><button onclick="handledelete(${i},${student.name})">delete user</button></td>
                 <td><button onclick="handledit()">edit user</button></td>
 
                 `
@@ -128,8 +128,9 @@
             })
         }
         displaystudents()
-        function handledelete(index){
+        function handledelete(index,name){
             students.splice(index,1)
+            console.log(`deleted ${index}`)
             displaystudents()
             // console.log(students)
 
