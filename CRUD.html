@@ -109,6 +109,7 @@
             }
         ];
         function displaystudents(){
+            document.querySelector("tbody")=""
             students.forEach(function(student,i){
                 // console.log(student)
                 var mytr=document.createElement("tr")
@@ -129,7 +130,9 @@
         displaystudents()
         function handledelete(index){
             students.splice(index,1)
-            console.log(students)
+            displaystudents()
+            // console.log(students)
+
         }
         
 
