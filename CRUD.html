@@ -109,7 +109,7 @@
             }
         ];
         function displaystudents(){
-            students.forEach(function(student){
+            students.forEach(function(student,i){
                 // console.log(student)
                 var mytr=document.createElement("tr")
                 // console.log(mytr)
@@ -119,7 +119,7 @@
                 <td>${student.age}</td>
                 <td>${student.course}</td>
                 <td>${student.marks}</td>
-                <td><button onclick="handledelete()">delete user</button></td>
+                <td><button onclick="handledelete(${i})">delete user</button></td>
                 <td><button onclick="handledit()">edit user</button></td>
 
                 `
@@ -127,6 +127,9 @@
             })
         }
         displaystudents()
+        function handledelete(){
+
+        }
         
 
     </script>
