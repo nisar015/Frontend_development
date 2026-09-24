@@ -132,7 +132,7 @@
         displaystudents()
         function handledelete(index, id) {
             students.splice(index, 1)
-            console.log("deleted :",id,students[index])
+            console.log("deleted :",id)
             displaystudents()
             // console.log(students)
 
@@ -156,6 +156,12 @@
             document.getElementById("age").value=""
             document.getElementById("course").value=""
             document.getElementById("marks").value=""
+        }
+        var editindex=null
+        function handledit(index){
+            editindex=index,
+            console.log(editindex)
+            // document.getElementById("id").value
         }
 
 
