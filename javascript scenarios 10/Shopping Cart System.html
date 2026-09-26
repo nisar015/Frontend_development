@@ -41,6 +41,7 @@
                 <td>${pro.price}</td>
                 <td>${pro.quantity}</td>
                 <td><button onclick="deleteproduct(${pro.id},${index})">delete</button></td>
+                <td><button onclick="addproduct(${pro.id},${index})">add</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
