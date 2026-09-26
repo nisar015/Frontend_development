@@ -29,14 +29,19 @@
             { name: "Mouse", price: 1500,quantity:1 },
             { name: "Keyboard", price: 3000,quantity:2 }
         ]
-        products.forEach(function(pro){
-            var mytr=document.createElement("tr")
-            mytr.innerHTML=`
-            <td>${pro.name}</td>
-            <td>${pro.price}</td>
-            <td>${pro.quantity}</td>`
-            document.querySelector("tbody").appendChild(mytr)
-        })
+        function addproduct(){
+            products.forEach(function(pro){
+                var mytr=document.createElement("tr")
+                mytr.innerHTML=`
+                <td>${pro.name}</td>
+                <td>${pro.price}</td>
+                <td>${pro.quantity}</td>`
+                document.querySelector("tbody").appendChild(mytr)
+            })
+
+        }
+        addproduct()
+
         
     </script>
     
