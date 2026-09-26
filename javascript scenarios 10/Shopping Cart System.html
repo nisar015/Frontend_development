@@ -31,9 +31,11 @@
             { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
         function addproduct(){
-            products.forEach(function(pro){
+            products.forEach(function(pro,index){
                 var mytr=document.createElement("tr")
                 mytr.innerHTML=`
+
+                <td>${pro.id}</td>
                 <td>${pro.name}</td>
                 <td>${pro.price}</td>
                 <td>${pro.quantity}</td>
