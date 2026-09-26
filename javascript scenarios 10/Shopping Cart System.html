@@ -14,21 +14,12 @@
     </style>
 </head>
 <body>
-    <figure>
-        <img src="" alt="laptop">
-        <br>
-        <button id="laptop" onclick=addtocart()>laptop</button>
-    </figure>
-    <figure>
-        <img src="" alt="mouse">
-        <br>
-        <button id="mouse" onclick=addtocart()>mouse</button>
-    </figure>
-    <figure>
-        <img src="" alt="keyboard">
-        <br>
-        <button id="keyboard" onclick=addtocart()>keyboard</button>
-    </figure>
+    <table>
+        <thead>
+            <th>products</th>
+        </thead>
+        <tbody></tbody>
+    </table>
     <script>
         var cart=[]
         var products = [
@@ -36,6 +27,16 @@
             { name: "Mouse", price: 1500,quantity:1 },
             { name: "Keyboard", price: 3000,quantity:2 }
         ]
+        products.forEach(function(pro){
+            var mytr=document.createElement("tr")
+            mytr.innerHTML=`
+            <td>${pro.name}</td>
+            <td>${pro.price}</td>
+            <td>${pro.quantity}</td>`
+        })
+        function addtocart(){
+            cart.push(products.)
+        }
     </script>
     
 </body>
