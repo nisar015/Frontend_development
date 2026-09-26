@@ -31,7 +31,7 @@
             { id:2,name: "Mouse", price: 1500,quantity:1 },
             { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
-        function addproduct(){
+        function displayproduct(){
             products.forEach(function(pro,index){
                 var mytr=document.createElement("tr")
                 mytr.innerHTML=`
@@ -39,13 +39,17 @@
                 <td>${pro.name}</td>
                 <td>${pro.price}</td>
                 <td>${pro.quantity}</td>
-                <td><button onclick=deleteproduct()>delete</button></td>
+                <td><button onclick=deleteproduct(${pro.id},${index})>delete</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
 
         }
-        addproduct()
+        displayproduct()
+        function deleteproduct(id,index){
+            products.splice(index,1)
+            deleteproduct()
+        }
 
         
     </script>
