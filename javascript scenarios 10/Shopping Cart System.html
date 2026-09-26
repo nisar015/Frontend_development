@@ -26,9 +26,9 @@
     <script>
         var cart=[]
         var products = [
-            { name: "Laptop", price: 60000 ,quantity:1},
-            { name: "Mouse", price: 1500,quantity:1 },
-            { name: "Keyboard", price: 3000,quantity:2 }
+            { id:1,name: "Laptop", price: 60000 ,quantity:1},
+            { id:2,name: "Mouse", price: 1500,quantity:1 },
+            { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
         function addproduct(){
             products.forEach(function(pro){
@@ -36,7 +36,9 @@
                 mytr.innerHTML=`
                 <td>${pro.name}</td>
                 <td>${pro.price}</td>
-                <td>${pro.quantity}</td>`
+                <td>${pro.quantity}</td>
+                <td><button onclick=deleteproduct()>${pro.quantity}<button></td>
+                `
                 document.querySelector("tbody").appendChild(mytr)
             })
 
