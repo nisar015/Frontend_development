@@ -32,6 +32,7 @@
             { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
         function displayproduct(){
+            document.querySelector("tbody").innerHTML=""
             products.forEach(function(pro,index){
                 var mytr=document.createElement("tr")
                 mytr.innerHTML=`
@@ -39,7 +40,7 @@
                 <td>${pro.name}</td>
                 <td>${pro.price}</td>
                 <td>${pro.quantity}</td>
-                <td><button onclick="deleteproduct(${pro.id},${index})"">delete</button></td>
+                <td><button onclick="deleteproduct(${pro.id},${index})">delete</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
