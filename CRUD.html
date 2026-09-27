@@ -159,7 +159,7 @@
             document.getElementById("marks").value=""
         }
         var editindex=null
-        console.log(editindex)
+        // console.log(editindex)
         function handledit(index){
             editindex=index,
             console.log(editindex)
@@ -182,6 +182,7 @@
                 marks:document.getElementById("marks").value,
             }
             // how editindex is accessible in this function
+            console.log(students[editindex].name)
             students[editindex]=student
             displaystudents()
             clearformfields()
