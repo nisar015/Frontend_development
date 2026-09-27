@@ -48,7 +48,7 @@
             })
             if(check){
                 check.quantity += newquan
-                console.log(check.quantity)
+                return check.quantity
             }
         }
         var products = [
@@ -57,6 +57,8 @@
             { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
         console.log(updatequantity(2,2))
+
+
         function displayproduct(){
             document.querySelector("tbody").innerHTML=""
             products.forEach(function(pro,index){
