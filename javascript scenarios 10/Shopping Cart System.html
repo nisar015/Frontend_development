@@ -42,20 +42,24 @@
         <button type="button" onclick="addproduct()">add product</button>
     </form>
     <script>
+        var editindex=null
         function updatequantity(id,newquan){
             var upquan={
                 quantity:document.getElementById("quantity").value
             }
-            var check=products.find(function(val){
-                return val.id==id
-            })
-            if(check){
-                check.quantity += newquan
-                return check.quantity
-            }
-            else{
-                return "product not found!!!"
-            }
+            products[editindex]=upquan
+            displayproduct()
+
+            // var check=products.find(function(val){
+            //     return val.id==id
+            // })
+            // if(check){
+            //     check.quantity += newquan
+            //     return check.quantity
+            // }
+            // else{
+            //     return "product not found!!!"
+            // }
         }
         var products = [
             { id:1,name: "Laptop", price: 60000 ,quantity:1},
