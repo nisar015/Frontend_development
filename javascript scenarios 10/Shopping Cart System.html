@@ -43,9 +43,10 @@
     </form>
     <script>
         function updatequantity(id,newquan){
-            var check=find(function(val){
-
+            var check=products.find(function(val){
+                return val.id==id
             })
+            if(check)
         }
         var products = [
             { id:1,name: "Laptop", price: 60000 ,quantity:1},
