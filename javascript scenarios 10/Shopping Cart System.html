@@ -42,12 +42,13 @@
         <button type="button" onclick="addproduct()">add product</button>
     </form>
     <script>
-        var cart=[]
+        
         var products = [
             { id:1,name: "Laptop", price: 60000 ,quantity:1},
             { id:2,name: "Mouse", price: 1500,quantity:1 },
             { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
+        console.log(updatequantity(2,2))
         function displayproduct(){
             document.querySelector("tbody").innerHTML=""
             products.forEach(function(pro,index){
@@ -79,6 +80,7 @@
             products.push(pro)
             displayproduct()
         }
+
 
         
     </script>
