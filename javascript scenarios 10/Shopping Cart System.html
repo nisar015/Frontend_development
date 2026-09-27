@@ -43,6 +43,9 @@
     </form>
     <script>
         function updatequantity(id,newquan){
+            var upquan={
+                quantity:document.getElementById("quantity").value
+            }
             var check=products.find(function(val){
                 return val.id==id
             })
@@ -59,7 +62,7 @@
             { id:2,name: "Mouse", price: 1500,quantity:1 },
             { id:3,name: "Keyboard", price: 3000,quantity:2 }
         ]
-        console.log(updatequantity(2,2))
+        console.log(updatequantity(4,2))
 
 
         function displayproduct(){
