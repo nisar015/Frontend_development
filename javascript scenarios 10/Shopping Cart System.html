@@ -106,6 +106,12 @@
             document.getElementById("price").value = products[editindex].price
             document.getElementById("quantity").value = products[editindex].quantity
         }
+        function clearformfields(){
+            document.getElementById("id").value=""
+            document.getElementById("name").value=""
+            document.getElementById("price").value=""
+            document.getElementById("id").value=""
+        }
         function updatequantity() {
             var pro = {
                 id: document.getElementById("id").value,
