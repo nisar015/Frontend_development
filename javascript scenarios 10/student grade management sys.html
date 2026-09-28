@@ -37,20 +37,20 @@
             console.log(grades(stu.name))
         })
         var maxele=students[0].marks
-        var j
-        console.log(students.length)
+        var maxindex=0
+        // console.log(students.length)
         for(var i=1;i<students.length;i++){
             if(maxele>students[i].marks){
                 maxele=maxele
-                j=i
+                maxindex=maxindex
                 // var maxstudentname=students[i].name
             }
             else{
                 maxele=students[i].marks
-                j=i
+                maxindex=i
             }
         }
-        console.log(maxele,students[j])
+        console.log(maxele,students[maxindex])
     </script>
 </body>
 
