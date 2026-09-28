@@ -36,11 +36,16 @@
         students.forEach(function(stu){
             console.log(grades(stu.name))
         })
-        var inele=students[0]
+        var maxele=students[0].marks
         for(var i=1;i<students.length;i++){
-            if(students[i])
-            console.log(students[i])
+            if(maxele>students[i].marks){
+                maxele=maxele
+            }
+            else{
+                maxele=students[i].marks
+            }
         }
+        console.log(maxele)
     </script>
 </body>
 
