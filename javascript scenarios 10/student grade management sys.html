@@ -38,18 +38,27 @@
         })
         var maxele=students[0].marks
         var maxindex=0
-        for(var i=1;i<students.length;i++){
-            if(maxele>students[i].marks){
-                maxele=maxele
-                maxindex=maxindex
-                // var maxstudentname=students[i].name
+        function highestmarks(){
+            for(var i=1;i<students.length;i++){
+                if(maxele>students[i].marks){
+                    maxele=maxele
+                    maxindex=maxindex
+                    // var maxstudentname=students[i].name
+                }
+                else{
+                    maxele=students[i].marks
+                    maxindex=i
+                }
             }
-            else{
-                maxele=students[i].marks
-                maxindex=i
-            }
+            console.log(" highest marks :",students[maxindex].name,maxele)
+
         }
-        console.log(" highest marks :",students[maxindex].name,maxele)
+        if(1){
+            highestmarks()
+        }
+        else{
+            lowestmarks()
+        }
     </script>
 </body>
 
