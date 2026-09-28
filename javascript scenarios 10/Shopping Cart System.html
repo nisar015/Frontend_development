@@ -129,9 +129,11 @@
             clearformfields()
         }
         var subtotal=0
-        products.forEach(function(val){
-            subtotal += val.price * val.quantity
-        })
+        function subtotal(){
+            products.forEach(function(val){
+                subtotal += val.price * val.quantity
+            })
+        }
         console.log(subtotal)
 
 
