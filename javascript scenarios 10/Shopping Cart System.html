@@ -86,16 +86,6 @@
             products.splice(index,1)
             displayproduct()
         }
-        var editindex=null
-        function updatequantity(id,index){
-            editindex=index
-            var upquantity={
-                // id:document.getElementById("id").value,
-                quantity:document.getElementById("quantity").value=products[editindex].quantity
-            }
-            products[editindex]=upquantity
-            displayproduct()
-        }
         function addproduct(){
             var pro={
                 id:document.getElementById("id").value,
@@ -104,6 +94,16 @@
                 quantity:document.getElementById("quantity").value
             }
             products.push(pro)
+            displayproduct()
+        }
+        var editindex=null
+        function updatequantity(id,index){
+            editindex=index
+            var upquantity={
+                // id:document.getElementById("id").value,
+                quantity:document.getElementById("quantity").value=products[editindex].quantity
+            }
+            products[editindex]=upquantity
             displayproduct()
         }
 
