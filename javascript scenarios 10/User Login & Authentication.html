@@ -9,6 +9,17 @@
 
 <body>
     <script>
+        function Usernamevalidation(username){
+            var check= registeredUsers.find(function(user){
+                return user.name==username
+            })
+            if(check){
+                console.log("user exits")
+            }
+            else{
+                console.log("username doesnot exits")
+            }
+        }
         var registeredUsers = [
             {
                 id: 101,
@@ -41,8 +52,7 @@
                 password: "Sneha@123"
             }
         ];
-
-        console.log(registeredUsers);
+        console.log(Usernamevalidation('Arjun'))
     </script>
 </body>
 
