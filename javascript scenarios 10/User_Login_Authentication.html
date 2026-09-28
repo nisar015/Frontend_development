@@ -67,8 +67,8 @@
         function passwordvalidation(){
             var email=document.getElementById("email").value
             var pw=document.getElementById("password").value
-            registeredUsers.forEach(function(user,pw){
-                if(user.email===email && user.password===){
+            registeredUsers.forEach(function(user){
+                if(user.email===email && user.password===pw){
                     console.log("user exits :",user.id,user.name)
                 }
             })
