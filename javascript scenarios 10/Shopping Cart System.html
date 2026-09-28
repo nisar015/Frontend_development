@@ -135,9 +135,10 @@
             products.forEach(function(val){
                 subtotal += val.price * val.quantity
             })
+            return subtotal
             discount()
         }
-        // console.log("subtotal :",subtotalfunc())
+        console.log("subtotal :",subtotalfunc())
         // console.log(subtotal)
         var discountval = 0
         function discount(){
