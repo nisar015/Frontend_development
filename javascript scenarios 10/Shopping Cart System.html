@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1.Shopping Cart System</title>
     <style>
-        table{
+        table {
             width: 450px;
             height: 200px;
             background: greenyellow;
         }
-
     </style>
 </head>
+
 <body>
     <table border="1px solid">
         <thead>
@@ -27,7 +28,7 @@
         <tbody></tbody>
     </table>
     <form>
-        
+
         <label for="id">id</label>
         <input type="id" id="id" name="id">
         <br>
@@ -45,72 +46,71 @@
 
     </form>
     <script>
-        
+
         // var check=products.find(function(val){
-            //     return val.id==id
-            // })
-            // if(check){
-            //     check.quantity += newquan
-            //     return check.quantity
-            // }
-            // else{
-                //     return "product not found!!!"
-                // }
-            
+        //     return val.id==id
+        // })
+        // if(check){
+        //     check.quantity += newquan
+        //     return check.quantity
+        // }
+        // else{
+        //     return "product not found!!!"
+        // }
+
         var products = [
-            { id:1,name: "Laptop", price: 60000 ,quantity:1},
-            { id:2,name: "Mouse", price: 1500,quantity:1 },
-            { id:3,name: "Keyboard", price: 3000,quantity:2 }
+            { id: 1, name: "Laptop", price: 60000, quantity: 1 },
+            { id: 2, name: "Mouse", price: 1500, quantity: 1 },
+            { id: 3, name: "Keyboard", price: 3000, quantity: 2 }
         ]
         // console.log(updatequantity(4,2))
 
 
-        function displayproduct(){
-            document.querySelector("tbody").innerHTML=""
-            products.forEach(function(pro,index){
-                var mytr=document.createElement("tr")
-                mytr.innerHTML=`
+        function displayproduct() {
+            document.querySelector("tbody").innerHTML = ""
+            products.forEach(function (pro, index) {
+                var mytr = document.createElement("tr")
+                mytr.innerHTML = `
                 <td>${pro.id}</td>
                 <td>${pro.name}</td>
                 <td>${pro.price}</td>
                 <td>${pro.quantity}</td>
                 <td><button onclick="deleteproduct(${pro.id},${index})">delete</button></td>
                 <td><button onclick="editquantity(${pro.id},${index})">edit quantity</button></td>`
-                
+
                 document.querySelector("tbody").appendChild(mytr)
             })
 
         }
         displayproduct()
-        function deleteproduct(id,index){
-            products.splice(index,1)
+        function deleteproduct(id, index) {
+            products.splice(index, 1)
             displayproduct()
         }
-        function addproduct(){
-            var pro={
-                id:document.getElementById("id").value,
-                name:document.getElementById("name").value,
-                price:document.getElementById("price").value,
-                quantity:document.getElementById("quantity").value
+        function addproduct() {
+            var pro = {
+                id: document.getElementById("id").value,
+                name: document.getElementById("name").value,
+                price: document.getElementById("price").value,
+                quantity: document.getElementById("quantity").value
             }
             products.push(pro)
             displayproduct()
         }
-        var editindex=null
-        function editquantity(id,index){
-            editindex=index
-            console.log(editindex)
-            var upquantity={
-                // id:document.getElementById("id").value,
-                quantity:document.getElementById("quantity").value=products[editindex].quantity
-            }
-            products[editindex]=upquantity
+        var editindex = null
+        function editquantity(index) {
+            editindex = index,
+                console.log(editindex)
+            document.getElementById("quantity").value = products[editindex].quantity
+
+            products[editindex] = upquantity
             displayproduct()
         }
 
 
-        
+
     </script>
-    
+
 </body>
+
 </html>
