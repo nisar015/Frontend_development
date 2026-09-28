@@ -128,6 +128,7 @@
             displayproduct()
             clearformfields()
             console.log("subtotal after updating product quantity: ",subtotalfunc())
+            console.log("subtotal after updating product quantity: ",discount())
         }
         var subtotal=0
         function subtotalfunc(){
@@ -143,6 +144,7 @@
             discountval = subtotal * (20/100)
             subtotal -= discountval
             console.log("total amount after discount :",subtotal)
+            console.log("Finall bill amount :",subtotal)
         }
         discount()
     </script>
