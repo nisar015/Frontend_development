@@ -101,16 +101,17 @@
         function editquantity(index) {
             editindex = index,
                 // console.log(editindex)
-            document.getElementById("id").value = products[editindex].id
+                document.getElementById("id").value = products[editindex].id
             document.getElementById("name").value = products[editindex].name
             document.getElementById("price").value = products[editindex].price
             document.getElementById("quantity").value = products[editindex].quantity
+            console.log(products)
         }
-        function clearformfields(){
-            document.getElementById("id").value=""
-            document.getElementById("name").value=""
-            document.getElementById("price").value=""
-            document.getElementById("quantity").value=""
+        function clearformfields() {
+            document.getElementById("id").value = ""
+            document.getElementById("name").value = ""
+            document.getElementById("price").value = ""
+            document.getElementById("quantity").value = ""
         }
         // console.log(editindex)
         function updatequantity() {
@@ -120,7 +121,8 @@
                 price: document.getElementById("price").value,
                 quantity: document.getElementById("quantity").value
             }
-
+            console.log(products)
+            console.log(editindex)
             products[editindex] = pro
             // console.log(products[editindex])
             displayproduct()
