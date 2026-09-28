@@ -9,14 +9,14 @@
 
 <body>
     <script>
-        function Usernamevalidation(username){
-            var check= registeredUsers.find(function(user){
-                return user.name==username
+        function Usernamevalidation(username) {
+            var check = registeredUsers.find(function (user) {
+                return user.name == username
             })
-            if(check){
+            if (check) {
                 console.log("user exits")
             }
-            else{
+            else {
                 console.log("username doesnot exits")
             }
         }
