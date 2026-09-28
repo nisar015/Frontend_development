@@ -63,11 +63,15 @@
             }
         ];
         console.log(Usernamevalidation('Arjun'))
-        console.log(passwordvalidation('Arjun@123'))
+        // console.log(passwordvalidation('Arjun@123'))
         function passwordvalidation(){
-            document.getElementById("email").value
-            document.getElementById("password").value
-            console.log("first")
+            var email=document.getElementById("email").value
+            var pw=document.getElementById("password").value
+            registeredUsers.forEach(function(user){
+                if(user.email===email){
+                    console.log("user exits :",user.id,user.name)
+                }
+            })
         }
     </script>
 </body>
