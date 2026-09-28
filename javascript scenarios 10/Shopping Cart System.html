@@ -141,7 +141,8 @@
         var discountval = 0
         function discount(){
             discountval = subtotal * (20/100)
-            console.log(discountval)
+            subtotal -= discountval
+            console.log("total amount after discount :",subtotal)
         }
         discount()
     </script>
