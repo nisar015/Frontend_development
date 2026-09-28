@@ -46,7 +46,8 @@
     </form>
     <script>
         var editindex=null
-        function updatequantity(id,newquan){
+        function updatequantity(id,index){
+            editindex=index
             var upquantity={
                 // id:document.getElementById("id").value,
                 quantity:document.getElementById("quantity").value=products[editindex].quantity
