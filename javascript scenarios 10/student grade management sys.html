@@ -19,7 +19,7 @@
         })
         function grades(name) {
             var check = students.find(function(val){
-                return val.name=name
+                return val.name==name
             })
             if(check){
                 if(check.marks>80){
@@ -34,7 +34,7 @@
             }
         }
         students.forEach(function(stu){
-            console.log(grades('Arun'))
+            console.log(grades(stu.name))
         })
     </script>
 </body>
