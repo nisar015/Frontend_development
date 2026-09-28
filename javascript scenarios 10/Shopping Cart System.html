@@ -112,14 +112,15 @@
             document.getElementById("price").value=""
             document.getElementById("quantity").value=""
         }
+        // console.log(editindex)
         function updatequantity() {
             var pro = {
                 id: document.getElementById("id").value,
                 name: document.getElementById("name").value,
                 price: document.getElementById("price").value,
                 quantity: document.getElementById("quantity").value
-
             }
+
             products[editindex] = pro
             // console.log(products[editindex])
             displayproduct()
