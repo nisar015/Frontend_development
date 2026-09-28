@@ -14,13 +14,28 @@
             { name: "Priya", marks: 72 },
             { name: "Kumar", marks: 45 }
         ];
-        students.forEach(function(student){
+        students.forEach(function (student) {
             console.log(`${student.name} : ${student.marks}`)
         })
-        function grades(){
-            if()
+        function grades(name) {
+            var check = students.find(function(val){
+                return val.name=name
+            })
+            if(check){
+                if(check.marks>80){
+                    return "Grade A"
+                }
+                else if(check.marks>70 & check.marks<80){
+                    return "Grade B"
+                }
+                else{
+                    return "Grade F"
+                }
+            }
         }
-    console.log(grades('Arun'))
+        students.forEach(function(stu){
+            console.log(grades('Arun'))
+        })
     </script>
 </body>
 
