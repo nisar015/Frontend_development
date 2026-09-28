@@ -45,17 +45,8 @@
 
     </form>
     <script>
-        var editindex=null
-        function updatequantity(id,index){
-            editindex=index
-            var upquantity={
-                // id:document.getElementById("id").value,
-                quantity:document.getElementById("quantity").value=products[editindex].quantity
-            }
-            products[editindex]=upquantity
-            displayproduct()
-
-            // var check=products.find(function(val){
+        
+        // var check=products.find(function(val){
             //     return val.id==id
             // })
             // if(check){
@@ -63,9 +54,9 @@
             //     return check.quantity
             // }
             // else{
-            //     return "product not found!!!"
-            // }
-        }
+                //     return "product not found!!!"
+                // }
+            }
         var products = [
             { id:1,name: "Laptop", price: 60000 ,quantity:1},
             { id:2,name: "Mouse", price: 1500,quantity:1 },
@@ -95,6 +86,15 @@
             products.splice(index,1)
             displayproduct()
         }
+        var editindex=null
+        function updatequantity(id,index){
+            editindex=index
+            var upquantity={
+                // id:document.getElementById("id").value,
+                quantity:document.getElementById("quantity").value=products[editindex].quantity
+            }
+            products[editindex]=upquantity
+            displayproduct()
         function addproduct(){
             var pro={
                 id:document.getElementById("id").value,
