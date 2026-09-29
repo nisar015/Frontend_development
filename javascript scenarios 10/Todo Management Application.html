@@ -48,7 +48,7 @@
                 <td>${todo.task}</td>
                 <td><button onclick=deletetask(${index})>Delete task</button></td>
                 <td><button onclick=editask(${index})>Edit task</button></td>
-                <td><input type=checkbox>completed</td>
+                <td><input type=checkbox onclick=checkcompleted()>completed</td>
                 <td><input type=checkbox>pending</td>
 
                 `
@@ -87,6 +87,9 @@
             clearformfields()
             document.getElementById("updatebutton").style.display="none"
             document.getElementById("addbutton").style.display="block"
+        }
+        function checkcompleted(){
+
         }
 
     </script>
