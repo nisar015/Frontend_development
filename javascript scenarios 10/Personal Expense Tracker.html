@@ -51,38 +51,37 @@
             })
             // console.log(check)
             if (check) {
-                var totexpense= check.reduce(function (a,b) {
-                    return a+b.expense
+                var totexpense = check.reduce(function (a, b) {
+                    return a + b.expense
                 }, 0)
             }
             return `total ${cat} expense ${totexpense}`
         }
-        function highestexpense(){
-            var inex=expenses[0]
+        function highestexpense() {
+            var inex = expenses[0]
             // console.log(inex)
-            for(var i=1;i<expenses.length;i++){
-                if(inex>expenses[i]){
-                    inex=inex
+            for (var i = 1; i < expenses.length; i++) {
+                if (inex > expenses[i]) {
+                    inex = inex
                 }
-                else{
-                    inex=expenses[i]
+                else {
+                    inex = expenses[i]
                 }
             }
             return inex
 
         }
         // console.log(inex)
-        function lowestexpense(){
-            var outex=expenses[0]
-            // console.log(inex)
-            for(var i=1;i<expenses.length;i++){
-                // console.log(expenses[i])
-                if(outex>expenses[i]){
-                    outex=expenses[i]
+        function lowestexpense() {
+            var outex = expenses[0]
+            // console.log(outex)
+            for (var i = 1; i < expenses.length; i++) {
+                if (outex > expenses[i]) {
+                    outex = expenses[i]
                     console.log(outex)
                 }
-                else{
-                    outex=outex
+                else {
+                    outex = outex
                 }
             }
             return outex
@@ -96,7 +95,7 @@
         console.log(calculatecatexpense('Entertainment'))
         console.log(highestexpense())
         console.log(lowestexpense())
-        </script>
+    </script>
 
 </body>
 
