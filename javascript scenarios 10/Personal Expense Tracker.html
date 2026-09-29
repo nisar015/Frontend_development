@@ -71,6 +71,20 @@
             return inex
 
         }
+        var inex=expenses[0]
+        function lowestexpense(){
+            // console.log(inex)
+            for(var i=1;i<expenses.length;i++){
+                if(inex>expenses[i]){
+                    inex=expenses[i]
+                }
+                else{
+                    inex=inex
+                }
+            }
+            return inex
+
+        }
         console.log(addexpense('stay', 2000))
         console.log(deletexpense(2))
         console.log(calculatetotexpense())
@@ -78,7 +92,8 @@
         console.log(calculatecatexpense('Food'))
         console.log(calculatecatexpense('Entertainment'))
         console.log(highestexpense())
-    </script>
+        console.log(lowestexpense())
+        </script>
 
 </body>
 
