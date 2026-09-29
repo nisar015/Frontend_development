@@ -35,8 +35,14 @@
             expenses.splice(index,1)
             return expenses
         }
+        function calculatetotexpense(){
+            return expenses.reduce(function(a,b){
+                return a+b.expense
+            },0)
+        }
         console.log(addexpense('stay',2000))
         console.log(deletexpense(2))
+        console.log(calculatetotexpense())
     </script>
 
 </body>
