@@ -33,6 +33,7 @@
                     return `${check.name} : Grade B`
                 }
                 else{
+                    studentFailed.push({"name":check.name,"marks":check.marks})
                     return `${check.name} : Grade F`
                 }
             }
@@ -74,6 +75,7 @@
         }
         console.log("class average is:",average()/students.length)
         console.log("passed students:",studentpassed)
+        console.log("Failed students:",studentFailed)
     </script>
 </body>
 
