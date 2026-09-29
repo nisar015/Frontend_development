@@ -64,7 +64,7 @@
         }
         console.log("lowest marks :",students[maxindex].name,maxele)
         function average(){
-            students.reduce(function(i,j){
+            return students.reduce(function(i,j){
                 return i + j.marks
             },0)
         }
