@@ -10,10 +10,10 @@
 <body>
     <table border="1px solid grey">
         <thead>
-            <td>Tasks</td>
-            <td>Add Task</td>
-            <td>Delete Task</td>
-            <td>Edit Task</td>
+            <th>Tasks</th>
+            <th>Add Task</th>
+            <th>Delete Task</th>
+            <th>Edit Task</th>
         </thead>
         <tbody></tbody>
     </table>
@@ -27,8 +27,9 @@
         function displaytasks() {
             var mytr = document.createElement("tr")
             mytr.innerHTML = `
-            <td>${Todolist.task1}</td>
+            <td>${Todolist}</td>
             `
+            document.querySelector("tbody").appendChild(mytr)
         }
     </script>
 </body>
