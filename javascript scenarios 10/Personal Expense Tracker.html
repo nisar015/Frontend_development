@@ -58,14 +58,13 @@
             return `total ${cat} expense ${totexpense}`
         }
         function highestexpense() {
-            var inex = expenses[0]
-            // console.log(inex)
+            var inex = expenses[0].expense
             for (var i = 1; i < expenses.length; i++) {
-                if (inex > expenses[i]) {
+                if (inex > expenses[i].expense) {
                     inex = inex
                 }
                 else {
-                    inex = expenses[i]
+                    inex = expenses[i].expense
                 }
             }
             return inex
@@ -73,12 +72,11 @@
         }
         // console.log(inex)
         function lowestexpense() {
-            var outex = expenses[0]
+            var outex = expenses[0].expense
             // console.log(outex)
             for (var i = 1; i < expenses.length; i++) {
-                if (outex > expenses[i]) {
-                    outex = expenses[i]
-                    console.log(outex)
+                if (outex > expenses[i].expense) {
+                    outex = expenses[i].expense
                 }
                 else {
                     outex = outex
