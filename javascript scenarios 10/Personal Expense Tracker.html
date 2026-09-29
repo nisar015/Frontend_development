@@ -85,6 +85,11 @@
             return outex
 
         }
+        function avgexpense(){
+            return expenses.reduce(function(a,b){
+                return a+b.expense
+            },0)
+        }
         console.log(addexpense('stay', 2000))
         console.log(deletexpense(2))
         console.log(calculatetotexpense())
@@ -93,6 +98,7 @@
         console.log(calculatecatexpense('Entertainment'))
         console.log(highestexpense())
         console.log(lowestexpense())
+        console.log("average expense:",avgexpense()/expenses.length)
     </script>
 
 </body>
