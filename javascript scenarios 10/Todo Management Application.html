@@ -30,7 +30,7 @@
         <input type="task" id="task" name="task">
         <br>
         <button type="button" onclick="addtask()" id="addbutton">add task</button>
-        <button type="button" onclick="updatetask()" id="editbutton">update task</button>
+        <button type="button" onclick="updatetask()" id="updatebutton">update task</button>
     </form>
     <script>
         var Todolist = [
@@ -59,16 +59,20 @@
             }
             Todolist.push(newtask)
             displaytasks()
-            editformfields()
+            clearformfields()
         }
-        function editformfields(){
+        function deletetask(index){
+            Todolist.splice(index,1)
+            displaytasks()
+        }
+        function clearformfields(){
             document.getElementById("task").value=""
         }
         var editindex=null
         function editask(i){
             editindex=i
             document.getElementById("task").value=Todolist[editindex].task
-            document.getElementById("editbutton").style.display="block"
+            document.getElementById("updatebutton").style.display="block"
             document.getElementById("addbutton").style.display="none"
         }
         function updatetask(){
@@ -77,7 +81,9 @@
             }
             Todolist[editindex]=newtask
             displaytasks()
-            editformfields()
+            clearformfields()
+            document.getElementById("updatebutton").style.display="block"
+            document.getElementById("addbutton").style.display="block"
         }
 
     </script>
