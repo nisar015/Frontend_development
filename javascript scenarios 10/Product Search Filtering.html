@@ -35,10 +35,17 @@
             var check= products.filter(function(val){
                 return val.category==proname
             })
+            var checkagain=products.find(function(ele){
+                return ele.prouctname==proname
+            })
             // console.log(check)
             if(check){
                 return check
             }
+            if(checkagain){
+                return "Yes product found: ",checkagain.category,checkagain.prouctname
+            }
+            
 
         }
         console.log(searchbyproname('phone'))
