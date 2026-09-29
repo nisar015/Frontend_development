@@ -49,7 +49,7 @@
                 <td><button onclick=deletetask(${index})>Delete task</button></td>
                 <td><button onclick=editask(${index})>Edit task</button></td>
                 <td><input type=checkbox onclick=checkcompleted()>completed</td>
-                <td><input type=checkbox>pending</td>
+                <td><input type=checkbox onclick=checkpending()>pending</td>
 
                 `
                 document.querySelector("tbody").appendChild(mytr)
