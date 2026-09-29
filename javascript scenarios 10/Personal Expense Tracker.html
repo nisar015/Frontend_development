@@ -59,7 +59,7 @@
         }
         function highestexpense(){
             var inex=expenses[0]
-            // console.log(inex)
+            console.log(inex)
             for(var i=1;i<expenses.length;i++){
                 if(inex>expenses[i]){
                     inex=inex
@@ -71,18 +71,20 @@
             return inex
 
         }
-        var inex=expenses[0]
+        // console.log(inex)
         function lowestexpense(){
+            var outex=expenses[0]
             // console.log(inex)
             for(var i=1;i<expenses.length;i++){
-                if(inex>expenses[i]){
-                    inex=expenses[i]
+                // console.log(expenses[i])
+                if(outex>expenses[i]){
+                    outex=expenses[i]
                 }
                 else{
-                    inex=inex
+                    outex=outex
                 }
             }
-            return inex
+            return outex
 
         }
         console.log(addexpense('stay', 2000))
