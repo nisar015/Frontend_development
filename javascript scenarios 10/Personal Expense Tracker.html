@@ -51,11 +51,11 @@
             })
             console.log(check)
             if (check) {
-                return check.reduce(function (a,b) {
-                    return `total wise expense`, a+b.expense
+                var totexpense= check.reduce(function (a,b) {
+                    return a+b.expense
                 }, 0)
-
             }
+            return `total ${cat} expense ${totexpense}`
         }
         console.log(addexpense('stay', 2000))
         console.log(deletexpense(2))
