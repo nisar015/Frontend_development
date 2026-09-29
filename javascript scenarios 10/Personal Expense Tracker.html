@@ -19,12 +19,12 @@
                 expense: 300
             },
             {
-                category: "Travel",
-                expense: 400
-            },
-            {
                 category: "Shopping",
                 expense: 1000
+            },
+            {
+                category: "Travel",
+                expense: 400
             },
             {
                 category: "Entertainment",
@@ -45,14 +45,14 @@
             }, 0)
         }
         function calculatecatexpense(cat) {
-
+            // why filter is returning
             var check = expenses.filter(function (val) {
                 return val.category == cat
             })
             console.log(check)
             if (check) {
-                return expenses.reduce(function (a, b) {
-                    return a + b.expense
+                return check.reduce(function (a,b) {
+                    return a+b.expense
                 }, 0)
 
             }
