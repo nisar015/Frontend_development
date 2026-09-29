@@ -31,25 +31,32 @@
                 expense: 500
             }
         ]
-        function addexpense(cat,ex){
-            expenses.push({category:cat,expense:ex})
+        function addexpense(cat, ex) {
+            expenses.push({ category: cat, expense: ex })
             return expenses
         }
-        function deletexpense(index){
-            expenses.splice(index,1)
+        function deletexpense(index) {
+            expenses.splice(index, 1)
             return expenses
         }
-        function calculatetotexpense(){
-            return expenses.reduce(function(a,b){
-                return a+b.expense
-            },0)
+        function calculatetotexpense() {
+            return expenses.reduce(function (a, b) {
+                return a + b.expense
+            }, 0)
         }
-        function calculatecatexpense(cat){
-            var check=expenses.reduce(function(a,b){
-                return a+b.expense
-            },0)
+        function calculatecatexpense(cat) {
+
+            var check = expenses.filter(function (val) {
+                return val.category == cat
+            })
+            if (check) {
+                return expenses.reduce(function (a, b) {
+                    return a + b.expense
+                }, 0)
+
+            }
         }
-        console.log(addexpense('stay',2000))
+        console.log(addexpense('stay', 2000))
         console.log(deletexpense(2))
         console.log(calculatetotexpense())
         console.log(calculatecatexpense('Travel'))
