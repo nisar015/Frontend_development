@@ -19,6 +19,10 @@
                 expense: 300
             },
             {
+                category: "Travel",
+                expense: 400
+            },
+            {
                 category: "Shopping",
                 expense: 1000
             },
@@ -40,10 +44,15 @@
                 return a+b.expense
             },0)
         }
+        function calculatecatexpense(cat){
+            var check=expenses.filter(function(cat){
+                return cat.expense
+            })
+        }
         console.log(addexpense('stay',2000))
         console.log(deletexpense(2))
         console.log(calculatetotexpense())
-        console.log(calculatecatexpense())
+        console.log(calculatecatexpense('Travel'))
     </script>
 
 </body>
