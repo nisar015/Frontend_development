@@ -14,6 +14,7 @@
             { name: "Priya", marks: 72 },
             { name: "Kumar", marks: 45 }
         ];
+        var studentpassed=[]
         students.forEach(function (student) {
             console.log(`${student.name} : ${student.marks}`)
         })
@@ -23,9 +24,11 @@
             })
             if(check){
                 if(check.marks>80){
+                    studentpassed.push({"name":check.name,"marks":check.marks})
                     return `${check.name} : Grade A`
                 }
                 else if(check.marks>70 & check.marks<80){
+                    studentpassed.push({"name":check.name,"marks":check.marks})
                     return `${check.name} : Grade B`
                 }
                 else{
@@ -68,7 +71,8 @@
                 return i + j.marks
             },0)
         }
-        console.log(average())
+        console.log("class average is:",average()/students.length)
+        console.log("passed students:",studentpassed)
     </script>
 </body>
 
