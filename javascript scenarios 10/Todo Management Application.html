@@ -71,6 +71,14 @@
             document.getElementById("editbutton").style.display="block"
             document.getElementById("addbutton").style.display="none"
         }
+        function updatetask(){
+            var newtask={
+                task:document.getElementById("task").value
+            }
+            Todolist[editindex]=newtask
+            displaytasks()
+            editformfields()
+        }
 
     </script>
 </body>
