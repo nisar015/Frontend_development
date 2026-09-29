@@ -65,8 +65,8 @@
             document.getElementById("task").value=""
         }
         var editindex=null
-        function editask(index){
-            editindex=index
+        function editask(i){
+            editindex=i
             document.getElementById("task").value=Todolist[editindex].task
             document.getElementById("editbutton").style.display="block"
             document.getElementById("addbutton").style.display="none"
