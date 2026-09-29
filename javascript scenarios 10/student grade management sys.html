@@ -49,7 +49,20 @@
                 maxindex=i
             }
         }
-        console.log(" highest marks :",students[maxindex].name,maxele)
+        console.log("highest marks :",students[maxindex].name,maxele)
+        // minindex=0
+        for(var i=1;i<students.length;i++){
+            if(maxele<students[i].marks){
+                maxele=maxele
+                maxindex=maxindex
+                // var maxstudentname=students[i].name
+            }
+            else{
+                maxele=students[i].marks
+                maxindex=i
+            }
+        }
+        console.log(students[maxindex].name)
     </script>
 </body>
 
