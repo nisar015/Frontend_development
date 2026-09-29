@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>Tasks</th>
-                <th>Add Task</th>
+                <!-- <th>Add Task</th> -->
                 <th>Delete Task</th>
                 <th>Edit Task</th>
                 
@@ -37,7 +37,7 @@
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${todo.task}</td>
-                <td><button onclick=editask()>Edit task</button></td>
+                <td><button onclick=deletetask()>Delete task</button></td>
 
                 `
                 document.querySelector("tbody").appendChild(mytr)
