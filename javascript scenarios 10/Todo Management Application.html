@@ -34,6 +34,7 @@
             {task:"LearnReact"},
         ]
         function displaytasks() {
+            document.querySelector("tbody").innerHTML=""
             Todolist.forEach(function(todo,index){
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
