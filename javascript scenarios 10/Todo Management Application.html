@@ -19,6 +19,7 @@
                 <!-- <th>Add Task</th> -->
                 <th>Delete Task</th>
                 <th>Edit Task</th>
+                <th>Task status</th>
                 
             </tr>
         </thead>
@@ -82,7 +83,7 @@
             Todolist[editindex]=newtask
             displaytasks()
             clearformfields()
-            document.getElementById("updatebutton").style.display="block"
+            document.getElementById("updatebutton").style.display="none"
             document.getElementById("addbutton").style.display="block"
         }
 
