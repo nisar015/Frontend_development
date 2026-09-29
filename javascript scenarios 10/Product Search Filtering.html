@@ -32,9 +32,16 @@
             }
         ]
         function searchbyproname(proname){
-            return products.includes(proname)
+            var check= products.filter(function(val){
+                return val.category==proname
+            })
+            // console.log(check)
+            if(check){
+                return check
+            }
+
         }
-        console.log(searchbyproname('iPhone'))
+        console.log(searchbyproname('phone'))
     </script>
 </body>
 
