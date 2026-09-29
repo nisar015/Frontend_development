@@ -59,6 +59,11 @@
         function editformfields(){
             document.getElementById("task").value=""
         }
+        var editindex=null
+        function editask(index){
+            editindex=index
+            document.getElementById("task").value=Todolist[editindex].task
+        }
     </script>
 </body>
 
