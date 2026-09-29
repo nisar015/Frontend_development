@@ -32,6 +32,8 @@
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${todo.task}</td>
+                <td><button onclick=addtask()>Add task</button></td>
+
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
