@@ -45,9 +45,9 @@
             },0)
         }
         function calculatecatexpense(cat){
-            var check=expenses.filter(function(cat){
-                return cat.expense
-            })
+            var check=expenses.reduce(function(a,b){
+                return a+b.expense
+            },0)
         }
         console.log(addexpense('stay',2000))
         console.log(deletexpense(2))
