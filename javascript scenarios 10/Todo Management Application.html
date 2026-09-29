@@ -28,12 +28,18 @@
             {task4:"LearnReact"},
         ]
         function displaytasks() {
-            var mytr = document.createElement("tr")
-            mytr.innerHTML = `
-            <td>${Todolist}</td>
-            `
-            document.querySelector("tbody").appendChild(mytr)
+            Todolist.forEach(function(todo,index){
+                var mytr = document.createElement("tr")
+                mytr.innerHTML = `
+                <td>${todo.task1}</td>
+                <td>${todo.task2}</td>
+                <td>${todo.task3}</td>
+                <td>${todo.task4}</td>
+                `
+                document.querySelector("tbody").appendChild(mytr)
+            })
         }
+        displaytasks()
     </script>
 </body>
 
