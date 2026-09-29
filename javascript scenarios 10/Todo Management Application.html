@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    #editbutton{
+        display: none;
+    }
+</style>
 <body>
     <table border="1px solid grey">
         <thead>
@@ -25,7 +29,8 @@
         <label for="task">task</label>
         <input type="task" id="task" name="task">
         <br>
-        <button type="button" onclick="addtask()">addtask</button>
+        <button type="button" onclick="addtask()" id="addbutton">addtask</button>
+        <button type="button" onclick="editbutton()" id="editbutton">update task</button>
     </form>
     <script>
         var Todolist = [
@@ -63,6 +68,8 @@
         function editask(index){
             editindex=index
             document.getElementById("task").value=Todolist[editindex].task
+            document.getElementById("editbutton").style.display="block"
+            document.getElementById("addbutton").style.display="none"
         }
     </script>
 </body>
