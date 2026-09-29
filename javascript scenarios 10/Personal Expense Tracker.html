@@ -57,6 +57,20 @@
             }
             return `total ${cat} expense ${totexpense}`
         }
+        function highestexpense(){
+            var inex=expenses[0]
+            console.log(inex)
+            for(var i=1;i<expenses.length;i++){
+                if(inex>expenses[i]){
+                    inex=inex
+                }
+                else{
+                    inex=expenses[i]
+                }
+            }
+            return inex
+
+        }
         console.log(addexpense('stay', 2000))
         console.log(deletexpense(2))
         console.log(calculatetotexpense())
