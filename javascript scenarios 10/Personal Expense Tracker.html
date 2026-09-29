@@ -49,6 +49,7 @@
             var check = expenses.filter(function (val) {
                 return val.category == cat
             })
+            console.log(check)
             if (check) {
                 return expenses.reduce(function (a, b) {
                     return a + b.expense
