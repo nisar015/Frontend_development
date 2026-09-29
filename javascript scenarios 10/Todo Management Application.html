@@ -22,19 +22,16 @@
     </table>
     <script>
         var Todolist = [
-            {task1:"LearnJavaScript"},
-            {task2:"PracticeArrays"},
-            {task3:"BuildTodoApp"},
-            {task4:"LearnReact"},
+            {task:"LearnJavaScript"},
+            {task:"PracticeArrays"},
+            {task:"BuildTodoApp"},
+            {task:"LearnReact"},
         ]
         function displaytasks() {
             Todolist.forEach(function(todo,index){
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
-                <td>${todo.task1}</td>
-                <td>${todo.task2}</td>
-                <td>${todo.task3}</td>
-                <td>${todo.task4}</td>
+                <td>${todo.task}</td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
