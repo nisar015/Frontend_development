@@ -31,7 +31,12 @@
             expenses.push({category:cat,expense:ex})
             return expenses
         }
+        function deletexpense(index){
+            expenses.splice(index,1)
+            return expenses
+        }
         console.log(addexpense('stay',2000))
+        console.log(deletexpense(2))
     </script>
 
 </body>
