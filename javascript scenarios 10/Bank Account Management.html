@@ -33,7 +33,8 @@
         <label for="Accbls">Enter Acc Balance</label>
         <input type="Accbls" id="Accbls">
         <br><br>
-        <button type="button" onclick="creatingaccount()">Add Account</button>
+        <button type="button" onclick="addaccount()">Add Account</button>
+        <button type="button" onclick="creatingaccount()">create Account</button>
     </form>
     <script>
         var AccHolders = [
@@ -58,7 +59,7 @@
             })
         }
         displayaccountholders()
-        function creatingaccount(){
+        function addaccount(){
             var hold={
                 name:document.getElementById("name").value,
                 AccNumber:document.getElementById("Accnum").value,
