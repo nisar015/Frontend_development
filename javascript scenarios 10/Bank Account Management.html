@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    input,label,#addaccount{
+    input,label,#addacc{
         display:none;
     }
 </style>
@@ -37,7 +37,7 @@
         <label for="Accbls">Enter Acc Balance</label>
         <input type="Accbls" id="Accbls">
         <!-- <br><br> -->
-        <button type="button" onclick="addaccount()" id="addaccount">Add Account</button>
+        <button type="button" onclick="addaccount()" id="addacc">Add Account</button>
         <button type="button" onclick="creatingaccount()" id="creatacc">create Account</button>
     </form>
     <script>
@@ -79,7 +79,7 @@
                 document.getElementsByTagName("input")[i].style.display="block"
             }
             document.getElementById("creatacc").style.display="none"
-            document.getElementById("addaccount").style.display="block"
+            document.getElementById("addacc").style.display="block"
         }
 
     </script>
