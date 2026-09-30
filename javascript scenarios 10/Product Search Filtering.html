@@ -36,9 +36,22 @@
                 price:60000
             }
         ]
-        function searchbyproname(proname){
+        function searchbycategory(cat){
+            
             var check= products.filter(function(val){
-                return val.category==proname
+                return val.category==cat
+            })
+            // console.log(check)
+            if(check){
+                return check
+            }
+            
+
+        }
+        function searchbyproname(proname){
+            
+            var check= products.find(function(val){
+                return val.prouctname==proname
             })
             // console.log(check)
             if(check){
@@ -48,6 +61,7 @@
 
         }
         console.log(searchbyproname('phone'))
+        console.log(searchbycategory('MacBook'))
         console.log(searchbyproname('MacBook'))
     </script>
 </body>
