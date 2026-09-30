@@ -31,9 +31,24 @@
         <button type="button" onclick="creatingaccount()">Create Account</button>
     </form>
     <script>
-        var AccHolders=[]
+        var AccHolders=[
+            {
+                name:"Nisar Ahmmed",
+                AccNumber:1245365,
+                AccType:"savings",
+                AccBal:1000
+            }
+        ]
         function creatingaccount(){
-            var mytr=document.createElement("tr")
+            AccHolders.forEach(function(holder){
+                var mytr=document.createElement("tr")
+                mytr.innerHTML=`
+                <td>${holder.name}</td>
+                <td>${holder.AccNumber}</td>
+                <td>${holder.AccType}</td>
+                <td>${holder.AccBal}</td>
+                `
+            })
         }
         
     </script>
