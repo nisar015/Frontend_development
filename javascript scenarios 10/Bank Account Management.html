@@ -43,6 +43,7 @@
         <!-- <br><br> -->
         <button type="button" onclick="addaccount()" id="addacc">Add Account</button>
         <button type="button" onclick="creatingaccount()" id="creatacc">create Account</button>
+        <button type="button" onclick="depositamount()" id="depo4amnt">create Account</button>
     </form>
     <script>
         var AccHolders = [
@@ -62,7 +63,7 @@
                 <td>${holder.AccNumber}</td>
                 <td>${holder.AccType}</td>
                 <td>${holder.AccBal}</td>
-                <td><button onclick="depositamount()">Deposit</button></td>
+                <td><button onclick="deposit()">Deposit</button></td>
   
                 `
                 document.querySelector("tbody").appendChild(mytr)
@@ -87,8 +88,12 @@
             document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "block"
         }
+        function deposit(){
+            document.getElementById("deposit").style.display="block";
+            document.getElementsByClassName("deposit")[0].style.display="block";
+        }
         function depositamount(){
-            document.getElementsByClassName
+            
         }
 
     </script>
