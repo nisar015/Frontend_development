@@ -74,8 +74,10 @@
             displayaccountholders()
         }
         function creatingaccount(){
-            document.getElementsByTagName("label")[0].style.display="block"
-            document.getElementsByTagName("input")[0].style.display="block"
+            for(var i=0;i<4;i++){
+                document.getElementsByTagName("label")[i].style.display="block"
+                document.getElementsByTagName("input")[i].style.display="block"
+            }
         }
 
     </script>
