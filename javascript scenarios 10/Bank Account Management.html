@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <style>
-    input,label,#addacc{
-        display:none;
+    input,
+    label,
+    #addacc {
+        display: none;
     }
 </style>
+
 <body>
     <table border="1">
         <thead>
@@ -35,11 +38,12 @@
         <!-- <br><br> -->
         <label for="Accbls">Enter Acc Balance</label>
         <input type="Accbls" id="Accbls">
+        <label for="deposit">Enter deposit amount</label>
+        <input type="deposit" id="deposit">
         <!-- <br><br> -->
         <button type="button" onclick="addaccount()" id="addacc">Add Account</button>
         <button type="button" onclick="creatingaccount()" id="creatacc">create Account</button>
     </form>
-    <td><button onclick="depositamount()">Deposit</button></td>
     <script>
         var AccHolders = [
             {
@@ -50,7 +54,7 @@
             }
         ]
         function displayaccountholders() {
-            document.querySelector("tbody").innerHTML=""
+            document.querySelector("tbody").innerHTML = ""
             AccHolders.forEach(function (holder) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
@@ -58,28 +62,33 @@
                 <td>${holder.AccNumber}</td>
                 <td>${holder.AccType}</td>
                 <td>${holder.AccBal}</td>
+                <td><button onclick="depositamount()">Deposit</button></td>
+  
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
         }
         displayaccountholders()
-        function addaccount(){
-            var hold={
-                name:document.getElementById("name").value,
-                AccNumber:document.getElementById("Accnum").value,
-                AccType:document.getElementById("Acctype").value,
-                AccBal:document.getElementById("Accbls").value,
+        function addaccount() {
+            var hold = {
+                name: document.getElementById("name").value,
+                AccNumber: document.getElementById("Accnum").value,
+                AccType: document.getElementById("Acctype").value,
+                AccBal: document.getElementById("Accbls").value,
             }
             AccHolders.push(hold)
             displayaccountholders()
         }
-        function creatingaccount(){
-            for(var i=0;i<4;i++){
-                document.getElementsByTagName("label")[i].style.display="block"
-                document.getElementsByTagName("input")[i].style.display="block"
+        function creatingaccount() {
+            for (var i = 0; i < 4; i++) {
+                document.getElementsByTagName("label")[i].style.display = "block"
+                document.getElementsByTagName("input")[i].style.display = "block"
             }
-            document.getElementById("creatacc").style.display="none"
-            document.getElementById("addacc").style.display="block"
+            document.getElementById("creatacc").style.display = "none"
+            document.getElementById("addacc").style.display = "block"
+        }
+        function depositamount(){
+
         }
 
     </script>
