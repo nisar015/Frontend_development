@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <table border="1">
         <thead>
             <tr>
-            <th>Account Holder Name</th>
-            <th>Account Number</th>
-            <th>Account Type</th>
-            <th>Account Balance</th>
+                <th>Account Holder Name</th>
+                <th>Account Number</th>
+                <th>Account Type</th>
+                <th>Account Balance</th>
             </tr>
-
         </thead>
         <tbody></tbody>
     </table>
@@ -31,28 +32,29 @@
         <button type="button" onclick="creatingaccount()">Create Account</button>
     </form>
     <script>
-        var AccHolders=[
+        var AccHolders = [
             {
-                name:"Nisar Ahmmed",
-                AccNumber:1245365,
-                AccType:"savings",
-                AccBal:1000
+                name: "Nisar Ahmmed",
+                AccNumber: 1245365,
+                AccType: "savings",
+                AccBal: 1000
             }
         ]
-        function displayaccountholders(){
-            AccHolders.forEach(function(holder){
-                var mytr=document.createElement("tr")
-                mytr.innerHTML=`
+        function displayaccountholders() {
+            AccHolders.forEach(function (holder) {
+                var mytr = document.createElement("tr")
+                mytr.innerHTML = `
                 <td>${holder.name}</td>
                 <td>${holder.AccNumber}</td>
                 <td>${holder.AccType}</td>
                 <td>${holder.AccBal}</td>
                 `
+                document.querySelector("tbody").appendChild(mytr)
             })
-            document.querySelector("tbody").appendChild(mytr)
         }
         displayaccountholders()
-        
+
     </script>
 </body>
+
 </html>
