@@ -61,17 +61,28 @@
 
         }
         function filterbelowprice(){
-            var belowprice=products.map(function(val){
+            var belowprice=[]
+            products.forEach(function(val){
                 if(val.price<50000){
                     belowprice.push(val.prouctname)
                 }
             })
             return belowprice
         }
+        function filteraboveprice(){
+            var aboveprice=[]
+            products.forEach(function(val){
+                if(val.price>50000){
+                    aboveprice.push(val.prouctname)
+                }
+            })
+            return aboveprice
+        }
         console.log(searchbycategory('phone'))
         console.log(searchbyproname('MacBook'))
         // how to implement case insensitive search
         console.log(filterbelowprice())
+        console.log(filteraboveprice())
     </script>
 </body>
 
