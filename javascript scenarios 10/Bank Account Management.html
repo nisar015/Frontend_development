@@ -44,6 +44,7 @@
             }
         ]
         function displayaccountholders() {
+            document.querySelector("tbody").innerHTML=""
             AccHolders.forEach(function (holder) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
