@@ -38,7 +38,7 @@
         <input type="Accbls" id="Accbls">
         <!-- <br><br> -->
         <button type="button" onclick="addaccount()" id="addaccount">Add Account</button>
-        <button type="button" onclick="creatingaccount()">create Account</button>
+        <button type="button" onclick="creatingaccount()" id="creatacc">create Account</button>
     </form>
     <script>
         var AccHolders = [
@@ -78,6 +78,8 @@
                 document.getElementsByTagName("label")[i].style.display="block"
                 document.getElementsByTagName("input")[i].style.display="block"
             }
+            document.getElementById("creatacc").style.display="none"
+            document.getElementById("addaccount").style.display="block"
         }
 
     </script>
