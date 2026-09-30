@@ -20,17 +20,17 @@
         <tbody></tbody>
     </table>
     <form>
-        <label for="amount">Enter Acc Holder name</label>
-        <input type="amount" id="amount">
+        <label for="name">Enter Acc Holder name</label>
+        <input type="name" id="name">
         <br><br>
-        <label for="Deposit">Enter Acc Number</label>
-        <input type="Deposit" id="Deposit">
+        <label for="Accnum">Enter Acc Number</label>
+        <input type="Accnum" id="Accnum">
         <br><br>
-        <label for="Withdraw">Enter Acc Type</label>
-        <input type="Withdraw" id="Withdraw">
+        <label for="Acctype">Enter Acc Type</label>
+        <input type="Acctype" id="Acctype">
         <br><br>
-        <label for="Withdraw">Enter Acc Balance</label>
-        <input type="Withdraw" id="Withdraw">
+        <label for="Accbls">Enter Acc Balance</label>
+        <input type="Accbls" id="Accbls">
         <br><br>
         <button type="button" onclick="creatingaccount()">Add Account</button>
     </form>
@@ -59,9 +59,9 @@
         function creatingaccount(){
             var hold={
                 name:document.getElementById("name").value,
-                AccNumber:document.getElementById("AccNumber").value,
-                AccType:document.getElementById("AccType").value,
-                AccBal:document.getElementById("AccBal").value,
+                AccNumber:document.getElementById("Accnum").value,
+                AccType:document.getElementById("Acctype").value,
+                AccBal:document.getElementById("Accbls").value,
             }
             AccHolders.push(hold)
             displayaccountholders()
