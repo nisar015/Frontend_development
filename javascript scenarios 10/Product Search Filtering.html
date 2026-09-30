@@ -60,9 +60,18 @@
             
 
         }
+        function filterbelowprice(){
+            var belowprice=products.map(function(val){
+                if(val.price<50000){
+                    belowprice.push(val.prouctname)
+                }
+            })
+            return belowprice
+        }
         console.log(searchbycategory('phone'))
         console.log(searchbyproname('MacBook'))
         // how to implement case insensitive search
+        console.log(filterbelowprice())
     </script>
 </body>
 
