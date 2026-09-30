@@ -39,7 +39,7 @@
                 AccBal:1000
             }
         ]
-        function creatingaccount(){
+        function displayaccountholders(){
             AccHolders.forEach(function(holder){
                 var mytr=document.createElement("tr")
                 mytr.innerHTML=`
@@ -51,7 +51,7 @@
             })
             document.querySelector("tbody").appendChild(mytr)
         }
-        creatingaccount()
+        displayaccountholders()
         
     </script>
 </body>
