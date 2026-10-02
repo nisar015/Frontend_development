@@ -28,8 +28,8 @@
                 displayusers(data)
             })
         }
-        function displayusers(data) {
-            data.forEach(function(user) {
+        function displayusers(usersdata) {
+            usersdata.forEach(function(user) {
                 console.log(user)
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
