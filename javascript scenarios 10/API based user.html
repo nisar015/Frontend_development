@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table{
+        table {
             margin: auto;
             width: 80%;
             align-items: center;
@@ -31,8 +31,35 @@
         </tbody>
     </table>
 
+    <form>
+
+        <!-- Text -->
+        <label for="ID">Id :</label>
+        <input type="id" id="id" name="id">
+        <br><br>
+
+        <!-- Email -->
+        <label for="name">name</label>
+        <input type="name" id="name" name="name" username="username" autocomplete="username">
+        <br><br>
+
+        <!-- Password -->
+        <label for="age">age</label>
+        <input type="age" id="age" name="age" autocomplete="current-password">
+        <br><br>
+
+        <!-- Telephone -->
+        <label for="course">course</label>
+        <input type="course" id="course" name="course">
+        <br><br>
+
+        <!-- Number -->
+        <label for="marks">marks</label>
+        <input type="marks" id="marks" name="marks" min="18" max="60">
+        <br><br>
+    </form>
     <script>
-        function getdatafromserver(){
+        function getdatafromserver() {
             fetch("http://localhost:3000/users").then(function (response) {
                 return response.json()
             }).then(function (data) {
@@ -42,8 +69,8 @@
         }
         getdatafromserver()
         function displayusers(usersdata) {
-            document.querySelector("tbody").innerHTML=""
-            usersdata.forEach(function(user) {
+            document.querySelector("tbody").innerHTML = ""
+            usersdata.forEach(function (user) {
                 console.log(user)
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
@@ -59,10 +86,10 @@
                 document.querySelector("tbody").appendChild(mytr)
             })
         }
-        function handledelete(id){
-            fetch("http://localhost:3000/users/"+id,{
-                method:"DELETE"
-            }).then(function(){
+        function handledelete(id) {
+            fetch("http://localhost:3000/users/" + id, {
+                method: "DELETE"
+            }).then(function () {
                 getdatafromserver()
             })
         }
