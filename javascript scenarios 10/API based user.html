@@ -94,6 +94,15 @@
                 getdatafromserver()
             })
         }
+        function handleadduser() {
+            var user = {
+                "id": document.getElementById("id").value,
+                "Name": document.getElementById("name").value,
+                "Email": document.getElementById("email").value,
+                "City": document.getElementById("city").value,
+                "Company": document.getElementById("company").value
+            }
+        }
         // displayusers()
 
     </script>
