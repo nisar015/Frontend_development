@@ -31,7 +31,33 @@
         </tbody>
     </table>
 
-    
+    <form>
+
+        <!-- Text -->
+        <label for="ID">Id :</label>
+        <input type="id" id="id" name="id">
+        <br><br>
+
+        <!-- Email -->
+        <label for="name">Name</label>
+        <input type="name" id="name" name="name" username="username" autocomplete="username">
+        <br><br>
+
+        <!-- Password -->
+        <label for="Email">age</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <br><br>
+
+        <!-- Telephone -->
+        <label for="city">city</label>
+        <input type="city" id="city" name="city">
+        <br><br>
+
+        <!-- Number -->
+        <label for="marks">marks</label>
+        <input type="marks" id="marks" name="marks" min="18" max="60">
+        <br><br>
+    </form>
     <script>
         function getdatafromserver() {
             fetch("http://localhost:3000/users").then(function (response) {
@@ -61,7 +87,7 @@
             })
         }
         function handledelete(id) {
-            fetch("http://localhost:3000/users/"+id,{
+            fetch("http://localhost:3000/users/" + id, {
                 method: "DELETE"
             }).then(function () {
                 getdatafromserver()
