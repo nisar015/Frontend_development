@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "Name": "Rahul Sharma",
+            "Email": "rahul@gmail.com",
+            "City": "Hyderabad",
+            "Company": "TCS"
+        },
+        {
+            "Name": "Priya Reddy",
+            "Email": "priya@gmail.com",
+            "City": "Bangalore",
+            "Company": "Infosys"
+        },
+        {
+            "Name": "Arjun Kumar",
+            "Email": "arjun@gmail.com",
+            "City": "Chennai",
+            "Company": "Wipro"
+        },
+        {
+            "Name": "Sneha Patel",
+            "Email": "sneha@gmail.com",
+            "City": "Mumbai",
+            "Company": "Accenture"
+        },
+        {
+            "Name": "Vikram Singh",
+            "Email": "vikram@gmail.com",
+            "City": "Delhi",
+            "Company": "Cognizant"
+        }
+    ]
+}
