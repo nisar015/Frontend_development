@@ -24,10 +24,10 @@
             fetch("http://localhost:3000/users").then(function (response) {
                 return response.json()
             }).then(function (data) {
+                console.log(data)
                 displayusers(data)
             })
         }
-        getdatafromserver()
         function displayusers(data) {
             data.forEach(function (user) {
                 var mytr = document.createElement("tr")
@@ -40,6 +40,7 @@
 
             })
         }
+        getdatafromserver()
         displayusers()
     </script>
 </body>
