@@ -29,9 +29,9 @@
             })
         }
         function displayusers(data) {
-            data.forEach(function (user) {
+            data.forEach(function(user) {
                 var mytr = document.createElement("tr")
-                mytr = `
+                mytr.innerHTML = `
                 <td>${user}</td>
                 <td></td>
                 <td></td>
@@ -41,7 +41,7 @@
             })
         }
         getdatafromserver()
-        displayusers()
+        // displayusers()
     </script>
 </body>
 
