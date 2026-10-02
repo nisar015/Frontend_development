@@ -1,39 +1,46 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "Name": "Rahul Sharma",
-            "Email": "rahul@gmail.com",
-            "City": "Hyderabad",
-            "Company": "TCS"
-        },
-        {
-            "id": "2",
-            "Name": "Priya Reddy",
-            "Email": "priya@gmail.com",
-            "City": "Bangalore",
-            "Company": "Infosys"
-        },
-        {
-            "id": "3",
-            "Name": "Arjun Kumar",
-            "Email": "arjun@gmail.com",
-            "City": "Chennai",
-            "Company": "Wipro"
-        },
-        {
-            "id": "4",
-            "Name": "Sneha Patel",
-            "Email": "sneha@gmail.com",
-            "City": "Mumbai",
-            "Company": "Accenture"
-        },
-        {
-            "id": "5",
-            "Name": "Vikram Singh",
-            "Email": "vikram@gmail.com",
-            "City": "Delhi",
-            "Company": "Cognizant"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "Name": "Rahul Sharma",
+      "Email": "rahul@gmail.com",
+      "City": "Hyderabad",
+      "Company": "TCS"
+    },
+    {
+      "id": "2",
+      "Name": "Priya Reddy",
+      "Email": "priya@gmail.com",
+      "City": "Bangalore",
+      "Company": "Infosys"
+    },
+    {
+      "id": "3",
+      "Name": "Arjun Kumar",
+      "Email": "arjun@gmail.com",
+      "City": "Chennai",
+      "Company": "Wipro"
+    },
+    {
+      "id": "4",
+      "Name": "Sneha Patel",
+      "Email": "sneha@gmail.com",
+      "City": "Mumbai",
+      "Company": "Accenture"
+    },
+    {
+      "id": "5",
+      "Name": "Vikram Singh",
+      "Email": "vikram@gmail.com",
+      "City": "Delhi",
+      "Company": "Cognizant"
+    },
+    {
+      "id": "6",
+      "Name": "nisarachukatla",
+      "Email": "nisarachukatla15@gmail.com",
+      "City": "Kurnool",
+      "Company": "adssss"
+    }
+  ]
 }
