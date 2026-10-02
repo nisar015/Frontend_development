@@ -37,11 +37,13 @@
                 console.log(user)
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
-                
+
                 <td>${user.Name}</td>
                 <td>${user.Email}</td>
                 <td>${user.City}</td>
                 <td>${user.Company}</td>
+                <td><button onclick=handledelete(${user.id})>delete</button></td>
+
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
