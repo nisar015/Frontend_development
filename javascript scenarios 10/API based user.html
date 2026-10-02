@@ -30,6 +30,7 @@
         }
         function displayusers(data) {
             data.forEach(function(user) {
+                console.log(user)
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${user}</td>
