@@ -61,7 +61,7 @@
             })
         }
         function handledelete(id) {
-            fetch("http://localhost:3000/users/" + id, {
+            fetch("http://localhost:3000/users/"+id,{
                 method: "DELETE"
             }).then(function () {
                 getdatafromserver()
