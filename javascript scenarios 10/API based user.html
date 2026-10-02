@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <table border="1px solid green">
         <thead>
@@ -16,15 +18,29 @@
             </tr>
         </thead>
     </table>
-    <script>
-        fetch("http://localhost:3000/users").then(function(response){
-            return response.json()
-        }).then(function(data){
-            displayusers(data)
-        })
-        function displayusers(data){
 
+    <script>
+        function getdatafromserver(){
+            fetch("http://localhost:3000/users").then(function (response) {
+                return response.json()
+            }).then(function (data) {
+                displayusers(data)
+            })
+        }
+        getdatafromserver()
+        function displayusers(data) {
+            data.forEach(function (user) {
+                var mytr = document.createElement("tr")
+                mytr = `
+                <td>${user}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                `
+
+            })
         }
     </script>
 </body>
+
 </html>
