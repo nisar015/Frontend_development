@@ -96,15 +96,19 @@
         }
         function handleadduser() {
             var user = {
-                "id": document.getElementById("id").value,
-                "Name": document.getElementById("name").value,
-                "Email": document.getElementById("email").value,
-                "City": document.getElementById("city").value,
-                "Company": document.getElementById("company").value
+                id: document.getElementById("id").value,
+                Name: document.getElementById("name").value,
+                Email: document.getElementById("email").value,
+                City: document.getElementById("city").value,
+                Company: document.getElementById("company").value
             }
             fetch("http://localhost:3000/users/",{
                 method:"POST",
-                body:JSON.stringify(user)
+                body:JSON.stringify(user),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+
             }).then(function(){
                 getdatafromserver()
             })
