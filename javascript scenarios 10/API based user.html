@@ -31,33 +31,7 @@
         </tbody>
     </table>
 
-    <form>
-
-        <!-- Text -->
-        <label for="ID">Id :</label>
-        <input type="id" id="id" name="id">
-        <br><br>
-
-        <!-- Email -->
-        <label for="name">name</label>
-        <input type="name" id="name" name="name" username="username" autocomplete="username">
-        <br><br>
-
-        <!-- Password -->
-        <label for="age">age</label>
-        <input type="age" id="age" name="age" autocomplete="current-password">
-        <br><br>
-
-        <!-- Telephone -->
-        <label for="course">course</label>
-        <input type="course" id="course" name="course">
-        <br><br>
-
-        <!-- Number -->
-        <label for="marks">marks</label>
-        <input type="marks" id="marks" name="marks" min="18" max="60">
-        <br><br>
-    </form>
+    
     <script>
         function getdatafromserver() {
             fetch("http://localhost:3000/users").then(function (response) {
