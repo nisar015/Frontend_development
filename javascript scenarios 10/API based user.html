@@ -124,6 +124,11 @@
                 return response.json()
             }).then(function(user){
                 console.log(user)
+                document.getElementById("id").value=user.id
+                document.getElementById("name").value=user.name
+                document.getElementById("email").value=user.email
+                document.getElementById("city").value=user.city
+                document.getElementById("company").value=user.company
             })
         }
 
