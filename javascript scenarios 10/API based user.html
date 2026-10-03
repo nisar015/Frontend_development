@@ -123,12 +123,12 @@
             fetch("http://localhost:3000/users/"+id).then(function(response){
                 return response.json()
             }).then(function(user){
-                // console.log(user)
+                console.log(user)
                 document.getElementById("id").value=user.id
-                document.getElementById("name").value=user.name
-                document.getElementById("email").value=user.email
-                document.getElementById("city").value=user.city
-                document.getElementById("company").value=user.company
+                document.getElementById("name").value=user.Name
+                document.getElementById("email").value=user.Email
+                document.getElementById("city").value=user.City
+                document.getElementById("company").value=user.Company
             })
         }
 
