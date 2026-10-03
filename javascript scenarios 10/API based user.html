@@ -15,7 +15,8 @@
             width: 80%;
             align-items: center;
         }
-        #updatebutton{
+
+        #updatebutton {
             display: none;
         }
     </style>
@@ -123,22 +124,36 @@
                 getdatafromserver()
             })
         }
-        function handledit(id){
-            fetch("http://localhost:3000/users/"+id).then(function(response){
+        function handledit(id) {
+            fetch("http://localhost:3000/users/" + id).then(function (response) {
                 return response.json()
-            }).then(function(user){
+            }).then(function (user) {
                 console.log(user)
-                document.getElementById("id").value=user.id
-                document.getElementById("name").value=user.Name
-                document.getElementById("email").value=user.Email
-                document.getElementById("city").value=user.City
-                document.getElementById("company").value=user.Company
+                document.getElementById("id").value = user.id
+                document.getElementById("name").value = user.Name
+                document.getElementById("email").value = user.Email
+                document.getElementById("city").value = user.City
+                document.getElementById("company").value = user.Company
             })
-            document.getElementById("updatebutton").style.display="block";
-            document.getElementById("addbutton").style.display="none";
+            document.getElementById("updatebutton").style.display = "block";
+            document.getElementById("addbutton").style.display = "none";
         }
-        function update(){
+        function update() {
+            var user = {
+                id: document.getElementById("id").value,
+                Name: document.getElementById("name").value,
+                Email: document.getElementById("email").value,
+                City: document.getElementById("city").value,
+                Company: document.getElementById("company").value
+            }
+            fetch("http://localhost:3000/users/" +user.id,{
+                method:"PUT",
+                body:JSON.stringify(user),
+                headers: {
+                    "Content-Type": "application/json"
+                }
 
+            }
         }
 
     </script>
