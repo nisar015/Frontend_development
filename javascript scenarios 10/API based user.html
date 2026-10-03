@@ -87,7 +87,7 @@
                 <td>${user.City}</td>
                 <td>${user.Company}</td>
                 <td><button onclick=handledelete(${user.id})>delete</button></td>
-                <td><button onclick=handledit(${index})>Edit</button></td>
+                <td><button onclick=handledit(${user.id})>Edit</button></td>
 
                 `
                 document.querySelector("tbody").appendChild(mytr)
