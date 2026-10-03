@@ -65,7 +65,7 @@
         <label for="Company">Company</label>
         <input type="company" id="company" name="company">
         <br><br>
-        <button type="button" onclick="handleadduser()" id="">add user</button>
+        <button type="button" onclick="handleadduser()" id="addbutton">add user</button>
         <button type="button" onclick="update()" id="updatebutton">update</button>
     </form>
     <script>
@@ -134,6 +134,7 @@
                 document.getElementById("city").value=user.City
                 document.getElementById("company").value=user.Company
                 document.getElementById("updatebutton").style.display="block";
+                document.getElementById("add").style.display="block";
             })
         }
 
