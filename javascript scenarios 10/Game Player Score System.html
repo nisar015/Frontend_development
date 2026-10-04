@@ -11,6 +11,7 @@
     <button onclick="attack()">enemy attacked</button>
     <button onclick="defeat()">defeat enemy</button>
     <button onclick="coins()">collect coins</button>
+    <button onclick="Health()">collect Health</button>
     <script>
         var playerHS = {
             Health: 100,
@@ -34,6 +35,10 @@
         function defeat() {
             playerHS.Score += 10
             document.write(`player defeated enemy, Score ${playerHS.Score}`)
+        }
+        function coins() {
+            playerHS.Score += 2
+            document.write(`player collects coins,Score ${playerHS.Score}`)
         }
         function coins() {
             playerHS.Score += 2
