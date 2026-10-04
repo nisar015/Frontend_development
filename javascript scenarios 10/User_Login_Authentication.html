@@ -67,34 +67,32 @@
         function passwordvalidation() {
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$!]).{8,}$/;
-            var mail=document.getElementById("email").value
-            var pw=document.getElementById("password").value
-            
+            var mail = document.getElementById("email").value
+            var pw = document.getElementById("password").value
+
             // console.log(user)
             if (!emailPattern.test(mail)) {
                 console.log("Invalid email");
                 // return;
             }
-            if(!passwordPattern.test(pw)){
+            if (!passwordPattern.test(pw)) {
                 console.log("Invalid password");
                 return;
             }
-            var check=registeredUsers.find(function(user){
-                return user.email===mail
+            var check = registeredUsers.find(function (user) {
+                return user.email === mail
             })
-            // console.log(check)
-            // why check output is not getting as boolean here
-            if(check){
-                console.log("user exits :",check.id,check.name)
+            if (check) {
+                console.log("user exits :", check.id, check.name)
                 // console.log("Successfull Login!!!")
-                if(check.password===pw){
+                if (check.password === pw) {
                     console.log("successfull Login!!!");
                 }
-                else{
+                else {
                     console.log("Wrong Password!!!");
                 }
             }
-            else{
+            else {
                 console.log("User Not found!!!")
             }
 
