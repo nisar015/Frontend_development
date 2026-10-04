@@ -73,7 +73,7 @@
             // console.log(user)
             if (!emailPattern.test(mail)) {
                 console.log("Invalid email");
-                // return;
+                return;
             }
             if (!passwordPattern.test(pw)) {
                 console.log("Invalid password");
@@ -97,6 +97,8 @@
             }
 
         }
+        // how to implement Account lock after 3 failed attempts
+        // how to implement logout
     </script>
 </body>
 
