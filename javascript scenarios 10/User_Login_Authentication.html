@@ -24,7 +24,7 @@
                 return user.name === username
             })
             if (check) {
-                return "user exits"
+                return "Search user exits"
             }
             else {
                 console.log("username doesnot exits")
@@ -73,7 +73,7 @@
             // console.log(user)
             if (!emailPattern.test(mail)) {
                 console.log("Invalid email");
-                return;
+                // return;
             }
             if(!passwordPattern.test(pw)){
                 console.log("Invalid password");
