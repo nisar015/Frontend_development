@@ -11,10 +11,13 @@
             Health:100,
             Score:0
         }
-        function playerhealth(){
-            return playerHS.Health
+        function playerhealth(attack){
+            if(attack){
+                playerHS.Health -= 5
+                return playerHS.Health
+            }
         }
-        console.log(playerhealth)
+        console.log(playerhealth('attack'))
         //if enemy attacks is a button then health decreases. how to implement this using CRUD
     </script>
 </body>
