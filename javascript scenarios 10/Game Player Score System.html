@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <button onclick="attack()" >attack</button>
+    <button onclick="attack()">attack</button>
     <script>
-        var playerHS={
-            Health:100,
-            Score:0
+        var playerHS = {
+            Health: 100,
+            Score: 0
         }
-        function playerhealth(attack,defeat){
-            if(attack){
-                playerHS.Health -= 5
-                return playerHS.Health
+        function playerhealth(attack, defeat) {
+            if (attack) {
+
             }
-            else if(defeat){
+            else if (defeat) {
                 playerHS.Score += 10
             }
-            else if(defeat){
+            else if (defeat) {
                 playerHS.Score += 10
             }
         }
-        console.log(playerhealth('attack'))
+        function attack() {
+            playerHS.Health -= 5
+            return playerHS.Health
+        }
         console.log(playerhealth('defeated enemy'))
         //if enemy attacks is a button then health decreases. how to implement this using CRUD
     </script>
 </body>
+
 </html>
