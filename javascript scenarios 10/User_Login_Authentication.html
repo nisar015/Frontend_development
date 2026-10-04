@@ -68,9 +68,10 @@
             var mail=document.getElementById("email").value
             var pw=document.getElementById("password").value
             var check=registeredUsers.find(function(user){
-                return user.email==mail
+                return user.email===mail
             })
-            // console.log(check)
+            console.log(check)
+            // why check output is not getting as boolean here
             if(check){
                 console.log("user exits :",check.id,check.name)
                 console.log("Successfull Login!!!")
