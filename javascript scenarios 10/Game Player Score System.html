@@ -18,17 +18,7 @@
             Health: 100,
             Score: 0
         }
-        function playerhealth(attack, defeat) {
-            if (attack) {
-
-            }
-            else if (defeat) {
-                
-            }
-            else if (defeat) {
-                playerHS.Score += 10
-            }
-        }
+        
         function attack() {
             playerHS.Health -= 5
             document.getElementById("heading").innerHTML=`Enemy attacked player, Health is ${playerHS.Health}`
@@ -42,8 +32,8 @@
             document.getElementById("heading").innerHTML=`player collected coins, Score ${playerHS.Score}`
         }
         function Health() {
-            playerHS.Score += 2
-            document.getElementById("heading").innerHTML=`player collects coins,Score ${playerHS.Score}`
+            playerHS.Score += 10
+            document.getElementById("heading").innerHTML=`player collects Health,Score ${playerHS.Score}`
         }
         //if enemy attacks is a button then health decreases. how to implement this using CRUD
     </script>
