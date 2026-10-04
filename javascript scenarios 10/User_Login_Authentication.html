@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    #logout{
+        display: none;
+    }
+</style>
 <body>
     <h2 id="heading"></h2>
     <form action="">
@@ -22,6 +26,7 @@
         <button type="button" onclick="passwordvalidation()">submit</button>
         <br>
     </form>
+    <button id="logout" onclick="logoutbutton()">logout</button>
     <script>
         function Usernamevalidation(username) {
             var check = registeredUsers.find(function (user) {
@@ -92,7 +97,7 @@
                 failedlogincount += 1
                 return;
             }
-            if (!mobilepattern.test(mobilenum)) {
+            if (!mobilepattern.test(mobile)) {
                 console.log("Invalid mobile number");
                 return;
             }
@@ -104,6 +109,9 @@
                 // console.log("Successfull Login!!!")
                 if (check.password === pw) {
                     console.log("successfull Login!!!");
+                    document.querySelector("form").style.display="none";
+                    document.querySelector("h2").innerHTML="welcome to "+document.getElementById("email").value
+                    document.querySelector("#logout").style.display="block"
                 }
                 else {
                     console.log("Wrong Password!!!");
@@ -112,6 +120,13 @@
             else {
                 console.log("User Not found!!!")
             }
+
+        }
+        function logoutbutton(){
+            document.querySelector("h2").style.display="none";
+            document.querySelector("form").style.display="block"
+            document.querySelector("form").reset()
+            document.querySelector("#logout").style.display="none"
 
         }
         // how to implement Failed-login counter

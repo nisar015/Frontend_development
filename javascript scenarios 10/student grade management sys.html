@@ -8,6 +8,19 @@
 </head>
 
 <body>
+    <ul id="studentmarks">
+        
+    </ul>
+    <hr>
+    <ul id="studentgrades">
+
+    </ul>
+    <hr>
+    <ul id="sortedstudents">
+
+    </ul>
+    
+    
     <script>
         var students = [
             { name: "Arun", marks: 85 },
@@ -16,9 +29,40 @@
         ];
         var studentpassed=[]
         var studentFailed=[]
-        students.forEach(function (student) {
-            console.log(`${student.name} : ${student.marks}`)
-        })
+        function displaystudentmarks(){
+            students.forEach(function (student) {
+                // document
+                // console.log(`${student.name} : ${student.marks}`)
+                var myli=document.createElement("li")
+                myli.innerHTML=`
+                <li>${student.name} - ${student.marks}</li>
+
+                `
+                document.querySelector("ul").appendChild(myli)
+            })
+            
+        }
+        displaystudentmarks()
+        function displaystudentgrades(){
+            students.forEach(function(student){
+                var myli=document.createElement("li")
+                var studentgrade=null
+                if(student.marks>=80){
+                    studentgrade="Grade A"
+                }
+                else if(student.marks>70 & student.marks<80){
+                    studentgrade="Grade B"
+                }
+                else{
+                    studentgrade="Grade C"
+                }
+                myli.innerHTML=`
+                <li>${student.name}- ${studentgrade}</li>
+                `
+                document.getElementById("studentgrades").appendChild(myli)
+            })
+        }
+        displaystudentgrades()
         function grades(name) {
             var check = students.find(function(val){
                 return val.name==name
@@ -76,6 +120,28 @@
         console.log("class average is:",average()/students.length)
         console.log("passed students:",studentpassed)
         console.log("Failed students:",studentFailed)
+        function sortstudentbymarks(){
+            students.sort(function(a,b){
+                console.log(a,b);
+                return a.marks-b.marks
+            })
+            // console.log(students);
+            displaysortedstudents()
+        }
+        sortstudentbymarks()
+        function displaysortedstudents(){
+            students.forEach(function(student){
+                // var myli=document.createElement("li")
+                // var studentgrade=null
+                var myli=document.createElement("li")
+                myli.innerHTML=`
+                <li>${student.name} - ${student.marks}</li>
+
+                `
+                document.getElementById("sortedstudents").appendChild(myli)
+            })
+            
+        }
         // how to sort the students by direct sort method
     </script>
 </body>

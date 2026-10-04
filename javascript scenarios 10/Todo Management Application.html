@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <style>
-    #updatebutton{
+    #updatebutton {
         display: none;
     }
 </style>
+
 <body>
     <table border="1px solid grey">
         <thead>
@@ -20,7 +21,7 @@
                 <th>Delete Task</th>
                 <th>Edit Task</th>
                 <th>Task status</th>
-                
+
             </tr>
         </thead>
         <tbody></tbody>
@@ -35,14 +36,26 @@
     </form>
     <script>
         var Todolist = [
-            {task:"LearnJavaScript"},
-            {task:"PracticeArrays"},
-            {task:"BuildTodoApp"},
-            {task:"LearnReact"},
+            {
+                task: "LearnJavaScript",
+                completed: false
+            },
+            {
+                task: "PracticeArrays",
+                completed: false
+            },
+            {
+                task: "BuildTodoApp",
+                completed: false
+            },
+            {
+                task: "LearnReact",
+                completed: false
+            },
         ]
         function displaytasks() {
-            document.querySelector("tbody").innerHTML=""
-            Todolist.forEach(function(todo,index){
+            document.querySelector("tbody").innerHTML = ""
+            Todolist.forEach(function (todo, index) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${todo.task}</td>
@@ -56,42 +69,42 @@
             })
         }
         displaytasks()
-        function addtask(){
-            var newtask={
-                task:document.getElementById("task").value
+        function addtask() {
+            var newtask = {
+                task: document.getElementById("task").value
             }
             Todolist.push(newtask)
             displaytasks()
             clearformfields()
         }
-        function deletetask(index){
-            Todolist.splice(index,1)
+        function deletetask(index) {
+            Todolist.splice(index, 1)
             displaytasks()
         }
-        function clearformfields(){
-            document.getElementById("task").value=""
+        function clearformfields() {
+            document.getElementById("task").value = ""
         }
-        var editindex=null
-        function editask(i){
-            editindex=i
-            document.getElementById("task").value=Todolist[editindex].task
-            document.getElementById("updatebutton").style.display="block"
-            document.getElementById("addbutton").style.display="none"
+        var editindex = null
+        function editask(i) {
+            editindex = i
+            document.getElementById("task").value = Todolist[editindex].task
+            document.getElementById("updatebutton").style.display = "block"
+            document.getElementById("addbutton").style.display = "none"
         }
-        function updatetask(){
-            var newtask={
-                task:document.getElementById("task").value
+        function updatetask() {
+            var newtask = {
+                task: document.getElementById("task").value
             }
-            Todolist[editindex]=newtask
+            Todolist[editindex] = newtask
             displaytasks()
             clearformfields()
-            document.getElementById("updatebutton").style.display="none"
-            document.getElementById("addbutton").style.display="block"
+            document.getElementById("updatebutton").style.display = "none"
+            document.getElementById("addbutton").style.display = "block"
         }
-        function checkcompleted(){
+        function checkcompleted() {
             console.log("completed")
         }
-        function checkpending(){
+        function checkpending() {
             console.log("pending")
         }
         // how to store marked todos as completed and pending
