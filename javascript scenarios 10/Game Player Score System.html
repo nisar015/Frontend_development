@@ -18,13 +18,15 @@
             Health: 100,
             Score: 0
         }
-        
-        function attack() {
-            playerHS.Health -= 50
-            document.getElementById("heading").innerHTML=`Enemy attacked player, Health is ${playerHS.Health}`
+        function Gameover(){
             if(playerHS.Health===0){
                 document.getElementById("heading").innerHTML=`Game Over`
             }
+
+        }
+        function attack() {
+            playerHS.Health -= 50
+            document.getElementById("heading").innerHTML=`Enemy attacked player, Health is ${playerHS.Health}`
         }
         function defeat() {
             playerHS.Score += 10
