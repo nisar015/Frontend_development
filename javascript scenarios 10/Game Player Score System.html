@@ -22,6 +22,9 @@
         function attack() {
             playerHS.Health -= 50
             document.getElementById("heading").innerHTML=`Enemy attacked player, Health is ${playerHS.Health}`
+            if(playerHS.Health===0){
+                document.getElementById("heading").innerHTML=`Game Over`
+            }
         }
         function defeat() {
             playerHS.Score += 10
