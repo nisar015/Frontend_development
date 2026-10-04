@@ -15,6 +15,9 @@
         <label for="password">enter password :</label>
         <input type="password" id="password" name="password">
         <br>
+        <label for="mobilenum">enter mobile number :</label>
+        <input type="mobilenum" id="mobilenum" name="mobilenum">
+        <br>
         <button type="button" onclick="passwordvalidation()">submit</button>
         <br>
     </form>
@@ -64,19 +67,29 @@
         ];
         console.log(Usernamevalidation('Arjun'))
         // console.log(passwordvalidation('Arjun@123'))
+        var failedlogincount=0
         function passwordvalidation() {
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$!]).{8,}$/;
+            var mobilepattern=/^\d{1,10}$/
             var mail = document.getElementById("email").value
             var pw = document.getElementById("password").value
+            var mobile = document.getElementById("mobilenum").value
+            
 
             // console.log(user)
             if (!emailPattern.test(mail)) {
                 console.log("Invalid email");
+                failedlogincount += 1
                 return;
             }
             if (!passwordPattern.test(pw)) {
                 console.log("Invalid password");
+                failedlogincount += 1
+                return;
+            }
+            if (!mobilepattern.test(mobilenum)) {
+                console.log("Invalid mobile number");
                 return;
             }
             var check = registeredUsers.find(function (user) {
