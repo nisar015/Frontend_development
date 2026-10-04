@@ -6,15 +6,22 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="attack()" >attack</button>
     <script>
         var playerHS={
             Health:100,
             Score:0
         }
-        function playerhealth(attack){
+        function playerhealth(attack,defeat){
             if(attack){
                 playerHS.Health -= 5
                 return playerHS.Health
+            }
+            else if(defeat){
+                playerHS.Score += 10
+            }
+            else if(defeat){
+                playerHS.Score += 10
             }
         }
         console.log(playerhealth('attack'))
