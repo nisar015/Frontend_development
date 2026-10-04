@@ -69,18 +69,7 @@
             var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$!]).{8,}$/;
             var mail=document.getElementById("email").value
             var pw=document.getElementById("password").value
-            // var check=registeredUsers.find(function(user){
-            //     return user.email===mail
-            // })
-            // console.log(check)
-            // why check output is not getting as boolean here
-            // if(check){
-            //     console.log("user exits :",check.id,check.name)
-            //     console.log("Successfull Login!!!")
-            // }
-            // else{
-            //     console.log("User Not found!!!")
-            // }
+            
             // console.log(user)
             if (!emailPattern.test(mail)) {
                 console.log("Invalid email");
@@ -90,6 +79,25 @@
                 console.log("Invalid password format");
                 return;
             }
+            var check=registeredUsers.find(function(user){
+                return user.email===mail
+            })
+            // console.log(check)
+            // why check output is not getting as boolean here
+            if(check){
+                console.log("user exits :",check.id,check.name)
+                console.log("Successfull Login!!!")
+                if(check.password===pw){
+                    console.log("successfull Login!!!");
+                }
+                else{
+                    console.log("Wrong Password!!!");
+                }
+            }
+            else{
+                console.log("User Not found!!!")
+            }
+
         }
     </script>
 </body>
