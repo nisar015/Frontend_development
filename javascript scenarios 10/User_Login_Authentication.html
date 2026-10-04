@@ -75,7 +75,10 @@
             var mail = document.getElementById("email").value
             var pw = document.getElementById("password").value
             var mobile = document.getElementById("mobilenum").value
-            
+            if(failedlogincount>=3){
+                alert("Your account is locked!!")
+                return
+            }
 
             // console.log(user)
             if (!emailPattern.test(mail)) {
