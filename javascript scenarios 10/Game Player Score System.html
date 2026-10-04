@@ -41,6 +41,7 @@
         }
         function coins() {
             playerHS.Score += 2
+            document.getElementById("heading").innerHTML=`player defeated enemy, Score ${playerHS.Score}`
             document.write(`player collects coins,Score ${playerHS.Score}`)
         }
         function Health() {
