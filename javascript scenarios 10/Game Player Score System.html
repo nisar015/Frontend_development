@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h2 id="heading"></h2>
+    <h2 id="heading">Game Starts</h2>
     <button onclick="attack()">enemy attacked</button>
     <button onclick="defeat()">defeat enemy</button>
     <button onclick="coins()">collect coins</button>
@@ -31,7 +31,8 @@
         }
         function attack() {
             playerHS.Health -= 5
-            document.write(`Enemy attacked player, Health is ${playerHS.Health}`)
+            document.getElementById("heading").innerHTML=`Enemy attacked player, Health is ${playerHS.Health}`
+            // document.write()
         }
         function defeat() {
             playerHS.Score += 10
