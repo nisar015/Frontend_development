@@ -76,7 +76,7 @@
                 return;
             }
             if(!passwordPattern.test(pw)){
-                console.log("Invalid password format");
+                console.log("Invalid password");
                 return;
             }
             var check=registeredUsers.find(function(user){
@@ -86,7 +86,7 @@
             // why check output is not getting as boolean here
             if(check){
                 console.log("user exits :",check.id,check.name)
-                console.log("Successfull Login!!!")
+                // console.log("Successfull Login!!!")
                 if(check.password===pw){
                     console.log("successfull Login!!!");
                 }
