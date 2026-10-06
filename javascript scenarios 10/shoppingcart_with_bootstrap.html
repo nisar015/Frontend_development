@@ -1,0 +1,583 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .table th {
+            white-space: nowrap;
+        }
+
+        .form-control {
+            border-radius: 8px;
+        }
+
+        .btn {
+            border-radius: 8px;
+        }
+
+        .bill-card {
+            background: white;
+        }
+
+        .total {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                🛒 Shopping Cart System
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Shopping Cart</h2>
+            <p class="text-muted">Manage your products easily</p>
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Product Table -->
+            <div class="col-lg-8">
+
+                <div class="card p-3">
+
+                    <h4 class="mb-3">Products</h4>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover align-middle text-center">
+
+                            <thead class="table-dark">
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Delete</th>
+                                    <th>Edit</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product Form -->
+            <div class="col-lg-4">
+
+                <div class="card p-4">
+
+                    <h4 class="mb-4">Product Details</h4>
+
+                    <form>
+
+                        <div class="mb-3">
+
+                            <label for="id" class="form-label">
+                                Product ID
+                            </label>
+
+                            <input type="number"
+                                   class="form-control"
+                                   id="id"
+                                   name="id"
+                                   placeholder="Enter product ID">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label for="name" class="form-label">
+                                Product Name
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   id="name"
+                                   name="name"
+                                   placeholder="Enter product name">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label for="price" class="form-label">
+                                Price
+                            </label>
+
+                            <input type="number"
+                                   class="form-control"
+                                   id="price"
+                                   name="price"
+                                   placeholder="Enter price">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label for="quantity" class="form-label">
+                                Quantity
+                            </label>
+
+                            <input type="number"
+                                   class="form-control"
+                                   id="quantity"
+                                   name="quantity"
+                                   placeholder="Enter quantity">
+
+                        </div>
+
+
+                        <div class="d-grid gap-2">
+
+                            <button type="button"
+                                    class="btn btn-success"
+                                    onclick="addproduct()">
+
+                                ➕ Add Product
+
+                            </button>
+
+
+                            <button type="button"
+                                    class="btn btn-primary"
+                                    onclick="updatequantity()">
+
+                                ✏️ Update Product
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bill Summary -->
+
+        <div class="row justify-content-end mt-4">
+
+            <div class="col-lg-4">
+
+                <div class="card bill-card p-4">
+
+                    <h4 class="mb-3">Bill Summary</h4>
+
+                    <div class="d-flex justify-content-between mb-2">
+
+                        <span>Subtotal</span>
+
+                        <span id="subtotalDisplay">
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+                    <div class="d-flex justify-content-between mb-2">
+
+                        <span>Discount (20%)</span>
+
+                        <span id="discountDisplay">
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="d-flex justify-content-between">
+
+                        <span class="total">
+                            Final Amount
+                        </span>
+
+                        <span class="total text-success"
+                              id="totalDisplay">
+
+                            ₹0
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+
+        var products = [
+
+            {
+                id: 1,
+                name: "Laptop",
+                price: 60000,
+                quantity: 1
+            },
+
+            {
+                id: 2,
+                name: "Mouse",
+                price: 1500,
+                quantity: 1
+            },
+
+            {
+                id: 3,
+                name: "Keyboard",
+                price: 3000,
+                quantity: 2
+            }
+
+        ];
+
+
+        // =========================
+        // DISPLAY PRODUCTS
+        // =========================
+
+        function displayproduct() {
+
+            document.querySelector("tbody").innerHTML = "";
+
+            products.forEach(function (pro, index) {
+
+                var mytr = document.createElement("tr");
+
+                mytr.innerHTML = `
+
+                    <td>
+                        ${pro.id}
+                    </td>
+
+                    <td>
+                        <strong>${pro.name}</strong>
+                    </td>
+
+                    <td>
+                        ₹${pro.price}
+                    </td>
+
+                    <td>
+                        <span class="badge text-bg-primary">
+                            ${pro.quantity}
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button
+                            class="btn btn-sm btn-danger"
+                            onclick="deleteproduct(${pro.id}, ${index})">
+
+                            🗑 Delete
+
+                        </button>
+
+                    </td>
+
+                    <td>
+
+                        <button
+                            class="btn btn-sm btn-warning"
+                            onclick="editquantity(${index})">
+
+                            ✏️ Edit
+
+                        </button>
+
+                    </td>
+
+                `;
+
+                document.querySelector("tbody")
+                    .appendChild(mytr);
+
+            });
+
+            subtotalfunc();
+        }
+
+
+        displayproduct();
+
+
+        // =========================
+        // DELETE PRODUCT
+        // =========================
+
+        function deleteproduct(id, index) {
+
+            products.splice(index, 1);
+
+            displayproduct();
+
+        }
+
+
+        // =========================
+        // ADD PRODUCT
+        // =========================
+
+        function addproduct() {
+
+            var pro = {
+
+                id: document.getElementById("id").value,
+
+                name: document.getElementById("name").value,
+
+                price: document.getElementById("price").value,
+
+                quantity: document.getElementById("quantity").value
+
+            };
+
+
+            products.push(pro);
+
+            displayproduct();
+
+            clearformfields();
+
+        }
+
+
+        // =========================
+        // EDIT PRODUCT
+        // =========================
+
+        var editindex = null;
+
+
+        function editquantity(index) {
+
+            editindex = index;
+
+
+            document.getElementById("id").value =
+                products[editindex].id;
+
+
+            document.getElementById("name").value =
+                products[editindex].name;
+
+
+            document.getElementById("price").value =
+                products[editindex].price;
+
+
+            document.getElementById("quantity").value =
+                products[editindex].quantity;
+
+        }
+
+
+        // =========================
+        // CLEAR FORM
+        // =========================
+
+        function clearformfields() {
+
+            document.getElementById("id").value = "";
+
+            document.getElementById("name").value = "";
+
+            document.getElementById("price").value = "";
+
+            document.getElementById("quantity").value = "";
+
+        }
+
+
+        // =========================
+        // UPDATE PRODUCT
+        // =========================
+
+        function updatequantity() {
+
+            if (editindex === null) {
+
+                alert("Please select a product to edit first!");
+
+                return;
+
+            }
+
+
+            var pro = {
+
+                id: document.getElementById("id").value,
+
+                name: document.getElementById("name").value,
+
+                price: document.getElementById("price").value,
+
+                quantity: document.getElementById("quantity").value
+
+            };
+
+
+            products[editindex] = pro;
+
+
+            displayproduct();
+
+            clearformfields();
+
+            editindex = null;
+
+        }
+
+
+        // =========================
+        // SUBTOTAL
+        // =========================
+
+        var subtotal = 0;
+
+
+        function subtotalfunc() {
+
+            // Important:
+            // Reset subtotal before calculating again
+
+            subtotal = 0;
+
+
+            products.forEach(function (val) {
+
+                subtotal +=
+                    Number(val.price) *
+                    Number(val.quantity);
+
+            });
+
+
+            discount();
+
+        }
+
+
+        // =========================
+        // DISCOUNT
+        // =========================
+
+        var discountval = 0;
+
+
+        function discount() {
+
+            discountval = subtotal * (20 / 100);
+
+
+            var finalAmount =
+                subtotal - discountval;
+
+
+            document.getElementById("subtotalDisplay")
+                .innerHTML =
+                "₹" + subtotal.toFixed(2);
+
+
+            document.getElementById("discountDisplay")
+                .innerHTML =
+                "₹" + discountval.toFixed(2);
+
+
+            document.getElementById("totalDisplay")
+                .innerHTML =
+                "₹" + finalAmount.toFixed(2);
+
+
+            console.log(
+                "Subtotal:",
+                subtotal
+            );
+
+
+            console.log(
+                "Discount:",
+                discountval
+            );
+
+
+            console.log(
+                "Final Amount:",
+                finalAmount
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
