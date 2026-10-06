@@ -153,7 +153,7 @@
             document.getElementById("addbutton").style.display = "block"
         }
         function handletodos(){
-            var filtervalue=document.getElementById("filtertodos")
+            var filtervalue=document.getElementById("filtertodos").value;
             var filteredtasks=Todolist.filter(function(val){
                 return val.status==filtervalue
             })
