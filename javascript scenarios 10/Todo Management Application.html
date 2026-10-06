@@ -115,7 +115,9 @@
         var editindex = null
         function editask(i) {
             editindex = i
-            document.getElementById("task").value = Todolist[editindex].task
+            document.getElementById("id").value = Todolist[editindex].id
+            document.getElementById("title").value = Todolist[editindex].title
+            document.getElementById("status").value = Todolist[editindex].status
             document.getElementById("updatebutton").style.display = "block"
             document.getElementById("addbutton").style.display = "none"
         }
