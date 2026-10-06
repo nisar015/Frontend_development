@@ -122,11 +122,13 @@
         }
         function updatetask() {
             var newtask = {
-                task: document.getElementById("task").value
+                id: document.getElementById("id").value,
+                title: document.getElementById("title").value,
+                status: document.getElementById("status").value
             }
             Todolist[editindex] = newtask
             displaytasks()
-            clearformfields()
+            // clearformfields()
             document.getElementById("updatebutton").style.display = "none"
             document.getElementById("addbutton").style.display = "block"
         }
