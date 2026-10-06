@@ -81,6 +81,7 @@
         function addexpense() {
             // expenses.push({ category: cat, expense: ex })
             // return expenses
+            document.querySelector("form").style.display="block"
             var expense={
                 category:document.getElementById("category").value,
                 expense:document.getElementById("expense").value,
@@ -88,6 +89,7 @@
             expenses.push(expense)
             displayexpenses()
             document.querySelector("form").reset()
+            document.querySelector("form").style.display="none"
 
 
 
