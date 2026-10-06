@@ -90,9 +90,9 @@
             }
 
         ]
-        function displaytasks(list) {
+        function displaytasks(Todolist) {
             document.querySelector("tbody").innerHTML = ""
-            list.forEach(function (todo, index) {
+            Todolist.forEach(function (todo, index) {
                 var statusbadge = "";
                 if (todo.status === "completed") {
                     statusbadge = `<span>completed</span>`
