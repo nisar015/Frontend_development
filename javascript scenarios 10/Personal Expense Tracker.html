@@ -52,13 +52,13 @@
                 expense: 500
             }
         ]
-        function displayexpenses(){
-            expenses.forEach(function(val){
-                var mytr=document.createElement("tr")
-                mytr.innerHTML=`
-                <tr>${val.category}</tr>
-                <tr>${val.expense}</tr>
-                <tr><button onclick=handleadd()>add expense</button></tr>
+        function displayexpenses() {
+            expenses.forEach(function (val) {
+                var mytr = document.createElement("tr")
+                mytr.innerHTML = `
+                <td>${val.category}</td>
+                <td>${val.expense}</td>
+                <td><button onclick=handleadd()>add expense</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
@@ -67,9 +67,7 @@
         function addexpense() {
             // expenses.push({ category: cat, expense: ex })
             // return expenses
-            var expense={
-                category:document.querySelector("")
-            }
+
 
 
         }
@@ -123,12 +121,12 @@
             return outex
 
         }
-        function avgexpense(){
-            return expenses.reduce(function(a,b){
-                return a+b.expense
-            },0)
+        function avgexpense() {
+            return expenses.reduce(function (a, b) {
+                return a + b.expense
+            }, 0)
         }
-        console.log(addexpense('stay', 2000))
+        // console.log(addexpense('stay', 2000))
         console.log(deletexpense(2))
         console.log(calculatetotexpense())
         console.log(calculatecatexpense('Travel'))
@@ -136,11 +134,11 @@
         console.log(calculatecatexpense('Entertainment'))
         console.log(highestexpense())
         console.log(lowestexpense())
-        console.log("average expense:",avgexpense()/expenses.length)
+        console.log("average expense:", avgexpense() / expenses.length)
     </script>
 
 
-    
+
 </body>
 
 </html>
