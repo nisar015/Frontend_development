@@ -61,6 +61,16 @@
         function displaytasks() {
             document.querySelector("tbody").innerHTML = ""
             Todolist.forEach(function (todo, index) {
+                var statusbadge="";
+                if(todo.status==="completed"){
+                    statusbadge=`<span>completed</span>`
+                }
+                else if(todo.status==="pending"){
+                    statusbadge=`<span>pending</span>`
+                }
+                else{
+                    statusbadge=`<span>yet to start</span>`
+                }
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${todo.id}</td>
