@@ -40,6 +40,7 @@
         <br><br>
         <button type="button" onclick="addexpense()" id="add">add</button>
     </form>
+    <h2 id="heading"></h2>
     <script>
         var expenses = [
             {
@@ -74,7 +75,8 @@
                 <td><button onclick=handledelete(${i})>delete expense</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
-            })
+            });
+            document.getElementById("heading").innerHTML=calculatetotexpense()
         }
         displayexpenses()
         function addexpense() {
@@ -97,10 +99,13 @@
             expenses.splice(index, 1)
             displayexpenses()
         }
+        var totexpense=0
         function calculatetotexpense() {
-            return expenses.reduce(function (a, b) {
-                return a + b.expense
-            }, 0)
+            totexpense=0
+            expenses.forEach(function(val){
+                totexpense += val.expense
+            })
+            
         }
         function calculatecatexpense(cat) {
             // why filter is returning
