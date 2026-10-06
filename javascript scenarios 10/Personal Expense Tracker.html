@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            
+
         </tbody>
     </table>
     <form>
@@ -53,7 +53,15 @@
             }
         ]
         function displayexpenses(){
-            var mytr=document.querySelector("tbody")
+            expenses.forEach(function(val){
+                var mytr=document.createElement("tr")
+                mytr.innerHTML=`
+                <tr>${val.category}</tr>
+                <tr>${val.expense}</tr>
+                <tr><button onclick=handleadd()>add expense</button></tr>
+                `
+                document.querySelector("tbody").appendChild(mytr)
+            })
         }
         function addexpense() {
             // expenses.push({ category: cat, expense: ex })
