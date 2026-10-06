@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <table border="1px solid red">
+    <table border="1px solid">
         <thead>
             <tr>
                 <th>category</th>
@@ -18,6 +18,14 @@
             </tr>
         </thead>
     </table>
+    <form>
+        <label for="category">category</label>
+        <input type="category" name="category" id="category">
+        <br><br>
+        <label for="expense">expense</label>
+        <input type="expense" name="expense" id="expense">
+        <br><br>
+    </form>
     <script>
         var expenses = [
             {
@@ -41,9 +49,15 @@
                 expense: 500
             }
         ]
+        function displayexpenses(){
+
+        }
         function addexpense() {
             // expenses.push({ category: cat, expense: ex })
             // return expenses
+            var expense={
+                category:document.querySelector("")
+            }
 
 
         }
