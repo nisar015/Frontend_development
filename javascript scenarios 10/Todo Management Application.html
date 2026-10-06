@@ -16,6 +16,7 @@
     <table border="1px solid grey">
         <thead>
             <tr>
+                <th>id</th>
                 <th>Tasks</th>
                 <!-- <th>Add Task</th> -->
                 <th>Delete Task</th>
@@ -58,12 +59,11 @@
             Todolist.forEach(function (todo, index) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
-                <td> ${todo.completed ? `<del>${todo.task}</del>` : `<span>${todo.task}</span>` } </td>
+                <td>${todo.id}</td>
+                <td>${todo.status}</td>
+                <td>${todo.title}</td>
                 <td><button onclick=deletetask(${index})>Delete task</button></td>
                 <td><button onclick=editask(${index})>Edit task</button></td>
-                <td><input type=checkbox onclick=handlestatus(${index})>checkbox</td>
-                <td><input type=checkbox onclick=checkpending()>pending</td>
-
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
