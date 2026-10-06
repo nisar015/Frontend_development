@@ -41,7 +41,7 @@
         <label for="expense">expense</label>
         <input type="expense" name="expense" id="expense">
         <br><br>
-        <button type="button" onclick="addexpense()" id="add">add expense</button>
+        <button type="button" onclick="addexpense()" id="add">add</button>
     </form>
     <script>
         var expenses = [
@@ -88,13 +88,16 @@
                 category:document.getElementById("category").value,
                 expense:document.getElementById("expense").value,
             }
-            document.querySelector("form").style.display="block"
             expenses.push(expense)
             displayexpenses()
             document.querySelector("form").reset()
             document.querySelector("form").style.display="none"
 
 
+
+        }
+        function handleadd(){
+            document.querySelector("form").style.display="block"
 
         }
         function deletexpense(index) {
