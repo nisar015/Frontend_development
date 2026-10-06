@@ -64,6 +64,7 @@
             }
         ]
         function displayexpenses() {
+            document.querySelector("tbody").innerHTML=""
             expenses.forEach(function (val) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
@@ -86,6 +87,7 @@
             }
             expenses.push(expense)
             displayexpenses()
+            document.querySelector("form").reset()
 
 
 
@@ -146,14 +148,14 @@
             }, 0)
         }
         // console.log(addexpense('stay', 2000))
-        console.log(deletexpense(2))
-        console.log(calculatetotexpense())
-        console.log(calculatecatexpense('Travel'))
-        console.log(calculatecatexpense('Food'))
-        console.log(calculatecatexpense('Entertainment'))
-        console.log(highestexpense())
-        console.log(lowestexpense())
-        console.log("average expense:", avgexpense() / expenses.length)
+        // console.log(deletexpense(2))
+        // console.log(calculatetotexpense())
+        // console.log(calculatecatexpense('Travel'))
+        // console.log(calculatecatexpense('Food'))
+        // console.log(calculatecatexpense('Entertainment'))
+        // console.log(highestexpense())
+        // console.log(lowestexpense())
+        // console.log("average expense:", avgexpense() / expenses.length)
     </script>
 
 
