@@ -8,6 +8,19 @@
 </head>
 
 <body>
+    <table>
+        <thead>
+            <tr>
+                <th>category</th>
+                <th>expense</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
     <script>
         var expenses = [
             {
@@ -31,9 +44,11 @@
                 expense: 500
             }
         ]
-        function addexpense(cat, ex) {
-            expenses.push({ category: cat, expense: ex })
-            return expenses
+        function addexpense() {
+            // expenses.push({ category: cat, expense: ex })
+            // return expenses
+
+
         }
         function deletexpense(index) {
             expenses.splice(index, 1)
