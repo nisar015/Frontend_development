@@ -93,9 +93,9 @@
 
         }
         
-        function deletexpense(index) {
+        function handledelete(index) {
             expenses.splice(index, 1)
-            return expenses
+            displayexpenses()
         }
         function calculatetotexpense() {
             return expenses.reduce(function (a, b) {
