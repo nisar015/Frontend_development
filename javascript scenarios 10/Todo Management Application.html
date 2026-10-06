@@ -7,16 +7,23 @@
     <title>Document</title>
 </head>
 <style>
-    table{
+    table {
         width: 80%;
         margin: auto;
     }
+
     #updatebutton {
         display: none;
     }
 </style>
 
 <body>
+    <select name="filter" onchange="handletodos()">
+        <option value="Yet to start">yet to start</option>
+        <option value="pending">pending</option>
+        <option value="completed">completed</option>
+
+    </select>
     <table border="1px solid grey">
         <thead>
             <tr>
@@ -52,34 +59,34 @@
     <script>
         var Todolist = [
             {
-                id:1,
+                id: 1,
                 title: "LearnJavaScript",
                 status: "completed"
             },
             {
-                id:2,
+                id: 2,
                 title: "PracticeArrays",
                 status: "pending"
             },
             {
-                id:3,
+                id: 3,
                 title: "BuildTodoApp",
                 status: "Yet to start"
             }
-            
+
         ]
         function displaytasks() {
             document.querySelector("tbody").innerHTML = ""
             Todolist.forEach(function (todo, index) {
-                var statusbadge="";
-                if(todo.status==="completed"){
-                    statusbadge=`<span>completed</span>`
+                var statusbadge = "";
+                if (todo.status === "completed") {
+                    statusbadge = `<span>completed</span>`
                 }
-                else if(todo.status==="pending"){
-                    statusbadge=`<span>pending</span>`
+                else if (todo.status === "pending") {
+                    statusbadge = `<span>pending</span>`
                 }
-                else{
-                    statusbadge=`<span>yet to start</span>`
+                else {
+                    statusbadge = `<span>yet to start</span>`
                 }
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
@@ -93,7 +100,7 @@
             })
         }
         displaytasks()
-       
+
         function addtask() {
             var newtask = {
                 id: document.getElementById("id").value,
@@ -102,15 +109,12 @@
             }
             Todolist.push(newtask)
             displaytasks()
-            // clearformfields()
         }
         function deletetask(index) {
             Todolist.splice(index, 1)
             displaytasks()
         }
-        function clearformfields() {
-            document.getElementById("task").value = ""
-        }
+
         var editindex = null
         function editask(i) {
             editindex = i
@@ -129,13 +133,12 @@
             Todolist[editindex] = newtask
             displaytasks()
             document.querySelector("form").reset()
-            // clearformfields()
+
             document.getElementById("updatebutton").style.display = "none"
             document.getElementById("addbutton").style.display = "block"
         }
-        
-        // how to store marked todos as completed and pending
-        // how to display them
+
+
 
     </script>
 </body>
