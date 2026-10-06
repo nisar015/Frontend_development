@@ -14,9 +14,7 @@
     button{
         margin: 10px 20px;
     }
-    form{
-        display: none;
-    }
+    
 </style>
 <body>
     <table border="1px solid">
@@ -73,7 +71,6 @@
                 mytr.innerHTML = `
                 <td>${val.category}</td>
                 <td>${val.expense}</td>
-                <td><button onclick=handleadd()>add expense</button></td>
                 <td><button onclick=handledit()>edit expense</button></td>
                 <td><button onclick=handledelete()>delete expense</button></td>
                 `
@@ -96,10 +93,7 @@
 
 
         }
-        function handleadd(){
-            document.querySelector("form").style.display="block"
-
-        }
+        
         function deletexpense(index) {
             expenses.splice(index, 1)
             return expenses
