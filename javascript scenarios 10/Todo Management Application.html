@@ -17,11 +17,11 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>Tasks</th>
+                <th>Title</th>
                 <!-- <th>Add Task</th> -->
-                <th>Delete Task</th>
+                <th>status</th>
                 <th>Edit Task</th>
-                <th>Task status</th>
+                <th>Delete Task</th>
 
             </tr>
         </thead>
@@ -60,10 +60,10 @@
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${todo.id}</td>
-                <td>${todo.status}</td>
                 <td>${todo.title}</td>
-                <td><button onclick=deletetask(${index})>Delete task</button></td>
+                <td>${todo.status}</td>
                 <td><button onclick=editask(${index})>Edit task</button></td>
+                <td><button onclick=deletetask(${index})>Delete task</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
