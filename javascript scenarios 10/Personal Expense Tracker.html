@@ -38,7 +38,7 @@
         <label for="expense">expense</label>
         <input type="expense" name="expense" id="expense">
         <br><br>
-        <button type="button" id="add">add expense</button>
+        <button type="button" onclick="addexpense()" id="add">add expense</button>
     </form>
     <script>
         var expenses = [
@@ -84,6 +84,8 @@
                 category:document.getElementById("category").value,
                 expense:document.getElementById("expense").value,
             }
+            expenses.push(expense)
+            displayexpenses()
 
 
 
