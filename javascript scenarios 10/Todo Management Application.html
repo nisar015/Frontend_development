@@ -92,9 +92,9 @@
        
         function addtask() {
             var newtask = {
-                id: document.getElementById("id").value
-                task: document.getElementById("task").value
-                task: document.getElementById("task").value
+                id: document.getElementById("id").value,
+                title: document.getElementById("title").value,
+                status: document.getElementById("status").value
             }
             Todolist.push(newtask)
             displaytasks()
