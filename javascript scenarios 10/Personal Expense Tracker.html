@@ -65,13 +65,13 @@
         ]
         function displayexpenses() {
             document.querySelector("tbody").innerHTML=""
-            expenses.forEach(function (val) {
+            expenses.forEach(function (val,i) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${val.category}</td>
                 <td>${val.expense}</td>
                 <td><button onclick=handledit()>edit expense</button></td>
-                <td><button onclick=handledelete()>delete expense</button></td>
+                <td><button onclick=handledelete(${i})>delete expense</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
