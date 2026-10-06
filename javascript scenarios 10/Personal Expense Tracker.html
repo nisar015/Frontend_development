@@ -87,9 +87,11 @@
                 expense:document.getElementById("expense").value,
             }
             expenses.push(expense)
+            calculatetotexpense()
             displayexpenses()
             document.querySelector("form").reset()
             document.querySelector("form").style.display="none"
+            // totexpense+ calculatetotexpense()
 
 
 
@@ -105,6 +107,7 @@
             expenses.forEach(function(val){
                 totexpense += val.expense
             })
+            return totexpense
             
         }
         function calculatecatexpense(cat) {
