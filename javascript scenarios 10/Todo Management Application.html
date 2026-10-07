@@ -132,7 +132,7 @@
         }
 
         var editindex = null
-        function editask(Todolist,i) {
+        function editask(i) {
             editindex = i
             // console.log(editindex);
             document.getElementById("id").value = Todolist[editindex].id
@@ -161,7 +161,7 @@
             })
             console.log(filteredtasks);
             displaytasks(filteredtasks)
-            editask(filteredtasks)
+            // editask(filteredtasks)
         }
 
 
