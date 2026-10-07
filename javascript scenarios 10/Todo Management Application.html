@@ -91,6 +91,7 @@
 
         ]
         function displaytasks(Todolist) {
+            console.log(Todolist);
             document.querySelector("tbody").innerHTML = ""
             Todolist.forEach(function (todo, index) {
                 var statusbadge = "";
@@ -131,8 +132,9 @@
         }
 
         var editindex = null
-        function editask(i) {
+        function editask(Todolist,i) {
             editindex = i
+            // console.log(editindex);
             document.getElementById("id").value = Todolist[editindex].id
             document.getElementById("title").value = Todolist[editindex].title
             document.getElementById("status").value = Todolist[editindex].status
@@ -159,6 +161,7 @@
             })
             console.log(filteredtasks);
             displaytasks(filteredtasks)
+            editask(filteredtasks)
         }
 
 
