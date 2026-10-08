@@ -72,26 +72,26 @@
 
         displaystudentmarks();
         
-        function grades(name,index) {
-            console.log(index);
-            var check = students.find(function (val) {
-                return val.name == name
-            })
-            if (check) {
-                if (check.marks > 80) {
-                    studentpassed.push({ "name": check.name, "marks": check.marks })
-                    document.getElementById("stupass").innerHTML= `${check.name} : Grade A`
-                }
-                else if (check.marks > 70 & check.marks < 80) {
-                    studentpassed.push({ "name": check.name, "marks": check.marks })
-                    document.getElementById("stupass").innerHTML= `${check.name} : Grade B`
-                    // return `${check.name} : Grade B`
-                }
-                else {
-                    studentFailed.push({ "name": check.name, "marks": check.marks })
-                    document.getElementById("stupass").innerHTML= `${check.name} : Grade F`
-                    // return `${check.name} : Grade F`
-                }
+        function grades(index) {
+            // var check = students.find(function (val) {
+            //     return val.name == name
+            // })
+            console.log(students[index]);
+            if (students[index].marks > 80) {
+                // studentpassed.push({ "name": check.name, "marks": check.marks })
+                document.getElementById("stupass").innerHTML= `${students[index].name} : Grade A`
+            }
+            else if (check.marks > 70 & check.marks < 80) {
+                studentpassed.push({ "name": check.name, "marks": check.marks })
+                document.getElementById("stupass").innerHTML= `${check.name} : Grade B`
+                // return `${check.name} : Grade B`
+            }
+            else {
+                studentFailed.push({ "name": check.name, "marks": check.marks })
+                document.getElementById("stupass").innerHTML= `${check.name} : Grade F`
+                // return `${check.name} : Grade F`
+            }
+            if (students[index]) {
             }
         }
         // students.forEach(function (stu) {
