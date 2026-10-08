@@ -83,14 +83,14 @@
                 // studentpassed.push({ "name": check.name, "marks": check.marks })
                 document.getElementById("stupass").innerHTML= `${students[index].name} : Grade A`
             }
-            else if (check.marks > 70 & check.marks < 80) {
+            else if (students[index].marks > 70 & students[index].marks < 80) {
                 // studentpassed.push({ "name": check.name, "marks": check.marks })
-                document.getElementById("stupass").innerHTML= `${check.name} : Grade B`
+                document.getElementById("stupass").innerHTML= `${students[index].name} : Grade B`
                 // return `${check.name} : Grade B`
             }
             else {
                 // studentFailed.push({ "name": check.name, "marks": check.marks })
-                document.getElementById("stupass").innerHTML= `${check.name} : Grade F`
+                document.getElementById("stupass").innerHTML= `${students[index].name} : Grade F`
                 // return `${check.name} : Grade F`
             }
             // if (students[index]) {
