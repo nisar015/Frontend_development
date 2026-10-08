@@ -76,10 +76,15 @@
         function grades() {
             var highmarks=students[0]
             // console.log(students);
-            students.forEach(function(stu){
-
-                
-            })
+            for(var i=1;i<students.length;i++){
+                if(highmarks>students[i]){
+                    highmarks=highmarks
+                }
+                else{
+                    highmarks=students[i]
+                }
+            }
+            return highmarks
         }
         // students.forEach(function (stu) {
         //     console.log(grades(stu.name))
