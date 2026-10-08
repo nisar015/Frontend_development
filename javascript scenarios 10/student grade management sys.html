@@ -26,6 +26,7 @@
     <button type="button" onclick="highestmark()">highest marks</button>
     <button type="button" onclick="lowestmarks()">lowest marks</button>
     <button type="button" onclick="classavg()">class Average</button>
+    <button type="button" onclick="sortstudentbymarks()">sortbymarks</button>
 
     <script>
         var students = [
@@ -36,7 +37,7 @@
         var studentpassed = []
         var studentFailed = []
         function displaystudentmarks() {
-
+            document.querySelector("tbody").innerHTML=""
             students.forEach(function (student,i) {
 
                 var mytd = document.createElement("tr");
@@ -107,9 +108,8 @@
                 return a.marks - b.marks
             })
             // console.log(students);
-            displaysortedstudents()
+            displaystudentmarks()
         }
-        // sortstudentbymarks()
         function displaysortedstudents() {
             students.forEach(function (student) {
                 // var myli=document.createElement("li")
