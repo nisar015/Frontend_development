@@ -101,15 +101,11 @@
             document.getElementById("stupass").innerHTML=avg/students.length
         }
 
-        function passfail(){
+        function studentsPassFail(){
             students.forEach(function(stu){
                 if(stu.marks<=35){
-                    var mytd=document.createElement("td")
-                    mytd.innerHTML=`
-                    <td>${stu.name}</td>
-                    <td>${stu.marks}</td>
-                    `
-                    document.querySelector("tbody").appendChild(mytd)
+                    document.getElementById("stupass").innerHTML=`${stu.name} : ${stu.marks}`
+
                 }
             })
         }
