@@ -24,6 +24,7 @@
             <tr>
                 <th>Student Name</th>
                 <th>Student Marks</th>
+                <th>Student Grades</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -48,6 +49,13 @@
 
                 `
                 document.querySelector("ul").appendChild(myli)
+
+                var mytd=document.createElement("tr")
+                mytd.innerHTML=`
+                <td>${student.name}</td>
+                <td>${student.marks}</td>
+                `
+                document.querySelector("tbody").appendChild(mytd)
             })
             
         }
