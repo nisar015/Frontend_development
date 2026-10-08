@@ -79,7 +79,7 @@
             if (check) {
                 if (check.marks > 80) {
                     studentpassed.push({ "name": check.name, "marks": check.marks })
-                    document.getElementById `${check.name} : Grade A`
+                    document.getElementById("stupass").innerHTML= `${check.name} : Grade A`
                 }
                 else if (check.marks > 70 & check.marks < 80) {
                     studentpassed.push({ "name": check.name, "marks": check.marks })
