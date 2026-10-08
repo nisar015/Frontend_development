@@ -74,15 +74,16 @@
         displaystudentmarks();
         
         function grades() {
-            var highmarks=students[0].marks
+            var highmarks=students[0]
             
             for(var i=1;i<students.length;i++){
-                if(highmarks<students[i].marks){
-                    highmarks=students[i].marks
+                if(highmarks.marks<students[i].marks){
+                    highmarks=students[i]
+                    // var nam=students[i].name
                 }
                 
             }
-            document.getElementById("stupass").innerHTML=highmarks
+            document.getElementById("stupass").innerHTML=`${highmarks.name} : ${highmarks.marks}`
         }
         
         var maxele = students[0].marks
