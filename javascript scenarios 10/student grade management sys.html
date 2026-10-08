@@ -54,7 +54,7 @@
                 mytd.innerHTML=`
                 <td>${student.name}</td>
                 <td>${student.marks}</td>
-                <td>${student.marks}</td>
+                <td>${displaystudentgrades()}</td>
                 `
                 document.querySelector("tbody").appendChild(mytd)
             })
@@ -63,24 +63,28 @@
         displaystudentmarks()
         function displaystudentgrades(){
             students.forEach(function(student){
-                var mytd=document.createElement("td")
+                // var mytd=document.createElement("tr")
                 var studentgrade=null
                 if(student.marks>=80){
                     studentgrade="Grade A"
+                    return studentgrade
                 }
                 else if(student.marks>70 & student.marks<80){
                     studentgrade="Grade B"
+                    return studentgrade
                 }
                 else{
                     studentgrade="Grade C"
+                    return studentgrade
                 }
-                mytd.innerHTML=`
-                <td>${studentgrade}</td>
-                `
-                document.getElementById("studentgrades").appendChild(mytd)
+                // mytd.innerHTML=`
+                // <td>${studentgrade}</td>
+                // `
+                // document.getElementById("stugrade").appendChild(mytd)
             })
+            // return studentgrade
         }
-        displaystudentgrades()
+        // displaystudentgrades()
         function grades(name) {
             var check = students.find(function(val){
                 return val.name==name
