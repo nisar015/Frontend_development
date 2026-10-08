@@ -29,7 +29,7 @@
         </thead>
         <tbody></tbody>
     </table>
-
+    <h2 id="stupass"></h2>
 
     <script>
         var students = [
@@ -71,6 +71,7 @@
 
 
         displaystudentmarks();
+        
         function grades(name) {
             var check = students.find(function (val) {
                 return val.name == name
@@ -78,7 +79,7 @@
             if (check) {
                 if (check.marks > 80) {
                     studentpassed.push({ "name": check.name, "marks": check.marks })
-                    return `${check.name} : Grade A`
+                    document.getElementById `${check.name} : Grade A`
                 }
                 else if (check.marks > 70 & check.marks < 80) {
                     studentpassed.push({ "name": check.name, "marks": check.marks })
