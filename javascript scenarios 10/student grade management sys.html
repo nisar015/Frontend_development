@@ -42,13 +42,14 @@
         function displaystudentmarks() {
 
             students.forEach(function (student,i) {
+
                 var mytd = document.createElement("tr");
 
                 mytd.innerHTML = `
             <td>${student.name}</td>
             <td>${student.marks}</td>
             <td>${displaystudentgrades(student.marks)}</td>
-            <td><button onclick="grades(${i})">Highest marks</button></td>
+            <td><button onclick=grades(${i})></button></td>
         `;
 
                 document.querySelector("tbody").appendChild(mytd);
@@ -72,33 +73,30 @@
 
         displaystudentmarks();
         
-        function grades(index) {
-            // var check = students.find(function (val) {
-            //     return val.name == name
-            // })
-            console.log(index);
-            console.log(students[index]);
-            if (students[index].marks >= 80) {
-                console.log(students[index].marks);
-                // studentpassed.push({ "name": check.name, "marks": check.marks })
-                document.getElementById("stupass").innerHTML= `${students[index].name} : Grade A`
+        function grades(name) {
+            var check = students.find(function (val) {
+                return val.name == name
+            })
+            if (check) {
+                if (check.marks > 80) {
+                    studentpassed.push({ "name": check.name, "marks": check.marks })
+                    document.getElementById("stupass").innerHTML= `${check.name} : Grade A`
+                }
+                else if (check.marks > 70 & check.marks < 80) {
+                    studentpassed.push({ "name": check.name, "marks": check.marks })
+                    document.getElementById("stupass").innerHTML= `${check.name} : Grade B`
+                    // return `${check.name} : Grade B`
+                }
+                else {
+                    studentFailed.push({ "name": check.name, "marks": check.marks })
+                    document.getElementById("stupass").innerHTML= `${check.name} : Grade F`
+                    // return `${check.name} : Grade F`
+                }
             }
-            else if (students[index].marks > 70 & students[index].marks < 80) {
-                // studentpassed.push({ "name": check.name, "marks": check.marks })
-                document.getElementById("stupass").innerHTML= `${students[index].name} : Grade B`
-                // return `${check.name} : Grade B`
-            }
-            else {
-                // studentFailed.push({ "name": check.name, "marks": check.marks })
-                document.getElementById("stupass").innerHTML= `${students[index].name} : Grade F`
-                // return `${check.name} : Grade F`
-            }
-            // if (students[index]) {
-            // }
         }
-        // students.forEach(function (stu) {
-        //     console.log(grades(stu.name))
-        // })
+        students.forEach(function (stu) {
+            console.log(grades(stu.name))
+        })
         var maxele = students[0].marks
         var maxindex = 0
         for (var i = 1; i < students.length; i++) {
