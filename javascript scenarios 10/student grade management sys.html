@@ -83,11 +83,13 @@
                 }
                 else if (check.marks > 70 & check.marks < 80) {
                     studentpassed.push({ "name": check.name, "marks": check.marks })
-                    return `${check.name} : Grade B`
+                    document.getElementById("stupass").innerHTML= `${check.name} : Grade B`
+                    // return `${check.name} : Grade B`
                 }
                 else {
                     studentFailed.push({ "name": check.name, "marks": check.marks })
-                    return `${check.name} : Grade F`
+                    document.getElementById("stupass").innerHTML= `${check.name} : Grade F`
+                    // return `${check.name} : Grade F`
                 }
             }
         }
