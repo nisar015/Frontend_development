@@ -31,7 +31,8 @@
     </table>
     <h2 id="stupass"></h2>
     <button type="button" onclick="highestmark()">highest marks</button>
-    <button type="button" onclick="grades()">highest marks</button>
+    <button type="button" onclick="lowestmarks()">lowest marks</button>
+    <button type="button" onclick="classavg()">class Average</button>
 
     <script>
         var students = [
@@ -80,40 +81,24 @@
             for(var i=1;i<students.length;i++){
                 if(highmarks.marks<students[i].marks){
                     highmarks=students[i]
-                    // var nam=students[i].name
                 }
                 
             }
             document.getElementById("stupass").innerHTML=`${highmarks.name} : ${highmarks.marks}`
         }
+        function lowestmarks() {
+            var lowestmark=students[0]
+            
+            for(var i=1;i<students.length;i++){
+                if(lowestmark.marks>students[i].marks){
+                    lowestmark=students[i]
+                }
+                
+            }
+            document.getElementById("stupass").innerHTML=`${lowestmark.name} : ${lowestmark.marks}`
+        }
         
-        var maxele = students[0].marks
-        var maxindex = 0
-        for (var i = 1; i < students.length; i++) {
-            if (maxele > students[i].marks) {
-                maxele = maxele
-                maxindex = maxindex
-                // var maxstudentname=students[i].name
-            }
-            else {
-                maxele = students[i].marks
-                maxindex = i
-            }
-        }
-        console.log("highest marks :", students[maxindex].name, maxele)
-        // minindex=0
-        for (var i = 1; i < students.length; i++) {
-            if (maxele < students[i].marks) {
-                maxele = maxele
-                maxindex = maxindex
-                // var maxstudentname=students[i].name
-            }
-            else {
-                maxele = students[i].marks
-                maxindex = i
-            }
-        }
-        console.log("lowest marks :", students[maxindex].name, maxele)
+        
         function average() {
             return students.reduce(function (i, j) {
                 return i + j.marks
