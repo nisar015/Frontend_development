@@ -75,13 +75,13 @@
         
         function grades() {
             var highmarks=students[0]
-            // console.log(students);
+            
             for(var i=1;i<students.length;i++){
-                if(highmarks>students[i]){
-                    highmarks=highmarks
+                if(highmarks<students[i]){
+                    highmarks=students[i]
                 }
                 else{
-                    highmarks=students[i]
+                    highmarks=highmarks
                 }
             }
             console.log(highmarks);
