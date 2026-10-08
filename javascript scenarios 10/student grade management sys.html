@@ -27,6 +27,7 @@
     <button type="button" onclick="lowestmarks()">lowest marks</button>
     <button type="button" onclick="classavg()">class Average</button>
     <button type="button" onclick="sortstudentbymarks()">sortbymarks</button>
+    <button type="button" onclick="studentsPassFail()">Pass & Fail</button>
 
     <script>
         var students = [
@@ -99,8 +100,21 @@
             }, 0)
             document.getElementById("stupass").innerHTML=avg/students.length
         }
-        console.log("passed students:", studentpassed)
-        console.log("Failed students:", studentFailed)
+
+        function passfail(){
+            students.forEach(function(stu){
+                if(stu.marks<=35){
+                    var mytd=document.createElement("td")
+                    mytd.innerHTML=`
+                    <td>${stu.name}</td>
+                    <td>${stu.marks}</td>
+                    `
+                    document.querySelector("tbody").appendChild(mytd)
+                }
+            })
+        }
+
+       
         function sortstudentbymarks() {
             students.sort(function (a, b) {
                 console.log(a, b);
