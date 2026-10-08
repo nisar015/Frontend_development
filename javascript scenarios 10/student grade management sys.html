@@ -105,11 +105,11 @@
         function studentsPassFail(){
             students.filter(function(stu){
                 if(stu.marks<=35){
-                    document.getElementById("stufail").innerHTML=`${stu.name} : ${stu.marks}`
+                    document.getElementById("stufail").innerHTML=`Failed students ${stu.name} : ${stu.marks}`
                     
                 }
                 else{
-                    document.getElementById("stupass").innerHTML=`${stu.name} : ${stu.marks}`
+                    document.getElementById("stupass").innerHTML=`Passed students ${stu.name} : ${stu.marks}`
 
                 }
             })
