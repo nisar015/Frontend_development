@@ -99,12 +99,13 @@
         }
         
         
-        function average() {
-            return students.reduce(function (i, j) {
+        function classavg() {
+            var avg=students.reduce(function (i, j) {
                 return i + j.marks
             }, 0)
+            document.getElementById("stupass").innerHTML=avg/students.length
         }
-        console.log("class average is:", average() / students.length)
+        // console.log("class average is:", average() / students.length)
         console.log("passed students:", studentpassed)
         console.log("Failed students:", studentFailed)
         function sortstudentbymarks() {
