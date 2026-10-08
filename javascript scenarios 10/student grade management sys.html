@@ -103,7 +103,7 @@
         }
 
         function studentsPassFail(){
-            students.forEach(function(stu){
+            students.filter(function(stu){
                 if(stu.marks<=35){
                     document.getElementById("stufail").innerHTML=`${stu.name} : ${stu.marks}`
                     
