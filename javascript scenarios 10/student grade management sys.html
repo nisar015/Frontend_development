@@ -107,23 +107,8 @@
                 console.log(a, b);
                 return a.marks - b.marks
             })
-            // console.log(students);
             displaystudentmarks()
         }
-        function displaysortedstudents() {
-            students.forEach(function (student) {
-                // var myli=document.createElement("li")
-                // var studentgrade=null
-                var myli = document.createElement("li")
-                myli.innerHTML = `
-                <li>${student.name} - ${student.marks}</li>
-
-                `
-                document.getElementById("sortedstudents").appendChild(myli)
-            })
-
-        }
-        // how to sort the students by direct sort method
     </script>
 </body>
 
