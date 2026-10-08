@@ -95,6 +95,7 @@
             if (!passwordPattern.test(pw)) {
                 console.log("Invalid password");
                 failedlogincount += 1
+                console.log(failedlogincount);
                 return;
             }
             if (!mobilepattern.test(mobile)) {
@@ -119,6 +120,9 @@
             }
             else {
                 console.log("User Not found!!!")
+                failedlogincount += 1
+                console.log(failedlogincount);
+                return
             }
 
         }
