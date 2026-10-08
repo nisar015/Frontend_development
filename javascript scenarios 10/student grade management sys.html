@@ -30,6 +30,7 @@
         <tbody></tbody>
     </table>
     <h2 id="stupass"></h2>
+    <button type="button" onclick="highestmark()">highest marks</button>
     <button type="button" onclick="grades()">highest marks</button>
 
     <script>
@@ -73,7 +74,7 @@
 
         displaystudentmarks();
         
-        function grades() {
+        function highestmark() {
             var highmarks=students[0]
             
             for(var i=1;i<students.length;i++){
