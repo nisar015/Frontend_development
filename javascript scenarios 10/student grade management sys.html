@@ -9,7 +9,7 @@
 
 <body>
     <ul id="studentmarks">
-        
+
     </ul>
     <hr>
     <ul id="studentgrades">
@@ -29,140 +29,126 @@
         </thead>
         <tbody></tbody>
     </table>
-    
-    
+
+
     <script>
         var students = [
             { name: "Arun", marks: 85 },
-            { name: "Priya", marks: 72 },
+            { name: "Priya", marks: 32 },
             { name: "Kumar", marks: 45 }
         ];
-        var studentpassed=[]
-        var studentFailed=[]
-        function displaystudentmarks(){
+        var studentpassed = []
+        var studentFailed = []
+        function displaystudentmarks() {
+
             students.forEach(function (student) {
-                // document
-                // console.log(`${student.name} : ${student.marks}`)
-                var myli=document.createElement("li")
-                myli.innerHTML=`
-                <li>${student.name} - ${student.marks}</li>
 
-                `
-                document.querySelector("ul").appendChild(myli)
+                var mytd = document.createElement("tr");
 
-                var mytd=document.createElement("tr")
-                mytd.innerHTML=`
-                <td>${student.name}</td>
-                <td>${student.marks}</td>
-                <td>${displaystudentgrades()}</td>
-                `
-                document.querySelector("tbody").appendChild(mytd)
-            })
-            
+                mytd.innerHTML = `
+            <td>${student.name}</td>
+            <td>${student.marks}</td>
+            <td>${displaystudentgrades(student.marks)}</td>
+        `;
+
+                document.querySelector("tbody").appendChild(mytd);
+            });
         }
-        displaystudentmarks()
-        function displaystudentgrades(){
-            students.forEach(function(student){
-                // var mytd=document.createElement("tr")
-                var studentgrade=null
-                if(student.marks>=80){
-                    studentgrade="Grade A"
-                    return studentgrade
-                }
-                else if(student.marks>70 & student.marks<80){
-                    studentgrade="Grade B"
-                    return studentgrade
-                }
-                else{
-                    studentgrade="Grade C"
-                    return studentgrade
-                }
-                // mytd.innerHTML=`
-                // <td>${studentgrade}</td>
-                // `
-                // document.getElementById("stugrade").appendChild(mytd)
-            })
-            // return studentgrade
+
+
+        function displaystudentgrades(marks) {
+
+            if (marks >= 80) {
+                return "Grade A";
+            }
+            else if (marks >= 70 && marks < 80) {
+                return "Grade B";
+            }
+            else {
+                return "Grade C";
+            }
         }
-        // displaystudentgrades()
+
+
+        displaystudentmarks();
         function grades(name) {
-            var check = students.find(function(val){
-                return val.name==name
+            var check = students.find(function (val) {
+                return val.name == name
             })
-            if(check){
-                if(check.marks>80){
-                    studentpassed.push({"name":check.name,"marks":check.marks})
+            if (check) {
+                if (check.marks > 80) {
+                    studentpassed.push({ "name": check.name, "marks": check.marks })
                     return `${check.name} : Grade A`
                 }
-                else if(check.marks>70 & check.marks<80){
-                    studentpassed.push({"name":check.name,"marks":check.marks})
+                else if (check.marks > 70 & check.marks < 80) {
+                    studentpassed.push({ "name": check.name, "marks": check.marks })
                     return `${check.name} : Grade B`
                 }
-                else{
-                    studentFailed.push({"name":check.name,"marks":check.marks})
+                else {
+                    studentFailed.push({ "name": check.name, "marks": check.marks })
                     return `${check.name} : Grade F`
                 }
             }
         }
-        students.forEach(function(stu){
+        students.forEach(function (stu) {
             console.log(grades(stu.name))
         })
-        var maxele=students[0].marks
-        var maxindex=0
-        for(var i=1;i<students.length;i++){
-            if(maxele>students[i].marks){
-                maxele=maxele
-                maxindex=maxindex
+        var maxele = students[0].marks
+        var maxindex = 0
+        for (var i = 1; i < students.length; i++) {
+            if (maxele > students[i].marks) {
+                maxele = maxele
+                maxindex = maxindex
                 // var maxstudentname=students[i].name
             }
-            else{
-                maxele=students[i].marks
-                maxindex=i
+            else {
+                maxele = students[i].marks
+                maxindex = i
             }
         }
-        console.log("highest marks :",students[maxindex].name,maxele)
+        console.log("highest marks :", students[maxindex].name, maxele)
         // minindex=0
-        for(var i=1;i<students.length;i++){
-            if(maxele<students[i].marks){
-                maxele=maxele
-                maxindex=maxindex
+        for (var i = 1; i < students.length; i++) {
+            if (maxele < students[i].marks) {
+                maxele = maxele
+                maxindex = maxindex
                 // var maxstudentname=students[i].name
             }
-            else{
-                maxele=students[i].marks
-                maxindex=i
+            else {
+                maxele = students[i].marks
+                maxindex = i
             }
         }
-        console.log("lowest marks :",students[maxindex].name,maxele)
-        function average(){
-            return students.reduce(function(i,j){
+        console.log("lowest marks :", students[maxindex].name, maxele)
+        function average() {
+            return students.reduce(function (i, j) {
                 return i + j.marks
-            },0)
+            }, 0)
         }
-        console.log("class average is:",average()/students.length)
-        console.log("passed students:",studentpassed)
-        console.log("Failed students:",studentFailed)
-        function sortstudentbymarks(){
-            students.sort(function(a,b){
-                console.log(a,b);
-                return a.marks-b.marks
+        console.log("class average is:", average() / students.length)
+        console.log("passed students:", studentpassed)
+        console.log("Failed students:", studentFailed)
+        function sortstudentbymarks() {
+            students.sort(function (a, b) {
+                console.log(a, b);
+                return a.marks - b.marks
             })
             // console.log(students);
             displaysortedstudents()
         }
         sortstudentbymarks()
-        function displaysortedstudents(){
-            students.forEach(function(student){
+        function displaysortedstudents() {
+            students.forEach(function (student) {
                 // var myli=document.createElement("li")
                 // var studentgrade=null
-                var myli=document.createElement("li")
-                myli.innerHTML=`
+                var myli = document.createElement("li")
+                myli.innerHTML = `
                 <li>${student.name} - ${student.marks}</li>
 
                 `
                 document.getElementById("sortedstudents").appendChild(myli)
             })
-            
+
         }
         // how to sort the students by direct sort method
     </script>
