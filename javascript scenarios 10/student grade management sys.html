@@ -84,8 +84,10 @@
                     highmarks=students[i]
                 }
             }
-            return document.querySelector("stupass").innerHTML=highmarks
+            console.log(highmarks);
+            document.querySelector("#stupass").innerHTML=`${highmarks}`
         }
+        grades()
         // students.forEach(function (stu) {
         //     console.log(grades(stu.name))
         // })
