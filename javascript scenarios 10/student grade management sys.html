@@ -74,21 +74,17 @@
         displaystudentmarks();
         
         function grades() {
-            var highmarks=students[0]
+            var highmarks=students[0].marks
             
             for(var i=1;i<students.length;i++){
-                if(highmarks<students[i]){
-                    highmarks=students[i]
+                if(highmarks<students[i].marks){
+                    highmarks=students[i].marks
                 }
                 
             }
-            // console.log(highmarks);
-            // return highmarks
             document.getElementById("stupass").innerHTML=highmarks
         }
-        // students.forEach(function (stu) {
-        //     console.log(grades(stu.name))
-        // })
+        
         var maxele = students[0].marks
         var maxindex = 0
         for (var i = 1; i < students.length; i++) {
