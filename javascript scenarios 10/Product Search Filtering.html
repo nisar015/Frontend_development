@@ -60,10 +60,12 @@
         function searchbyproname(proname) {
             var inputproname=document.getElementById("search").value
             // console.log(inputproname);
-            var check = products.filter(function (val) {
+            var check = products.find(function (val) {
                 return val.prouctname == inputproname
             })
-            document.getElementById("head2").innerHTML=check
+            console.log(check);
+            document.getElementById("head2").innerHTML=`Your Search product is :
+        ${check.prouctname},${check.category} ,${check.price}`
             
 
 
