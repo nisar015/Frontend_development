@@ -99,6 +99,7 @@
         }
         function filterbelowprice() {
             // var belowprice = []
+            document.querySelector("tbody").innerHTML=""
             products.forEach(function (val) {
                 if (val.price < 50000) {
                     // belowprice.push(val.prouctname)
