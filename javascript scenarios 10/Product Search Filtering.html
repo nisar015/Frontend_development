@@ -32,13 +32,13 @@
         <form>
             <label for="site-search">Search by product name:</label>
             <input type="search" id="search" name="search" placeholder="Type here to search..." required>
-            <button type="button" onclick="searchbyproname()">Search</button><br><br>
-            <button type="button" onclick="filterbelowprice()" id="belowprice">Search products below a
-                price</button><br><br>
-            <button type="button" onclick="filteraboveprice()" id="aboveprice">Search products above a price</button>
-            <button type="button" onclick="sortprobyprice()" id="sortbyprice">Sort products</button>
         </form>
     </search>
+    <button type="button" onclick="searchbyproname()">Search</button><br><br>
+    <button type="button" onclick="filterbelowprice()" id="belowprice">Search products below a
+        price</button><br><br>
+    <button type="button" onclick="filteraboveprice()" id="aboveprice">Search products above a price</button>
+    <button type="button" onclick="sortprobyprice()" id="sortbyprice">Sort products</button>
 
     <script>
         var products = [
@@ -126,9 +126,9 @@
         function filterbelowprice() {
             // var belowprice = []
             document.querySelector("tbody").innerHTML = ""
-            var enterprice=document.getElementById("search").value.toLowerCase()
+            var enterbelowprice=document.getElementById("search").value.toLowerCase()
             products.forEach(function (val) {
-                if (val.price > enterprice) {
+                if (val.price > enterbelowprice) {
                     // belowprice.push(val.prouctname)
                     var mytd = document.createElement("tr")
                     mytd.innerHTML = `
@@ -158,6 +158,7 @@
                 }
             })
             document.querySelector("table").style.display = "block"
+            document.querySelector("form").reset()
             // return aboveprice
         }
         function sortprobyprice(){
