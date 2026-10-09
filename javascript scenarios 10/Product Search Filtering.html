@@ -126,8 +126,9 @@
         function filterbelowprice() {
             // var belowprice = []
             document.querySelector("tbody").innerHTML = ""
+            var enterprice=document.getElementById("search").value.toLowerCase()
             products.forEach(function (val) {
-                if (val.price < 50000) {
+                if (val.price > enterprice) {
                     // belowprice.push(val.prouctname)
                     var mytd = document.createElement("tr")
                     mytd.innerHTML = `
