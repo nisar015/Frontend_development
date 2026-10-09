@@ -80,6 +80,7 @@
 
         }
         function searchbyproname(proname) {
+            document.querySelector("tbody").innerHTML=""
             var inputproname = document.getElementById("search").value.toLowerCase()
             console.log(inputproname);
             var check = products.find(function (val) {
@@ -100,6 +101,8 @@
             } else {
                 document.getElementById("head2").innerHTML = "Product not found.";
             }
+            
+            document.querySelector("table").style.display = "block"
             // console.log(check);
             // document.getElementById("head2").innerHTML = `Productname : ${check.prouctname} <br> Category : ${check.category} <br> Price : ${check.price}`
 
