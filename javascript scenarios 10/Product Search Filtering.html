@@ -58,15 +58,15 @@
 
         }
         function searchbyproname(proname) {
-            var inputproname=document.getElementById("search").value
+            var inputproname = document.getElementById("search").value
             // console.log(inputproname);
             var check = products.find(function (val) {
                 return val.prouctname == inputproname
             })
             console.log(check);
-            document.getElementById("head2").innerHTML=`Your Search result is :
+            document.getElementById("head2").innerHTML = `Your Search result is :
         ${check.prouctname} ${check.category} ${check.price}`
-            
+
 
 
         }
