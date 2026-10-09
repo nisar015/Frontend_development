@@ -128,7 +128,7 @@
             document.querySelector("tbody").innerHTML = ""
             var enterbelowprice=document.getElementById("search").value.toLowerCase()
             products.forEach(function (val) {
-                if (val.price > enterbelowprice) {
+                if (val.price < enterbelowprice) {
                     // belowprice.push(val.prouctname)
                     var mytd = document.createElement("tr")
                     mytd.innerHTML = `
@@ -145,10 +145,10 @@
         }
 
         function filteraboveprice() {
-            // var aboveprice = []
             document.querySelector("tbody").innerHTML = ""
+            var enteraboveprice =document.getElementById("search").value.toLowerCase()
             products.forEach(function (val) {
-                if (val.price > 50000) {
+                if (val.price > enteraboveprice) {
                     var mytd = document.createElement("tr")
                     mytd.innerHTML = `
                     <td>${val.category}</td>
