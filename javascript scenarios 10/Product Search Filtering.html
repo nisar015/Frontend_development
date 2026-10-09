@@ -59,9 +59,9 @@
         }
         function searchbyproname(proname) {
             var inputproname = document.getElementById("search").value.toLowerCase()
-            // console.log(inputproname);
+            console.log(inputproname);
             var check = products.find(function (val) {
-                return val.prouctname == inputproname
+                return val.prouctname.toLowerCase() === inputproname
             })
             // console.log(check);
             document.getElementById("head2").innerHTML = `Productname : ${check.prouctname} <br> Category : ${check.category} <br> Price : ${check.price}`
