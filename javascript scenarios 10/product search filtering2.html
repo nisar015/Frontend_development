@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Search Application</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f7fb;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #0d6efd, #5146e5);
+        }
+
+        .main-container {
+            max-width: 1100px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .card-header {
+            border-radius: 15px 15px 0 0 !important;
+        }
+
+        .search-input {
+            min-height: 45px;
+        }
+
+        .custom-btn {
+            min-height: 44px;
+        }
+
+        #head2 {
+            font-size: 1rem;
+        }
+
+        table {
+            display: none;
+            width: 100%;
+        }
+
+        .table thead th {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark shadow-sm">
+        <div class="container">
+            <span class="navbar-brand fw-bold">
+                🛍️ Product Finder
+            </span>
+            <span class="text-white small">
+                Search • Filter • Sort
+            </span>
+        </div>
+    </nav>
+
+
+    <div class="container main-container py-5">
+
+        <!-- Page Heading -->
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-primary">
+                Product Search
+            </h1>
+            <p class="text-secondary">
+                Find products by name or filter them by price.
+            </p>
+        </div>
+
+
+        <!-- Search Card -->
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-header bg-white p-3">
+                <h5 class="mb-0 fw-bold">
+                    🔎 Search Products
+                </h5>
+            </div>
+
+            <div class="card-body p-4">
+
+                <form>
+                    <label for="search" class="form-label fw-semibold">
+                        Product name or price
+                    </label>
+
+                    <input
+                        type="search"
+                        id="search"
+                        name="search"
+                        class="form-control search-input"
+                        placeholder="Enter product name or price...">
+                </form>
+
+                <div class="row g-2 mt-3">
+
+                    <div class="col-12 col-md-6">
+                        <button
+                            type="button"
+                            onclick="searchbyproname()"
+                            class="btn btn-primary custom-btn w-100">
+                            🔍 Search by Name
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <button
+                            type="button"
+                            onclick="filterbelowprice()"
+                            id="belowprice"
+                            class="btn btn-outline-success custom-btn w-100">
+                            💰 Products Below Price
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <button
+                            type="button"
+                            onclick="filteraboveprice()"
+                            id="aboveprice"
+                            class="btn btn-outline-warning custom-btn w-100">
+                            💵 Products Above Price
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <button
+                            type="button"
+                            onclick="sortprobyprice()"
+                            id="sortbyprice"
+                            class="btn btn-dark custom-btn w-100">
+                            ↕️ Sort by Price
+                        </button>
+                    </div>
+
+                </div>
+
+                <h2 id="head2" class="text-danger mt-3 mb-0"></h2>
+
+            </div>
+        </div>
+
+
+        <!-- Product Table Card -->
+        <div class="card shadow-sm">
+
+            <div class="card-header bg-primary text-white p-3">
+                <h5 class="mb-0">
+                    📦 Product Details
+                </h5>
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover align-middle text-center mb-0">
+
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Category</th>
+                                <th>Product Name</th>
+                                <th>Product Price (₹)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+        <p class="text-center text-secondary small mt-4">
+            Product Search Application | Built with HTML, CSS, JavaScript & Bootstrap
+        </p>
+
+    </div>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        var products = [
+            {
+                category: "phone",
+                prouctname: "iPhone",
+                price: 85000
+            },
+            {
+                category: "phone",
+                prouctname: "Samsung Galaxy",
+                price: 45000
+            },
+            {
+                category: "phone",
+                prouctname: "OnePlus",
+                price: 35000
+            },
+            {
+                category: "Laptop",
+                prouctname: "MacBook",
+                price: 95000
+            },
+            {
+                category: "Laptop",
+                prouctname: "Dell Laptop",
+                price: 60000
+            }
+        ]
+
+        function displayproducts() {
+            document.querySelector("tbody").innerHTML = ""
+            products.forEach(function (pro) {
+                var mytd = document.createElement("tr")
+                mytd.innerHTML = `
+                <td>${pro.category}</td>
+                <td>${pro.prouctname}</td>
+                <td>₹${pro.price.toLocaleString("en-IN")}</td>
+                `
+                document.querySelector("tbody").appendChild(mytd)
+            })
+            document.querySelector("table").style.display = "table"
+        }
+
+        function searchbycategory(cat) {
+
+            var check = products.filter(function (val) {
+                return val.category == cat
+            })
+            if (check) {
+                return check
+            }
+
+        }
+
+        function searchbyproname(proname) {
+            document.querySelector("tbody").innerHTML = ""
+            var inputproname = document.getElementById("search").value.toLowerCase()
+            var check = products.find(function (val) {
+                return val.prouctname.toLowerCase() === inputproname
+            })
+            if (check) {
+
+                var mytd = document.createElement("tr")
+                mytd.innerHTML = `
+             <td>${check.category}</td>
+             <td>${check.prouctname}</td>
+             <td>₹${check.price.toLocaleString("en-IN")}</td>
+             `
+                document.querySelector("tbody").appendChild(mytd)
+                document.getElementById("head2").innerHTML = "";
+            } else {
+                document.getElementById("head2").innerHTML = "Product not found.";
+            }
+
+            document.querySelector("table").style.display = "table"
+
+        }
+
+        function filterbelowprice() {
+            document.querySelector("tbody").innerHTML = ""
+            var enterbelowprice = document.getElementById("search").value.toLowerCase()
+            products.forEach(function (val) {
+                if (val.price < enterbelowprice) {
+                    var mytd = document.createElement("tr")
+                    mytd.innerHTML = `
+                    <td>${val.category}</td>
+                    <td>${val.prouctname}</td>
+                    <td>₹${val.price.toLocaleString("en-IN")}</td>
+                    `
+                    document.querySelector("tbody").appendChild(mytd)
+                }
+            })
+            document.querySelector("table").style.display = "table"
+            document.querySelector("form").reset()
+        }
+
+        function filteraboveprice() {
+            document.querySelector("tbody").innerHTML = ""
+            var enteraboveprice = document.getElementById("search").value.toLowerCase()
+            products.forEach(function (val) {
+                if (val.price > enteraboveprice) {
+                    var mytd = document.createElement("tr")
+                    mytd.innerHTML = `
+                    <td>${val.category}</td>
+                    <td>${val.prouctname}</td>
+                    <td>₹${val.price.toLocaleString("en-IN")}</td>
+                    `
+                    document.querySelector("tbody").appendChild(mytd)
+                }
+            })
+            document.querySelector("table").style.display = "table"
+            document.querySelector("form").reset()
+        }
+
+        function sortprobyprice() {
+            products.sort(function (a, b) {
+                return a.price - b.price
+            })
+            displayproducts()
+        }
+
+    </script>
+
+</body>
+</html>
