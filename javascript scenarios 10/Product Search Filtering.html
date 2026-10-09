@@ -12,7 +12,7 @@
     <search>
         <form>
             <label for="site-search">Search our site:</label>
-            <input type="search" id="site-search" name="q" placeholder="Type here to search..." required>
+            <input type="search" id="search" name="search" placeholder="Type here to search..." required>
             <button type="button" onclick="searchbyproname()">Search</button>
         </form>
     </search>
@@ -58,14 +58,13 @@
 
         }
         function searchbyproname(proname) {
-
-            var check = products.find(function (val) {
-                return val.prouctname == proname
+            var inputproname=document.getElementById("search").value
+            // console.log(inputproname);
+            var check = products.filter(function (val) {
+                return val.prouctname == inputproname
             })
-            // console.log(check)
-            if (check) {
-                return check
-            }
+            document.getElementById("head2").innerHTML=check
+            
 
 
         }
