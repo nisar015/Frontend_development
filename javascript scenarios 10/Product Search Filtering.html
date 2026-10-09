@@ -68,6 +68,18 @@
                 price: 60000
             }
         ]
+        function displayproducts(){
+            document.querySelector("tbody").innerHTML=""
+            products.forEach(function(pro){
+                var mytd=document.createElement("tr")
+                mytd.innerHTML=`
+                <td>${pro.category}</td>
+                <td>${pro.prouctname}</td>
+                <td>${pro.price}</td>
+                `
+                document.querySelector("tbody").appendChild(mytd)
+            })
+        }
         function searchbycategory(cat) {
 
             var check = products.filter(function (val) {
