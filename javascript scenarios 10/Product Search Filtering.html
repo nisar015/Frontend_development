@@ -36,6 +36,7 @@
             <button type="button" onclick="filterbelowprice()" id="belowprice">Search products below a
                 price</button><br><br>
             <button type="button" onclick="filteraboveprice()" id="aboveprice">Search products above a price</button>
+            <button type="button" onclick="sortprobyprice()" id="sortbyprice">Sort products</button>
         </form>
     </search>
 
@@ -144,6 +145,12 @@
             })
             document.querySelector("table").style.display = "block"
             // return aboveprice
+        }
+        function sortprobyprice(){
+            products.sort(function(a,b){
+                return a.price-b.price
+            })
+            displayproducts()
         }
         // console.log(searchbycategory('phone'))
         // console.log(searchbyproname('MacBook'))
