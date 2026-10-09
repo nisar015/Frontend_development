@@ -86,7 +86,6 @@
             var check = products.filter(function (val) {
                 return val.category == cat
             })
-            // console.log(check)
             if (check) {
                 return check
             }
@@ -96,7 +95,6 @@
         function searchbyproname(proname) {
             document.querySelector("tbody").innerHTML=""
             var inputproname = document.getElementById("search").value.toLowerCase()
-            // console.log(inputproname);
             var check = products.find(function (val) {
                 return val.prouctname.toLowerCase() === inputproname
             })

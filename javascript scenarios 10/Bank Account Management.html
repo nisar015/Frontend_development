@@ -21,6 +21,7 @@
                 <th>Account Holder Name</th>
                 <th>Account Number</th>
                 <th>Account Type</th>
+                <th>deposited amount</th>
                 <th>Account Balance</th>
             </tr>
         </thead>
@@ -51,6 +52,7 @@
                 name: "Nisar Ahmmed",
                 AccNumber: 1245365,
                 AccType: "savings",
+                deposit:500,
                 AccBal: 1000
             }
         ]
@@ -62,6 +64,7 @@
                 <td>${holder.name}</td>
                 <td>${holder.AccNumber}</td>
                 <td>${holder.AccType}</td>
+                <td>${holder.deposit}</td>
                 <td>${holder.AccBal}</td>
                 <td><button onclick="deposit()">Deposit</button></td>
   
