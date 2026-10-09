@@ -112,16 +112,22 @@
             var aboveprice = []
             products.forEach(function (val) {
                 if (val.price > 50000) {
-                    aboveprice.push(val.prouctname)
+                    var mytd=document.createElement("tr")
+                    mytd.innerHTML=`
+                    <td>${val.category}</td>
+                    <td>${val.prouctname}</td>
+                    <td>${val.price}</td>
+                    `
+                    document.querySelector("tbody").appendChild(mytd)
                 }
             })
-            return aboveprice
+            // return aboveprice
         }
         console.log(searchbycategory('phone'))
         // console.log(searchbyproname('MacBook'))
         // how to implement case insensitive search
         // console.log(filterbelowprice())
-        console.log(filteraboveprice())
+        // console.log(filteraboveprice())
         // how to sort products by price using sort method
     </script>
 </body>
