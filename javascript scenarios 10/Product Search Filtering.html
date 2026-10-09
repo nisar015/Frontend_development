@@ -8,6 +8,18 @@
 </head>
 
 <body>
+    <table>
+        <thead>
+            <tr>
+                <td>Category</td>
+                <td>Product Name</td>
+                <td>Product Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
     <h2 id="head2"></h2>
     <search>
         <form>
@@ -78,14 +90,22 @@
 
         }
         function filterbelowprice() {
-            var belowprice = []
+            // var belowprice = []
             products.forEach(function (val) {
                 if (val.price < 50000) {
-                    belowprice.push(val.prouctname)
+                    // belowprice.push(val.prouctname)
+                    var mytd=document.createElement("tr")
+                    mytd.innerHTML=`
+                    <td>${val.category}</td>
+                    <td>${val.prouctname}</td>
+                    <td>${val.price}</td>
+                    `
+                    document.querySelector("tbody").appendChild(mytd)
                 }
             })
-            return belowprice
+            // return belowprice
         }
+
         function filteraboveprice() {
             var aboveprice = []
             products.forEach(function (val) {
