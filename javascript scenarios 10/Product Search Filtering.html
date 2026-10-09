@@ -8,71 +8,79 @@
 </head>
 
 <body>
+    <search>
+        <form action="/search-results" method="GET">
+            <label for="site-search">Search our site:</label>
+            <input type="search" id="site-search" name="q" placeholder="Type here to search..." required>
+            <button type="submit">Search</button>
+        </form>
+    </search>
+
     <script>
         var products = [
             {
                 category: "phone",
                 prouctname: "iPhone",
-                price:85000
+                price: 85000
             },
             {
-                category:"phone",
+                category: "phone",
                 prouctname: "Samsung Galaxy",
-                price:45000
+                price: 45000
             },
             {
-                category:"phone",
+                category: "phone",
                 prouctname: "OnePlus",
-                price:35000
+                price: 35000
             },
             {
-                category:"Laptop",
+                category: "Laptop",
                 prouctname: "MacBook",
-                price:95000
+                price: 95000
             },
             {
-                category:"Laptop",
+                category: "Laptop",
                 prouctname: "Dell Laptop",
-                price:60000
+                price: 60000
             }
         ]
-        function searchbycategory(cat){
-            
-            var check= products.filter(function(val){
-                return val.category==cat
+        function searchbycategory(cat) {
+
+            var check = products.filter(function (val) {
+                return val.category == cat
             })
             // console.log(check)
-            if(check){
+            if (check) {
                 return check
             }
-            
+
 
         }
-        function searchbyproname(proname){
-            
-            var check= products.find(function(val){
-                return val.prouctname==proname
+        function searchbyproname(proname) {
+
+            var check = products.find(function (val) {
+                return val.prouctname == proname
             })
             // console.log(check)
-            if(check){
+            if (check) {
                 return check
             }
-            
+
 
         }
-        function filterbelowprice(){
-            var belowprice=[]
-            products.forEach(function(val){
-                if(val.price<50000){
+        function filterbelowprice() {
+            var belowprice = []
+            products.forEach(function (val) {
+                if (val.price < 50000) {
                     belowprice.push(val.prouctname)
                 }
             })
             return belowprice
         }
-        function filteraboveprice(){
-            var aboveprice=[]
-            products.forEach(function(val){
-                if(val.price>50000){
+        function filteraboveprice() {
+            var aboveprice = []
+            products.forEach(function (val) {
+                if (val.price > 50000) {
                     aboveprice.push(val.prouctname)
                 }
             })
