@@ -117,6 +117,7 @@
 
         function filteraboveprice() {
             // var aboveprice = []
+            document.querySelector("tbody").innerHTML=""
             products.forEach(function (val) {
                 if (val.price > 50000) {
                     var mytd=document.createElement("tr")
