@@ -50,7 +50,8 @@
         }
         function Health() {
             playerHS.Score += 10
-            document.getElementById("heading").innerHTML=`player collects Health,Score ${playerHS.Score}`
+            document.getElementById("heading").innerHTML=`player collects Health`
+            document.getElementById("heading").innerHTML=`Score : ${playerHS.Score}`
             Gameover()
         }
         function Restart(){
