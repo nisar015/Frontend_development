@@ -29,7 +29,9 @@
         }
         function attack() {
             playerHS.Health -= 50
-            document.getElementById("heading").innerHTML=`Enemy attacked player, Health is ${playerHS.Health}`
+            document.getElementById("heading").innerHTML=`Enemy attacked player`
+            document.getElementById("health").innerHTML=`${playerHS.Health}`
+            document.getElementById("score").innerHTML=`${playerHS.Health}`
             Gameover()
         }
         function defeat() {
