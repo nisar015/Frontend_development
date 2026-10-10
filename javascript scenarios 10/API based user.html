@@ -71,6 +71,9 @@
         <button type="button" onclick="searchusers()" id="">search user by id</button>
     </form>
     <h2 id="heading"></h2>
+    <h2 id="emailid"></h2>
+    <h2 id="cityy"></h2>
+    <h2 id="compan"></h2>
     <script>
         function getdatafromserver() {
             fetch("http://localhost:3000/users").then(function (response) {
@@ -163,17 +166,16 @@
         function searchusers(){
             var searchval=document.getElementById("id").value
             // console.log(searchval);
-            if(searchval){
-                fetch("http://localhost:3000/users/"+searchval).then(function(response){
-                    return response.json()
-                }).then(function(data){
-                    console.log(data);
-                    document.getElementById("heading").innerHTML=data.Name
-                })
-            }
-            else{
-                document.getElementById("heading").innerHTML="User not found!!!"
-            }
+            fetch("http://localhost:3000/users/"+searchval).then(function(response){
+                return response.json()
+            }).then(function(data){
+                console.log(data);
+                document.getElementById("heading").innerHTML=data.Name
+                document.getElementById("emailid").innerHTML=data.Email
+                document.getElementById("cityy").innerHTML=data.City
+                document.getElementById("compan").innerHTML=data.Company
+            })
+            document.querySelector("form").reset()
         }
 
     </script>
