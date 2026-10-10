@@ -44,6 +44,7 @@
         function coins() {
             playerHS.Score += 2
             document.getElementById("heading").innerHTML=`player collected coins`
+            document.getElementById("health").innerHTML=`Score : ${playerHS.Health}`
             document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
             Gameover()
         }
