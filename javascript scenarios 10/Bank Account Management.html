@@ -59,7 +59,7 @@
         ]
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
-            AccHolders.forEach(function (holder) {
+            AccHolders.forEach(function (holder,i) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 <td>${holder.name}</td>
@@ -67,7 +67,7 @@
                 <td>${holder.AccType}</td>
                 <td>${holder.deposit}</td>
                 <td>${holder.AccBal}</td>
-                <td><button onclick="deposit()">Deposit</button></td>
+                <td><button onclick="deposit(${i})">Deposit</button></td>
   
                 `
                 document.querySelector("tbody").appendChild(mytr)
@@ -93,10 +93,25 @@
             document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "block"
         }
-        function deposit(){
+        function depositamount(depval){
+            
+            var depholder={
+                deposit:document.getElementById("depost").value + depval
+            }
+            AccHolders.push(depholder)
+            displayaccountholders()
+        }
+        function deposit(index){
+            for (var i = 0; i < 5; i++) {
+                document.getElementsByTagName("label")[i].style.display = "none"
+                document.getElementsByTagName("input")[i].style.display = "none"
+            }
+            document.getElementById("creatacc").style.display = "none"
+            document.getElementById("addacc").style.display = "none"
+            var depoval=document.getElementById("depost").value
+            depositamount(depoval)
+
             document.getElementById("depost").style.display="block";
-            document.getElementsByClassName("depost")[0].style.display="block";
-            document.getElementById("creatacc").style.display="none"
             document.getElementById("depoamnt").style.display="block"
         }
         
