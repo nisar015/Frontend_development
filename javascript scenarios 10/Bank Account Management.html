@@ -44,7 +44,7 @@
         <input type="Accbls" id="Accbls" class="Accbls">
         <!-- <br><br> -->
         <button type="button" onclick="addaccount()" id="addacc">Add Account</button>
-        <button type="button" onclick="creatingaccount()" id="creatacc">create Account</button>
+        <button type="button" onclick="createaccount()" id="creatacc">create Account</button>
         <button type="button" onclick="depositamount()" id="depoamnt">deposit Amount</button>
     </form>
     <script>
@@ -85,7 +85,7 @@
             AccHolders.push(hold)
             displayaccountholders()
         }
-        function creatingaccount() {
+        function createaccount() {
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
@@ -99,17 +99,8 @@
             document.getElementById("creatacc").style.display="none"
             document.getElementById("depoamnt").style.display="block"
         }
-        function depositamount(){
-            var amntdeposited=document.getElementById("deposit").value
-            
-
-        }
-        // how to add the amount deposited to the acount balance
-        // Prevent withdrawal when balance is insufficient 
-        // Store transaction history 
-        // Display deposits 
-        // Display withdrawals 
-        // Transfer money between accounts 
+        
+         
     </script>
 </body>
 
