@@ -43,7 +43,8 @@
         }
         function coins() {
             playerHS.Score += 2
-            document.getElementById("heading").innerHTML=`player collected coins, Score ${playerHS.Score}`
+            document.getElementById("heading").innerHTML=`player collected coins`
+            document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
             Gameover()
         }
         function Health() {
