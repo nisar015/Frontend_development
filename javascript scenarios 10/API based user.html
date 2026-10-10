@@ -165,7 +165,8 @@
             fetch("http://localhost:3000/users/"+searchval).then(function(response){
                 return response.json()
             }).then(function(data){
-                document.
+                console.log(data);
+                document.getElementById("heading").innerHTML=data.Name
             })
         }
 
