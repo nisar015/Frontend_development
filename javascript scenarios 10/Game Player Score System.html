@@ -36,7 +36,8 @@
         }
         function defeat() {
             playerHS.Score += 10
-            document.getElementById("heading").innerHTML=`player defeated enemy, Score ${playerHS.Score}`
+            document.getElementById("heading").innerHTML=`player defeated enemy`
+            document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
             Gameover()
         }
         function coins() {
