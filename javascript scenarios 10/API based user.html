@@ -162,6 +162,7 @@
         }
         function searchusers(){
             var searchval=document.getElementById("id").value
+            // console.log(searchval);
             fetch("http://localhost:3000/users/"+searchval).then(function(response){
                 return response.json()
             }).then(function(data){
