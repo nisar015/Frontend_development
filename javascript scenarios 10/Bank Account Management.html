@@ -38,7 +38,7 @@
         <input type="Acctype" id="Acctype">
         <!-- <br><br> -->
         <label for="deposit" id="deposit">Enter deposit amount</label>
-        <input type="depost" id="depost">
+        <input type="depost" id="depost" class="depost">
         <!-- <br><br> -->
         <label for="Accbls">Enter Acc Balance</label>
         <input type="Accbls" id="Accbls" class="Accbls">
@@ -95,7 +95,7 @@
         }
         function deposit(){
             document.getElementById("depost").style.display="block";
-            document.getElementsByClassName("deposit")[0].style.display="block";
+            document.getElementsByClassName("depost")[0].style.display="block";
             document.getElementById("creatacc").style.display="none"
             document.getElementById("depoamnt").style.display="block"
         }
