@@ -21,48 +21,47 @@
             Health: 100,
             Score: 0
         }
-        function Gameover(){
-            if(playerHS.Health===0){
-                document.getElementById("heading").innerHTML=`Game Over`
+        function Gameover() {
+            if (playerHS.Health === 0) {
+                document.getElementById("heading").innerHTML = `Game Over`
             }
 
         }
         function attack() {
             playerHS.Health -= 50
-            document.getElementById("heading").innerHTML=`Enemy attacked player`
-            document.getElementById("health").innerHTML=`Health : ${playerHS.Health}`
-            document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
+            document.getElementById("heading").innerHTML = `Enemy attacked player`
+            document.getElementById("health").innerHTML = `Health : ${playerHS.Health}`
+            document.getElementById("score").innerHTML = `Score : ${playerHS.Score}`
             Gameover()
         }
         function defeat() {
             playerHS.Score += 10
-            document.getElementById("heading").innerHTML=`player defeated enemy`
-            document.getElementById("health").innerHTML=`Health : ${playerHS.Health}`
-            document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
+            document.getElementById("heading").innerHTML = `player defeated enemy`
+            document.getElementById("health").innerHTML = `Health : ${playerHS.Health}`
+            document.getElementById("score").innerHTML = `Score : ${playerHS.Score}`
             Gameover()
         }
         function coins() {
             playerHS.Score += 2
-            document.getElementById("heading").innerHTML=`player collected coins`
-            document.getElementById("health").innerHTML=`Health : ${playerHS.Health}`
-            document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
+            document.getElementById("heading").innerHTML = `player collected coins`
+            document.getElementById("health").innerHTML = `Health : ${playerHS.Health}`
+            document.getElementById("score").innerHTML = `Score : ${playerHS.Score}`
             Gameover()
         }
         function Health() {
             playerHS.Score += 10
-            document.getElementById("heading").innerHTML=`player collects Health`
-            document.getElementById("health").innerHTML=`Health : ${playerHS.Health}`
-            document.getElementById("score").innerHTML=`Score : ${playerHS.Score}`
+            document.getElementById("heading").innerHTML = `player collects Health`
+            document.getElementById("health").innerHTML = `Health : ${playerHS.Health}`
+            document.getElementById("score").innerHTML = `Score : ${playerHS.Score}`
             Gameover()
         }
-        function Restart(){
-            playerHS.Health=100,
-            playerHS.Score=0,
-            document.getElementById("heading").innerHTML=`Game starts Again`
-            document.getElementById("health").innerHTML=`Health : ${playerHS.Health}`
-            document.getElementById("scpre").innerHTML=`Score : ${playerHS.Score}`
+        function Restart() {
+            playerHS.Health = 100,
+                playerHS.Score = 0,
+                document.getElementById("heading").innerHTML = `Game starts Again`
+            document.getElementById("health").innerHTML = `Health : ${playerHS.Health}`
+            document.getElementById("scpre").innerHTML = `Score : ${playerHS.Score}`
         }
-        //if enemy attacks is a button then health decreases. how to implement this using CRUD
     </script>
 </body>
 
