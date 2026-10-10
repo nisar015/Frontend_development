@@ -68,7 +68,9 @@
         <br><br>
         <button type="button" onclick="handleadduser()" id="addbutton">add user</button>
         <button type="button" onclick="update()" id="updatebutton">update</button>
+        <button type="button" onclick="searchusers()" id="">search user</button>
     </form>
+    <h2 id="heading"></h2>
     <script>
         function getdatafromserver() {
             fetch("http://localhost:3000/users").then(function (response) {
@@ -160,7 +162,11 @@
         }
         function searchusers(){
             var searchval=document.getElementById("id").value
-            // if()
+            fetch("http://localhost:3000/users/"+searchval).then(function(response){
+                return response.json()
+            }).then(function(data){
+                document.
+            })
         }
 
     </script>
