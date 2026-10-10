@@ -129,6 +129,7 @@
                 return response.json()
             }).then(function (user) {
                 console.log(user)
+                console.log(id)
                 document.getElementById("id").value = user.id
                 document.getElementById("name").value = user.Name
                 document.getElementById("email").value = user.Email
@@ -146,16 +147,20 @@
                 City: document.getElementById("city").value,
                 Company: document.getElementById("company").value
             }
-            fetch("http://localhost:3000/users/" +user.id,{
-                method:"PUT",
-                body:JSON.stringify(user),
+            fetch("http://localhost:3000/users/" + user.id, {
+                method: "PUT",
+                body: JSON.stringify(user),
                 headers: {
                     "Content-Type": "application/json"
                 }
 
-            }).then(function(){
+            }).then(function () {
                 getdatafromserver()
             })
+        }
+        function searchusers(){
+            var searchval=document.getElementById("id").value
+            // if()
         }
 
     </script>
