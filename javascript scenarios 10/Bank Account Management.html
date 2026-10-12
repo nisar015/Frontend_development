@@ -93,15 +93,10 @@
             document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "block"
         }
-        function depositamount(depindex){
-            console.log(depindex);
+        function depositamount(){
             var enteredeposit=document.getElementById("depost").value
-
-            console.log(enteredeposit);
         }
-        var depindex=null
         function deposit(index){
-            depindex=index
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
@@ -112,7 +107,6 @@
 
             document.getElementById("depost").style.display="block";
             document.getElementById("depoamnt").style.display="block"
-            depositamount(depindex)
         }
         
          
