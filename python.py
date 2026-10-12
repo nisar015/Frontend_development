@@ -1,7 +1,7 @@
 # Data types
 # strings are immutable
 strng='thos os a string'
-combine=strng+'\ncombined'
+combine=strng+'\ncombined' #\n means jump to next line
 print(combine)
 # variables
 print(4**3)
@@ -16,9 +16,9 @@ course='programming'
 print(language+' '+course)
 print(language +' ' + 'language')
 print(language[-1])
-print(language[2:4])           
-print(language[2:])
-print(language[:3])
+print(language[2:4])  #this is slicing       
+print(language[2:])  #this starts from index to 2 and goes upto end of string.
+print(language[:3])  #this starts from 0 and till index n-1
 print("which" + language)  
 print('Hacka'+language[2:])  
 # print(id(language))  #address
