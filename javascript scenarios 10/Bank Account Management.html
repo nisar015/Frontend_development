@@ -95,19 +95,15 @@
         }
         function depositamount(depval){
             
-            var depholder={
-                deposit:document.getElementById("depost").value + depval
-            }
-            AccHolders.push(depholder)
-            displayaccountholders()
+            var enteredeposit=document.getElementById("depost").value
+            console.log(enteredeposit);
         }
         function deposit(index){
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
             }
-            var enteredeposit=document.getElementById("depost").value
-            console.log(enteredeposit);
+            
             document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "none"
 
