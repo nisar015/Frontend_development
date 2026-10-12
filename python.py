@@ -1,6 +1,6 @@
 # Data types
 # strings are immutable
-strng='thos os a string/n'
+strng='thos os a string'
 combine=strng+'combined'
 print(combine)
 # variables
