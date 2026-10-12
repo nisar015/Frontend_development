@@ -63,14 +63,15 @@
         ]
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
-            AccHolders.forEach(function (holder,i) {
+            AccHolders[0].deposits.forEach(function (holder,i) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
-                <td>${holder.name}</td>
-                <td>${holder.AccNumber}</td>
-                <td>${holder.AccType}</td>
+                
+                <td>${AccHolders[0].name}</td>
+                <td>${AccHolders[0].AccNumber}</td>
+                <td>${AccHolders[0].AccType}</td>
                 <td>${holder.deposit}</td>
-                <td>${holder.AccBal}</td>
+                <td>${holder.accountbalance}</td>
                 <td><button onclick="deposit(${i})">Deposit</button></td>
   
                 `
@@ -98,7 +99,14 @@
             document.getElementById("addacc").style.display = "block"
         }
         function depositamount(){
-            var enteredeposit=document.getElementById("depost").value
+            var enteredeposit=Number(document.getElementById("depost").value)
+            var newdeposit={
+                deposit:enteredeposit,
+                accountbalance:AccHolders[0].deposits[AccHolders[0].deposits.length-1].accountbalance+enteredeposit
+            }
+            AccHolders[0].deposits=[newdeposit]
+            displayaccountholders()
+
 
         }
         function deposit(index){
