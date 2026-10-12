@@ -22,7 +22,7 @@ print(language[:3])  #this starts from 0 and till index n-1
 print("which" + language)  
 print('Hacka'+language[2:])  
 # print(id(language))  #address
-a=10
+a=10 #here a is tagged to numeric value 10 which is immutabel and it is a tagging
 b=a
 k=10
 print(id(k)) #tagging
