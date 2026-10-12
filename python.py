@@ -1,7 +1,7 @@
 # Data types
 # strings are immutable
-strng='thos os a string'
-combine=strng+'\ncombined'
+strng='thos os a string/n'
+combine=strng+'combined'
 print(combine)
 # variables
 print(4**3)
