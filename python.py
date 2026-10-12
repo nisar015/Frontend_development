@@ -7,10 +7,10 @@ print(combine)
 print(4**3)
 print("nisar")
 print('nisar "name"')
-print('nisar\'s "name"')
+print('nisar\'s "name"')  #in this example the apostrope(') is considered as an end to a string so we use \ to escape that.
 print('nisar'*20)
 print('nisar\docx\nname')
-print(r'nisar\docx\nname')
+print(r'nisar\docx\nname') #In raw strings, escape sequences are not processed, meaning backslashes \ are treated as literal characters and not as special characters.
 language='python'
 course='programming'
 print(language+' '+course)
