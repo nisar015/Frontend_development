@@ -1,3 +1,3 @@
 strng='thos os a string'
-combine='/n'+strng+'combined'
+combine=strng+'/ncombined'
 print(combine)
