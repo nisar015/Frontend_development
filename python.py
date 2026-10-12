@@ -69,6 +69,7 @@ s.pop()
 print(s)
 
 # dictionary
+# mutable
 dic={1:"nisar",6:"ahmmed",4:"ak"}
 print(dic)
 print(dic.get(6))
