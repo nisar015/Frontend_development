@@ -3,3 +3,6 @@ print(type(tup))
 print(tup[1])
 print(tup.count(4))
 print(tup)
+
+str1=["nisar","ahmmed","achukatla"]
+print(str1[0])
