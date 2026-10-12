@@ -53,8 +53,12 @@
                 name: "Nisar Ahmmed",
                 AccNumber: 1245365,
                 AccType: "savings",
-                deposit:500,
-                AccBal: 1000
+                deposits:[
+                    {
+                        deposit:500,
+                        accountbalance:500
+                    }
+                ]
             }
         ]
         function displayaccountholders() {
@@ -95,6 +99,7 @@
         }
         function depositamount(){
             var enteredeposit=document.getElementById("depost").value
+
         }
         function deposit(index){
             for (var i = 0; i < 5; i++) {
