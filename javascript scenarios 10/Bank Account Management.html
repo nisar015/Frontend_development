@@ -232,6 +232,7 @@
                 accountbalance: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].accountbalance - enteramntosend,
             }
             AccHolders[editUPIndex].deposits = [newtransferamnt]
+            document.getElementById("heading").innerHTML=`Amount received : ${enteramntosend}`
             displayaccountholders()
 
         }
