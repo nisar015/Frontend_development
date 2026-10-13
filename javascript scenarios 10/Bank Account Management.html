@@ -231,6 +231,7 @@
         }
         function transfermoney() {
             var enteramntosend = Number(document.getElementById("phonpe").value)
+            totUPItransactions.push(enteramntosend)
             var newtransferamnt = {
                 UPI: enteramntosend,
                 withdraw: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].withdraw,
@@ -238,13 +239,20 @@
                 accountbalance: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].accountbalance - enteramntosend,
             }
             AccHolders[editUPIndex].deposits = [newtransferamnt]
-            document.getElementById("heading").innerHTML = `Amount received : ${enteramntosend}`
+            document.getElementById("heading").innerHTML = `total UPI transactions : ${totUPItransactions}`
             displayaccountholders()
 
         }
         var editUPIndex = null
+        var totUPItransactions=null
         function sendamnt(index) {
             editUPIndex = index
+             for (var i = 0; i < 6; i++) {
+                document.getElementsByTagName("label")[i].style.display = "none"
+                document.getElementsByTagName("input")[i].style.display = "none"
+            }
+
+            document.getElementById("addacc").style.display = "none"
             document.getElementById("phonpe").style.display = "block"
             document.getElementById("transferamnt").style.display = "block"
             document.getElementById("creatacc").style.display = "none"
