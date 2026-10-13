@@ -221,11 +221,18 @@
         function transfermoney(){
             var enteramntosend=Number(document.getElementById("phonpe").value)
             var newtransferamnt={
-
+                UPI:enteramntosend,
+                withdraw:AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length-1].withdraw,
+                deposit:AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length-1].deposit,
+                accountbalance:AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length-1].accountbalance-enteramntosend,
             }
+            AccHolders[editUPIndex].deposits=[newtransferamnt]
+            displayaccountholders()
 
         }
-        function sendamnt(){
+        var editUPIndex=null
+        function sendamnt(index){
+            editUPIndex=index
             document.getElementById("phonpe").style.display="block"
             document.getElementById("transferamnt").style.display="block"
             document.getElementById("creatacc").style.display="none"
