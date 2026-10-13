@@ -163,9 +163,10 @@
             {
                 withdraw:enterwithdraw,
                 deposit:AccHolders[index].deposits[index].deposit,
-                accountbalance:AccHolders[index]
+                accountbalance:AccHolders[index].deposits[AccHolders[index].deposits.length-1]-enterwithdraw
             }
-
+            AccHolders[index].deposits=[newwihdraw]
+            displayaccountholders()
         }
         function withdraw(index) {
             editindex=index
