@@ -66,14 +66,18 @@
                         deposit: 500,
                         accountbalance: 250
                     }
-                ]
+                ],
+                // withdraws:[
+                //     {
+                //     }
+                // ]
             }
         ]
         console.log(AccHolders[0].deposits.length);
         console.log(AccHolders[0].deposits[AccHolders[0].deposits.length - 1].accountbalance);
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
-            for(var j=0;j<AccHolders.length;j++){
+            for (var j = 0; j < AccHolders.length; j++) {
                 AccHolders[j].deposits.forEach(function (holder) {
                     var mytr = document.createElement("tr")
                     mytr.innerHTML = `
@@ -99,10 +103,10 @@
                 name: document.getElementById("name").value,
                 AccNumber: document.getElementById("Accnum").value,
                 AccType: document.getElementById("Acctype").value,
-                deposits:[
+                deposits: [
                     {
                         deposit: Number(document.getElementById("depost").value),
-                        accountbalance:Number(document.getElementById("Accbls").value)
+                        accountbalance: Number(document.getElementById("Accbls").value)
                     }
 
                 ]
@@ -131,14 +135,14 @@
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
-            document.getElementById("depoamnt").style.display="none"
-            document.getElementById("creatacc").style.display="block"
+            document.getElementById("depoamnt").style.display = "none"
+            document.getElementById("creatacc").style.display = "block"
 
 
         }
-        var editindex=null
+        var editindex = null
         function deposit(index) {
-            editindex=index
+            editindex = index
             console.log(editindex);
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
@@ -151,8 +155,13 @@
             document.getElementById("depost").style.display = "block";
             document.getElementById("depoamnt").style.display = "block"
         }
-        function withdraw(){
-            var enterwithdraw=Number(document.getElementById("withdw").value)
+        function withdraw(index) {
+            var enterwithdraw = Number(document.getElementById("withdw").value)
+            var newwihdraw =
+            {
+                withdraw:enterwithdraw,
+                deposit:AccHolders[index].deposits[index].deposit
+            }
 
         }
 
