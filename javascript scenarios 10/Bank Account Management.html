@@ -127,6 +127,7 @@
         function depositamount() {
             var enteredeposit = Number(document.getElementById("depost").value)
             var newdeposit = {
+                withdraw:AccHolders[editindex].deposits[editindex].withdraw,
                 deposit: enteredeposit,
                 accountbalance: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
@@ -174,6 +175,10 @@
         function withdraw(index) {
             editwdindex=index
             console.log(editwdindex);
+            for (var i = 0; i < 5; i++) {
+                document.getElementsByTagName("label")[i].style.display = "none"
+                document.getElementsByTagName("input")[i].style.display = "none"
+            }
             document.getElementById("withdw").style.display="block"
             document.getElementById("withamnt").style.display="block"
             document.getElementById("creatacc").style.display="none"
