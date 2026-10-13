@@ -109,7 +109,7 @@
                 deposits: [
                     {
 
-                        deposit: Number(document.getElementById("withdw").value),
+                        withdraw: Number(document.getElementById("withdw").value),
                         deposit: Number(document.getElementById("depost").value),
                         accountbalance: Number(document.getElementById("Accbls").value)
                     }
@@ -130,7 +130,7 @@
         function depositamount() {
             var enteredeposit = Number(document.getElementById("depost").value)
             var newdeposit = {
-                withdraw:AccHolders[editindex].deposits[editindex].withdraw,
+                withdraw:AccHolders[editindex].deposits[AccHolders[editindex].deposits].withdraw
                 deposit: enteredeposit,
                 accountbalance: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
@@ -184,7 +184,7 @@
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
             
-            document.getElementById("withdw").style.display = "none"
+            // document.getElementById("withdw").style.display = "none"
             document.getElementById("withamnt").style.display = "none"
             document.getElementById("creatacc").style.display = "block"
 
