@@ -138,8 +138,10 @@
             document.getElementById("addacc").style.display = "block"
             document.getElementById("creatacc").style.display = "none"
         }
+        var totdeposits = []
         function depositamount() {
             var enteredeposit = Number(document.getElementById("depost").value)
+            totdeposits.push(enteredeposit)
             var newdeposit = {
                 withdraw: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].withdraw,
                 deposit: enteredeposit,
@@ -152,6 +154,8 @@
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
+
+            document.getElementById("heading").innerHTML = `Deposited Amount : ${totdeposits}`
             document.getElementById("depoamnt").style.display = "none"
             document.getElementById("addacc").style.display = "block"
 
@@ -232,7 +236,7 @@
                 accountbalance: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].accountbalance - enteramntosend,
             }
             AccHolders[editUPIndex].deposits = [newtransferamnt]
-            document.getElementById("heading").innerHTML=`Amount received : ${enteramntosend}`
+            document.getElementById("heading").innerHTML = `Amount received : ${enteramntosend}`
             displayaccountholders()
 
         }
