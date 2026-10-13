@@ -25,10 +25,10 @@
                 <th>Account Holder Name</th>
                 <th>Account Number</th>
                 <th>Account Type</th>
+                <th>UPI</th>
                 <th>Withdraw amount</th>
                 <th>deposited amount</th>
                 <th>Account Balance</th>
-                <th>UPI</th>
                 <th>Deposit</th>
                 <th>Withdraw</th>
                 <th>Phone pay</th>
@@ -93,8 +93,7 @@
             for (var j = 0; j < AccHolders.length; j++) {
                 AccHolders[j].deposits.forEach(function (holder) {
                     var mytr = document.createElement("tr")
-                    mytr.innerHTML = `
-                    
+                    mytr.innerHTML = `                    
                     <td>${AccHolders[j].name}</td>
                     <td>${AccHolders[j].AccNumber}</td>
                     <td>${AccHolders[j].AccType}</td>
@@ -120,7 +119,7 @@
                 AccType: document.getElementById("Acctype").value,
                 deposits: [
                     {
-
+                        
                         withdraw: Number(document.getElementById("withdw").value),
                         deposit: Number(document.getElementById("depost").value),
                         accountbalance: Number(document.getElementById("Accbls").value)
