@@ -61,6 +61,7 @@
                 AccType: "savings",
                 deposits: [
                     {
+                        withdraw:10,
                         deposit: 500,
                         accountbalance: 250
                     }
@@ -147,6 +148,10 @@
 
             document.getElementById("depost").style.display = "block";
             document.getElementById("depoamnt").style.display = "block"
+        }
+        function withdraw(){
+            var enterwithdraw=Number(document.getElementById("withdw").value)
+
         }
 
 
