@@ -168,7 +168,7 @@
         function withdrawamount(){
             console.log(editwdindex);
             var enterwithdraw = Number(document.getElementById("withdw").value)
-            totwithdraws.push({name:AccHolders[editwdindex].name,withdrawn:enterwithdraw})
+            totwithdraws.push(enterwithdraw)
             var newwihdraw =
             {
                 withdraw:enterwithdraw,
