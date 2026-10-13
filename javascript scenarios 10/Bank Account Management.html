@@ -160,7 +160,7 @@
             document.getElementById("withdw").style.display = "none"
             document.getElementById("withamnt").style.display = "none"
         }
-        function withdrawamount(editindex){
+        function withdrawamount(){
             var enterwithdraw = Number(document.getElementById("withdw").value)
             var newwihdraw =
             {
@@ -174,7 +174,6 @@
         }
         function withdraw(index) {
             editwdindex=index
-            console.log(editindex);
             console.log(editwdindex);
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
