@@ -124,20 +124,20 @@
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
-            document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "block"
+            document.getElementById("creatacc").style.display = "none"
         }
         function depositamount() {
             var enteredeposit = Number(document.getElementById("depost").value)
             var newdeposit = {
-                withdraw:AccHolders[editindex].deposits[AccHolders[editindex].deposits].withdraw,
+                withdraw:AccHolders[editindex].deposits[editindex].withdraw,
                 deposit: enteredeposit,
                 accountbalance: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
             AccHolders[editindex].deposits = [newdeposit]
             displayaccountholders()
             document.querySelector("form").reset()
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
