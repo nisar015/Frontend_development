@@ -73,8 +73,8 @@
                 AccType: "savings",
                 deposits: [
                     {
-                        UPI:0,
-                        withdraw:10,
+                        UPI: 0,
+                        withdraw: 10,
                         deposit: 500,
                         accountbalance: 250
 
@@ -119,7 +119,7 @@
                 AccType: document.getElementById("Acctype").value,
                 deposits: [
                     {
-                        UPI:Number(document.getElementById("phonpe").value),   
+                        UPI: Number(document.getElementById("phonpe").value),
                         withdraw: Number(document.getElementById("withdw").value),
                         deposit: Number(document.getElementById("depost").value),
                         accountbalance: Number(document.getElementById("Accbls").value)
@@ -141,7 +141,7 @@
         function depositamount() {
             var enteredeposit = Number(document.getElementById("depost").value)
             var newdeposit = {
-                withdraw:AccHolders[editindex].deposits[AccHolders[editindex].deposits.length-1].withdraw,
+                withdraw: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].withdraw,
                 deposit: enteredeposit,
                 accountbalance: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
@@ -173,69 +173,74 @@
             document.getElementById("depoamnt").style.display = "block"
             document.getElementById("withdw").style.display = "none"
             document.getElementById("withamnt").style.display = "none"
+            document.getElementById("phonpe").style.display = "none"
+            document.getElementById("transferamnt").style.display = "none"
+
         }
-        var totwithdraws=[]
-        var editwdindex=null
-        function withdrawamount(){
+        var totwithdraws = []
+        var editwdindex = null
+        function withdrawamount() {
             console.log(editwdindex);
             var enterwithdraw = Number(document.getElementById("withdw").value)
             totwithdraws.push(enterwithdraw)
             var newwihdraw =
             {
-                withdraw:enterwithdraw,
-                deposit:AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].deposit,
-                accountbalance:AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance - enterwithdraw,
+                withdraw: enterwithdraw,
+                deposit: AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length - 1].deposit,
+                accountbalance: AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length - 1].accountbalance - enterwithdraw,
                 // AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
-            if(AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance<enterwithdraw){
+            if (AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length - 1].accountbalance < enterwithdraw) {
                 alert("no sufficient balance");
                 return
             }
-            AccHolders[editwdindex].deposits=[newwihdraw]
+            AccHolders[editwdindex].deposits = [newwihdraw]
             displayaccountholders()
             document.querySelector("form").reset()
             for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
-            
-            document.getElementById("heading").innerHTML =`withdrawn Amount : ${totwithdraws}`
+
+            document.getElementById("heading").innerHTML = `withdrawn Amount : ${totwithdraws}`
             document.getElementById("withamnt").style.display = "none"
             document.getElementById("addacc").style.display = "block"
 
         }
         function withdraw(index) {
-            editwdindex=index
+            editwdindex = index
             console.log(editwdindex);
             for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
             }
-            document.getElementById("withdw").style.display="block"
-            document.getElementById("withamnt").style.display="block"
-            document.getElementById("addacc").style.display="none"
-            document.getElementById("depoamnt").style.display="none"
-            document.getElementById("creatacc").style.display="none"
+            document.getElementById("withdw").style.display = "block"
+            document.getElementById("withamnt").style.display = "block"
+            document.getElementById("addacc").style.display = "none"
+            document.getElementById("depoamnt").style.display = "none"
+            document.getElementById("creatacc").style.display = "none"
+            document.getElementById("phonpe").style.display = "none"
+            document.getElementById("transferamnt").style.display = "none"
 
         }
-        function transfermoney(){
-            var enteramntosend=Number(document.getElementById("phonpe").value)
-            var newtransferamnt={
-                UPI:enteramntosend,
-                withdraw:AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length-1].withdraw,
-                deposit:AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length-1].deposit,
-                accountbalance:AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length-1].accountbalance-enteramntosend,
+        function transfermoney() {
+            var enteramntosend = Number(document.getElementById("phonpe").value)
+            var newtransferamnt = {
+                UPI: enteramntosend,
+                withdraw: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].withdraw,
+                deposit: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].deposit,
+                accountbalance: AccHolders[editUPIndex].deposits[AccHolders[editUPIndex].deposits.length - 1].accountbalance - enteramntosend,
             }
-            AccHolders[editUPIndex].deposits=[newtransferamnt]
+            AccHolders[editUPIndex].deposits = [newtransferamnt]
             displayaccountholders()
 
         }
-        var editUPIndex=null
-        function sendamnt(index){
-            editUPIndex=index
-            document.getElementById("phonpe").style.display="block"
-            document.getElementById("transferamnt").style.display="block"
-            document.getElementById("creatacc").style.display="none"
+        var editUPIndex = null
+        function sendamnt(index) {
+            editUPIndex = index
+            document.getElementById("phonpe").style.display = "block"
+            document.getElementById("transferamnt").style.display = "block"
+            document.getElementById("creatacc").style.display = "none"
 
         }
         // after depositing an amount i created a user and then i tried depositing on the newly aded user which is throwing me an error
