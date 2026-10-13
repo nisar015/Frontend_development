@@ -157,15 +157,15 @@
             document.getElementById("depost").style.display = "block";
             document.getElementById("depoamnt").style.display = "block"
         }
-        function withdrawamount(){
+        function withdrawamount(editindex){
             var enterwithdraw = Number(document.getElementById("withdw").value)
             var newwihdraw =
             {
                 withdraw:enterwithdraw,
-                deposit:AccHolders[index].deposits[index].deposit,
-                accountbalance:AccHolders[index].deposits[AccHolders[index].deposits.length-1]-enterwithdraw
+                deposit:AccHolders[editindex].deposits[editindex].deposit,
+                accountbalance:AccHolders[editindex].deposits[AccHolders[editindex].deposits.length-1]-enterwithdraw
             }
-            AccHolders[index].deposits=[newwihdraw]
+            AccHolders[editindex].deposits=[newwihdraw]
             displayaccountholders()
         }
         function withdraw(index) {
