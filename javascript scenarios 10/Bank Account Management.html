@@ -42,14 +42,14 @@
         <label for="Acctype">Enter Acc Type</label>
         <input type="Acctype" id="Acctype">
         <!-- <br><br> -->
+        <label for="withdw">Enter Acc Balance</label>
+        <input type="withdw" id="withdw" class="withdw">
+        <!-- <br><br> -->
         <label for="depost">Enter deposit amount</label>
         <input type="depost" id="depost" class="depost">
         <!-- <br><br> -->
         <label for="Accbls">Enter Acc Balance</label>
         <input type="Accbls" id="Accbls" class="Accbls">
-        <!-- <br><br> -->
-        <label for="withdw">Enter Acc Balance</label>
-        <input type="withdw" id="withdw" class="withdw">
         <!-- <br><br> -->
         <button type="button" onclick="addaccount()" id="addacc">Add Account</button>
         <button type="button" onclick="createaccount()" id="creatacc">create Account</button>
@@ -108,6 +108,8 @@
                 AccType: document.getElementById("Acctype").value,
                 deposits: [
                     {
+
+                        deposit: Number(document.getElementById("withdw").value),
                         deposit: Number(document.getElementById("depost").value),
                         accountbalance: Number(document.getElementById("Accbls").value)
                     }
