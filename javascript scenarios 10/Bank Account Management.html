@@ -162,15 +162,16 @@
             var newwihdraw =
             {
                 withdraw:enterwithdraw,
-                deposit:AccHolders[editindex].deposits[editindex].deposit,
-                accountbalance:AccHolders[editindex].deposits[AccHolders[editindex].deposits.length-1]-enterwithdraw
+                deposit:AccHolders[editwdindex].deposits[editwdindex].deposit,
+                accountbalance:AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance - enterwithdraw
+                // AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
-            AccHolders[editindex].deposits=[newwihdraw]
+            AccHolders[editwdindex].deposits=[newwihdraw]
             displayaccountholders()
         }
         function withdraw(index) {
-            editindex=index
-            console.log(editindex);
+            editwdindex=index
+            console.log(editwdindex);
             document.getElementById("withdw").style.display="block"
             document.getElementById("withamnt").style.display="block"
             document.getElementById("creatacc").style.display="none"
