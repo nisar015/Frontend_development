@@ -68,11 +68,6 @@
                         withdraw:10,
                         deposit: 500,
                         accountbalance: 250
-                    },
-                    {
-                        withdraw:100,
-                        deposit: 500,
-                        accountbalance: 250
                     }
                 ],
                 // withdraws:[
@@ -193,7 +188,7 @@
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
             
-            document.getElementById("heading").style.display = totwithdraws
+            document.getElementById("heading").innerHTML = totwithdraws
             document.getElementById("withamnt").style.display = "none"
             document.getElementById("addacc").style.display = "block"
 
