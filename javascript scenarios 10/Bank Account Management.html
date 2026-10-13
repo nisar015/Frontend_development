@@ -28,6 +28,7 @@
                 <th>Withdraw amount</th>
                 <th>deposited amount</th>
                 <th>Account Balance</th>
+                <th>UPI</th>
                 <th>Deposit</th>
                 <th>Withdraw</th>
                 <th>Phone pay</th>
@@ -70,11 +71,13 @@
                 name: "Nisar Ahmmed",
                 AccNumber: 1245365,
                 AccType: "savings",
+                UPI:0,
                 deposits: [
                     {
                         withdraw:10,
                         deposit: 500,
                         accountbalance: 250
+
                     }
                 ],
                 // withdraws:[
@@ -95,6 +98,7 @@
                     <td>${AccHolders[j].name}</td>
                     <td>${AccHolders[j].AccNumber}</td>
                     <td>${AccHolders[j].AccType}</td>
+                    <td>${AccHolders[j].UPI}</td>
                     <td>${holder.withdraw}</td>
                     <td>${holder.deposit}</td>
                     <td>${holder.accountbalance}</td>
