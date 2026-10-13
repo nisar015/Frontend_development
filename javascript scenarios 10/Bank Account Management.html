@@ -61,6 +61,8 @@
                 ]
             }
         ]
+        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length-1].accountbalance);
+        // console.log(AccHolders[0].deposits[[0].deposits.length-1].accountbalance)
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
             AccHolders[0].deposits.forEach(function (holder,i) {
@@ -102,7 +104,7 @@
             var enteredeposit=Number(document.getElementById("depost").value)
             var newdeposit={
                 deposit:enteredeposit,
-                accountbalance:AccHolders[0].deposits[AccHolders[0].deposits.length-1].accountbalance+enteredeposit
+                accountbalance:AccHolders[0].deposits[AccHolders[0].deposits.length-1].accountbalance+enteredeposit,
             }
             AccHolders[0].deposits=[newdeposit]
             displayaccountholders()
