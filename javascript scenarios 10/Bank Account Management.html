@@ -130,7 +130,7 @@
         function depositamount() {
             var enteredeposit = Number(document.getElementById("depost").value)
             var newdeposit = {
-                withdraw:AccHolders[editindex].deposits[AccHolders[editindex].deposits].withdraw
+                withdraw:AccHolders[editindex].deposits[AccHolders[editindex].deposits].withdraw,
                 deposit: enteredeposit,
                 accountbalance: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
