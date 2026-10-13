@@ -87,8 +87,10 @@
                 name: document.getElementById("name").value,
                 AccNumber: document.getElementById("Accnum").value,
                 AccType: document.getElementById("Acctype").value,
-                deposit: document.getElementById("depost").value,
-                AccBal: document.getElementById("Accbls").value
+                deposits:{
+                    deposit: document.getElementById("depost").value,
+                    accountbalance: document.getElementById("Accbls").value
+                }
             }
             AccHolders.push(hold)
             displayaccountholders()
