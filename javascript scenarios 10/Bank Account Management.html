@@ -229,6 +229,8 @@
             document.getElementById("transferamnt").style.display = "none"
 
         }
+
+        var totUPItransactions=[]
         function transfermoney() {
             var enteramntosend = Number(document.getElementById("phonpe").value)
             totUPItransactions.push(enteramntosend)
@@ -244,7 +246,6 @@
 
         }
         var editUPIndex = null
-        var totUPItransactions=null
         function sendamnt(index) {
             editUPIndex = index
              for (var i = 0; i < 6; i++) {
