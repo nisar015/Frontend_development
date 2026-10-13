@@ -93,6 +93,7 @@
                     <td>${holder.accountbalance}</td>
                     <td><button onclick="deposit(${j})">Deposit</button></td>
                     <td><button onclick="withdraw(${j})">withdraw</button></td>
+                    <td><button onclick="transfermoney(${j})">transfer money</button></td>
       
                     `
                     document.querySelector("tbody").appendChild(mytr)
@@ -188,7 +189,7 @@
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
             
-            document.getElementById("heading").innerHTML = totwithdraws
+            document.getElementById("heading").innerHTML =`withdrawn Amount : ${totwithdraws}`
             document.getElementById("withamnt").style.display = "none"
             document.getElementById("addacc").style.display = "block"
 
