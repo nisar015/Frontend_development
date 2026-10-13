@@ -9,7 +9,8 @@
 <style>
     input,
     label,
-    #addacc,#depoamnt {
+    #addacc,
+    #depoamnt {
         display: none;
     }
 </style>
@@ -53,20 +54,19 @@
                 name: "Nisar Ahmmed",
                 AccNumber: 1245365,
                 AccType: "savings",
-                deposits:[
+                deposits: [
                     {
-                        deposit:500,
-                        accountbalance:250
+                        deposit: 500,
+                        accountbalance: 250
                     }
                 ]
             }
         ]
         console.log(AccHolders[0].deposits.length);
-        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length-1].accountbalance);
-        // console.log(AccHolders[0].deposits[[0].deposits.length-1].accountbalance)
+        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length - 1].accountbalance);
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
-            AccHolders[0].deposits.forEach(function (holder,i) {
+            AccHolders[0].deposits.forEach(function (holder, i) {
                 var mytr = document.createElement("tr")
                 mytr.innerHTML = `
                 
@@ -101,32 +101,32 @@
             document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "block"
         }
-        function depositamount(){
-            var enteredeposit=Number(document.getElementById("depost").value)
-            var newdeposit={
-                deposit:enteredeposit,
-                accountbalance:AccHolders[0].deposits[AccHolders[0].deposits.length-1].accountbalance+enteredeposit,
+        function depositamount() {
+            var enteredeposit = Number(document.getElementById("depost").value)
+            var newdeposit = {
+                deposit: enteredeposit,
+                accountbalance: AccHolders[0].deposits[AccHolders[0].deposits.length - 1].accountbalance + enteredeposit,
             }
-            AccHolders[0].deposits=[newdeposit]
+            AccHolders[0].deposits = [newdeposit]
             displayaccountholders()
             document.querySelector("form").reset()
 
 
         }
-        function deposit(index){
+        function deposit(index) {
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
             }
-            
+
             document.getElementById("creatacc").style.display = "none"
             document.getElementById("addacc").style.display = "none"
 
-            document.getElementById("depost").style.display="block";
-            document.getElementById("depoamnt").style.display="block"
+            document.getElementById("depost").style.display = "block";
+            document.getElementById("depoamnt").style.display = "block"
         }
-        
-         
+
+
     </script>
 </body>
 
