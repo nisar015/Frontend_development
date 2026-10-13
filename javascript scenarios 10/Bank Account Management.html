@@ -53,6 +53,7 @@
         <button type="button" onclick="addaccount()" id="addacc">Add Account</button>
         <button type="button" onclick="createaccount()" id="creatacc">create Account</button>
         <button type="button" onclick="depositamount()" id="depoamnt">deposit Amount</button>
+        <button type="button" onclick="withdrawamount()" id="withamnt">withdraw Amount</button>
     </form>
     <script>
         var AccHolders = [
@@ -156,11 +157,15 @@
             document.getElementById("depoamnt").style.display = "block"
         }
         function withdraw(index) {
+            editindex=index
+            console.log(editindex);
+
             var enterwithdraw = Number(document.getElementById("withdw").value)
             var newwihdraw =
             {
                 withdraw:enterwithdraw,
-                deposit:AccHolders[index].deposits[index].deposit
+                deposit:AccHolders[index].deposits[index].deposit,
+                accountbalance:AccHolders[index]
             }
 
         }
