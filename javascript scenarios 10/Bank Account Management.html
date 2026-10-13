@@ -77,6 +77,7 @@
                     <td>${holder.deposit}</td>
                     <td>${holder.accountbalance}</td>
                     <td><button onclick="deposit(${j})">Deposit</button></td>
+                    <td><button onclick="withdraw(${j})">withdraw</button></td>
       
                     `
                     document.querySelector("tbody").appendChild(mytr)
@@ -123,7 +124,7 @@
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
             document.getElementById("depoamnt").style.display="none"
-            document.getElementById("createacc").style.display="block"
+            document.getElementById("creatacc").style.display="block"
 
 
         }
