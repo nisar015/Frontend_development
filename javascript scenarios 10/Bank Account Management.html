@@ -68,6 +68,11 @@
                         withdraw:10,
                         deposit: 500,
                         accountbalance: 250
+                    },
+                    {
+                        withdraw:100,
+                        deposit: 500,
+                        accountbalance: 250
                     }
                 ],
                 // withdraws:[
@@ -76,8 +81,8 @@
                 // ]
             }
         ]
-        console.log(AccHolders[0].deposits.length);
-        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length - 1].accountbalance);
+        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length-2]);
+        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length - 1]);
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
             for (var j = 0; j < AccHolders.length; j++) {
@@ -172,9 +177,12 @@
             var newwihdraw =
             {
                 withdraw:enterwithdraw,
-                deposit:AccHolders[editwdindex].deposits[editwdindex].deposit,
-                accountbalance:AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance - enterwithdraw
+                deposit:AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].deposit,
+                accountbalance:AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance - enterwithdraw,
                 // AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
+            }
+            if(AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance<enterwithdraw){
+                console.log("no sufficient balance");
             }
             AccHolders[editwdindex].deposits=[newwihdraw]
             displayaccountholders()
@@ -186,7 +194,7 @@
             
             // document.getElementById("withdw").style.display = "none"
             document.getElementById("withamnt").style.display = "none"
-            document.getElementById("creatacc").style.display = "block"
+            document.getElementById("addacc").style.display = "block"
 
         }
         function withdraw(index) {
@@ -198,6 +206,7 @@
             }
             document.getElementById("withdw").style.display="block"
             document.getElementById("withamnt").style.display="block"
+            document.getElementById("addacc").style.display="none"
             document.getElementById("depoamnt").style.display="none"
             document.getElementById("creatacc").style.display="none"
 
