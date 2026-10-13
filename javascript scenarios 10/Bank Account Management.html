@@ -11,7 +11,8 @@
     label,
     #addacc,
     #depoamnt,
-    #withamnt {
+    #withamnt,
+    #phonepe {
         display: none;
     }
 </style>
@@ -216,6 +217,10 @@
         function transfermoney(){
             var enteramntosend=Number(document.getElementById("phonpe").value)
 
+
+        }
+        function sendamnt(){
+            document.getElementById("phonepe").style.display="block"
         }
         // after depositing an amount i created a user and then i tried depositing on the newly aded user which is throwing me an error
     </script>
