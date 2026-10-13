@@ -13,7 +13,7 @@
     #depoamnt,
     #withamnt,
     #phonepe,
-    #sendamnt {
+    #transferamnt {
         display: none;
     }
 </style>
@@ -61,7 +61,7 @@
         <button type="button" onclick="createaccount()" id="creatacc">create Account</button>
         <button type="button" onclick="depositamount()" id="depoamnt">deposit Amount</button>
         <button type="button" onclick="withdrawamount()" id="withamnt">withdraw Amount</button>
-        <button type="button" onclick="sendmoney()" id="sendamnt">send Amount</button>
+        <button type="button" onclick="transfermoney()" id="transferamnt">Transfer Amount</button>
     </form>
     <h2 id="heading"></h2>
     <script>
@@ -222,6 +222,7 @@
         }
         function sendamnt(){
             document.getElementById("phonepe").style.display="block"
+            document.getElementById("transferamnt").style.display="block"
         }
         // after depositing an amount i created a user and then i tried depositing on the newly aded user which is throwing me an error
     </script>
