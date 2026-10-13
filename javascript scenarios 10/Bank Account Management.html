@@ -157,10 +157,7 @@
             document.getElementById("depost").style.display = "block";
             document.getElementById("depoamnt").style.display = "block"
         }
-        function withdraw(index) {
-            editindex=index
-            console.log(editindex);
-
+        function withdrawamount(){
             var enterwithdraw = Number(document.getElementById("withdw").value)
             var newwihdraw =
             {
@@ -168,6 +165,13 @@
                 deposit:AccHolders[index].deposits[index].deposit,
                 accountbalance:AccHolders[index]
             }
+
+        }
+        function withdraw(index) {
+            editindex=index
+            console.log(editindex);
+            document.getElementById("withdw").style.display="block"
+            document.getElementById("withamnt").style.display="block"
 
         }
 
