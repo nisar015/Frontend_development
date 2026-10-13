@@ -66,20 +66,23 @@
         console.log(AccHolders[0].deposits[AccHolders[0].deposits.length - 1].accountbalance);
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
-            AccHolders[0].deposits.forEach(function (holder, i) {
-                var mytr = document.createElement("tr")
-                mytr.innerHTML = `
-                
-                <td>${AccHolders[0].name}</td>
-                <td>${AccHolders[0].AccNumber}</td>
-                <td>${AccHolders[0].AccType}</td>
-                <td>${holder.deposit}</td>
-                <td>${holder.accountbalance}</td>
-                <td><button onclick="deposit(${i})">Deposit</button></td>
-  
-                `
-                document.querySelector("tbody").appendChild(mytr)
-            })
+            for(var j=0;j<AccHolders.length;j++){
+                AccHolders[j].deposits.forEach(function (holder) {
+                    var mytr = document.createElement("tr")
+                    mytr.innerHTML = `
+                    
+                    <td>${AccHolders[j].name}</td>
+                    <td>${AccHolders[j].AccNumber}</td>
+                    <td>${AccHolders[j].AccType}</td>
+                    <td>${holder.deposit}</td>
+                    <td>${holder.accountbalance}</td>
+                    <td><button onclick="deposit(${j})">Deposit</button></td>
+      
+                    `
+                    document.querySelector("tbody").appendChild(mytr)
+                })
+
+            }
         }
         displayaccountholders()
         function addaccount() {
@@ -110,15 +113,19 @@
             var enteredeposit = Number(document.getElementById("depost").value)
             var newdeposit = {
                 deposit: enteredeposit,
-                accountbalance: AccHolders[0].deposits[AccHolders[0].deposits.length - 1].accountbalance + enteredeposit,
+                accountbalance: AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
-            AccHolders[0].deposits = [newdeposit]
+            AccHolders[editindex].deposits = [newdeposit]
             displayaccountholders()
             document.querySelector("form").reset()
+            document.querySelector("depoamnt").style.display="none"
 
 
         }
+        var editindex=null
         function deposit(index) {
+            editindex=index
+            console.log(editindex);
             for (var i = 0; i < 5; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
