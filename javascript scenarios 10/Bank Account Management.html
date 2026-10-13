@@ -118,6 +118,10 @@
             AccHolders[editindex].deposits = [newdeposit]
             displayaccountholders()
             document.querySelector("form").reset()
+            for (var i = 0; i < 5; i++) {
+                document.getElementsByTagName("label")[i].style.display = "block"
+                document.getElementsByTagName("input")[i].style.display = "block"
+            }
             document.getElementById("depoamnt").style.display="none"
             document.getElementById("createacc").style.display="block"
 
