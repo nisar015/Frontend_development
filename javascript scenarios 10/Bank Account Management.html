@@ -182,7 +182,8 @@
                 // AccHolders[editindex].deposits[AccHolders[editindex].deposits.length - 1].accountbalance + enteredeposit,
             }
             if(AccHolders[editwdindex].deposits[AccHolders[editwdindex].deposits.length-1].accountbalance<enterwithdraw){
-                console.log("no sufficient balance");
+                alert("no sufficient balance");
+                return
             }
             AccHolders[editwdindex].deposits=[newwihdraw]
             displayaccountholders()
