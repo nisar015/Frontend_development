@@ -87,10 +87,13 @@
                 name: document.getElementById("name").value,
                 AccNumber: document.getElementById("Accnum").value,
                 AccType: document.getElementById("Acctype").value,
-                deposits:{
-                    deposit: document.getElementById("depost").value,
-                    accountbalance: document.getElementById("Accbls").value
-                }
+                deposits:[
+                    {
+                        deposit: Number(document.getElementById("depost").value),
+                        accountbalance:Number(document.getElementById("Accbls").value)
+                    }
+
+                ]
             }
             AccHolders.push(hold)
             displayaccountholders()
