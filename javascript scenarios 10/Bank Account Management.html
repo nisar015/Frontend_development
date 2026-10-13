@@ -42,7 +42,7 @@
         <label for="Acctype">Enter Acc Type</label>
         <input type="Acctype" id="Acctype">
         <!-- <br><br> -->
-        <label for="withdw">Enter Acc Balance</label>
+        <label for="withdw">Enter withdraw Balance</label>
         <input type="withdw" id="withdw" class="withdw">
         <!-- <br><br> -->
         <label for="depost">Enter deposit amount</label>
@@ -120,7 +120,7 @@
             displayaccountholders()
         }
         function createaccount() {
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
@@ -150,7 +150,7 @@
         function deposit(index) {
             editindex = index
             console.log(editindex);
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
             }
@@ -179,7 +179,7 @@
             AccHolders[editwdindex].deposits=[newwihdraw]
             displayaccountholders()
             document.querySelector("form").reset()
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "block"
                 document.getElementsByTagName("input")[i].style.display = "block"
             }
@@ -192,7 +192,7 @@
         function withdraw(index) {
             editwdindex=index
             console.log(editwdindex);
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 6; i++) {
                 document.getElementsByTagName("label")[i].style.display = "none"
                 document.getElementsByTagName("input")[i].style.display = "none"
             }
