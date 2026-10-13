@@ -83,7 +83,7 @@
                 // ]
             }
         ]
-        console.log(AccHolders[0].deposits[AccHolders[0].deposits.length-2]);
+        // console.log(AccHolders[0].deposits[AccHolders[0].deposits.length-2]);
         console.log(AccHolders[0].deposits[AccHolders[0].deposits.length - 1]);
         function displayaccountholders() {
             document.querySelector("tbody").innerHTML = ""
@@ -221,8 +221,10 @@
 
         }
         function sendamnt(){
-            document.getElementById("phonepe").style.display="block"
+            document.getElementById("phonpe").style.display="block"
             document.getElementById("transferamnt").style.display="block"
+            document.getElementById("creatacc").style.display="none"
+
         }
         // after depositing an amount i created a user and then i tried depositing on the newly aded user which is throwing me an error
     </script>
