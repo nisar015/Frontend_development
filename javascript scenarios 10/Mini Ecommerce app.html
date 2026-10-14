@@ -13,6 +13,11 @@
     </style>
 </head>
 <body>
+    <form>
+        <label for="id">search</label>
+        <input type="id" id="id">
+        <button type="button" onclick="searchuser()">search user</button>
+    </form>
     <div id="container">
 
     </div>
@@ -69,6 +74,7 @@
         }
         getdatafromserverforcart()
         function displayproducts(product){
+            document.getElementById("container").innerHTML=""
             product.forEach(function(pro){
                 var card=document.createElement('div')
                 card.innerHTML=`
@@ -120,6 +126,15 @@
                 }).then(function(){
                     getdatafromserverforcart()
                 })
+            })
+        }
+        function searchuser(){
+            var searchpro=Number(document.getElementById("id").value)
+            fetch("http://localhost:3000/Products/"+searchpro).then(function(response){
+                return response.json()
+            }).then(function(data){
+                console.log(data);
+                displayproducts(data)
             })
         }
     </script>

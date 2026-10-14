@@ -119,6 +119,22 @@
       "price": 1499,
       "rating": 4.5,
       "id": 3
+    },
+    {
+      "image": "https://placehold.co/300x300?text=Smart+Watch",
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 2499,
+      "rating": 4.2,
+      "id": 4
+    },
+    {
+      "image": "https://placehold.co/300x300?text=Headphones",
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 1499,
+      "rating": 4.5,
+      "id": 5
     }
   ]
 }
