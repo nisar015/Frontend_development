@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    body{
+    body {
         background: grey;
     }
+
     table {
         width: 80%;
         margin: auto;
@@ -58,42 +60,60 @@
         <button type="button" onclick="addtask()" id="addbutton">add task</button>
         <button type="button" onclick="updatetask()" id="updatebutton">update task</button>
     </form>
-<body>
-    <script>
-        function getdatafromserver(){
-            fetch("http://localhost:3000/Todolist").then(function(response){
-                return response.json()
-            }).then(function(data){
-                console.log(data);
-                displaytodos(data)
-            })
-        }
-        getdatafromserver()
-        function displaytodos(Tododata){
-            Tododata.forEach(function(todo){
-                var mytr=document.createElement("tr")
-                mytr.innerHTML=`
+
+    <body>
+        <script>
+            function getdatafromserver() {
+                fetch("http://localhost:3000/Todolist").then(function (response) {
+                    return response.json()
+                }).then(function (data) {
+                    console.log(data);
+                    displaytodos(data)
+                })
+            }
+            getdatafromserver()
+            function displaytodos(Tododata) {
+                Tododata.forEach(function (todo) {
+                    var mytr = document.createElement("tr")
+                    mytr.innerHTML = `
                 <td>${todo.id}</td>
                 <td>${todo.title}</td>
                 <td>${todo.status}</td>
                 <td><button onclick="editodo(${todo.id})">edit</button></td>
                 <td><button onclick="deletetodo(${todo.id})">delete</button></td>
                 `
-                document.querySelector("tbody").appendChild(mytr)
-            })
-        }
-        function editodo(id){
-            fetch("http://localhost:3000/Todolist/"+id).then(function(response){
-                return response.json()
-            }).then(function(todo){
-                console.log(todo);
-                document.getElementById("id").value=todo.id
-                document.getElementById("title").value=todo.title
-                document.getElementById("status").value=todo.status
-            })
-            document.getElementById("updatebutton").style.display="block"
-            document.getElementById("addbutton").style.display="none"
-        }
-    </script>
-</body>
+                    document.querySelector("tbody").appendChild(mytr)
+                })
+            }
+            function editodo(id) {
+                fetch("http://localhost:3000/Todolist/" + id).then(function (response) {
+                    return response.json()
+                }).then(function (todo) {
+                    console.log(todo);
+                    document.getElementById("id").value = todo.id
+                    document.getElementById("title").value = todo.title
+                    document.getElementById("status").value = todo.status
+                })
+                document.getElementById("updatebutton").style.display = "block"
+                document.getElementById("addbutton").style.display = "none"
+            }
+            function updatetask() {
+                var uptodo = {
+                    id: document.getElementById("id").value,
+                    title: document.getElementById("title").value,
+                    status: document.getElementById("status").value,
+                }
+                fetch("http://localhost:3000/Todolist/" + uptodo.id, {
+                    method: "PUT",
+                    body: JSON.stringify(uptodo),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).then(function () {
+                    getdatafromserver()
+                })
+            }
+        </script>
+    </body>
+
 </html>
