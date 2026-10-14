@@ -85,6 +85,13 @@
                     document.querySelector("tbody").appendChild(mytr)
                 })
             }
+            function deletetodo(id){
+                fetch("http://localhost:3000/Todolist/" + id,{
+                    method:"DELETE"
+                }).then(function(){
+                    getdatafromserver()
+                })
+            }
             function editodo(id) {
                 fetch("http://localhost:3000/Todolist/" + id).then(function (response) {
                     return response.json()
