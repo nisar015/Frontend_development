@@ -43,7 +43,22 @@
             return response.json()
         }).then(function(data){
             console.log(data);
+            displayproducts(data)
         })
+        function displayproducts(product){
+            product.forEach(function(pro){
+                var card=document.createElement('div')
+                card.innerHTML=`
+                <img src="${pro.image}">
+                <p>${pro.name}</p>
+                <p>${pro.category}</p>
+                <p>${pro.price}</p>
+                <p>${pro.rating}</p>
+                <button onclick="addtovart(${pro.id})">Add to cart</button>
+                `
+                document.querySelector("div").appendChild(card)
+            })
+        }
     </script>
 </body>
 </html>
