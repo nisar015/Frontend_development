@@ -73,6 +73,7 @@
             }
             getdatafromserver()
             function displaytodos(Tododata) {
+                console.log(Tododata);
                 document.querySelector("tbody").innerHTML=""
                 Tododata.forEach(function (todo) {
                     var mytr = document.createElement("tr")
