@@ -14,8 +14,8 @@
 </head>
 <body>
     <form>
-        <label for="name">search</label>
-        <input type="name" id="name">
+        <label for="id">search</label>
+        <input type="id" id="id">
         <button type="button" onclick="searchuser()">search user</button>
     </form>
     <div id="container">
@@ -131,7 +131,7 @@
             })
         }
         function searchuser(){
-            var searchpro=document.getElementById("name").value
+            var searchpro=Number(document.getElementById("id").value)
             fetch("http://localhost:3000/Products/"+searchpro).then(function(response){
                 return response.json()
             }).then(function(data){
