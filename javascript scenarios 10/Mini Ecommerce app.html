@@ -8,6 +8,7 @@
         #container,#cartcont{
             width: 50%;
             float: left;
+            margin: auto;
         }
     </style>
 </head>
@@ -104,11 +105,11 @@
                 })
                 console.log(check);
                 var newpro={
-                    image:document.getElementById("image").value=check.image,
-                    name:document.getElementById("name").value=check.name,
-                    category:document.getElementById("category").value=check.category,
-                    price:document.getElementById("price").value=check.price,
-                    rating:document.getElementById("rating").value=check.rating,
+                    image:check.image,
+                    name:check.name,
+                    category:check.category,
+                    price:check.price,
+                    rating:check.rating,
                 }
                 fetch("http://localhost:3000/cart",{
                     method:"POST",
