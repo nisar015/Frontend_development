@@ -9,6 +9,9 @@
     <div id="container" style="float: left;">
 
     </div>
+    <div id="cartcont" style="float: left;">
+
+    </div>
     <form border="1">
         <label for="id">id</label>
         <input type="id" id="id" name="id">
@@ -48,6 +51,16 @@
             })
         }
         getdatafromserver()
+        function getdatafromserverforcart(){
+            fetch("http://localhost:3000/cart").then(function(response){
+                return response.json()
+            }).then(function(cartdata){
+                console.log(cartdata);
+                displaycartproducts(cartdata)
+            })
+
+        }
+        getdatafromserverforcart()
         function displayproducts(product){
             product.forEach(function(pro){
                 var card=document.createElement('div')
@@ -61,23 +74,45 @@
                 `
                 document.getElementById("container").appendChild(card)
             })
+            
+        }
+        function displaycartproducts(cartproducts){
+            cartproducts.forEach(function(cartpro){
+                var cartproduct=document.createElement('div')
+                cartproduct.innerHTML=`
+                <img src="${cartpro.image}">
+                <p>${cartpro.name}</p>
+                <p>${cartpro.category}</p>
+                <p>${cartpro.price}</p>
+                <p>${cartpro.rating}</p>
+                `
+                document.getElementById("cartcont").appendChild(cartproduct)
+            })
         }
         function addtocart(id){
-            var newpro={
-                image:document.getElementById("image").value,
-                name:document.getElementById("name").value,
-                category:document.getElementById("category").value,
-                price:document.getElementById("price").value,
-                rating:document.getElementById("rating").value,
-            }
-            fetch("http://localhost:3000/cart/"+newpro.id,{
-                method:"POST",
-                body:JSON.stringify(newpro),
-                headers:{
-                    "Content-Type": "application/json"
+            fetch("http://localhost:3000/Products").then(function(response){
+                return response.json()
+            }).then(function(data){
+                var check=data.find(function(p){
+                    return p.id===id
+                })
+                console.log(check);
+                var newpro={
+                    image:document.getElementById("image").value=check.image,
+                    name:document.getElementById("name").value=check.name,
+                    category:document.getElementById("category").value=check.category,
+                    price:document.getElementById("price").value=check.price,
+                    rating:document.getElementById("rating").value=check.rating,
                 }
-            }).then(function(){
-                getdatafromserver()
+                fetch("http://localhost:3000/cart",{
+                    method:"POST",
+                    body:JSON.stringify(newpro),
+                    headers:{
+                        "Content-Type": "application/json"
+                    }
+                }).then(function(){
+                    getdatafromserverforcart()
+                })
             })
         }
     </script>
