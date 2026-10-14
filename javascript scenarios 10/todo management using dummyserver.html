@@ -85,10 +85,26 @@
                     document.querySelector("tbody").appendChild(mytr)
                 })
             }
-            function deletetodo(id){
-                fetch("http://localhost:3000/Todolist/" + id,{
-                    method:"DELETE"
+            function addtask() {
+                var adtodo = {
+                    id: document.getElementById("id").value,
+                    title: document.getElementById("title").value,
+                    status: document.getElementById("status").value,
+                }
+                fetch("http://localhost:3000/Todolist", {
+                    method: "POST",
+                    body: JSON.stringify(adtodo),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
                 }).then(function(){
+                    getdatafromserver()
+                })
+            }
+            function deletetodo(id) {
+                fetch("http://localhost:3000/Todolist/" + id, {
+                    method: "DELETE"
+                }).then(function () {
                     getdatafromserver()
                 })
             }
