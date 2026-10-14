@@ -73,6 +73,7 @@
             }
             getdatafromserver()
             function displaytodos(Tododata) {
+                document.querySelector("tbody").innerHTML=""
                 Tododata.forEach(function (todo) {
                     var mytr = document.createElement("tr")
                     mytr.innerHTML = `
@@ -97,7 +98,7 @@
                     headers: {
                         "Content-Type": "application/json"
                     }
-                }).then(function(){
+                }).then(function () {
                     getdatafromserver()
                 })
             }
@@ -136,6 +137,26 @@
                     getdatafromserver()
                 })
             }
+
+            function handletodos() {
+                var filtervalue = document.getElementById("filtertodos").value;
+
+                fetch("http://localhost:3000/Todolist")
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (Todolist) {
+                        console.log(Todolist);
+                        var filteredtasks = Todolist.filter(function (val) {
+                            return val.status == filtervalue;
+                        });
+
+                        console.log(filteredtasks);
+
+                        displaytodos(filteredtasks);
+                    })
+            }
+
         </script>
     </body>
 
