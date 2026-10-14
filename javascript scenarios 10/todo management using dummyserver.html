@@ -62,7 +62,7 @@
     <script>
         function getdatafromserver(){
             fetch("http://localhost:3000/Todolist").then(function(response){
-                response.json()
+                return response.json()
             }).then(function(data){
                 console.log(data);
             })
