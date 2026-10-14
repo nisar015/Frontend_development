@@ -76,11 +76,23 @@
                 <td>${todo.id}</td>
                 <td>${todo.title}</td>
                 <td>${todo.status}</td>
-                <td><button onclick="edittodo(${todo.id})">edit</button></td>
+                <td><button onclick="editodo(${todo.id})">edit</button></td>
                 <td><button onclick="deletetodo(${todo.id})">delete</button></td>
                 `
                 document.querySelector("tbody").appendChild(mytr)
             })
+        }
+        function editodo(id){
+            fetch("http://localhost:3000/Todolist/"+id).then(function(response){
+                return response.json()
+            }).then(function(todo){
+                console.log(todo);
+                document.getElementById("id").value=todo.id
+                document.getElementById("title").value=todo.title
+                document.getElementById("status").value=todo.status
+            })
+            document.getElementById("updatebutton").style.display="block"
+            document.getElementById("addbutton").style.display="none"
         }
     </script>
 </body>
