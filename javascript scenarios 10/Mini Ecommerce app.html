@@ -14,8 +14,8 @@
 </head>
 <body>
     <form>
-        <label for="id">search</label>
-        <input type="id" id="id">
+        <label for="name">search</label>
+        <input type="name" id="name">
         <button type="button" onclick="searchuser()">search user</button>
     </form>
     <div id="container">
@@ -74,8 +74,10 @@
         }
         getdatafromserverforcart()
         function displayproducts(product){
+            console.log(product);
             document.getElementById("container").innerHTML=""
             product.forEach(function(pro){
+
                 var card=document.createElement('div')
                 card.innerHTML=`
                 <img src="${pro.image}">
@@ -129,12 +131,12 @@
             })
         }
         function searchuser(){
-            var searchpro=Number(document.getElementById("id").value)
+            var searchpro=document.getElementById("name").value
             fetch("http://localhost:3000/Products/"+searchpro).then(function(response){
                 return response.json()
             }).then(function(data){
                 console.log(data);
-                displayproducts(data)
+                displayproducts([data])
             })
         }
     </script>
