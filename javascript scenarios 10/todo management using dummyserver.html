@@ -60,7 +60,14 @@
     </form>
 <body>
     <script>
-        
+        function getdatafromserver(){
+            fetch("http://localhost:3000/Todolist").then(function(response){
+                response.json()
+            }).then(function(data){
+                console.log(data);
+            })
+        }
+        getdatafromserver()
     </script>
 </body>
 </html>
