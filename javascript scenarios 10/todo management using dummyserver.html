@@ -5,7 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        background: grey;
+    }
+    table {
+        width: 80%;
+        margin: auto;
+    }
+
+    #updatebutton {
+        display: none;
+    }
+</style>
+
 <body>
-    
+    <select name="" id="filtertodos" onchange="handletodos()">
+        <option value="yet to start">yet to start</option>
+        <option value="pending">pending</option>
+        <option value="completed">completed</option>
+
+    </select>
+    <table border="1px solid grey">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Title</th>
+                <!-- <th>Add Task</th> -->
+                <th>status</th>
+                <th>Edit Task</th>
+                <th>Delete Task</th>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <br><br>
+    <form>
+        <label for="id">id</label>
+        <input type="id" id="id" name="id">
+        <br><br>
+        <label for="title">title</label>
+        <input type="title" id="title" name="title">
+        <br><br>
+        <label for="status">status</label>
+        <select name="status" id="status">
+            <option value="yet to start">yet to start</option>
+            <option value="pending">pending</option>
+            <option value="completed">completed</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="addtask()" id="addbutton">add task</button>
+        <button type="button" onclick="updatetask()" id="updatebutton">update task</button>
+    </form>
+<body>
+    <script>
+        
+    </script>
 </body>
 </html>
