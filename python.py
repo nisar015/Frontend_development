@@ -221,13 +221,13 @@ print(arr.index(value))
 
 #numpy is for handling multi dimensional arrays 
 # and performing scientific calculations
-#diff ways of creating an array
+#diff ways of creating an array :
 # 1.array()
 # 2.linespace()
 # 3.logspace()
 # 4.zeros()
 # 5.ones()
-# 6.ones()
+# 6.arange()
 from numpy import *     
 arra=array((1,4,5,20),(1,4,2,4,9))
 print(arra)
