@@ -189,6 +189,7 @@ for i in range(10,0,-1):      #this prints in reverse order by one num
     print(i,end=" ")
 for i in range(10,0,-2):      #this prints in reverse skip by two num
     print(i,end=" ")
+    print()
 
 # break-will stop execution
 # continue-will skip the condition that contains continue
@@ -196,4 +197,8 @@ for i in range(10,0,-2):      #this prints in reverse skip by two num
 # example:
 def func():
     pass
+
+from array import *
+val=array('i',[2,3,6,2,7])
+print(val)
 
