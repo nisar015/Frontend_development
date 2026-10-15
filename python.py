@@ -199,6 +199,6 @@ def func():
     pass
 
 from array import *
-val=array('i',[2,3,6,2,7])
+val=array('i',[2,3,6,2,7]) #here i means only int values can be inserted in an array
 print(val)
 
