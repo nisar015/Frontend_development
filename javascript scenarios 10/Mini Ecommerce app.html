@@ -131,16 +131,16 @@
             })
         }
         function searchuser(){
-            var searchpro=document.getElementById("id").value
-            fetch("http://localhost:3000/Products/"+searchpro).then(function(response){
+            var searchpro=document.getElementById("name").value
+            fetch("http://localhost:3000/Products").then(function(response){
                 return response.json()
             }).then(function(data){
                 console.log(data);
-                var findsearchpro=data.filter(function(proname){
-                    return proname.name==searchpro
+                var findsearchpro=data.filter(function(product){
+                    return product.name.toLoweCase()===searchpro.toLoweCase();
                 })
                 console.log(findsearchpro);
-                displayproducts([findsearchpro])
+                displayproducts(findsearchpro)
             })
         }
     </script>
