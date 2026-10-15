@@ -200,6 +200,13 @@ def func():
 
 from array import *
 val=array('i',[2,3,6,2,7]) #here i means only int values can be inserted in an array
+char=array('u',['a','v','g','d']) #here u means uniqe code means chars
 print(len(val))
+for ch in char:
+    print(ch)
+
+newval=array(val.typecode, (a for a in val) )
+for i in newval:
+    print(i)
 
 

@@ -13,6 +13,3 @@
 #     print(i,end=" ")
 # for i in range(10,1,-3):      
 #     print(i,end=" ")
-num=747
-for i in range(4):
-    if i%
