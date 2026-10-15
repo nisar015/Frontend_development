@@ -183,9 +183,9 @@ while i<=5:
     print()           #print() means it jumps to a new line
 
 
-for i in range(1,11):
+for i in range(1,11,2):       #this prints by skiping 2 nums
     print(i,end="")
-for i in range(10,0,-1):      #this prints in reverse order
+for i in range(10,0,-1):      #this prints in reverse order by one num
     print(i,end=" ")
-for i in range(10,0,2):      #this prints in reverse skip by one num
+for i in range(10,0,-2):      #this prints in reverse skip by two num
     print(i,end=" ")
