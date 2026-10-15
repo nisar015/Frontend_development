@@ -189,3 +189,11 @@ for i in range(10,0,-1):      #this prints in reverse order by one num
     print(i,end=" ")
 for i in range(10,0,-2):      #this prints in reverse skip by two num
     print(i,end=" ")
+
+# break-will stop execution
+# continue-will skip the condition that contains continue
+# pass-if we declare a function and dont know what to write we use pass
+# example:
+def func():
+    pass
+

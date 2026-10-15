@@ -11,5 +11,9 @@
 
 # for i in range(10,0,-1):
 #     print(i,end=" ")
-for i in range(10,1,-3):      
-    print(i,end=" ")
+# for i in range(10,1,-3):      
+#     print(i,end=" ")
+i=j=0
+for i in range(4):
+    for j in range(4):
+        print("#",end=" ")
