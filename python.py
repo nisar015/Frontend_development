@@ -209,4 +209,11 @@ newval=array(val.typecode, (a for a in val) )
 for i in newval:
     print(i)
 
+# taking user input for creating an array
+arr=array('i',())
+n=int(input('enter length of array :'))
+for i in range(n):
+    m=int(input('enter the val :'))
+    arr.append(m)
+print(arr)
 
