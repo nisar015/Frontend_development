@@ -74,7 +74,7 @@
         }
         getdatafromserverforcart()
         function displayproducts(product){
-            console.log(product);
+            // console.log(product);
             document.getElementById("container").innerHTML=""
             product.forEach(function(pro){
 
@@ -131,13 +131,13 @@
             })
         }
         function searchuser(){
-            var searchpro=document.getElementById("name").value
+            var searchpro=document.getElementById("name").value.toLowerCase()
             fetch("http://localhost:3000/Products").then(function(response){
                 return response.json()
             }).then(function(data){
                 console.log(data);
                 var findsearchpro=data.filter(function(product){
-                    return product.name.toLoweCase()===searchpro.toLoweCase();
+                    return product.name.toLowerCase()===searchpro;
                 })
                 console.log(findsearchpro);
                 displayproducts(findsearchpro)

@@ -135,6 +135,22 @@
       "price": 1499,
       "rating": 4.5,
       "id": 5
+    },
+    {
+      "image": "https://placehold.co/300x300?text=Backpack",
+      "name": "Travel Backpack",
+      "category": "Accessories",
+      "price": 999,
+      "rating": 4.1,
+      "id": 6
+    },
+    {
+      "image": "https://placehold.co/300x300?text=Headphones",
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 1499,
+      "rating": 4.5,
+      "id": 7
     }
   ]
 }
