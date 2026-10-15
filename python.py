@@ -215,5 +215,7 @@ n=int(input('enter length of array :'))
 for i in range(n):
     m=int(input('enter the val :'))
     arr.append(m)
-print(arr)
+value=int(input('enter the search value :'))
+print(arr,i)
+print(arr.index(value))
 
