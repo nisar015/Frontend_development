@@ -231,3 +231,7 @@ print(arr.index(value))
 from numpy import *     
 arra=array((1,4,5,20),(1,4,2,4,9))
 print(arra)
+arr1=[1,6,46,43]
+arr2=[1,5,6,4]
+arr3=arr1+arr2
+print(arr3)
