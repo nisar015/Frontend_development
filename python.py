@@ -218,4 +218,6 @@ for i in range(n):
 value=int(input('enter the search value :'))
 print(arr,i)
 print(arr.index(value))
-
+from numpy import *
+arra=array('i',(1,4,5,20),(1,4,2,4,9))
+print(arra)
