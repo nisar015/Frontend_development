@@ -17,4 +17,4 @@ while i<=5:
         print("paf",end=" ") 
         j += 1
     i += 1
-    print()           #
+    print()           #print() means it jumps to a new line
