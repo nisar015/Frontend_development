@@ -174,10 +174,10 @@ a=a-b
 # loops
 i=j=1
 while i<=5:
-    print("print",end=" ")
+    print("print",end=" ") #end="" it continues on the same line
     j=1
     while j<=4:
-        print("paf",end=" ")
+        print("paf",end=" ") 
         j += 1
     i += 1
-    print()
+    print()           #print() means it jumps to a new line
