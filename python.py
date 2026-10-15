@@ -182,7 +182,10 @@ while i<=5:
     i += 1
     print()           #print() means it jumps to a new line
 
+
 for i in range(1,11):
     print(i,end="")
-for i in range(10,0,-1):
+for i in range(10,0,-1):      #this prints in reverse order
+    print(i,end=" ")
+for i in range(10,0,2):      #this prints in reverse skip by one num
     print(i,end=" ")
