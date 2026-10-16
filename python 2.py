@@ -68,3 +68,4 @@ from numpy import *
 # print(batarr)
 m=matrix('1,2,3;5,6,4;4,7,9')
 print(m)
+print(diagonal(m))
