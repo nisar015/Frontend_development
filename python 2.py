@@ -41,7 +41,17 @@ from numpy import *
 arrA=array([2,5,3,7])
 arrB=arrA.view()
 arrA[1]=6
-print(arrA)
-print(arrB)
-print(id(arrA))
-print(id(arrB))
+print(arrA)   #output is [2 6 3 7] ----|
+                                    #  | - - but address is different
+print(arrB)   ##output is [2 6 3 7]----|
+print(id(arrA))  #2202478597808
+print(id(arrB))  #2202478909584       
+# Deep copy doent depends on one other
+arrC=array([1,5,2,30])
+arrD=arrC.copy()
+arrC[1]=4
+print(arrC)    #[ 1  4  2 30] ----|
+                               #  | - -output and address both are different
+print(arrD)    #[ 1  5  2 30]-----|
+print(id(arrC))
+print(id(arrD))
