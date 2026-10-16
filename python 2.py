@@ -35,8 +35,12 @@ from numpy import *
 # print(id(oldarr))
 
 # copying of an array
+# copying is of two types shallow copy and deep copy
+#shallow copy depends on one other 
+# below is an example arrB is dependent on arrA
 arrA=array([2,5,3,7])
 arrB=arrA.view()
+arrA[1]=6
 print(arrA)
 print(arrB)
 print(id(arrA))

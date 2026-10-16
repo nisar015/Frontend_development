@@ -247,7 +247,7 @@ print(min(arr))
 print(max(arr))
 print(sort(arr))
 
-#copying of arrays
+#copying of an arrays
 newarr=array([1,4,5,33])
 oldarr=newarr
 print(newarr)
