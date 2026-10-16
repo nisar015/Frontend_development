@@ -235,3 +235,14 @@ arr1=[1,6,46,43]
 arr2=[1,5,6,4]
 arr3=arr1+arr2
 print(arr3)
+
+# built in methods for arrays
+arr=array([1,6,4,3,70])
+print(sin(arr))
+print(cos(arr))
+print(log(arr))
+print(sqrt(arr))
+print(sum(arr))
+print(min(arr))
+print(max(arr))
+print(sort(arr))
