@@ -228,9 +228,7 @@ print(arr.index(value))
 # 4.zeros()
 # 5.ones()
 # 6.arange()
-from numpy import *     
-arra=array((1,4,5,20),(1,4,2,4,9))
-print(arra)
+from numpy import *    
 arr1=[1,6,46,43]
 arr2=[1,5,6,4]
 arr3=arr1+arr2
