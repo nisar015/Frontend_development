@@ -29,3 +29,7 @@ print(sum(arr))
 print(min(arr))
 print(max(arr))
 print(sort(arr))
+newarr=array([1,4,5,33])
+oldarr=newarr
+print(newarr)
+print(oldarr)
