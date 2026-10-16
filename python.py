@@ -280,8 +280,15 @@ print(vatarr)
 batarr = vatarr.reshape(2,2,3) #2 means 2 two-d array, 2 means two one-d array and 3 values
 print(batarr)
 # m means matrices
+# we can directly perform matric operations in matrices without using loops
 m=matrix('1,2,3;5,6,4;4,7,9')
 print(m)
 print(diagonal(m))
 print(m.min())
 print(m.max())
+a1=matrix('1,2,3;5,6,4;4,7,9')
+a2=matrix('1,3,6;1,3,4;2,6,5')
+a3=a1+a2
+a4=a1*a2
+print(a3)
+print(a4)
