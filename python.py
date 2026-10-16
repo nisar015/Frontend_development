@@ -294,13 +294,14 @@ print(a3)
 print(a4)
 
 # functions 
+# in python we dont use pass y value or reference
 def add(x,y):
     return x+y,x-y
 print(add(2,3))
 
 def func(z):
     print(id(z))  #1701274321424
-    z=5
+    z=5        #here when i change value the address also changed
     print(id(z))  #1701274321464
     return z
 
