@@ -75,3 +75,6 @@ a3=a1+a2
 a4=a1*a2
 print(a3)
 print(a4)
+def add(x,y):
+    return x+y,x-y
+print(add(2,3))
