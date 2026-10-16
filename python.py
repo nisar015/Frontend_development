@@ -281,4 +281,7 @@ vatarr=matarr.flatten() #combines matarr and vatarr //[1,2,3,4,5,6]
 print(vatarr)
 batarr = vatarr.reshape(2,2,3) #2 means 2 two-d array, 2 means two one-d array and 3 values
 print(batarr)
+# m means matrices
+m=matrix('1,2,3;5,6,4')
+print(m)
 
