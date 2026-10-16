@@ -301,7 +301,7 @@ def add(x,y):
     return x+y,x-y
 print(add(2,3))
 
-# Pass by reference example
+# Pass by value example
 def func(z):
     print(id(z))  #1701274321424
     z=5        #here when i change value the address also changed
@@ -311,10 +311,11 @@ def func(z):
 z=10
 print(id(z))  #1701274321424 
 print(func(z))
-# pass by value example
+# pass by reference example
 def funct(lit):
     lit[1].append(35)
     return lit
 
 lst=[2,83,3]
-print(funct(lst))
+print(funct(lst)) #[2,83,3,35] same inside and outside of function so pass by reference
+print(lst)        #[2,83,3,35] because of same adress the output also same
