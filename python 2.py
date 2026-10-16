@@ -66,6 +66,6 @@ from numpy import *
 # print(vatarr)
 # batarr = vatarr.reshape(2,2,3) #2 means 2 two-d array, 2 means two one-d array and 3 values
 # print(batarr)
-m=matrix('1,2,3;5,6,4;4,7,9')
-print(m)
-print(diagonal(m))
+from numpy import *     
+arra=array([1,4,5,20],[1,4,2,4,9])
+print(arra)
