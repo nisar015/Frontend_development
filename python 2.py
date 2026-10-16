@@ -56,13 +56,13 @@ from numpy import *
 # print(id(arrC))
 # print(id(arrD))
 matarr=array([
-    [1,2,3],
-    [4,5,7],
+    [1,2,3,5,3,7,8],
+    [4,5,7,4,9,6,5],
 ])
 print(matarr.ndim) #means dimension type //2d
 print(matarr.shape) #matrix          //m*
 print(matarr.size)  #size is         //6
 vatarr=matarr.flatten() #combines matarr and vatarr //[1,2,3,4,5,6]
 print(vatarr)
-batarr = vatarr.reshape(2,3)
+batarr = vatarr.reshape(2,2,3)
 print(batarr)
