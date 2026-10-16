@@ -299,9 +299,11 @@ def add(x,y):
 print(add(2,3))
 
 def func(z):
-    print(id(z))
+    print(id(z))  #1701274321424
+    z=5
+    print(id(z))  #1701274321464
     return z
 
 z=10
-print(id(x))
+print(id(z))  #1701274321424 
 print(func(z))

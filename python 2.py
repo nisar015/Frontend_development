@@ -78,6 +78,7 @@ print(a4)
 def func(z):
     print(id(z))
     z=5
+    print(id(z))
     return z
 
 z=10
