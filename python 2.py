@@ -75,6 +75,11 @@ a3=a1+a2
 a4=a1*a2
 print(a3)
 print(a4)
-def add(x,y):
-    return x+y,x-y
-print(add(2,3))
+def func(z):
+    print(id(z))
+    z=5
+    return z
+
+z=10
+print(id(z))
+print(func(z))
