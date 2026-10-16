@@ -38,20 +38,31 @@ from numpy import *
 # copying is of two types shallow copy and deep copy
 #shallow copy depends on one other 
 # below is an example arrB is dependent on arrA
-arrA=array([2,5,3,7])
-arrB=arrA.view()
-arrA[1]=6
-print(arrA)   #output is [2 6 3 7] ----|
-                                    #  | - - but address is different
-print(arrB)   ##output is [2 6 3 7]----|
-print(id(arrA))  #2202478597808
-print(id(arrB))  #2202478909584       
-# Deep copy doent depends on one other
-arrC=array([1,5,2,30])
-arrD=arrC.copy()
-arrC[1]=4
-print(arrC)    #[ 1  4  2 30] ----|
-                               #  | - -output and address both are different
-print(arrD)    #[ 1  5  2 30]-----|
-print(id(arrC))
-print(id(arrD))
+# arrA=array([2,5,3,7])
+# arrB=arrA.view()
+# arrA[1]=6     #this val is changed in both arrays in shallow copy
+# print(arrA)   #output is [2 6 3 7] ----|
+#                                     #  | - - but address is different
+# print(arrB)   ##output is [2 6 3 7]----|
+# print(id(arrA))  #2202478597808
+# print(id(arrB))  #2202478909584       
+# # Deep copy doent depends on one other it return the original array
+# arrC=array([1,5,2,30])
+# arrD=arrC.copy()
+# arrC[1]=4      #this val is changed in one array arrC in deep copy
+# print(arrC)    #[ 1  4  2 30] ----|
+#                                #  | - -output and address both are different
+# print(arrD)    #[ 1  5  2 30]-----|
+# print(id(arrC))
+# print(id(arrD))
+matarr=array([
+    [1,2,3],
+    [4,5,7],
+])
+print(matarr.ndim) #means dimension type //2d
+print(matarr.shape) #matrix          //m*
+print(matarr.size)  #size is         //6
+vatarr=matarr.flatten() #combines matarr and vatarr //[1,2,3,4,5,6]
+print(vatarr)
+batarr = vatarr.reshape(2,3)
+print(batarr)
