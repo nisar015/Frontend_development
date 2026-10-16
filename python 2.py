@@ -20,7 +20,7 @@ arr1=array([1,6,46,43])
 arr2=array([1,5,6,4])
 arr3=arr1+arr2
 print(arr3)
-arr=[1,6,4,3,70]
+arr=array([1,6,4,3,70])
 print(sin(arr))
 print(cos(arr))
 print(log(arr))
