@@ -295,10 +295,13 @@ print(a4)
 
 # functions 
 # in python we dont use pass y value or reference
+# it totally depends on the obj we use, if we use immutable(int,str,float,tuple,bool) then it is pass by value i.e the address changes
+# if it is muttable(dic,list,set) then pass by reference i.e the address doesnt change 
 def add(x,y):
     return x+y,x-y
 print(add(2,3))
 
+# Pass by reference example
 def func(z):
     print(id(z))  #1701274321424
     z=5        #here when i change value the address also changed
@@ -308,3 +311,10 @@ def func(z):
 z=10
 print(id(z))  #1701274321424 
 print(func(z))
+# pass by value example
+def funct(lit):
+    lit[1].append(35)
+    return lit
+
+lst=[2,83,3]
+print(funct(lst))

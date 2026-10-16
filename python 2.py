@@ -75,12 +75,9 @@ a3=a1+a2
 a4=a1*a2
 print(a3)
 print(a4)
-def func(z):
-    print(id(z))
-    z=5
-    print(id(z))
-    return z
+def funct(lit):
+    lit.append(35)
+    return lit
 
-z=10
-print(id(z))
-print(func(z))
+lst=[2,83,3]
+print(funct(lst))
