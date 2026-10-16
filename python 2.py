@@ -31,5 +31,5 @@ print(max(arr))
 print(sort(arr))
 newarr=array([1,4,5,33])
 oldarr=newarr
-print(newarr)
-print(oldarr)
+print(id(newarr))
+print(id(oldarr))
