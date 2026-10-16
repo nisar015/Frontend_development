@@ -64,5 +64,5 @@ print(matarr.shape) #matrix          //m
 print(matarr.size)  #size is         //6
 vatarr=matarr.flatten() #combines matarr and vatarr //[1,2,3,4,5,6]
 print(vatarr)
-batarr = vatarr.reshape(2,2,2)
+batarr = vatarr.reshape(2,2,3)
 print(batarr)
