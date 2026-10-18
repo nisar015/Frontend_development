@@ -171,13 +171,14 @@
                     return response.json();
                 })
                 .then(function (data) {
+                    console.log(data);
                     cartCount++;
                     document.getElementById("cartcount").innerHTML = cartCount;
-                    alert(product.name + " added to cart!");
+                    console.log(cartCount);
+                    // alert(product.name + " added to cart!");
                 })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                displayproducts()
+                
         }
 
         // View cart (basic placeholder)
