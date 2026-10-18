@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container,#cartcont{
-            width: 80%;
+        #container,
+        #cartcont {
+            width: 95%;
             height: 500px;
             float: left;
-            margin: 0 auto;
+            margin: auto;
         }
-        #container div{
+
+        #container div {
             float: left;
+            margin: 20px;
         }
-        #container img{
+
+        #container img {
             width: 200px;
             height: 200px;
         }
     </style>
 </head>
+
 <body>
     <form>
         <label for="name">search</label>
@@ -62,32 +68,32 @@
         <br><br>
     </form> -->
     <script>
-        function getdatafromserver(){
-            fetch("http://localhost:3000/Products").then(function(response){
+        function getdatafromserver() {
+            fetch("http://localhost:3000/Products").then(function (response) {
                 return response.json()
-            }).then(function(data){
+            }).then(function (data) {
                 console.log(data);
                 displayproducts(data)
             })
         }
         getdatafromserver()
-        function getdatafromserverforcart(){
-            fetch("http://localhost:3000/cart").then(function(response){
+        function getdatafromserverforcart() {
+            fetch("http://localhost:3000/cart").then(function (response) {
                 return response.json()
-            }).then(function(cartdata){
+            }).then(function (cartdata) {
                 console.log(cartdata);
                 displaycartproducts(cartdata)
             })
 
         }
         getdatafromserverforcart()
-        function displayproducts(product){
+        function displayproducts(product) {
             // console.log(product);
-            document.getElementById("container").innerHTML=""
-            product.forEach(function(pro){
+            document.getElementById("container").innerHTML = ""
+            product.forEach(function (pro) {
 
-                var card=document.createElement('div')
-                card.innerHTML=`
+                var card = document.createElement('div')
+                card.innerHTML = `
                 <img src="${pro.image}">
                 <p>${pro.name}</p>
                 <p>${pro.category}</p>
@@ -97,12 +103,12 @@
                 `
                 document.getElementById("container").appendChild(card)
             })
-            
+
         }
-        function displaycartproducts(cartproducts){
-            cartproducts.forEach(function(cartpro){
-                var cartproduct=document.createElement('div')
-                cartproduct.innerHTML=`
+        function displaycartproducts(cartproducts) {
+            cartproducts.forEach(function (cartpro) {
+                var cartproduct = document.createElement('div')
+                cartproduct.innerHTML = `
                 <img src="${cartpro.image}">
                 <p>${cartpro.name}</p>
                 <p>${cartpro.category}</p>
@@ -112,41 +118,42 @@
                 document.getElementById("cartcont").appendChild(cartproduct)
             })
         }
-        function addtocart(id){
-            fetch("http://localhost:3000/Products").then(function(response){
+        function addtocart(id) {
+            fetch("http://localhost:3000/Products").then(function (response) {
                 return response.json()
-            }).then(function(data){
-                var check=data.find(function(p){
-                    return p.id===id
+            }).then(function (data) {
+                var check = data.find(function (p) {
+                    return p.id === id
                 })
                 console.log(check);
-                var newpro={
-                    image:check.image,
-                    name:check.name,
-                    category:check.category,
-                    price:check.price,
-                    rating:check.rating,
-                    delete:check.delete
+                var newpro = {
+                    image: check.image,
+                    name: check.name,
+                    category: check.category,
+                    price: check.price,
+                    rating: check.rating,
+                    delete: check.delete
                 }
-                fetch("http://localhost:3000/cart",{
-                    method:"POST",
-                    body:JSON.stringify(newpro),
-                    headers:{
+                
+                fetch("http://localhost:3000/cart", {
+                    method: "POST",
+                    body: JSON.stringify(newpro),
+                    headers: {
                         "Content-Type": "application/json"
                     }
-                }).then(function(){
+                }).then(function () {
                     getdatafromserverforcart()
                 })
             })
         }
-        function searchuser(){
-            var searchpro=document.getElementById("name").value.toLowerCase()
-            fetch("http://localhost:3000/Products").then(function(response){
+        function searchuser() {
+            var searchpro = document.getElementById("name").value.toLowerCase()
+            fetch("http://localhost:3000/Products").then(function (response) {
                 return response.json()
-            }).then(function(data){
+            }).then(function (data) {
                 console.log(data);
-                var findsearchpro=data.filter(function(product){
-                    return product.name.toLowerCase()===searchpro;
+                var findsearchpro = data.filter(function (product) {
+                    return product.name.toLowerCase() === searchpro;
                 })
                 console.log(findsearchpro);
                 displayproducts(findsearchpro)
@@ -154,4 +161,5 @@
         }
     </script>
 </body>
+
 </html>

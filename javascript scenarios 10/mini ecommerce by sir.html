@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <ul id="Products">
 
     </ul>
     <script>
-        function getallproducts(){
-            fetch("http://localhost:3000/Products").then(function(response){
+        function getallproducts() {
+            fetch("http://localhost:3000/Products").then(function (response) {
                 response.json()
-            }).then(function(data){
-                data.forEach(function(pros){
-                    var myli=document.createElement('li')
-                    myli.innerHTML=`
+            }).then(function (data) {
+                console.log(data);
+                data.forEach(function (pros) {
+                    var myli = document.createElement('li')
+                    myli.innerHTML = `
                     <div class="card" style="width:10rem">
                         <img src="${pros.image}" alt="product image">
                         <div class="card-body">
@@ -34,4 +37,5 @@
         getallproducts()
     </script>
 </body>
+
 </html>
