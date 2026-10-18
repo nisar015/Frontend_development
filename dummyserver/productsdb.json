@@ -6,7 +6,7 @@
       "category": "Electronics",
       "price": 1499,
       "description": "Wireless headphones with clear sound and comfortable ear cushions.",
-      "image": "https://placehold.co/300x300?text=Headphones",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
       "rating": 4.5,
       "stock": 25,
       "inStock": true
@@ -17,7 +17,7 @@
       "category": "Electronics",
       "price": 2499,
       "description": "Smart watch with fitness tracking and notification support.",
-      "image": "https://placehold.co/300x300?text=Smart+Watch",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
       "rating": 4.2,
       "stock": 15,
       "inStock": true
@@ -28,7 +28,7 @@
       "category": "Clothing",
       "price": 499,
       "description": "Comfortable cotton T-shirt for everyday wear.",
-      "image": "https://placehold.co/300x300?text=T-Shirt",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
       "rating": 4.3,
       "stock": 40,
       "inStock": true
@@ -39,7 +39,7 @@
       "category": "Footwear",
       "price": 1799,
       "description": "Lightweight running shoes for walking and daily exercise.",
-      "image": "https://placehold.co/300x300?text=Running+Shoes",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
       "rating": 4.4,
       "stock": 20,
       "inStock": true
@@ -50,7 +50,7 @@
       "category": "Accessories",
       "price": 999,
       "description": "Spacious backpack suitable for college and travel.",
-      "image": "https://placehold.co/300x300?text=Backpack",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
       "rating": 4.1,
       "stock": 18,
       "inStock": true
@@ -61,7 +61,7 @@
       "category": "Electronics",
       "price": 1199,
       "description": "Portable Bluetooth speaker for music on the go.",
-      "image": "https://placehold.co/300x300?text=Speaker",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
       "rating": 4,
       "stock": 0,
       "inStock": false
@@ -72,7 +72,7 @@
       "category": "Accessories",
       "price": 299,
       "description": "Reusable stainless steel water bottle.",
-      "image": "https://placehold.co/300x300?text=Water+Bottle",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
       "rating": 4.2,
       "stock": 50,
       "inStock": true
@@ -83,7 +83,7 @@
       "category": "Home",
       "price": 699,
       "description": "LED desk lamp for reading and studying.",
-      "image": "https://placehold.co/300x300?text=Desk+Lamp",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
       "rating": 4.1,
       "stock": 12,
       "inStock": true
@@ -94,7 +94,7 @@
       "category": "Accessories",
       "price": 599,
       "description": "Stylish sunglasses for everyday outdoor use.",
-      "image": "https://placehold.co/300x300?text=Sunglasses",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
       "rating": 3.9,
       "stock": 22,
       "inStock": true
@@ -105,60 +105,16 @@
       "category": "Electronics",
       "price": 899,
       "description": "Adjustable laptop stand for a comfortable desk setup.",
-      "image": "https://placehold.co/300x300?text=Laptop+Stand",
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80",
       "rating": 4.6,
       "stock": 10,
       "inStock": true
     }
   ],
   "cart": [
-    {
-      "image": "https://placehold.co/300x300?text=Headphones",
-      "name": "Wireless Headphones",
-      "category": "Electronics",
-      "price": 1499,
-      "rating": 4.5,
-      "id": 3
-    },
-    {
-      "image": "https://placehold.co/300x300?text=Smart+Watch",
-      "name": "Smart Watch",
-      "category": "Electronics",
-      "price": 2499,
-      "rating": 4.2,
-      "id": 4
-    },
-    {
-      "image": "https://placehold.co/300x300?text=Headphones",
-      "name": "Wireless Headphones",
-      "category": "Electronics",
-      "price": 1499,
-      "rating": 4.5,
-      "id": 5
-    },
-    {
-      "image": "https://placehold.co/300x300?text=Backpack",
-      "name": "Travel Backpack",
-      "category": "Accessories",
-      "price": 999,
-      "rating": 4.1,
-      "id": 6
-    },
-    {
-      "image": "https://placehold.co/300x300?text=Headphones",
-      "name": "Wireless Headphones",
-      "category": "Electronics",
-      "price": 1499,
-      "rating": 4.5,
-      "id": 7
-    },
-    {
-      "image": "https://placehold.co/300x300?text=Smart+Watch",
-      "name": "Smart Watch",
-      "category": "Electronics",
-      "price": 2499,
-      "rating": 4.2,
-      "id": 8
-    }
+    
   ]
+
+
+ 
 }
