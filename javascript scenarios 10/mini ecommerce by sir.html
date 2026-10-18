@@ -10,7 +10,28 @@
 
     </ul>
     <script>
-
+        function getallproducts(){
+            fetch("http://localhost:3000/Products").then(function(response){
+                response.json()
+            }).then(function(data){
+                data.forEach(function(pros){
+                    var myli=document.createElement('li')
+                    myli.innerHTML=`
+                    <div class="card" style="width:10rem">
+                        <img src="${pros.image}" alt="product image">
+                        <div class="card-body">
+                            <h5>${pros.name}</h5>
+                            <p>${pros.description}</p>
+                            <h5>${pros.price}</h5>
+                            <button onclick=addtocart()>Add to cart</button>
+                        </div>
+                    </div>
+                    `
+                    document.querySelector("#Products").appendChild(myli)
+                })
+            })
+        }
+        getallproducts()
     </script>
 </body>
 </html>
