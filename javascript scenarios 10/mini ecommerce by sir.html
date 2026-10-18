@@ -145,25 +145,8 @@
         // Add product to cart
         function addtocart(index) {
             var product = allproducts[index];
-
-            if (!product) {
-                return;
-            }
-
-            fetch("http://localhost:3000/cart", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    productId: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    quantity: 1
-                })
-            })
-                .then(function (response) {
+            localStorage.setItem("cartitems").JSON.stringify(cartitems)
+            .then(function (response) {
                     if (!response.ok) {
                         throw new Error("Failed to add product to cart");
                     }
