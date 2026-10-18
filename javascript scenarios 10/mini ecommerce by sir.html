@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li {
+            width: 200px;
+            float: left;
+        }
+
+        image {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,8 +25,9 @@
     <script>
         function getallproducts() {
             fetch("http://localhost:3000/Products").then(function (response) {
-                response.json()
+                return response.json()
             }).then(function (data) {
+
                 console.log(data);
                 data.forEach(function (pros) {
                     var myli = document.createElement('li')
