@@ -1,14 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Shopping Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
     <style>
         #Products {
             width: 100%;
             overflow: auto;
+            padding: 15px;
         }
 
         #Products li {
@@ -19,42 +30,171 @@
         }
 
         .card img {
-            width: 200px;
+            width: 100%;
             height: 200px;
+            object-fit: cover;
+        }
+
+        .cart-btn {
+            position: relative;
+        }
+
+        #cartcount {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 12px;
         }
     </style>
 </head>
 
 <body>
-    <ul id="Products">
 
-    </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <!-- Website Name -->
+            <a class="navbar-brand" href="#">MyShop</a>
+
+            <!-- Home Button -->
+            <a href="#" class="btn btn-outline-light me-3"
+                onclick="getallproducts(); return false;">
+                <i class="bi bi-house"></i> Home
+            </a>
+
+            <!-- Search Bar -->
+            <form class="d-flex flex-grow-1 me-3" onsubmit="searchproducts(); return false;">
+                <input class="form-control me-2"
+                    type="search"
+                    id="search"
+                    placeholder="Search products..."
+                    aria-label="Search">
+
+                <button class="btn btn-warning" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+
+            <!-- Cart Button -->
+            <button class="btn btn-outline-light cart-btn"
+                onclick="viewcart()">
+                <i class="bi bi-cart3"></i> Cart
+                <span id="cartcount"
+                    class="badge bg-danger rounded-pill">0</span>
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- Products -->
+    <div class="container-fluid mt-4">
+        <h3 class="mb-3">Our Products</h3>
+        <ul id="Products"></ul>
+    </div>
+
     <script>
-        function getallproducts() {
-            fetch("http://localhost:3000/Products").then(function (response) {
-                return response.json()
-            }).then(function (data) {
+        var allproducts = [];
+        var cartCount = 0;
 
-                console.log(data);
-                data.forEach(function (pros) {
-                    var myli = document.createElement('li')
-                    myli.innerHTML = `
+        function getallproducts() {
+            fetch("http://localhost:3000/Products")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+
+                    allproducts = data;
+                    displayproducts(data);
+                })
+                .catch(function (error) {
+                    console.log("Error fetching products:", error);
+                });
+        }
+
+        // Display products
+        function displayproducts(data) {
+            document.getElementById("Products").innerHTML = "";
+
+            data.forEach(function (pros, i) {
+                var myli = document.createElement("li");
+
+                myli.innerHTML = `
                     <div class="card" style="width:10rem">
-                        <img src="${pros.image}" alt="product image">
+                        <img src="${pros.image}" alt="${pros.name}">
                         <div class="card-body">
                             <h5>${pros.name}</h5>
                             <p>${pros.description}</p>
-                            <h5>${pros.price}</h5>
-                            <button onclick=addtocart()>Add to cart</button>
+                            <h5>₹${pros.price}</h5>
+
+                            <button class="btn btn-primary btn-sm"
+                                onclick="addtocart(${i})">
+                                Add to cart
+                            </button>
                         </div>
                     </div>
-                    `
-                    document.getElementById("Products").appendChild(myli)
+                `;
+
+                document.getElementById("Products").appendChild(myli);
+            });
+        }
+
+        // Search products by name
+        function searchproducts() {
+            var searchval = document.getElementById("search").value.toLowerCase();
+
+            var filteredproducts = allproducts.filter(function (pros) {
+                return pros.name.toLowerCase().includes(searchval);
+            });
+
+            displayproducts(filteredproducts);
+        }
+
+        // Add product to cart
+        function addtocart(index) {
+            var product = allproducts[index];
+
+            if (!product) {
+                return;
+            }
+
+            fetch("http://localhost:3000/cart", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    productId: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
                 })
             })
-        }
-        getallproducts()
-    </script>
-</body>
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Failed to add product to cart");
+                }
 
+                return response.json();
+            })
+            .then(function (data) {
+                cartCount++;
+                document.getElementById("cartcount").innerHTML = cartCount;
+                alert(product.name + " added to cart!");
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+
+        // View cart (basic placeholder)
+        function viewcart() {
+            window.location.href = "cart.html";
+        }
+
+        getallproducts();
+    </script>
+
+</body>
 </html>
