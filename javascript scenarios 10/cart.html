@@ -88,67 +88,67 @@
     </nav>
 
     <!-- Products -->
-    <div class="container-fluid mt-4">
+    <!-- <div class="container-fluid mt-4">
         <h3 class="mb-3">Our Products</h3>
         <ul id="Products"></ul>
-    </div>
+    </div> -->
 
     <script>
-        var allproducts = [];
-        var cartCount = 0;
+        // var allproducts = [];
+        // var cartCount = 0;
 
-        function getallproducts() {
-            fetch("http://localhost:3000/Products")
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
+        // function getallproducts() {
+        //     fetch("http://localhost:3000/Products")
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (data) {
 
-                    allproducts = data;
-                    displayproducts(data);
-                })
-                .catch(function (error) {
-                    console.log("Error fetching products:", error);
-                });
-        }
+        //             allproducts = data;
+        //             displayproducts(data);
+        //         })
+        //         .catch(function (error) {
+        //             console.log("Error fetching products:", error);
+        //         });
+        // }
 
         // Display products
-        function displayproducts(data) {
-            document.getElementById("Products").innerHTML = "";
+        // function displayproducts(data) {
+        //     document.getElementById("Products").innerHTML = "";
 
-            data.forEach(function (pros, i) {
-                var myli = document.createElement("li");
+        //     data.forEach(function (pros, i) {
+        //         var myli = document.createElement("li");
 
-                myli.innerHTML = `
-                    <div class="card" style="width:10rem">
-                        <img src="${pros.image}" alt="${pros.name}">
-                        <div class="card-body">
-                            <h5>${pros.name}</h5>
-                            <p>${pros.description}</p>
-                            <h5>₹${pros.price}</h5>
+        //         myli.innerHTML = `
+        //             <div class="card" style="width:10rem">
+        //                 <img src="${pros.image}" alt="${pros.name}">
+        //                 <div class="card-body">
+        //                     <h5>${pros.name}</h5>
+        //                     <p>${pros.description}</p>
+        //                     <h5>₹${pros.price}</h5>
 
-                            <button class="btn btn-primary btn-sm"
-                                onclick="addtocart(${i})">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                `;
+        //                     <button class="btn btn-primary btn-sm"
+        //                         onclick="addtocart(${i})">
+        //                         Add to cart
+        //                     </button>
+        //                 </div>
+        //             </div>
+        //         `;
 
-                document.getElementById("Products").appendChild(myli);
-            });
-        }
+        //         document.getElementById("Products").appendChild(myli);
+        //     });
+        // }
 
         // Search products by name
-        function searchproducts() {
-            var searchval = document.getElementById("search").value.toLowerCase();
+        // function searchproducts() {
+        //     var searchval = document.getElementById("search").value.toLowerCase();
 
-            var filteredproducts = allproducts.filter(function (pros) {
-                return pros.name.toLowerCase().includes(searchval);
-            });
+        //     var filteredproducts = allproducts.filter(function (pros) {
+        //         return pros.name.toLowerCase().includes(searchval);
+        //     });
 
-            displayproducts(filteredproducts);
-        }
+        //     displayproducts(filteredproducts);
+        // }
 
         // Add product to cart
         // function addtocart(index) {
@@ -189,11 +189,11 @@
         // }
 
         // View cart (basic placeholder)
-        function viewcart() {
-            window.location.href = "cart.html";
-        }
+        // function viewcart() {
+        //     window.location.href = "cart.html";
+        // }
 
-        getallproducts();
+        // getallproducts();
     </script>
 
 </body>
