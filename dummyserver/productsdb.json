@@ -112,9 +112,21 @@
     }
   ],
   "cart": [
-    
+    {
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+      "name": "Travel Backpack",
+      "category": "Accessories",
+      "price": 999,
+      "rating": 4.1,
+      "id": 1
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 1199,
+      "rating": 4,
+      "id": 2
+    }
   ]
-
-
- 
 }
