@@ -142,7 +142,9 @@
         }
         // Add product to cart
         function addtocart(index) {
-            var product = allproducts[index];
+            // var product = allproducts[index];
+            cartitems.push(allproducts[index])
+            document.getElementById("cartcount").innerHTML=cartitems.length
             localStorage.setItem("cartitems").JSON.stringify(cartitems)
             .then(function (response) {
                     if (!response.ok) {
