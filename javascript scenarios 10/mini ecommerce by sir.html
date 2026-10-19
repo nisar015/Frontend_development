@@ -143,17 +143,17 @@
         }
         // Add product to cart
         function addtocart(index) {
-            // var product = allproducts[index];
+            var product = allproducts[index];
             cartitems.push(allproducts[index])
             console.log(cartitems);
-            document.getElementById("cartcount").innerHTML = cartitems.length
+            // document.getElementById("cartcount").innerHTML = cartitems.length
             // localStorage.setItem("cartitems").JSON.stringify(cartitems)
             fetch("http://localhost:3000/cart", {
                 method: "POST",
-                body: JSON.stringify(allproducts[index]),
                 headers: {
                     "Content-Type": "application/json"
-                }
+                },
+                body: JSON.stringify(allproducts[index])
             }).then(function () {
                 console.log("cart items aded succefully");
             })
@@ -163,11 +163,11 @@
             console.log("object");
             window.location.href = "cart.html";
         }
-        function displaycartcount(){
-            fetch("http://localhost:3000/cart").then(function(response){
+        function displaycartcount() {
+            fetch("http://localhost:3000/cart").then(function (response) {
                 return response.json()
-            }).then(function(data){
-                document.getElementById("cartcount").innerHTML=data.length
+            }).then(function (data) {
+                document.getElementById("cartcount").innerHTML = data.length
             })
         }
         displaycartcount()
