@@ -127,9 +127,9 @@
                     // } else {
                     //     return a + b.price
                     // }
-                    
-                    return a+b.price
-                },0)
+
+                    return a + b.price
+                }, 0)
                 document.getElementById("amountPayble").innerHTML = totalAmount
 
                 console.log(totalAmount);
@@ -150,6 +150,7 @@
             document.querySelector("#cartpros").innerHTML = ""
             data.forEach(function (product, i) {
                 var myLi = document.createElement("li");
+                var quantity = product.quantity || 1;
                 myLi.innerHTML = `
                      <div class="card" style="width: 18rem;">
 
@@ -165,13 +166,28 @@
 
                 <h5 class="text-success">₹ ${product.price}</h5>
 
-                <button class="btn btn-primary" onclick="addToCart(${i})">
-                    <i class="bi bi-cart-plus"></i>
-                    Add to Cart
-                </button>
+                <!-- Quantity Controls -->
+                    <div class="d-flex align-items-center gap-2 mb-3">
+
+                        <button class="btn btn-outline-secondary"
+                            onclick="updateQuantity(${product.id}, -1)">
+                            <i class="bi bi-dash"></i>
+                        </button>
+
+                        <span id="quantity-${product.id}"
+                            class="fw-bold">
+                            ${quantity}
+                        </span>
+
+                        <button class="btn btn-outline-primary"
+                            onclick="updateQuantity(${product.id}, 1)">
+                            <i class="bi bi-plus"></i>
+                        </button>
+
+                    </div>
                 <button class="btn btn-primary" onclick="deletefromcart(${product.id})">
                     <i class="bi bi-cart-plus"></i>
-                    Delete from Cart
+                    remove
                 </button>
 
             </div>
@@ -182,7 +198,25 @@
             })
 
         }
-        function deletefromcart(index){
+
+        function updateQuantity(productId, change) {
+            var quantityElement = document.getElementById("quantity-" + productId
+);
+
+            var quantity = Number(quantityElement.innerText);
+
+            console.log(change);
+            quantity = quantity + change;
+            console.log(quantity);
+            // Quantity cannot go below 1
+            if (quantity < 1) {
+                quantity = 1;
+            }
+
+            quantityElement.innerText = quantity;
+        }
+
+        function deletefromcart(index) {
             fetch("http://localhost:3000/cart/" + index, {
                 method: "DELETE"
             }).then(function () {
