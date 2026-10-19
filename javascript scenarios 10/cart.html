@@ -54,7 +54,7 @@
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="./copycode.html">
                             Home <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -93,6 +93,9 @@
 
         <h1>Total Cart Items : <span id="totalItems"></span></h1>
         <h2>Amount Payble : <span id="amountPayble"></span></h2>
+        <ul id="cartpros">
+
+        </ul>
         <script>
             //    var allCartItems = JSON.parse(localStorage.getItem("cartItems"))
             //    document.getElementById("cartCount").innerHTML = allCartItems.length;
@@ -132,6 +135,48 @@
             })
         }
         displayCartCount();
+        function getAllProducts() {
+            fetch("http://localhost:3000/cart").then(function (response) {
+                return response.json()
+            }).then(function (data) {
+                allProducts = data;
+                displayProducts(data)
+            })
+        }
+
+        getAllProducts();
+        function displayProducts(data) {
+            document.querySelector("#cartpros").innerHTML = ""
+            data.forEach(function (product, i) {
+                var myLi = document.createElement("li");
+                myLi.innerHTML = `
+                     <div class="card" style="width: 18rem;">
+
+            <img src="${product.image}" class="card-img-top" alt="Product Image">
+
+            <div class="card-body">
+
+                <h5 class="card-title">${product.name}</h5>
+
+                <p class="card-text">
+                    ${product.description}
+                </p>
+
+                <h5 class="text-success">₹ ${product.price}</h5>
+
+                <button class="btn btn-primary" onclick="addToCart(${i})">
+                    <i class="bi bi-cart-plus"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+                    
+                    `
+                document.querySelector("#cartpros").appendChild(myLi)
+            })
+
+        }
     </script>
 
 </body>
