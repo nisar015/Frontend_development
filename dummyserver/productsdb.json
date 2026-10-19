@@ -122,28 +122,6 @@
       "rating": 4.2,
       "stock": 15,
       "inStock": true
-    },
-    {
-      "id": 3,
-      "name": "Cotton T-Shirt",
-      "category": "Clothing",
-      "price": 499,
-      "description": "Comfortable cotton T-shirt for everyday wear.",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
-      "rating": 4.3,
-      "stock": 40,
-      "inStock": true
-    },
-    {
-      "id": 6,
-      "name": "Bluetooth Speaker",
-      "category": "Electronics",
-      "price": 1199,
-      "description": "Portable Bluetooth speaker for music on the go.",
-      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
-      "rating": 4,
-      "stock": 0,
-      "inStock": false
     }
   ]
 }
