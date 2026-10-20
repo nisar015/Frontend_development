@@ -122,13 +122,15 @@
                 document.getElementById("totalItems").innerHTML = data.length;
 
                 var totalAmount = data.reduce(function (a, b) {
-                    return a + (
-                        Number(b.price) * Number(b.quantity || 1)
-                    );
-                }, 0);
-                document.getElementById("amountPayble").innerHTML =
-                    "₹ " + totalAmount
-                // document.getElementById("amountPayble").innerHTML = totalAmount
+                    // if (typeof (a) !== "number") {
+                    //     return a.price + b.price
+                    // } else {
+                    //     return a + b.price
+                    // }
+
+                    return a + (b.price*b.quantity)
+                }, 0)
+                document.getElementById("amountPayble").innerHTML = totalAmount
 
                 console.log(totalAmount);
             })
@@ -141,7 +143,7 @@
                 displayProducts(data)
             })
         }
-
+        
         getAllProducts();
         function displayProducts(data) {
             document.querySelector("#cartpros").innerHTML = ""
@@ -191,39 +193,34 @@
         </div>
         
         `
-                document.querySelector("#cartpros").appendChild(myLi)
-            })
-
+        document.querySelector("#cartpros").appendChild(myLi)
+    })
+    
         }
 
         function updateQuantity(productId, change) {
             var quantityElement = document.getElementById("quantity-" + productId
-            );
-
-            var quantity = Number(quantityElement.innerText);
-
-            console.log(change);
-            quantity = quantity + change;
+        );
+        
+        var quantity = Number(quantityElement.innerText);
+        
+        console.log(change);
+        quantity = quantity + change;
             console.log(quantity);
             // Quantity cannot go below 1
             if (quantity < 1) {
                 quantity = 1;
             }
-
+            
             quantityElement.innerHTML = quantity;
-            fetch("http://localhost:3000/cart/" + productId, {
-                method: "PATCH",
-                headers: {
+            fetch("http://localhost:3000/cart/"+productId,{
+                method:"POST",
+                body:JSON.stringify(allCartItems[productId].quantity),
+                headers:{
                     "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    quantity: quantity
-                })
-            }).then(function (data) {
-                // Refresh cart data and amount payable
-                displayCartCount();
+                }
             })
-            // displayCartCount();
+            displayCartCount();
         }
 
         function deletefromcart(index) {
