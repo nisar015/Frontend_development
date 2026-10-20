@@ -128,7 +128,7 @@
                     //     return a + b.price
                     // }
 
-                    return a + b.price 
+                    return a + b.price
                 }, 0)
                 console.log(totalAmount);
                 document.getElementById("amountPayble").innerHTML = totalAmount
@@ -171,7 +171,7 @@
                 <div class="d-flex align-items-center gap-2 mb-3">
 
                     <button class="btn btn-outline-secondary"
-                    onclick="updateQuantity(${product.id}, -1)">
+                    onclick="updateQuantity(${product.id}, -1,${i})">
                     <i class="bi bi-dash"></i>
                     </button>
                     
@@ -181,7 +181,7 @@
                         </span>
 
                         <button class="btn btn-outline-primary"
-                            onclick="updateQuantity(${product.id}, 1)">
+                            onclick="updateQuantity(${product.id}, 1,${i})">
                             <i class="bi bi-plus"></i>
                         </button>
 
@@ -200,7 +200,7 @@
 
         }
 
-        function updateQuantity(productId, change) {
+        function updateQuantity(productId, change,index) {
             var quantityElement = document.getElementById("quantity-" + productId
             );
 
@@ -215,7 +215,35 @@
             }
 
             quantityElement.innerHTML = quantity;
+            fetch("http://localhost:3000/cart", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(allCartItems[index].quantity=quantity)
+            }).then(function(){
+                console.log("add success");
+                console.log(allCartItems);
+                var totalAmount = allCartItems.reduce(function (a, b) {
+                    // if (typeof (a) !== "number") {
+                    //     return a.price + b.price
+                    // } else {
+                    //     return a + b.price
+                    // }
+    
+                    return a + (b.price * b.quantity)
+                }, 0)
+                console.log(totalAmount);
+                document.getElementById("amountPayble").innerHTML = totalAmount
+            })
+
+            // document.getElementById("cartCount").innerHTML = data.length
+            // document.getElementById("totalItems").innerHTML = data.length;
+
+
+
         }
+
 
         function deletefromcart(index) {
             fetch("http://localhost:3000/cart/" + index, {
