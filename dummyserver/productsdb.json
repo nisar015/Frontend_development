@@ -123,27 +123,15 @@
   ],
   "cart": [
     {
-      "id": 2,
-      "name": "Smart Watch",
+      "id": 1,
+      "name": "Wireless Headphones",
       "category": "Electronics",
-      "price": 2499,
-      "description": "Smart watch with fitness tracking and notification support.",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
-      "quantity": 2,
-      "rating": 4.2,
-      "stock": 15,
-      "inStock": true
-    },
-    {
-      "id": 5,
-      "name": "Travel Backpack",
-      "category": "Accessories",
-      "price": 999,
-      "description": "Spacious backpack suitable for college and travel.",
-      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+      "price": 1499,
+      "description": "Wireless headphones with clear sound and comfortable ear cushions.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
       "quantity": 1,
-      "rating": 4.1,
-      "stock": 18,
+      "rating": 4.5,
+      "stock": 25,
       "inStock": true
     }
   ]

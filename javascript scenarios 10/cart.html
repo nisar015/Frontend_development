@@ -112,7 +112,7 @@
 
     <script>
         var allCartItems = []
-        function displayCartCount(quant) {
+        function displayCartCount() {
             fetch("http://localhost:3000/cart").then(function (response) {
                 return response.json()
             }).then(function (data) {
@@ -128,13 +128,15 @@
                     //     return a + b.price
                     // }
 
-                    return a + (b.price * b.quantity)
+                    return a + b.price 
                 }, 0)
+                console.log(totalAmount);
                 document.getElementById("amountPayble").innerHTML = totalAmount
 
                 console.log(totalAmount);
             })
         }
+        displayCartCount()
         function getAllProducts() {
             fetch("http://localhost:3000/cart").then(function (response) {
                 return response.json()
