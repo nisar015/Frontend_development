@@ -123,15 +123,15 @@
   ],
   "cart": [
     {
-      "id": 3,
-      "name": "Cotton T-Shirt",
-      "category": "Clothing",
-      "price": 499,
-      "description": "Comfortable cotton T-shirt for everyday wear.",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 1499,
+      "description": "Wireless headphones with clear sound and comfortable ear cushions.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
       "quantity": 1,
-      "rating": 4.3,
-      "stock": 40,
+      "rating": 4.5,
+      "stock": 25,
       "inStock": true
     },
     {
