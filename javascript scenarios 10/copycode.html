@@ -161,6 +161,7 @@
             window.location.href = "cart.html"
         }
         function displayCartCount() {
+            console.log('displayCartCount');
             fetch("http://localhost:3000/cart").then(function (response) {
                 return response.json()
             }).then(function (data) {

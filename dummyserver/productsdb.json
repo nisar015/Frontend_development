@@ -169,6 +169,18 @@
       "rating": 4.1,
       "stock": 18,
       "inStock": true
+    },
+    {
+      "id": 8,
+      "name": "Desk Lamp",
+      "category": "Home",
+      "price": 699,
+      "description": "LED desk lamp for reading and studying.",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
+      "quantity": 1,
+      "rating": 4.1,
+      "stock": 12,
+      "inStock": true
     }
   ]
 }
