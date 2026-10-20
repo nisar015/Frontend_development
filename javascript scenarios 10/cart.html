@@ -128,7 +128,7 @@
                     //     return a + b.price
                     // }
 
-                    return a + (b.price*b.quantity)
+                    return a + (b.price * b.quantity)
                 }, 0)
                 document.getElementById("amountPayble").innerHTML = totalAmount
 
@@ -143,7 +143,7 @@
                 displayProducts(data)
             })
         }
-        
+
         getAllProducts();
         function displayProducts(data) {
             document.querySelector("#cartpros").innerHTML = ""
@@ -193,34 +193,26 @@
         </div>
         
         `
-        document.querySelector("#cartpros").appendChild(myLi)
-    })
-    
+                document.querySelector("#cartpros").appendChild(myLi)
+            })
+
         }
 
         function updateQuantity(productId, change) {
             var quantityElement = document.getElementById("quantity-" + productId
-        );
-        
-        var quantity = Number(quantityElement.innerText);
-        
-        console.log(change);
-        quantity = quantity + change;
+            );
+
+            var quantity = Number(quantityElement.innerText);
+
+            console.log(change);
+            quantity = quantity + change;
             console.log(quantity);
             // Quantity cannot go below 1
             if (quantity < 1) {
                 quantity = 1;
             }
-            
+
             quantityElement.innerHTML = quantity;
-            fetch("http://localhost:3000/cart/"+productId,{
-                method:"POST",
-                body:JSON.stringify(allCartItems[productId].quantity),
-                headers:{
-                    "Content-Type": "application/json"
-                }
-            })
-            displayCartCount();
         }
 
         function deletefromcart(index) {
