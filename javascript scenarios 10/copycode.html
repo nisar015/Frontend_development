@@ -143,6 +143,7 @@
 
         function addToCart(index) {
             cartItems.push(allProducts[index]);
+            console.log(cartItems);
             document.getElementById("cartCount").innerHTML = cartItems.length;
             // localStorage.setItem("cartItems", JSON.stringify(cartItems));
             fetch("http://localhost:3000/cart", {
@@ -173,7 +174,8 @@
             console.log("searchProducts happening !!", userInput);
             var filteredProducts = allProducts.filter(function (product) {
                 // return product.name.toLowerCase()==includes(userInput.toLowerCase())
-                return product.name.toLowerCase() == userInput.toLowerCase();
+                // return product.name.toLowerCase() == userInput.toLowerCase();
+                return product.name.toLowerCase().includes(userInput.toLowerCase());
             })
             displayProducts(filteredProducts)
 
