@@ -172,9 +172,13 @@
             var userInput = document.getElementById("searchInput").value
             console.log("searchProducts happening !!", userInput);
             var filteredProducts = allProducts.filter(function (product) {
-                return product.name.toLocaleLowerCase().indexOf(userInput.toLocaleLowerCase()) > -1
+                // return product.name.toLowerCase()==includes(userInput.toLowerCase())
+                return product.name.toLowerCase() == userInput.toLowerCase();
             })
-            displayProducts(filteredProducts)
+            if(filteredProducts){
+
+                displayProducts(filteredProducts)
+            }
 
         }
         function displayProducts(data) {
