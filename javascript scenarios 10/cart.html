@@ -219,6 +219,9 @@
                 body: JSON.stringify({
                     quantity: quantity
                 })
+            }).then(function (data) {
+                // Refresh cart data and amount payable
+                displayCartCount();
             })
             // displayCartCount();
         }
