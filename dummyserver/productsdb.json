@@ -145,6 +145,18 @@
       "rating": 4.2,
       "stock": 15,
       "inStock": true
+    },
+    {
+      "id": 4,
+      "name": "Running Shoes",
+      "category": "Footwear",
+      "price": 1799,
+      "description": "Lightweight running shoes for walking and daily exercise.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+      "quantity": 1,
+      "rating": 4.4,
+      "stock": 20,
+      "inStock": true
     }
   ]
 }
