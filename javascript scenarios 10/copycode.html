@@ -172,7 +172,7 @@
             var userInput = document.getElementById("searchInput").value
             console.log("searchProducts happening !!", userInput);
             var filteredProducts = allProducts.filter(function (product) {
-                // return product.name.toLowerCase()==includes(userInput.toLowerCase())
+                return product.name.toLowerCase()==includes(userInput.toLowerCase())
                 return product.name.toLowerCase() == userInput.toLowerCase();
             })
             displayProducts(filteredProducts)
