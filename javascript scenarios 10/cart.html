@@ -204,8 +204,7 @@
             var quantityElement = document.getElementById("quantity-" + productId
             );
 
-            // var quantity = Number(quantityElement.innerText);
-            var quantity = quantityElement.innerHTML
+            var quantity = Number(quantityElement.innerText);
 
             console.log(change);
             quantity = quantity + change;
