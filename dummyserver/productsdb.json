@@ -133,6 +133,18 @@
       "rating": 4.5,
       "stock": 25,
       "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 2499,
+      "description": "Smart watch with fitness tracking and notification support.",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+      "quantity": 1,
+      "rating": 4.2,
+      "stock": 15,
+      "inStock": true
     }
   ]
 }
