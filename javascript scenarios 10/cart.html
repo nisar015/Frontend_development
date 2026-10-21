@@ -93,7 +93,7 @@
 
         <h1>Total Cart Items : <span id="totalItems"></span></h1>
         <h2>Amount Payble : <span id="amountPayble"></span></h2>
-        <h2>Discount applied : <span id="discount"></span></h2>
+        <h2>Discount applied : <span id="discount">10%</span></h2>
         <ul id="cartpros">
 
         </ul>
@@ -236,7 +236,7 @@
                 }, 0)
                 console.log(totalAmount);
                 var afterdiscount=totalAmount-(totalAmount/10)
-                document.getElementById("discount").innerHTML = "10%"
+                // document.getElementById("discount").innerHTML = "10%"
                 document.getElementById("amountPayble").innerHTML = afterdiscount
 
             })
