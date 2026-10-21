@@ -75,7 +75,7 @@ a3=a1+a2
 a4=a1*a2
 print(a3)
 print(a4)
-def funct(lit):
+def funct(lit):g
     lit.append(35)
     return lit
 
