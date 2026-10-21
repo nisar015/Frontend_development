@@ -80,5 +80,5 @@ def funct(lit):
     return lit
 
 lst=[2,83,3]
-print(funct(lst))
+print(funct(lst))d
 1sssssssssssss
