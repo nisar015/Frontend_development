@@ -235,7 +235,10 @@
                     return a + (b.price * b.quantity)
                 }, 0)
                 console.log(totalAmount);
-                document.getElementById("amountPayble").innerHTML = totalAmount
+                var afterdiscount=totalAmount-(totalAmount/10)
+                document.getElementById("discount").innerHTML = disco
+                document.getElementById("amountPayble").innerHTML = afterdiscount
+
             })
 
             // document.getElementById("cartCount").innerHTML = data.length
