@@ -132,7 +132,8 @@
                     return a + b.price
                 }, 0)
                 console.log(totalAmount);
-                document.getElementById("amountPayble").innerHTML = totalAmount
+                var afterdiscount=totalAmount-(totalAmount/10)
+                document.getElementById("amountPayble").innerHTML = afterdiscount
 
                 console.log(totalAmount);
             })
