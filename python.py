@@ -325,6 +325,9 @@ print(lst)        #[2,83,3,35] because of same adress the output also same
 # tpyes of arguments
 # 1.Formal args
 # 2.Actual args
+def sum(a,b):     #here a ,b are formal arguments
+    return a+b
+sum(3,5)          #here 2,3 are actual arguments which we are passing
 # types of actual args:
 # 1.Position args
 def person(name,age):
@@ -342,9 +345,9 @@ def person(name,age=20):   #here age=20 is the default value
     print(age)
 person(age=24,name='nisar') #even if we define default values these are the top priority values
 # 4.variable length args
-def add(b):      #here a ,b are formal arguments
+def add(b):     
     c=0
     for i in b:
         c += i
     print(c)
-add(2,3,4,3,6)           #here 2,3 are actual arguments which we are passing
+add(2,3,4,3,6)           
