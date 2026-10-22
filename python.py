@@ -323,6 +323,11 @@ print(lst)        #[2,83,3,35] because of same adress the output also same
 # tpyes of arguments
 # 1.Formal args
 # 2.Actual args
+# types of actual args:
+# 1.Position 
+# 2.keyword
+# 3.default
+# 4.variable length
 def add(a,b):      #here a ,b are formal arguments
     return a+b
 add(2,3)           #here 2,3 are actual arguments which we are passing
