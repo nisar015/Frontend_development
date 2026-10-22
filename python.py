@@ -340,6 +340,9 @@ def person(name,age=20):   #here age=20 is the default value
     print(age)
 person(age=24,name='nisar') #even if we define default values these are the top priority values
 # 4.variable length
-def add(a,b):      #here a ,b are formal arguments
-    return a+b
-add(2,3)           #here 2,3 are actual arguments which we are passing
+def add(b):      #here a ,b are formal arguments
+    c=0
+    for i in b:
+        c += i
+    print(c)
+add(2,3,4,3,6)           #here 2,3 are actual arguments which we are passing
