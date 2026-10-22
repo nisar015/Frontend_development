@@ -320,6 +320,8 @@ lst=[2,83,3]
 print(funct(lst)) #[2,83,3,35] same inside and outside of function so pass by reference
 print(lst)        #[2,83,3,35] because of same adress the output also same
 
+
+
 # tpyes of arguments
 # 1.Formal args
 # 2.Actual args
