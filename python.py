@@ -335,7 +335,7 @@ person('nisar',24)     #here 'nisar' is positioned to name and 24 to age by defa
 def person(name,age):
     print(name)
     print(age)
-person(age=24,name='nisar') #here age and name are keywords 
+person(age=24,name='nisar') #here age and name are keywords. if we not declared in position form
 # 3.default args
 def person(name,age=20):   #here age=20 is the default value
     print(name)
