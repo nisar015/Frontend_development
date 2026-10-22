@@ -364,7 +364,7 @@ persondata('nisar',age=24,city='pattikonda',num=245833)
 #Global variables in python
 a=3
 def glo():
-    global a            #a=1 acts as global and local
+    global a            #global a declaration makes to produce same output in and outside of func
     a=1
     print("inside",a)   #1
 glo()
