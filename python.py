@@ -331,12 +331,12 @@ def person(name,age):
     print(name)
     print(age)
 person('nisar',24)     #here 'nisar' is positioned to name and 24 to age by default
-# 2.keyword
+# 2.keyword args
 def person(name,age):
     print(name)
     print(age)
 person(age=24,name='nisar') #here age and name are keywords 
-# 3.default
+# 3.default args
 def person(name,age=20):   #here age=20 is the default value
     print(name)
     print(age)
