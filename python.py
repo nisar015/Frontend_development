@@ -373,8 +373,8 @@ print("out",a)          #1
 b=2
 def code():
     b=6
-    x=globals()['b']
-    print("inside func",b)
+    x=globals()['b']    #here x = 2 because we declare it as global 
+    print("inside func",b) 
     print(x)
     globals()['b']=12
 
