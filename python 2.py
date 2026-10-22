@@ -86,3 +86,22 @@ def peros(name,**data):
     for i,j in data.items():  #this prints **kwargs in key val pairs
             print(i,j)
 peros('nidar',age=24,city='pkd',num=1243)
+#Global variable in python
+a=3
+def code():
+    a=6
+    x=globals()['a']
+    print("inside func",a)
+
+code()
+print("outside func",a)
+b=2
+def code():
+    b=6
+    x=globals()['b']
+    print("inside func",b)
+    print(x)
+    globals()['b']=12
+
+code()
+print("outside func",b)

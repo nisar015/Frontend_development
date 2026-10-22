@@ -363,10 +363,19 @@ persondata('nisar',age=24,city='pattikonda',num=245833)
 
 #Global variable in python
 a=3
+def glo():
+    global a
+    a=1
+    print("inside",a)   #1
+glo()
+print("out",a)          #1
+
+b=2
 def code():
-    a=6
-    x=globals()['a']
-    print("inside func",a)
+    b=6
+    x=globals()['b']
+    print("inside func",b)
+    globals()['b']=12
 
 code()
-print("outside func",a)
+print("outside func",b)
