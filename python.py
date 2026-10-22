@@ -335,6 +335,10 @@ def person(name,age):
     print(age)
 person(age=24,name='nisar')
 # 3.default
+def person(name,age=20):
+    print(name)
+    print(age)
+person(age=24,name='nisar')
 # 4.variable length
 def add(a,b):      #here a ,b are formal arguments
     return a+b
