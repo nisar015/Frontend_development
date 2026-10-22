@@ -321,6 +321,8 @@ print(funct(lst)) #[2,83,3,35] same inside and outside of function so pass by re
 print(lst)        #[2,83,3,35] because of same adress the output also same
 
 # tpyes of arguments
-def add(a,b):
+# 1.Formal args
+# 2.Actual args
+def add(a,b):      #here a ,b are formal arguments
     return a+b
-add(2,3)
+add(2,3)           #here 2,3 are actual arguments which we are passing
