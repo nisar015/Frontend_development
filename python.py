@@ -333,12 +333,12 @@ person('nisar',24)
 def person(name,age):
     print(name)
     print(age)
-person(age=24,name='nisar')
+person(age=24,name='nisar') #here age and name are keywords 
 # 3.default
-def person(name,age=20):
+def person(name,age=20):   #here age=20 is the default value
     print(name)
     print(age)
-person(age=24,name='nisar')
+person(age=24,name='nisar') 
 # 4.variable length
 def add(a,b):      #here a ,b are formal arguments
     return a+b
