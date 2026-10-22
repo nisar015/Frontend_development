@@ -101,7 +101,7 @@ def code():
     x=globals()['b']
     print("inside func",b)
     print(x)
-    globals()['b']=12
+    # globals()['b']=12
 
 code()
 print("outside func",b)

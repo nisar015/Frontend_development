@@ -379,4 +379,4 @@ def code():
     globals()['b']=12
 
 code()
-print("outside func",b)
+print("outside func",b)  #here b=12 we redeclare b as 12 in this line
