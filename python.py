@@ -330,6 +330,10 @@ def person(name,age):
     print(age)
 person('nisar',24)
 # 2.keyword
+def person(name,age):
+    print(name)
+    print(age)
+person(name='nisar',age=24)
 # 3.default
 # 4.variable length
 def add(a,b):      #here a ,b are formal arguments
