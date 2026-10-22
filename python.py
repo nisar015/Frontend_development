@@ -374,7 +374,7 @@ b=2
 def code():
     b=6
     x=globals()['b']    #here x = 2 because we declare it as global 
-    print("inside func",b) 
+    print("inside func",b) #here b=6 we are accessing local variable b
     print(x)
     globals()['b']=12
 
