@@ -338,7 +338,7 @@ person(age=24,name='nisar') #here age and name are keywords
 def person(name,age=20):   #here age=20 is the default value
     print(name)
     print(age)
-person(age=24,name='nisar') 
+person(age=24,name='nisar') #even if we define default values these are the top priority values
 # 4.variable length
 def add(a,b):      #here a ,b are formal arguments
     return a+b
