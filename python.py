@@ -375,6 +375,7 @@ def code():
     b=6
     x=globals()['b']
     print("inside func",b)
+    print(x)
     globals()['b']=12
 
 code()
