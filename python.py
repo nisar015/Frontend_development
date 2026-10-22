@@ -361,7 +361,7 @@ def persondata(name,**data):   #here ** means we are passing multiple args with 
         print(i,j)
 persondata('nisar',age=24,city='pattikonda',num=245833)
 
-#Global variable in python
+#Global variables in python
 a=3
 def glo():
     global a
