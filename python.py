@@ -345,7 +345,8 @@ def person(name,age=20):   #here age=20 is the default value
     print(age)
 person(age=24,name='nisar') #even if we define default values these are the top priority values
 # 4.variable length args
-def add(a,b):     #a=2 by default and b=(3,4,3,6)
+# def add(a,*b):  it prints b in tuple form 
+def add(a,*b):     #a=2 by default and b=(3,4,3,6)
     c=a
     for i in b:
         c += i

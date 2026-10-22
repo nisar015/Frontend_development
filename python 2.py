@@ -13,7 +13,7 @@
 #     print(i,end=" ")
 # for i in range(10,1,-3):      
 #     print(i,end=" ")
-from numpy import *     
+# from numpy import *     
 # arra=array((1,4,5,20),(1,4,2,4,9))
 # print(arra)
 # arr1=array([1,6,46,43])
@@ -69,16 +69,16 @@ from numpy import *
 # from numpy import *     
 # arra=array([1,4,5,20],[1,4,2,4,9])
 # print(arra)
-a1=matrix('1,2,3;5,6,4;4,7,9')
-a2=matrix('1,3,6;1,3,4;2,6,5')
-a3=a1+a2
-a4=a1*a2
-print(a3)
-print(a4)
-def funct(lit):g
-    lit.append(35)
-    return lit
-
-lst=[2,83,3]
-print(funct(lst))d
-jgjsfjssfr
+# a1=matrix('1,2,3;5,6,4;4,7,9')
+# a2=matrix('1,3,6;1,3,4;2,6,5')
+# a3=a1+a2
+# a4=a1*a2
+# print(a3)
+# print(a4)
+def add(a,*b):     #a=2 by default and b=(3,4,3,6)
+    c=a
+    for i in b:
+        c += i
+    print(c)
+    # print(b)
+add(2,3,4,3,6)
