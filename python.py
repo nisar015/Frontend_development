@@ -330,7 +330,7 @@ print(lst)        #[2,83,3,35] because of same adress the output also same
 def person(name,age):
     print(name)
     print(age)
-person('nisar',24)
+person('nisar',24)     #here 'nisar' is positioned to name and 24 to age by default
 # 2.keyword
 def person(name,age):
     print(name)
