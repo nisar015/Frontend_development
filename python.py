@@ -325,6 +325,10 @@ print(lst)        #[2,83,3,35] because of same adress the output also same
 # 2.Actual args
 # types of actual args:
 # 1.Position 
+def person(name,age):
+    print(name)
+    print(age)
+person('nisar',24)
 # 2.keyword
 # 3.default
 # 4.variable length
