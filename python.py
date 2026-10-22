@@ -360,3 +360,13 @@ def persondata(name,**data):   #here ** means we are passing multiple args with 
     for i,j in data.items():  #this prints **kwargs in key val pairs
         print(i,j)
 persondata('nisar',age=24,city='pattikonda',num=245833)
+
+#Global variable in python
+a=3
+def code():
+    a=6
+    x=globals()['a']
+    print("inside func",a)
+
+code()
+print("outside func",a)
