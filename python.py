@@ -352,3 +352,5 @@ def add(a,*b):     #a=2 by default and b=(3,4,3,6)
         c += i
     print(c)
 add(2,3,4,3,6) #we can define a func where number of args are not fixed is called variable length args
+
+# keyworded variable length args
