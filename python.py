@@ -333,7 +333,7 @@ person('nisar',24)
 def person(name,age):
     print(name)
     print(age)
-person(name='nisar',age=24)
+person(age=24,name='nisar')
 # 3.default
 # 4.variable length
 def add(a,b):      #here a ,b are formal arguments
