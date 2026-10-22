@@ -326,7 +326,7 @@ print(lst)        #[2,83,3,35] because of same adress the output also same
 # 1.Formal args
 # 2.Actual args
 # types of actual args:
-# 1.Position 
+# 1.Position args
 def person(name,age):
     print(name)
     print(age)
