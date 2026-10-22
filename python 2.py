@@ -82,3 +82,7 @@ def add(a,*b):     #a=2 by default and b=(3,4,3,6)
     print(c)
     # print(b)
 add(2,3,4,3,6)
+def peros(name,**data):
+    for i,j in data.items():  #this prints **kwargs in key val pairs
+            print(i,j)
+peros('nidar',age=24,city='pkd',num=1243)

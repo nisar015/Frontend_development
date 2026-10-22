@@ -357,4 +357,6 @@ add(2,3,4,3,6) #we can define a func where number of args are not fixed is calle
 def persondata(name,**data):   #here ** means we are passing multiple args with keywords
     print(name)
     print(data)
+    for i,j in data.items():  #this prints **kwargs in key val pairs
+        print(i,j)
 persondata('nisar',age=24,city='pattikonda',num=245833)
