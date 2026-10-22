@@ -345,9 +345,9 @@ def person(name,age=20):   #here age=20 is the default value
     print(age)
 person(age=24,name='nisar') #even if we define default values these are the top priority values
 # 4.variable length args
-def add(b):     
-    c=0
+def add(a,b):     
+    c=a
     for i in b:
         c += i
     print(c)
-add(2,3,4,3,6)           
+add(2,3,4,3,6)          #we can define a func where number of args are not fixed 
