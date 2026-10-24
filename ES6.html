@@ -12,7 +12,7 @@
         // 2.Execution phase
         function hoisting(){
             var a                  //in execution phase this is already memorized so the next line console will be executed
-            console.log(a);     //then this line will be executed 
+            console.log(a);     //then this line will be executed which is "undefined" 
             var a=5            //here the var a is memorized first in memorization phase
         }
         hoisting()
