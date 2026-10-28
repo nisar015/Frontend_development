@@ -135,4 +135,4 @@ def recc_fact(n):
     if n==0:
         return 1
     return n * recc_fact(n-1)
-print(recc_fact(5))
+print(recc_fact(4))
