@@ -127,5 +127,5 @@ i=0
 def rec():
     print(i)
     print("recursive func is called")
-    rec()
+    # rec()
 rec()
