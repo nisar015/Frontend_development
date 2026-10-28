@@ -382,6 +382,7 @@ code()
 print("outside func",b)  #here b=12 we redeclare b as 12 in this line
 
 # fibonocci sequence 
+# fibanocci series means 0,1,1,2,3,5,8,13,21,34
 def fib():
     a=0
     b=1
