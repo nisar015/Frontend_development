@@ -121,7 +121,7 @@
 #     return f
 # print(fact(5))
 import sys
-print(sys.setrecursionlimit(5000))
+sys.setrecursionlimit(5000)
 print(sys.getrecursionlimit())
 def rec():
     print("recursive func is called")
