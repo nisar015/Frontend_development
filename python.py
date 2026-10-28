@@ -410,8 +410,8 @@ def rec():
 rec()
 
 # factorial using recurssion
-def recc_fact():
-    if i==0:
+def recc_fact(n):
+    if n==0:
         return 1
-    return i * recc_fact(n-1)
-print(recc_fact(5))
+    return n * recc_fact(n-1)
+print(recc_fact(4))
