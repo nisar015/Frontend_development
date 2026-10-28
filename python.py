@@ -381,3 +381,4 @@ def code():
 code()
 print("outside func",b)  #here b=12 we redeclare b as 12 in this line
 
+# fibonocci series 
