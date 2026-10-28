@@ -390,3 +390,4 @@ def fib():
         a=b
         b=c
         print(c)
+fib()
