@@ -385,7 +385,9 @@ print("outside func",b)  #here b=12 we redeclare b as 12 in this line
 def fib():
     a=0
     b=1
-    for i in range(1,10):
+    print(a)
+    print(b)
+    for i in range(2,10):
         c=a+b
         a=b
         b=c
