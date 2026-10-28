@@ -394,3 +394,5 @@ def fib():
         b=c
         print(c)
 fib()
+
+# factorial of a number
