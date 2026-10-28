@@ -131,3 +131,8 @@ def rec():
     print("recursive func is called",i)
     rec()
 rec()
+def recc_fact():
+    if i==0:
+        return 1
+    return i * recc_fact(n-1)
+print(recc_fact(5))
