@@ -402,3 +402,7 @@ def fact(n):
         f *= i
     return f
 print(fact(5))
+
+# Recurssion-means a func calling itself
+def rec():
+    print()
