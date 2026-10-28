@@ -120,3 +120,9 @@
 #         f *= i
 #     return f
 # print(fact(5))
+import sys
+print(sys.getrecursionlimit())
+def rec():
+    print("recursive func is called")
+    rec()
+rec()
