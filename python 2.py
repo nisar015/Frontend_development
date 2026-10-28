@@ -131,8 +131,5 @@
 #     print("recursive func is called",i)
 #     rec()
 # rec()
-def recc_fact(n):
-    if n==0:
-        return 1
-    return n * recc_fact(n-1)
-print(recc_fact(4))
+for i in range(-1):
+    ddfd
