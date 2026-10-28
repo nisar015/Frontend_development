@@ -408,3 +408,5 @@ def rec():
     print("recursive func is called")
     rec()
 rec()
+
+# factorial using recurssion
