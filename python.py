@@ -405,4 +405,4 @@ print(fact(5))
 
 # Recurssion-means a func calling itself
 def rec():
-    print()
+    print("recursive func is called")
