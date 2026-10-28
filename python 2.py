@@ -75,33 +75,41 @@
 # a4=a1*a2
 # print(a3)
 # print(a4)
-def add(a,*b):     #a=2 by default and b=(3,4,3,6)
-    c=a
-    for i in b:
-        c += i
-    print(c)
-    # print(b)
-add(2,3,4,3,6)
-def peros(name,**data):
-    for i,j in data.items():  #this prints **kwargs in key val pairs
-            print(i,j)
-peros('nidar',age=24,city='pkd',num=1243)
-#Global variable in python
-a=3
-def code():
-    a=6
-    x=globals()['a']
-    print("inside func",a)
+# def add(a,*b):     #a=2 by default and b=(3,4,3,6)
+#     c=a
+#     for i in b:
+#         c += i
+#     print(c)
+#     # print(b)
+# add(2,3,4,3,6)
+# def peros(name,**data):
+#     for i,j in data.items():  #this prints **kwargs in key val pairs
+#             print(i,j)
+# peros('nidar',age=24,city='pkd',num=1243)
+# #Global variable in python
+# a=3
+# def code():
+#     a=6
+#     x=globals()['a']
+#     print("inside func",a)
 
-code()
-print("outside func",a)
-b=2
-def code():
-    b=6
-    x=globals()['b']
-    print("inside func",b)
-    print(x)
-    # globals()['b']=12 
+# code()
+# print("outside func",a)
+# b=2
+# def code():
+#     b=6
+#     x=globals()['b']
+#     print("inside func",b)
+#     print(x)
+#     # globals()['b']=12 
 
-code()
-print("outside func",b)
+# code()
+# print("outside func",b)
+def fib():
+    a=0
+    b=1
+    for i in range(1,10):
+        c=a+b
+        a=b
+        b=c
+        print(c)
