@@ -126,6 +126,7 @@ print(sys.getrecursionlimit())
 i=0
 def rec():
     # print(i)
+    i += 1
     print("recursive func is called",i)
     rec()
 rec()
