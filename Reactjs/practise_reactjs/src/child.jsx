@@ -5,9 +5,12 @@ class child extends Component {
         console.log(this.props);
         return <div>
             <h2>You are in child Component</h2>
-            {this.props.user.map(function(use){
-                console.log(use);
-            })}
+            <ul>
+                {this.props.user.map(function (use) {
+                    console.log(use);
+                })}
+
+            </ul>
         </div>
     }
 }
