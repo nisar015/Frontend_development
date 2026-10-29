@@ -14,4 +14,4 @@ class Child extends Component {
         </div>
     }
 }
-export default child
+export default Child
