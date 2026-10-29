@@ -11,7 +11,9 @@ class parent extends Component{
     render(){
         return <div>
             <h2>This is Parent Component</h2>
+            <child/>
         </div>
+
     }
 }
 export default parent
