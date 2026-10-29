@@ -5,8 +5,7 @@ class Child extends Component {
     render() {
         console.log(this.props);
 
-        return (
-            <div>
+        return <div>
                 <h2>You are in Child Component</h2>
 
                 <ul>
@@ -15,7 +14,6 @@ class Child extends Component {
                     })}
                 </ul>
             </div>
-        );
     }
 }
 
