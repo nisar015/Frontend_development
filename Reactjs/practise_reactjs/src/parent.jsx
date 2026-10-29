@@ -10,12 +10,10 @@ class Parent extends Component {
         }
     }
     render() {
-        return (
-            <div>
+        return <div>
                 <h2>This is Parent Component</h2>
                 <Child usersarr={this.state.users}/>
             </div>
-        )
 
     }
 }
