@@ -1,19 +1,22 @@
+
 import { Component } from "react";
 
 class Child extends Component {
     render() {
         console.log(this.props);
+
         return (
             <div>
-                <h2>You are in child Component</h2>
-                <ul>
-                    {this.props.userarr.map(function (use) {
-                        return <li>{use}</li>
-                    })}
+                <h2>You are in Child Component</h2>
 
+                <ul>
+                    {this.props.userarr.map(function (user) {
+                        return <li key={user}>{user}</li>;
+                    })}
                 </ul>
             </div>
-        )
+        );
     }
 }
-export default Child
+
+export default Child;
