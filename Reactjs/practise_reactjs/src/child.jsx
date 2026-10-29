@@ -7,7 +7,7 @@ class child extends Component {
             <h2>You are in child Component</h2>
             <ul>
                 {this.props.user.map(function (use) {
-                    console.log(use);
+                    return <li>{use}</li>
                 })}
 
             </ul>
