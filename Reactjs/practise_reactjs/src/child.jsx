@@ -3,15 +3,17 @@ import { Component } from "react";
 class Child extends Component {
     render() {
         console.log(this.props);
-        return <div>
-            <h2>You are in child Component</h2>
-            <ul>
-                {this.props.userarr.map(function (use) {
-                    return <li>{use}</li>
-                })}
+        return (
+            <div>
+                <h2>You are in child Component</h2>
+                <ul>
+                    {this.props.userarr.map(function (use) {
+                        return <li>{use}</li>
+                    })}
 
-            </ul>
-        </div>
+                </ul>
+            </div>
+        )
     }
 }
 export default Child
