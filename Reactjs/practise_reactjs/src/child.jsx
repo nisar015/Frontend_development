@@ -10,7 +10,7 @@ class Child extends Component {
                 <h2>You are in Child Component</h2>
 
                 <ul>
-                    {this.props.userarr.map(function (user) {
+                    {this.props.usersarr.map(function (user) {
                         return <li key={user}>{user}</li>;
                     })}
                 </ul>
