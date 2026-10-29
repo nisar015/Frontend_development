@@ -6,7 +6,7 @@ class child extends Component {
         return <div>
             <h2>You are in child Component</h2>
             <ul>
-                {this.props.user.map(function (use) {
+                {this.props.userarr.map(function (use) {
                     return <li>{use}</li>
                 })}
 
