@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class parent extends Component{
+class Parent extends Component{
     constructor(){
         super()
         this.state={
@@ -17,4 +17,4 @@ class parent extends Component{
 
     }
 }
-export default parent
+export default Parent
