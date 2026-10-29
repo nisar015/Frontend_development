@@ -11,7 +11,7 @@ class parent extends Component{
     render(){
         return <div>
             <h2>This is Parent Component</h2>
-            <child/>
+            <child user={this.state.users}/>
         </div>
 
     }
