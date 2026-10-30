@@ -425,3 +425,5 @@ print(res)
 arr=[1,2,4,3,5,3,1]
 def even_odd(n):
     return n%2==0
+even=list(filter(even_odd,arr))
+print(even)
