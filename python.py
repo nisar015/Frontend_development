@@ -417,3 +417,6 @@ def recc_fact(n):
 print(recc_fact(4))
 
 # lambda or anonymous function
+f=lambda a,b:a+b
+res=f(3,2)
+print(res)
