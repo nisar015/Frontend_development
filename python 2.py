@@ -132,5 +132,5 @@
 #     rec()
 # rec()
 f=lambda a,b:a+b,
-res = f(5,3),
+res =f(5,3),
 print(res)
