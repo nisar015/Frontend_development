@@ -158,9 +158,8 @@ def smart_div(func): #div(2,4):
             a,b=b,a
         return func(a,b)  #here func(4,2) means original div(a,b):
                                                          #print(a/b)
-    # print(inner) 
-    g=inner
-    print(g)                                               
+    # print(inner)                                          
     return inner
-x=smart_div(div)
+x=smart_div(div) #returns inner not a number when we call x(2,4) we get a/b value
+print(x)
 x(2,4)
