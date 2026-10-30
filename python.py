@@ -450,7 +450,8 @@ anothersum=reduce(lambda a,b:a+b,arr)
 print(anothersum)
 
 #Decorators
-# suppose i want to 
+# suppose i want to swap a and b if a<b, that i can do without changing anything in the present code 
+# 
 def func(a,b):
     print(a/b)
 func(2,4)
