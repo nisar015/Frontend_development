@@ -435,3 +435,4 @@ print(eve)    #[2,4]
 def doub(n):
     return n*2
 doubles=list(map(doub,arr))
+print(doubles)
