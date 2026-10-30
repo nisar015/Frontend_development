@@ -135,5 +135,5 @@
 # res=f(3,2)
 # print(res)
 arr=[1,2,4,3,5,3,1]
-eve=list(filter(lambda n:n*2==0,arr))
+eve=list(filter(lambda n:n*2,arr))
 print(eve)
