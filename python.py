@@ -448,3 +448,5 @@ print(sum)
 # anather way writing the above method using lambda func which gives the same output
 anothersum=reduce(lambda a,b:a+b,arr)
 print(anothersum)
+
+#Decorators
