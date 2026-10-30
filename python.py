@@ -420,3 +420,8 @@ print(recc_fact(4))
 f=lambda a,b:a+b
 res=f(3,2)
 print(res)
+
+# filter,map,reduce
+arr=[1,2,4,3,5,3,1]
+def even_odd(n):
+    return n%2==0
