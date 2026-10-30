@@ -131,6 +131,6 @@
 #     print("recursive func is called",i)
 #     rec()
 # rec()
-f=lambda a,b:a+b
-res=f(5,3)
+f=lambda a,b:a+b,
+res = f(5,3),
 print(res)
