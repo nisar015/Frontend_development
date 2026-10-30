@@ -135,7 +135,5 @@
 # res=f(3,2)
 # print(res)
 arr=[1,2,4,3,5,3,1]
-def even_odd(n):
-    return n%2==0
-even=list(filter(even_odd,arr))
-print(even)
+eve=list(filter(lambda n:n%2==0,arr))
+print(eve)
