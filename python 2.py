@@ -131,6 +131,5 @@
 #     print("recursive func is called",i)
 #     rec()
 # rec()
-for i in range(-1):g
-    ddfvd
-fjgscdbg
+f=lambda a,b:a-b
+print(f(5,3))
