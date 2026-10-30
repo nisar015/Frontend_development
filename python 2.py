@@ -148,3 +148,16 @@ sum=reduce(red,doubles)
 print(sum)
 anothersum=reduce(lambda a,b:a+b,doubles)
 print(anothersum)
+
+def div(a,b):
+    print(a/b)
+def smart_div(func): #div(2,4):
+                      #print(a/b) is passed as func here
+    def inner(a,b):
+        if a<b:
+            a,b=b,a
+        return func(a,b)  #here func(4,2) means original div(a,b):
+                                                         #print(a/b)
+    return inner
+x=smart_div(div)
+x(2,4)
