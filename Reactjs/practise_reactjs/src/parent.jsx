@@ -10,7 +10,7 @@ class Parent extends Component{
     }
     render(){
         return <div>
-            <Child usersarr={this.state.users} />
+            <Child usersarr={this.state.users} / >
         </div>
     }
 }
