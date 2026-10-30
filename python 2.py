@@ -141,3 +141,8 @@ def doub(n):
     return n*2
 doubles=list(map(doub,arr))
 print(doubles)
+from functools import reduce
+def red(a,b):
+    return a+b
+sum=list(reduce(red,doubles))
+print(sum)
