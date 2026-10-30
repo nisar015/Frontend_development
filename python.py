@@ -437,7 +437,7 @@ def doub(n):
 doubles=list(map(doub,arr))
 print(doubles)
 
-
+#for reduce we need to import from functools module
 from functools import reduce
 def red(a,b):
     return a+b
