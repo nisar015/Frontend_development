@@ -427,7 +427,7 @@ def even_odd(n):
     return n%2==0
 even=list(filter(even_odd,arr))
 
-# anather way writing the above line
+# anather way writing the above method
 eve=list(filter(lambda n:n%2==0,arr))
 print(even)
 
