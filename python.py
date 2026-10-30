@@ -450,3 +450,7 @@ anothersum=reduce(lambda a,b:a+b,arr)
 print(anothersum)
 
 #Decorators
+# suppose i want to 
+def func(a,b):
+    print(a/b)
+func(2,4)
