@@ -451,7 +451,7 @@ print(anothersum)
 
 #Decorators
 # suppose i want to swap a and b if a<b, that i can do without changing anything in the present code 
-# 
+# with the decorators we can add extra features in the existing function
 def func(a,b):
     print(a/b)
 func(2,4)
