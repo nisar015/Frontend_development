@@ -415,3 +415,5 @@ def recc_fact(n):
         return 1
     return n * recc_fact(n-1)
 print(recc_fact(4))
+
+# lambda or anonymous function
