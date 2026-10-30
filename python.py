@@ -428,6 +428,7 @@ def even_odd(n):
 even=list(filter(even_odd,arr))
 print(even)     #[2,4]
 
+#Map
 # anather way writing the above method using lambda func which gives the same output
 eve=list(filter(lambda n:n%2==0,arr))
 print(eve)    #[2,4]
