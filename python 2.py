@@ -144,5 +144,5 @@ print(doubles)
 from functools import reduce
 def red(a,b):
     return a+b
-sum=list(reduce(red,doubles))
+sum=reduce(red,doubles)
 print(sum)
