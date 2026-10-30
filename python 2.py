@@ -146,3 +146,5 @@ def red(a,b):
     return a+b
 sum=reduce(red,doubles)
 print(sum)
+anothersum=reduce(lambda a,b:a+b,arr)
+print(anothersum)
