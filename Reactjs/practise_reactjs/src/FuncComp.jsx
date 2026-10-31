@@ -10,4 +10,6 @@ export function FuncComp2(){
 export function FuncComp3(){
     return <h2>this is a functional component</h2>
 }
-export
+export default function FunComponent(){
+    return <h1>this is an export default function</h1>
+}
