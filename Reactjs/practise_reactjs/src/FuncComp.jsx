@@ -16,8 +16,10 @@ export function FuncComp(){
 
     return <>
     <button onClick={()=>{setmessage("this is chnaged message")}}>button</button>
+    <button onClick={()=>{setuser({fname:"name",lname:"lastname"})}}>button</button>
     <h2>this is a functional component</h2>
             <h2>{message}</h2>
+            <h2>{user}</h2>
     </> 
 }
 export function FuncComp1(){
