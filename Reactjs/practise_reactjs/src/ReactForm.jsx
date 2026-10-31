@@ -15,7 +15,7 @@ class ReactForm extends Component{
     handleinput=(event)=>{
         console.log(event.target.value);
         const newuser=[...this.state.users]
-        newuser[this.target.name]=event.target.value
+        newuser[event.target.name]=event.target.value
         this.setState({uers:newuser})
     }
     handlesubmit=()=>{
