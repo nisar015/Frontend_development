@@ -1,6 +1,7 @@
 // a file can have multiple components
 //because this is exported without default they are imported  in brackets in App.jsx
 // default exported component name can be imported with any name in App.jsx
+// each can only able to return only one element
 export function FuncComp(){                                
     return <h2>this is a functional component</h2>
 }
