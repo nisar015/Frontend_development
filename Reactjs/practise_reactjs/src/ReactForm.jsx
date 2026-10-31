@@ -4,7 +4,12 @@ class ReactForm extends Component{
     constructor(){
         super()
         this.state={
-            fname:""
+            users:[
+                {
+                    fname:"",
+                    lname:""
+                }
+            ]
         }
     }
     render(){
