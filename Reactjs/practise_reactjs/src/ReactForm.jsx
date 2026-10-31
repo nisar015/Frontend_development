@@ -12,7 +12,7 @@ class ReactForm extends Component{
             <form>
                 <label htmlFor="">fname</label>
                 <input type="text" /><br />
-                <label htmlFor="">fname</label>
+                <label htmlFor="">lname</label>
                 <input type="text" /><br />
             </form>
         </div>
