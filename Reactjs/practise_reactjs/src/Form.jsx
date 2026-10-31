@@ -14,7 +14,7 @@ class Form extends Component {
     }
     render() {
         return <div>
-            <table>
+            <table border={1}>
                 <thead>
                     <tr>
                         <th>fname</th>
