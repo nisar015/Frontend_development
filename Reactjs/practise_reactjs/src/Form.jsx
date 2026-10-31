@@ -12,8 +12,16 @@ class Form extends Component {
             ]
         }
     }
-    handledelete=(user)=>{
-        
+    handledelete=(index)=>{
+        // console.log(user);
+        // const newuser=this.state.users.filter((use)=>{
+        //     return use.email !== user.email
+        // })
+        // this.setState({users:newuser})
+        const newuser=[...this.state.users]
+        newuser.splice(index,1)
+        this.setState({users:newuser})
+
     }
     render() {
         return <div>
@@ -35,7 +43,7 @@ class Form extends Component {
                             <td>{user.email}</td>
                             <td>{user.pnumber}</td>
                             <td>
-                                <button onClick={()=>{this.handledelete(user)}}>delete</button>
+                                <button onClick={()=>{this.handledelete(index)}}>delete</button>
 
                             </td>
                         </tr>
