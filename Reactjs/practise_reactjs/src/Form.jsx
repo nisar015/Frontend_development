@@ -27,11 +27,11 @@ class Form extends Component{
                 <tbody>
                     {this.state.users.map((user)=>{
                         return <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{user.fname}</td>
+                            <td>{user.lname}</td>
+                            <td>{user.lname}</td>
+                            <td>{user.lname}</td>
+                            <td>{user.lname}</td>
                         </tr>
                     })}
                 </tbody>
