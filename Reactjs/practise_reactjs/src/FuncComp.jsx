@@ -8,7 +8,7 @@ import { useState } from "react"
 export function FuncComp(){  
     const [message,setmessage]=useState("this is a variable;")                              
     return <>
-    <button onClick={()=>{setmessage("this is chnaged message")}}></button>
+    <button onClick={()=>{setmessage("this is chnaged message")}}>button</button>
     <h2>this is a functional component</h2>
             <h2>{message}</h2>
     </> 
