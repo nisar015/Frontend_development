@@ -1,5 +1,6 @@
 import './App.css'
 // import Parent from './parent'
+import Form from './Form'
 
 function App() {
   return(
@@ -7,6 +8,7 @@ function App() {
       {/* <h2>this is the first line of react</h2>
       <h2>this is also a line of text</h2> */}
       {/* <Parent/> */}
+      <Form/>
     </div>
   )
 }
