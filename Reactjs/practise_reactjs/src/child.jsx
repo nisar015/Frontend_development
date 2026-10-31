@@ -1,15 +1,13 @@
 import { Component } from "react";
 
-class Child extends Component {
-    render() {
+class Child extends Component{
+    render(){
         return <div>
-            <ul>
-                {this.props.usersarr.map(function (user) {
-                    return <li>{user}</li>
-                })}
-
-            </ul>
+            {this.props.userarr.map(function(user){
+                return <li>{user}</li>
+            })}
         </div>
+
     }
 }
 export default Child

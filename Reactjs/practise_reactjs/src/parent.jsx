@@ -1,16 +1,15 @@
 import { Component } from "react";
-import Child from "./child";
-
+import Child from './child'
 class Parent extends Component{
     constructor(){
         super()
         this.state={
-            users:["user1","user1","user1","user1"]
+            users:["user1","user2","user3"]
         }
     }
     render(){
         return <div>
-            <Child usersarr={this.state.users} / >
+            <Child userarr={this.state.users}/>
         </div>
     }
 }
