@@ -1,5 +1,5 @@
 import './App.css'
-import FunComponent, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
+import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
 // import Parent from './parent'
 // import Form from './Form'
 // import ReactForm from './ReactForm'
@@ -15,7 +15,7 @@ function App() {
       <FuncComp/>
       <FuncComp1/>
       <FuncComp2/>
-      <FunComponent/>
+      <Xyz/>
     </div>
   )
 }
