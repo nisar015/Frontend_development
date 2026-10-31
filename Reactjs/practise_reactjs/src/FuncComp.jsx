@@ -10,6 +10,7 @@ export function FuncComp(){
     // 1.message is deleted
     // 2.new var is declared 
     // 3.the new value is assigned to the new var
+    // that is all handled by react useState
     const [message,setmessage]=useState("this is a variable;")  
     const [user,setuser]=useState(
         {
