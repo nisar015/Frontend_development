@@ -12,6 +12,9 @@ class Form extends Component {
             ]
         }
     }
+    handledelete=(user)=>{
+        
+    }
     render() {
         return <div>
             <table border={1}>
@@ -32,7 +35,7 @@ class Form extends Component {
                             <td>{user.email}</td>
                             <td>{user.pnumber}</td>
                             <td>
-                                <button onClick={this.handledelete}>delete</button>
+                                <button onClick={()=>{this.handledelete(user)}}>delete</button>
 
                             </td>
                         </tr>
