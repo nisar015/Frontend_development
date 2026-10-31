@@ -2,7 +2,9 @@ import { Component } from "react";
 import Child from './child'
 class Parent extends Component{
     constructor(){
-        super()
+        super()  
+        //when we combines two classes we need to use super method
+        
         this.state={
             users:["user1","user2","user3"]
         }
