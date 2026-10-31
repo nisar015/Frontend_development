@@ -9,6 +9,7 @@ class Parent extends Component{
             users:["user1","user2","user3"] ,  
             //state means entire declared data or values in a component
             // state can be anything bool,arr,null,undefined etc
+            // state can be changeble but props cannot be changeable
             yesorno:false    //this is also a state
         }
     }
