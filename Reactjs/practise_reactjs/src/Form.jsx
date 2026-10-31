@@ -5,9 +5,9 @@ class Form extends Component{
         super()
         this.state={
             users:[
-                {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789}
-                {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789}
-                {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789}
+                {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789},
+                {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789},
+                {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789},
                 {fname:"mike",lname:"nike",email:"mikenike@gmail.com",pnumber:145236789}
             ]
         }
