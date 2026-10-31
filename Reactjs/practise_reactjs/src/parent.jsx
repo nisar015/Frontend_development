@@ -7,7 +7,7 @@ class Parent extends Component{
         // it extracts extra features or power from the component class to parent class
         this.state={
             users:["user1","user2","user3"] ,  
-            //state means declared data or values in a component
+            //state means entire declared data or values in a component
             // state can be anything bool,arr,null,undefined etc
             yesorno:false    //this is also a state
         }
