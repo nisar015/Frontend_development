@@ -17,8 +17,8 @@ export function FuncComp(){
             fname:"nisar",
             lname:"ahmmed"
         }
-    )    
-
+    )  
+    
     return <>
     <button onClick={()=>{setmessage("this is chnaged message")}}>button</button>
     <button onClick={()=>{setuser({fname:"name",lname:"lastname"})}}>button</button>
@@ -29,8 +29,14 @@ export function FuncComp(){
     </> 
 }
 export function FuncComp1(){
+    const [allusers,setallusers]=useState("user1","user2","user3")  
     return <>
     <h2>this is a functional component</h2>
+    <ul>
+        {allusers.map((user)=>{
+            return <li>{user}</li>
+        })}
+    </ul>
     </>
 }
 export function FuncComp2(){
