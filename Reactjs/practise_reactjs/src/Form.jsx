@@ -31,6 +31,7 @@ class Form extends Component{
                             <td>{user.lname}</td>
                             <td>{user.email}</td>
                             <td>{user.pnumber}</td>
+                            <button onClick={this.handledelete}></button>
                         </tr>
                     })}
                 </tbody>
