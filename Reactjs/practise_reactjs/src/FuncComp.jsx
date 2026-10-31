@@ -1,3 +1,4 @@
+// a file can have multiple components
 export function FuncComp(){                                //because this is exported without default they are imported  in brackets in App.jsx
     return <h2>this is a functional component</h2>
 }
