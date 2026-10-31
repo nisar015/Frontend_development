@@ -7,10 +7,15 @@ import { useState } from "react"
 // each can only able to return only one element
 export function FuncComp(){  
     const [message,setmessage]=useState("this is a variable;")                              
-    return <h2>this is a functional component</h2>
+    return <>
+    <h2>this is a functional component</h2>
+            <h2>{message}</h2>
+    </> 
 }
 export function FuncComp1(){
-    return <h2>this is a functional component</h2>
+    return <>
+    <h2>this is a functional component</h2>
+    </>
 }
 export function FuncComp2(){
     return <h2>this is a functional component</h2>
