@@ -29,9 +29,8 @@ class Form extends Component{
                         return <tr>
                             <td>{user.fname}</td>
                             <td>{user.lname}</td>
-                            <td>{user.lname}</td>
-                            <td>{user.lname}</td>
-                            <td>{user.lname}</td>
+                            <td>{user.email}</td>
+                            <td>{user.pnumber}</td>
                         </tr>
                     })}
                 </tbody>
