@@ -24,10 +24,19 @@ class Form extends Component{
                         <th>delete</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {this.state.users.map((user)=>{
+                        return <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    })}
+                </tbody>
             </table>
-            {this.state.users.map((use)=>{
 
-            })}
         </div>
     }
 }
