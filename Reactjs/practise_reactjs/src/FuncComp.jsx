@@ -29,7 +29,7 @@ export function FuncComp(){
     </> 
 }
 export function FuncComp1(){
-    const [allusers,setallusers]=useState("user1","user2","user3")  
+    const [allusers]=useState("user1","user2","user3")  
     return <>
     <h2>this is a functional component</h2>
     <ul>
