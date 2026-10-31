@@ -6,6 +6,7 @@ import { useState } from "react"
 
 // each can only able to return only one element
 export function FuncComp(){  
+    // here we are changing the referrence of message
     const [message,setmessage]=useState("this is a variable;")  
     const [user,setuser]=useState(
         {
