@@ -25,7 +25,7 @@ class Form extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.users.map((user) => {
+                    {this.state.users.map((user,index) => {
                         return <tr>
                             <td>{user.fname}</td>
                             <td>{user.lname}</td>
