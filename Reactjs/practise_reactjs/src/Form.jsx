@@ -32,7 +32,7 @@ class Form extends Component {
                             <td>{user.email}</td>
                             <td>{user.pnumber}</td>
                             <td>
-                                <button onClick={this.handledelete}></button>
+                                <button onClick={this.handledelete}>delete</button>
 
                             </td>
                         </tr>
