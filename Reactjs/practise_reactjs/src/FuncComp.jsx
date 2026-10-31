@@ -33,8 +33,8 @@ export function FuncComp1(){
     return <>
     <h2>this is a functional component</h2>
     <ul>
-        {allusers.map((user)=>{
-            return <li>{user}</li>
+        {allusers.map((use)=>{
+            return <li>{use}</li>
         })}
     </ul>
     </>
