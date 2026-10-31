@@ -16,7 +16,7 @@ class ReactForm extends Component{
         console.log(event.target.value);
         const newuser=[...this.state.users]
         newuser[event.target.name]=event.target.value
-        this.setState({uers:newuser})
+        this.setState({users:newuser})
     }
     handlesubmit=()=>{
         console.log(this.state.users);
@@ -27,7 +27,7 @@ class ReactForm extends Component{
                 <label htmlFor="">fname</label>
                 <input type="text" name="fname" onChange={(event)=>{this.handleinput(event)}} value={this.state.fname}/><br />
                 <label htmlFor="">lname</label>
-                <input type="text" name="lname" onChange={(event)=>{this.handleinput(event)}} value={this.state.lname} /><br />
+                <input type="text" name="lname" onChange={(event)=>{this.handleinput(event)}} value={this.state.fname} /><br />
                 <button type="button" onClick={this.handlesubmit}>submit</button>
             </form>
         </div>
