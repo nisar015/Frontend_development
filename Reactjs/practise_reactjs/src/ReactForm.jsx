@@ -7,5 +7,15 @@ class ReactForm extends Component{
             fname:""
         }
     }
+    render(){
+        return <div>
+            <form>
+                <label htmlFor="">fname</label>
+                <input type="text" /><br />
+                <label htmlFor="">fname</label>
+                <input type="text" /><br />
+            </form>
+        </div>
+    }
 }
 export default ReactForm
