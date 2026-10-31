@@ -12,5 +12,23 @@ class Form extends Component{
             ]
         }
     }
+    render(){
+        return <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>fname</th>
+                        <th>lname</th>
+                        <th>email</th>
+                        <th>pnumber</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+            </table>
+            {this.state.users.map((use)=>{
+
+            })}
+        </div>
+    }
 }
 export default Form
