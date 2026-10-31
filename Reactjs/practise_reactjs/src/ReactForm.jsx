@@ -16,7 +16,7 @@ class ReactForm extends Component{
         return <div>
             <form>
                 <label htmlFor="">fname</label>
-                <input type="text" /><br />
+                <input type="text" onChange={(event)=>{this.handleinput(event)}} value={this.state.users.fname}/><br />
                 <label htmlFor="">lname</label>
                 <input type="text" /><br />
             </form>
