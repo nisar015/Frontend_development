@@ -6,7 +6,13 @@ import { useState } from "react"
 
 // each can only able to return only one element
 export function FuncComp(){  
-    const [message,setmessage]=useState("this is a variable;")      
+    const [message,setmessage]=useState("this is a variable;")  
+    const [user,setuser]=useState(
+        {
+            fname:"nisar",
+            lname:"ahmmed"
+        }
+    )    
 
     return <>
     <button onClick={()=>{setmessage("this is chnaged message")}}>button</button>
