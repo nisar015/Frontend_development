@@ -15,14 +15,17 @@ class ReactForm extends Component{
     handleinput=(event)=>{
         console.log(event.target.value);
     }
+    handlesubmit=()=>{
+
+    }
     render(){
         return <div>
             <form>
                 <label htmlFor="">fname</label>
-                <input type="text" onChange={(event)=>{this.handleinput(event)}} value={this.state.users.fname}/><br />
+                <input type="text" name="fname" onChange={(event)=>{this.handleinput(event)}} value={this.state.fname}/><br />
                 <label htmlFor="">lname</label>
-                <input type="text" /><br />
-                <button type="button">submit</button>
+                <input type="text" name="lname" /><br />
+                <button type="button" onClick={this.handlesubmit}>submit</button>
             </form>
         </div>
     }
