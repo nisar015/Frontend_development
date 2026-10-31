@@ -12,6 +12,9 @@ class ReactForm extends Component{
             ]
         }
     }
+    handleinput=(event)=>{
+        console.log(event);
+    }
     render(){
         return <div>
             <form>
@@ -19,6 +22,7 @@ class ReactForm extends Component{
                 <input type="text" onChange={(event)=>{this.handleinput(event)}} value={this.state.users.fname}/><br />
                 <label htmlFor="">lname</label>
                 <input type="text" /><br />
+                <button type="button">submit</button>
             </form>
         </div>
     }
