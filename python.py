@@ -496,6 +496,7 @@ if __name__=="__main__":
 # Polymorphism
 
 class computer:
+    # we use __init__ to initialize variables
     def __init__(self,cpu,ram):  #these are just args and to be part of our objet we need to use self.cpu because self means here comp1 or comp2 object
         self.cpu=cpu
         self.ram=ram
