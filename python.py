@@ -494,3 +494,10 @@ if __name__=="__main__":
 # Encapsulation
 # Abstraction
 # Polymorphism
+
+class computer:
+    def config(self):
+        print("this is inside computer class")
+
+comp1=computer()
+comp2=computer()
