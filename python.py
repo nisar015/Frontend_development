@@ -459,7 +459,7 @@ func(2,4)
 # Python modules
 def add(a,b):      #these are will be another file
     return a+b
-#from calc import * #this will be another file and importing above file data
+from calc import * #this will be another file and importing above file data
 c=add(2,3)
 print(c)
 
