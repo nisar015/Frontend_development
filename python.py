@@ -501,9 +501,10 @@ class computer:
 
 comp1=computer()
 comp2=computer()
+# method 1
 computer.config(comp1)  #here comp1 acts like an arg
 computer.config(comp2)
-
+# method 2
 # another way of accessing config()
 # most of the time we use this method in python
 comp1.config()  #behind the config will take comp1 as argument and pass it as self inside class.
