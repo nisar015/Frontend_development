@@ -465,3 +465,6 @@ print(c)
 
 # special variable __name__
 print(__name__) #output is __main__ means the first module name is always main
+# file 1
+print("hii"+__name__)
+#
