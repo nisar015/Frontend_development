@@ -458,5 +458,7 @@ func(2,4)
 
 # Python modules
 from calc import *
+def add(a,b):      #these are will be another file
+    return a+b
 c=add(2,3)
 print(c)
