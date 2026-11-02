@@ -464,6 +464,8 @@ c=add(2,3)
 print(c)
 
 # special variable __name__
+#when i am running an indivisual file it will give i.e output as __main__(when print consists __name__)
+#when i run the same file as module the in other file it will print the __name__ as file name i.e filename
 print(__name__) #output is __main__ means the first module name is always main
 # file 1
 print("hii"+__name__)  #output is hii __main__
