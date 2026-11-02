@@ -486,3 +486,10 @@ def main():
 main()
 if __name__=="__main__":
     main()
+
+#OOPs
+#object-mean anything a person,car,bus etc
+#class-for example there is a mobile manufacturing company and the design is a class and the design is manufactured multiple times
+# Encapsulation
+# Abstraction
+# Polymorphism
