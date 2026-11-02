@@ -462,3 +462,5 @@ def add(a,b):      #these are will be another file
 from calc import * #this will be another file and importing above file data
 c=add(2,3)
 print(c)
+
+# special variable __name__
