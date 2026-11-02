@@ -464,3 +464,4 @@ c=add(2,3)
 print(c)
 
 # special variable __name__
+print(__name__)
