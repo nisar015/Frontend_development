@@ -468,5 +468,6 @@ print(__name__) #output is __main__ means the first module name is always main
 # file 1
 print("hii"+__name__)  #output is hii __main__
 # file 2
-
-print()
+# import file 1 *
+print("this is file2"+__name__)  #output will be. hii file 1 | this is file2 __main__
+# we will get two outputs because we are importing
