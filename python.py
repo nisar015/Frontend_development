@@ -497,11 +497,11 @@ if __name__=="__main__":
 
 class computer:
     def __init__(self,cpu,ram):  #these are just args and to be part of our objet we need to use self.cpu because self means here comp1 or comp2 object
-        print(cpu)
-        print(ram)
+        self.cpu=cpu
+        self.ram=ram
         
     def config(self):            #here self is comp1 or comp2 i.e an arg
-        print("this is inside computer class")
+        print("this is inside computer class",self.cpu,self.ram)  #here cpu and ram are not local variabels so we need to pass self.cpu
 
 comp1=computer('i5',16) #here we passing three args comp1,i5,16
 comp2=computer('Ryzen 3',8)
