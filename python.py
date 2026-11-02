@@ -457,3 +457,6 @@ def func(a,b):
 func(2,4)
 
 # Python modules
+from calc import *
+c=add(2,3)
+print(c)
