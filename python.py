@@ -497,6 +497,8 @@ if __name__=="__main__":
 
 class computer:
     def __init__(self,cpu,ram):
+        print(cpu)
+        print(ram)
         
     def config(self):            #here self is comp1 or comp2 i.e an arg
         print("this is inside computer class")
