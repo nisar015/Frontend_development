@@ -476,6 +476,10 @@ print("this is file2"+__name__)   #output will be. hii file 1 | this is file2 __
 
 # example 2 we are importing file 1 in file 2
 # import file 1 *
+def add(a,b):
+    print("res"+__name__)
+
+# this is file1
 def main():
     print("this is file2"+__name__)  
 main()
