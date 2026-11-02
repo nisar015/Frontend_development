@@ -496,8 +496,14 @@ if __name__=="__main__":
 # Polymorphism
 
 class computer:
-    def config(self):
+    def config(self):            #here self is comp1 or comp2 i.e an arg
         print("this is inside computer class")
 
 comp1=computer()
 comp2=computer()
+computer.config(comp1)  #here comp1 acts like an arg
+computer.config(comp2)
+
+# another way of accessing config()
+comp1.config()  #behind the config will take comp1 as argument and pass it as self inside class.
+comp2.config()
