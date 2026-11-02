@@ -472,7 +472,7 @@ print("hii"+__name__)  #output is hii __main__
 print("this is file2"+__name__)   #output will be. hii file 1 | this is file2 __main__
 # we will get two outputs because we are importing
 
-# example 2
+# example 2 we are importing file 1 in file 2
 # import file 1 *
 def main():
     print("this is file2"+__name__)  
