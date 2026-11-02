@@ -473,6 +473,7 @@ print("this is file2"+__name__)   #output will be. hii file 1 | this is file2 __
 # we will get two outputs because we are importing
 
 # example 2
+# import file 1 *
 def main():
     print("this is file2"+__name__)  
 main()
