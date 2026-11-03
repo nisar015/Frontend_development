@@ -163,3 +163,18 @@
 # x=smart_div(div) #returns inner not a number when we call x(2,4) we get a/b value
 # print(x)
 # x(2,4)
+class Computer:
+    def __init__(self):
+        self.name="Nisar"
+        self.age=24
+    def updateage(self):
+        self.age=23
+    def compare(self,comparing):
+        if self.age==comparing.age:
+            return True
+c1=Computer()
+c2=Computer()
+if c1.compare(c2):
+    print("age is correct")
+else:
+    print("age is wrong")
