@@ -547,3 +547,10 @@ else:
 # Namespace is an area where we create and store obj/var 
 # 1.class namespace
 # 2.obj/instance namespace
+class Car:
+    wheels=4
+    def __init__(self):
+        self.mileage=24
+        self.company="defender"
+c1.Car()
+c2.Car()
