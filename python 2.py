@@ -134,32 +134,32 @@
 # f=lambda a,b:a+b
 # res=f(3,2)
 # print(res)
-arr=[1,2,4,3,5,3,1]
-# eve=list(filter(lambda n:n%2==0,arr))
-# print(eve)
-def doub(n):
-    return n*2
-doubles=list(map(doub,arr))
-print(doubles)
-from functools import reduce
-def red(a,b):
-    return a+b
-sum=reduce(red,doubles)
-print(sum)
-anothersum=reduce(lambda a,b:a+b,doubles)
-print(anothersum)
+# arr=[1,2,4,3,5,3,1]
+# # eve=list(filter(lambda n:n%2==0,arr))
+# # print(eve)
+# def doub(n):
+#     return n*2
+# doubles=list(map(doub,arr))
+# print(doubles)
+# from functools import reduce
+# def red(a,b):
+#     return a+b
+# sum=reduce(red,doubles)
+# print(sum)
+# anothersum=reduce(lambda a,b:a+b,doubles)
+# print(anothersum)
 
-def div(a,b):
-    print(a/b)
-def smart_div(func): #div(2,4):
-                      #print(a/b) is passed as func here
-    def inner(a,b):
-        if a<b:
-            a,b=b,a
-        return func(a,b)  #here func(4,2) means original div(a,b):
-                                                         #print(a/b)
-    # print(inner)                                          
-    return inner
-x=smart_div(div) #returns inner not a number when we call x(2,4) we get a/b value
-print(x)
-x(2,4)
+# def div(a,b):
+#     print(a/b)
+# def smart_div(func): #div(2,4):
+#                       #print(a/b) is passed as func here
+#     def inner(a,b):
+#         if a<b:
+#             a,b=b,a
+#         return func(a,b)  #here func(4,2) means original div(a,b):
+#                                                          #print(a/b)
+#     # print(inner)                                          
+#     return inner
+# x=smart_div(div) #returns inner not a number when we call x(2,4) we get a/b value
+# print(x)
+# x(2,4)
