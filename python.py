@@ -540,3 +540,6 @@ if c1.compare(c2):
     print("age is correct")
 else:
     print("age is wrong")
+
+# variable
+1.instance variable
