@@ -542,5 +542,5 @@ else:
     print("age is wrong")
 
 # variable
-1.instance variable
-2.class or static variable
+# 1.instance variable
+# 2.class or static variable
