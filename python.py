@@ -518,3 +518,25 @@ comp2.config()
 
 #  Constructor, Self and Comparing Objects
 # the obj memory allocation is depends on the number of variables we have declared
+class Computer:
+    def __init__(self):
+        self.name="Nisar"
+        self.age=24
+    def updateage(self):
+        self.age=23
+        self.name="ahmmed"
+    def compare(self,c2):
+        if self.name == c2.name:
+            return True
+        else:
+            return False
+c1=Computer()
+c2=Computer()
+c2.updateage()
+print(c1.age)
+print(c2.age)
+print(c2.name)
+if c1.compare(c2):
+    print("age is correct")
+else:
+    print("age is wrong")
