@@ -172,6 +172,8 @@ class Computer:
     def compare(self,comparing):
         if self.age==comparing.age:
             return True
+        else:
+            return False
 c1=Computer()
 c2=Computer()
 if c1.compare(c2):
