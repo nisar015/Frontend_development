@@ -544,3 +544,6 @@ else:
 # variable
 # 1.instance variable
 # 2.class or static variable
+Namespace is an area where we create and store obj/var 
+1.class namespace
+2.obj/instance namespace
