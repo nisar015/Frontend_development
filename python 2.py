@@ -169,15 +169,15 @@ class Computer:
         self.age=24
     def updateage(self):
         self.age=23
-    def compare(self,comparing):
-        if self.age==comparing.age:
+    def compare(self,c2):
+        if self.age == c2.age:
             return True
         else:
             return False
 c1=Computer()
 c2=Computer()
-print(c1)
-print(c2)
+print(c1.age)
+print(c2.age)
 if c1.compare(c2):
     print("age is correct")
 else:
