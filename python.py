@@ -515,3 +515,6 @@ computer.config(comp2)
 # most of the time we use method 2 in python
 comp1.config()  #behind the config will take comp1 as argument and pass it as self inside class.
 comp2.config()
+
+#  Constructor, Self and Comparing Objects
+# the obj memory allocation is depends on the number of variables we have declared
