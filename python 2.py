@@ -176,6 +176,8 @@ class Computer:
             return False
 c1=Computer()
 c2=Computer()
+print(c1)
+print(c2)
 if c1.compare(c2):
     print("age is correct")
 else:
