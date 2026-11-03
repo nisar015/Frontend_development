@@ -543,3 +543,4 @@ else:
 
 # variable
 1.instance variable
+2.class or static variable
