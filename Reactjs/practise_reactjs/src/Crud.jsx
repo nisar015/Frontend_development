@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import './Crud.css'
 class CRUD extends Component {
     constructor() {
         super()
@@ -25,7 +25,15 @@ class CRUD extends Component {
                     </tr>
                 </thead>
                 <tbody>
-
+                    {this.state.users.map((user)=>{
+                        return <tr>
+                            <td>{user.fname}</td>
+                            <td>{user.lname}</td>
+                            <td>{user.email}</td>
+                            <td>{user.Mobilenum}</td>
+                            <td><button>delete</button></td>
+                        </tr>
+                    })}
                 </tbody>
             </table>
         </div>
