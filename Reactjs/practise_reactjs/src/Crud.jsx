@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component} from "react";
 import './Crud.css'
 class CRUD extends Component {
     constructor() {
@@ -14,7 +14,10 @@ class CRUD extends Component {
         }
     }
     handledelete=(index)=>{
-        console.log(index);
+        const newuser=this.state.users.filter((user)=>{
+            return user.email != this.state.users[index]
+        })
+        console.log(newuser);
     }
     render() {
         return <div>
