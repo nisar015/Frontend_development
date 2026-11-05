@@ -21,8 +21,8 @@ export function FuncComp() {
     const [allusers] = useState(["user1", "user2", "user3"])
 
     return <>
-        <button onClick={() => { setmessage("this is chnaged message") }}>button</button>
-        <button onClick={() => { setuser({ fname: "name", lname: "lastname" }) }}>change message</button>
+        <button onClick={() => { setmessage("this is chnaged message") }}>change message </button>
+        <button onClick={() => { setuser({ fname: "name", lname: "lastname" }) }}>change user</button>
         <h2>this is a functional component</h2>
         <h2>{message}</h2>
         <li>{user.fname}</li>
