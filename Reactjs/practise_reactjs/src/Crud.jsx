@@ -13,6 +13,9 @@ class CRUD extends Component {
             ]
         }
     }
+    handledelete=(index)=>{
+        console.log(index);
+    }
     render() {
         return <div>
             <table border={1}>
