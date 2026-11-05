@@ -1,9 +1,10 @@
 import './App.css'
 // import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
-import {FuncComp} from './FuncComp'
+// import {FuncComp} from './FuncComp'
 // import Parent from './parent'
 // import Form from './Form'
-import ReactForm from './ReactForm'
+// import ReactForm from './ReactForm'
+import CRUD from './CRUD'
 
 function App() {
   return(
@@ -12,11 +13,12 @@ function App() {
       <h2>this is also a line of text</h2> */}
       {/* <Parent/> */}
       {/* <Form/> */}
-      <ReactForm/>
-      <FuncComp/>
+      {/* <ReactForm/>
+      <FuncComp/> */}
       {/* <FuncComp1/>
       <FuncComp2/>
       <Xyz/> */}
+      <CRUD />
     </div>
   )
 }
