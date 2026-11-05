@@ -22,7 +22,7 @@ export function FuncComp() {
 
     return <>
         <button onClick={() => { setmessage("this is chnaged message") }}>button</button>
-        <button onClick={() => { setuser({ fname: "name", lname: "lastname" }) }}>button</button>
+        <button onClick={() => { setuser({ fname: "name", lname: "lastname" }) }}>change message</button>
         <h2>this is a functional component</h2>
         <h2>{message}</h2>
         <li>{user.fname}</li>
