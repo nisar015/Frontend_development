@@ -3,6 +3,7 @@ import './Crud.css'
 class CRUD extends Component {
     constructor() {
         super()
+        // this means the state is belong to this component
         this.state = {
             users: [
                 { fname: "nisar",lname: "achukatla",email: "nisar@gmail.com",Mobilenum: 1234567891},
@@ -32,6 +33,7 @@ class CRUD extends Component {
                             <td>{user.email}</td>
                             <td>{user.Mobilenum}</td>
                             <td><button onClick={()=>{this.handledelete(index)}}>delete</button></td>
+
                         </tr>
                     })}
                 </tbody>
