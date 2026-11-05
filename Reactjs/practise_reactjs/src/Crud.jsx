@@ -33,7 +33,7 @@ class CRUD extends Component {
                 </thead>
                 <tbody>
                     {this.state.users.map((user,index)=>{
-                        return <tr>
+                        return <tr key={index}>
                             <td>{user.fname}</td>
                             <td>{user.lname}</td>
                             <td>{user.email}</td>
