@@ -17,15 +17,15 @@ class CRUD extends Component {
             <table>
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>fname</th>
+                        <th>lname</th>
+                        <th>email</th>
+                        <th>mobile num</th>
+                        <th>delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
             </table>
         </div>
