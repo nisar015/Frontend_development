@@ -3,7 +3,7 @@ import './App.css'
 import {FuncComp} from './FuncComp'
 // import Parent from './parent'
 // import Form from './Form'
-// import ReactForm from './ReactForm'
+import ReactForm from './ReactForm'
 
 function App() {
   return(
@@ -12,7 +12,7 @@ function App() {
       <h2>this is also a line of text</h2> */}
       {/* <Parent/> */}
       {/* <Form/> */}
-      {/* <ReactForm/> */}
+      <ReactForm/>
       <FuncComp/>
       {/* <FuncComp1/>
       <FuncComp2/>
