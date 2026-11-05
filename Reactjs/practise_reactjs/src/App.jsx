@@ -1,5 +1,6 @@
 import './App.css'
-import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
+// import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
+import {FuncComp} from './FuncComp'
 // import Parent from './parent'
 // import Form from './Form'
 // import ReactForm from './ReactForm'
@@ -13,9 +14,9 @@ function App() {
       {/* <Form/> */}
       {/* <ReactForm/> */}
       <FuncComp/>
-      <FuncComp1/>
+      {/* <FuncComp1/>
       <FuncComp2/>
-      <Xyz/>
+      <Xyz/> */}
     </div>
   )
 }
