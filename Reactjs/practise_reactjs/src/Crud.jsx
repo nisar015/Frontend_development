@@ -1,20 +1,18 @@
 import { Component } from "react";
 
-class CRUD extends Component{
-    constructor(){
+class CRUD extends Component {
+    constructor() {
         super()
-        this.state={
-            users:[
-                {
-                    fname:"nisar",
-                    lname:"achukatla",
-                    email:"nisar@gmail.com",
-                    Mobilenum:1234567891
-                }
+        this.state = {
+            users: [
+                { fname: "nisar",lname: "achukatla",email: "nisar@gmail.com",Mobilenum: 1234567891},
+                { fname: "mike",lname: "jackson",email: "jackson@gmail.com",Mobilenum: 1234567891},
+                { fname: "john",lname: "carter",email: "carter@gmail.com",Mobilenum: 1234567891},
+                { fname: "nikhil",lname: "kamath",email: "kamath@gmail.com",Mobilenum: 1234567891},
             ]
         }
     }
-    render(){
+    render() {
         return <div>
 
         </div>
