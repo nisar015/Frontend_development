@@ -19,6 +19,7 @@ class CRUD extends Component {
         })
         // console.log(newuser);
         this.setState({users:newuser})
+        // updates the current state
     }
     render() {
         return <div>
