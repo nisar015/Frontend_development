@@ -14,7 +14,20 @@ class CRUD extends Component {
     }
     render() {
         return <div>
-
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
         </div>
     }
 }
