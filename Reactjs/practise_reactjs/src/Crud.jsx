@@ -17,7 +17,8 @@ class CRUD extends Component {
         const newuser=this.state.users.filter((use)=>{
             return use.email != user.email
         })
-        console.log(newuser);
+        // console.log(newuser);
+        this.setState({users:newuser})
     }
     render() {
         return <div>
@@ -33,7 +34,7 @@ class CRUD extends Component {
                 </thead>
                 <tbody>
                     {this.state.users.map((user,index)=>{
-                        return <tr key={index}>
+                        return <tr key={index}>   
                             <td>{user.fname}</td>
                             <td>{user.lname}</td>
                             <td>{user.email}</td>
