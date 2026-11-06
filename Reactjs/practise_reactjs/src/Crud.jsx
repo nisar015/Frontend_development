@@ -45,7 +45,7 @@ class CRUD extends Component {
                             <td>{user.lname}</td>
                             <td>{user.email}</td>
                             <td>{user.Mobilenum}</td>
-                            <td><button onClick={()=>{this.handledelete(user,index)}}>delete</button></td>
+                            <td><button onClick={()=>{this.handledelete(index)}}>delete</button></td>
 
                         </tr>
                     })}
