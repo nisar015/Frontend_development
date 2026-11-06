@@ -14,7 +14,9 @@ class Form extends Component{
             ]
         }
     }
-
+    handleinputchange=(event)=>{
+        console.log(event.target.value);
+    }
     render(){
         return <div>
             <form>
