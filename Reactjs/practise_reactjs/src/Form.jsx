@@ -16,6 +16,12 @@ class Form extends Component{
     }
     handleinputchange=(event)=>{
         console.log(event.target.value);
+        const inputval=[...this.state.users]
+        inputval[event.target.name]=event.target.value;
+        this.setState({users:inputval})
+    }
+    handlesubmit=()=>{
+        console.log(this.state.users);
     }
     render(){
         return <div>
@@ -28,6 +34,7 @@ class Form extends Component{
                 <input type="text" name="email" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.email} /> <br />
                 <label htmlFor="Mobilenum">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.Mobilenum} /> <br />
+                <button type="submit" onClick={()=>{this.handlesubmit}}>submit</button>
             </form>
         </div>
     }
