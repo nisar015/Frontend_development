@@ -17,9 +17,9 @@ class CRUD extends Component {
         // const newuser=this.state.users.filter((use)=>{
         //     return use.email != user.email
         // })
+        // we cannot directly delete or update the state
         const newuser=[...this.state.users]
         newuser.splice(index,1)
-        // console.log(newuser);
         this.setState({users:newuser})
         // updates the current state i.e users
     }
