@@ -1,40 +1,40 @@
 import { Component } from "react";
 
-class Form extends Component{
-    constructor(){
+class Form extends Component {
+    constructor() {
         super()
-        this.state={
-            users:[
+        this.state = {
+            users: [
                 {
-                    fname:"",
-                    lname:"",
-                    email:"",
-                    Mobilenum:""
+                    fname: "",
+                    lname: "",
+                    email: "",
+                    Mobilenum: ""
                 }
             ]
         }
     }
-    handleinputchange=(event)=>{
+    handleinputchange = (event) => {
         console.log(event.target.value);
-        const inputval=[...this.state.users]
-        inputval[event.target.name]=event.target.value;
-        this.setState({users:inputval})
+        const inputval = [...this.state.users]
+        inputval[event.target.name] = event.target.value;
+        this.setState({ users: inputval })
     }
-    handlesubmit=()=>{
+    handlesubmit = () => {
         console.log(this.state.users);
     }
-    render(){
+    render() {
         return <div>
             <form>
                 <label htmlFor="fname">fname</label>
-                <input type="text" name="fname" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.fname} /> <br />
+                <input type="text" name="fname" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.fname} /> <br />
                 <label htmlFor="lname">lname</label>
-                <input type="text" name="lname" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.lname} /> <br />
+                <input type="text" name="lname" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.lname} /> <br />
                 <label htmlFor="email">email</label>
-                <input type="text" name="email" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.email} /> <br />
+                <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.email} /> <br />
                 <label htmlFor="Mobilenum">Mobilenum</label>
-                <input type="text" name="Mobilenum" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.Mobilenum} /> <br />
-                <button type="submit" onClick={()=>{this.handlesubmit}}>submit</button>
+                <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.Mobilenum} /> <br />
+                <button type="submit" onClick={this.handlesubmit}>submit</button>
             </form>
         </div>
     }
