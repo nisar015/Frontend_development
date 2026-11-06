@@ -34,7 +34,7 @@ class Form extends Component {
                 <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.email} /> <br />
                 <label htmlFor="Mobilenum">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.Mobilenum} /> <br />
-                <button type="submit" onClick={this.handlesubmit}>submit</button>
+                <button type="button" onClick={this.handlesubmit}>submit</button>
             </form>
         </div>
     }
