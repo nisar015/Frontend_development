@@ -18,7 +18,7 @@ class CRUD extends Component {
         //     return use.email != user.email
         // })
         const newuser=[...this.state.users]
-        this.state.users.splice(index,1)
+        newuser.splice(index,1)
         // console.log(newuser);
         this.setState({users:newuser})
         // updates the current state i.e users
