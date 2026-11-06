@@ -4,21 +4,19 @@ class Form extends Component {
     constructor() {
         super()
         this.state = {
-            users: [
+            users:
                 {
                     fname: "",
                     lname: "",
                     email: "",
                     Mobilenum: ""
                 }
-
-            ]
             
         }
     }
     handleinputchange = (event) => {
         console.log(event.target.value);
-        const inputval = [...this.state.users][0]
+        const inputval = {...this.state.users}
         inputval[event.target.name] = event.target.value;
         this.setState({ users: inputval })
     }
@@ -37,7 +35,7 @@ class Form extends Component {
                 <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.email} /> <br />
                 <label htmlFor="">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={this.state.users.Mobilenum} /> <br />
-                <button type="button" onClick={this.handlesubmit}>submit</button>
+                <button type="button" onClick={this.handlesubmit}>Create User</button>
             </form>
         </div>
     }
