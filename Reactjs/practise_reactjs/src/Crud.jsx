@@ -13,12 +13,12 @@ class CRUD extends Component {
             ]
         }
     }
-    handledelete=(user,index)=>{
+    handledelete=(index)=>{
         // const newuser=this.state.users.filter((use)=>{
         //     return use.email != user.email
         // })
-        const newuser=this.state.users[index]
-        this.state.users.splice(newuser,1)
+        const newuser=[...this.state.users]
+        this.state.users.splice(index,1)
         // console.log(newuser);
         this.setState({users:newuser})
         // updates the current state i.e users
