@@ -4,19 +4,19 @@ class Form extends Component {
     constructor() {
         super()
         this.state = {
-            users: [
+            users: 
                 {
                     fname: "",
                     lname: "",
                     email: "",
                     Mobilenum: ""
                 }
-            ]
+            
         }
     }
     handleinputchange = (event) => {
         console.log(event.target.value);
-        const inputval = [...this.state.users]
+        const inputval = {...this.state.users}
         inputval[event.target.name] = event.target.value;
         this.setState({ users: inputval })
     }
