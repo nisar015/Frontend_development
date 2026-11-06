@@ -10,9 +10,17 @@ class CRUD extends Component {
                 { fname: "mike",lname: "jackson",email: "jackson@gmail.com",Mobilenum: 1234567891},
                 { fname: "john",lname: "carter",email: "carter@gmail.com",Mobilenum: 1234567891},
                 { fname: "nikhil",lname: "kamath",email: "kamath@gmail.com",Mobilenum: 1234567891},
-            ]
+            ],
+            newuser:
+                {
+                    fname: "",
+                    lname: "",
+                    email: "",
+                    Mobilenum: ""
+                }
         }
     }
+
     handledelete=(index)=>{
         // const newuser=this.state.users.filter((use)=>{
         //     return use.email != user.email
@@ -27,8 +35,35 @@ class CRUD extends Component {
         this.setState({users:newuser})
         // updates the current state i.e users
     }
+    handleinputchange = (event) => {
+        console.log(event.target.value);
+        const inputval = {...this.state.users}
+        inputval[event.target.name] = event.target.value;
+        this.setState({ users: inputval })
+    }
+    handlecreateuser=()=>{
+        const newuser={
+            fname:"",
+            lname:"",
+            email:"",
+            Mobilenum:""
+        }
+        this.setState({users:newuser})
+    }
     render() {
+        const {fname,lname,email,Mobilenum}=this.state.newuser
         return <div>
+            <form>
+                <label htmlFor="">fname</label>
+                <input type="text" name="fname" onChange={(event) => { this.handleinputchange(event) }} value={fname} /> <br />
+                <label htmlFor="">lname</label>
+                <input type="text" name="lname" onChange={(event) => { this.handleinputchange(event) }} value={lname} /> <br />
+                <label htmlFor="">email</label>
+                <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={email} /> <br />
+                <label htmlFor="">Mobilenum</label>
+                <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={Mobilenum} /> <br />
+                <button type="button" onClick={this.handlecreateuser}>Create User</button>
+            </form>
             <table border={1}>
                 <thead>
                     <tr>
