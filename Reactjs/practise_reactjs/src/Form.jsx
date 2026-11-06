@@ -19,6 +19,14 @@ class Form extends Component{
             <form>
                 <label htmlFor="fname">fname</label>
                 <input type="text" name="fname" value={this.state.users.fname} /> <br />
+                <label htmlFor="lname">lname</label>
+                <input type="text" name="lname" value={this.state.users.lname} /> <br />
+                <label htmlFor="fname">fname</label>
+                <input type="text" name="fname" value={this.state.users.fname} /> <br />
+                <label htmlFor="fname">fname</label>
+                <input type="text" name="fname" value={this.state.users.fname} /> <br />
+                <label htmlFor="fname">fname</label>
+                <input type="text" name="fname" value={this.state.users.fname} /> <br />
             </form>
         </div>
     }
