@@ -23,9 +23,9 @@ class Form extends Component{
                 <label htmlFor="lname">lname</label>
                 <input type="text" name="lname" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.lname} /> <br />
                 <label htmlFor="email">email</label>
-                <input type="text" name="email" value={this.state.users.email} /> <br />
+                <input type="text" name="email" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.email} /> <br />
                 <label htmlFor="Mobilenum">Mobilenum</label>
-                <input type="text" name="Mobilenum" value={this.state.users.Mobilenum} /> <br />
+                <input type="text" name="Mobilenum" onChange={(event)=>{this.handleinputchange(event)}} value={this.state.users.Mobilenum} /> <br />
             </form>
         </div>
     }
