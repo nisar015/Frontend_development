@@ -3,7 +3,7 @@ import './Crud.css'
 class CRUD extends Component {
     constructor() {
         super()
-        // this means the state is belong to this component
+        // this means the state is belong to CRUD component
         this.state = {
             users: [
                 { fname: "nisar",lname: "achukatla",email: "nisar@gmail.com",Mobilenum: 1234567891},
