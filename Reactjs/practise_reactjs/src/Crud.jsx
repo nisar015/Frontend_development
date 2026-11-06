@@ -18,6 +18,9 @@ class CRUD extends Component {
         //     return use.email != user.email
         // })
         // we cannot directly delete or update the state
+        1.create a copy of the state
+        2.delete or update the state
+        3.reassign value back to the state
         const newuser=[...this.state.users]
         newuser.splice(index,1)
         this.setState({users:newuser})
