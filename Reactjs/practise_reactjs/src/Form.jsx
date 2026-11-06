@@ -23,10 +23,8 @@ class Form extends Component{
                 <input type="text" name="lname" value={this.state.users.lname} /> <br />
                 <label htmlFor="email">email</label>
                 <input type="text" name="email" value={this.state.users.email} /> <br />
-                <label htmlFor="fname">fname</label>
-                <input type="text" name="fname" value={this.state.users.fname} /> <br />
-                <label htmlFor="fname">fname</label>
-                <input type="text" name="fname" value={this.state.users.fname} /> <br />
+                <label htmlFor="Mobilenum">Mobilenum</label>
+                <input type="text" name="Mobilenum" value={this.state.users.Mobilenum} /> <br />
             </form>
         </div>
     }
