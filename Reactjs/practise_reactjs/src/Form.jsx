@@ -24,6 +24,15 @@ class Form extends Component {
         console.log(this.state.users);
 
     }
+    handlecreateuser=()=>{
+        const newuser={
+            fname:"",
+            lname:"",
+            email:"",
+            Mobilenum:""
+        }
+        this.setState({users:newuser})
+    }
     render() {
         const {fname,lname,email,Mobilenum}=this.state.users
         return <div>
@@ -36,7 +45,7 @@ class Form extends Component {
                 <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={email} /> <br />
                 <label htmlFor="">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={Mobilenum} /> <br />
-                <button type="button" onClick={this.handlesubmit}>Create User</button>
+                <button type="button" onClick={this.handlecreateuser}>Create User</button>
             </form>
         </div>
     }
