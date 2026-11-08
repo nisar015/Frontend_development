@@ -12,7 +12,7 @@ class StudentManagementSystem extends Component {
         }
     }
     render() {
-        const {StudentID,StudentID,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
+        const {StudentID,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
         return <div>
             <form>
                 <label htmlFor=""></label>
