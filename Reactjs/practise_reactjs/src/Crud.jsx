@@ -73,6 +73,7 @@ class CRUD extends Component {
                 <label htmlFor="">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={Mobilenum} /> <br />
                 <button type="button" onClick={this.handlecreateuser}>Create User</button>
+                <button type="button" onClick={this.handleupdateuser}>Update User</button>
             </form>
             <table border={1}>
                 <thead>
