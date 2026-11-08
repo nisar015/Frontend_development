@@ -9,53 +9,53 @@ class StudentManagementSystem extends Component {
                 { StudentID: 2, FullName: "Priya Kumar", Email: "PriyaKumar@gmail.com", MobileNumber: 1245368883, Department: "ECE", YearOfStudy: 3, Gender: "Female" },
                 { StudentID: 3, FullName: "Kiran Kumar", Email: "KiranKumar@gmail.com", MobileNumber: 1245368883, Department: "AIML", YearOfStudy: 4, Gender: "Male" },
             ],
-            newstudent:{
-                StudentID:"",
-                FullName:"",
-                Email:"",
-                MobileNumber:"",
-                Department:"",
-                YearOfStudy:"",
-                Gender:""
+            newstudent: {
+                StudentID: "",
+                FullName: "",
+                Email: "",
+                MobileNumber: "",
+                Department: "",
+                YearOfStudy: "",
+                Gender: ""
             },
-            editindex:null
+            editindex: null
         }
     }
-    handleinputchange=(event)=>{
-        const inputval={...this.state.newstudent}
-        inputval[event.target.name]=event.target.value
-        this.setState({newstudent:inputval})
+    handleinputchange = (event) => {
+        const inputval = { ...this.state.newstudent }
+        inputval[event.target.name] = event.target.value
+        this.setState({ newstudent: inputval })
     }
-    handlecreatestudent=()=>{
+    handlecreatestudent = () => {
         console.log(this.state.students);
-        const newstu=[...this.state.students]
+        const newstu = [...this.state.students]
         newstu.push(this.state.newstudent)
-        this.setState({students:newstu})
+        this.setState({ students: newstu })
 
     }
-    handleedit=(student,index)=>{
-        this.setState({newstudent:student,editindex:index})
+    handleedit = (student, index) => {
+        this.setState({ newstudent: student, editindex: index })
     }
     render() {
-        const {StudentID,FullName,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
+        const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.students
         return <div>
             <form>
                 {/* <label htmlFor="">Search Student</label>
                 <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/> */}
                 <label htmlFor="">StudentID</label>
-                <input type="text" name="StudentID" onChange={(event)=>{this.handleinputchange(event)}} value={StudentID} /><br/>
+                <input type="text" name="StudentID" onChange={(event) => { this.handleinputchange(event) }} value={StudentID} /><br />
                 <label htmlFor="">FullName</label>
-                <input type="text" name="FullName" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
+                <input type="text" name="FullName" onChange={(event) => { this.handleinputchange(event) }} value={FullName} /><br />
                 <label htmlFor="">Email</label>
-                <input type="text" name="Email" onChange={(event)=>{this.handleinputchange(event)}} value={Email} /><br/>
+                <input type="text" name="Email" onChange={(event) => { this.handleinputchange(event) }} value={Email} /><br />
                 <label htmlFor="">MobileNumber</label>
-                <input type="text" name="MobileNumber" onChange={(event)=>{this.handleinputchange(event)}} value={MobileNumber} /><br/>
+                <input type="text" name="MobileNumber" onChange={(event) => { this.handleinputchange(event) }} value={MobileNumber} /><br />
                 <label htmlFor="">Department</label>
-                <input type="text" name="Department" onChange={(event)=>{this.handleinputchange(event)}} value={Department} /><br/>
+                <input type="text" name="Department" onChange={(event) => { this.handleinputchange(event) }} value={Department} /><br />
                 <label htmlFor="">YearOfStudy</label>
-                <input type="text" name="YearOfStudy" onChange={(event)=>{this.handleinputchange(event)}} value={YearOfStudy} /><br/>
+                <input type="text" name="YearOfStudy" onChange={(event) => { this.handleinputchange(event) }} value={YearOfStudy} /><br />
                 <label htmlFor="">Gender</label>
-                <input type="text" name="Gender" onChange={(event)=>{this.handleinputchange(event)}} value={Gender} /><br/>
+                <input type="text" name="Gender" onChange={(event) => { this.handleinputchange(event) }} value={Gender} /><br />
                 <button type="button" onClick={this.handlecreatestudent}>create student</button>
                 <button type="button" onClick={this.handleupdatestudent}>Update Student</button>
             </form>
@@ -84,7 +84,7 @@ class StudentManagementSystem extends Component {
                             <td>{student.YearOfStudy}</td>
                             <td>{student.Gender}</td>
                             <td>
-                                <button onClick={() => { this.handleedit(student,index) }}>Edit</button>
+                                <button onClick={() => { this.handleedit(student, index) }}>Edit</button>
                             </td>
                             <td>
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
