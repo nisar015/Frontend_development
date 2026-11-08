@@ -27,6 +27,23 @@ class StudentManagementSystem extends Component {
                         <th>Delete</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {this.state.students.map((student,index)=>{
+                        return <tr>
+                            <td>{student.StudentID}</td>
+                            <td>{student.FullName}</td>
+                            <td>{student.Email}</td>
+                            <td>{student.MobileNumber}</td>
+                            <td>{student.Department}</td>
+                            <td>{student.YearOfStudy}</td>
+                            <td>{student.Gender}</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    })}
+                </tbody>
             </table>
         </div>
     }
