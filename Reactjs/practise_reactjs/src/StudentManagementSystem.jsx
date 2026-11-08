@@ -18,13 +18,21 @@ class StudentManagementSystem extends Component {
                 YearOfStudy: "",
                 Gender: ""
             },
-            editindex: null
+            editindex: null,
+            searchstudent:{
+                FullName:""
+            }
         }
     }
     handleinputchange = (event) => {
         const inputval = { ...this.state.newstudent }
         inputval[event.target.name] = event.target.value
         this.setState({ newstudent: inputval })
+    }
+    handleiputsearch=(event)=>{
+        const inputsearch={...this.state.searchstudent}
+        inputsearch[event.target.name]=event.target.value
+        this.setState({searchstudent:inputsearch})
     }
     handlecreatestudent = () => {
         console.log(this.state.newstudent);
@@ -66,7 +74,7 @@ class StudentManagementSystem extends Component {
             <form>
                 <label htmlFor="">Search Student</label>
                 <input type="text" placeholder="enter student name" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} />
-                <button type="button" onChange={this.handleinputchange}>Search sutdent</button><br />
+                <button type="button" onChange={(event)=>{this.handleiputsearch(event)}}>Search sutdent</button><br />
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event) => { this.handleinputchange(event) }} value={StudentID} /><br />
                 <label htmlFor="">FullName</label>
