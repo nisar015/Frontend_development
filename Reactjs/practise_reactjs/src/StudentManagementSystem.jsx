@@ -21,6 +21,9 @@ class StudentManagementSystem extends Component {
         }
     }
     handleaddstudent=()=>{
+        const newstu=[...this.state.students]
+        newstu.push(this.state.newstudent)
+        this.setState({students:newstu})
 
     }
     render() {
