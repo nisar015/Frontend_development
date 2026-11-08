@@ -31,6 +31,7 @@ class StudentManagementSystem extends Component {
         const newstu = [...this.state.students]
         newstu.push(this.state.newstudent)
         this.setState({ students: newstu })
+        this.handleclearform()
 
     }
     handleedit = (student, index) => {
