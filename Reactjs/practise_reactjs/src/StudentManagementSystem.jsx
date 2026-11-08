@@ -19,20 +19,20 @@ class StudentManagementSystem extends Component {
                 Gender: ""
             },
             editindex: null,
-            searchstudent:{
-                FullName:""
-            }
+            searchstudent: ""
         }
     }
     handleinputchange = (event) => {
         const inputval = { ...this.state.newstudent }
         inputval[event.target.name] = event.target.value
-        this.setState({ newstudent: inputval })
+        this.setState({students:inputval})
+        // this.setState({ searchstudent: event.target.value })
+        // console.log(this.state.searchstudent);
     }
-    handleiputsearch=(event)=>{
-        const inputsearch={...this.state.searchstudent}
-        inputsearch[event.target.name]=event.target.value
-        this.setState({searchstudent:inputsearch})
+    handleiputsearch = (event) => {
+        // const inputsearch = { ...this.state.searchstudent }
+        // inputsearch[event.target.name] = event.target.value
+        this.setState({ searchstudent: inputsearch })
     }
     handlecreatestudent = () => {
         console.log(this.state.newstudent);
@@ -66,15 +66,25 @@ class StudentManagementSystem extends Component {
             YearOfStudy: "",
             Gender: ""
         }
-        this.setState({newstudent:newstu})
+        this.setState({ newstudent: newstu })
+    }
+    handlesearch = () => {
+        const newsearchstu = [...this.state.students]
+        newsearchstu.push(this.state.searchstudent)
+        // this.setState({students:newsearchstu})
+        // {newsearchstu}
+        console.log(newsearchstu);
     }
     render() {
+        const filteredstudent = this.state.students.filter((student) => {
+            return (student.FullName).toLowerCase().includes(this.state.searchstudent.toLowerCase());
+        });
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
             <form>
                 <label htmlFor="">Search Student</label>
-                <input type="text" placeholder="enter student name" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} />
-                <button type="button" onChange={(event)=>{this.handleiputsearch(event)}}>Search sutdent</button><br />
+                <input type="text" placeholder="enter student name" name="FullName" onChange={(event) => { this.handleiputsearch(event) }} value={this.state.searchstudent} />
+                <button type="button" onClick={this.handlesearch}>Search sutdent</button><br />
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event) => { this.handleinputchange(event) }} value={StudentID} /><br />
                 <label htmlFor="">FullName</label>
@@ -108,7 +118,7 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.students.map((student, index) => {
+                    {filteredstudent.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
