@@ -8,14 +8,25 @@ class StudentManagementSystem extends Component {
                 { StudentID: 1, FullName: "Rahul Chowdary", Email: "Rahulchowdry@gmail.com", MobileNumber: 1245368883, Department: "CSE", YearOfStudy: 2, Gender: "Male" },
                 { StudentID: 2, FullName: "Priya Kumar", Email: "PriyaKumar@gmail.com", MobileNumber: 1245368883, Department: "ECE", YearOfStudy: 3, Gender: "Female" },
                 { StudentID: 3, FullName: "Kiran Kumar", Email: "KiranKumar@gmail.com", MobileNumber: 1245368883, Department: "AIML", YearOfStudy: 4, Gender: "Male" },
-            ]
+            ],
+            newstudent:{
+                StudentID:null,
+                FullName:"",
+                Email:"",
+                MobileNumber:null,
+                Department:"",
+                YearOfStudy:null,
+                Gender:""
+            }
         }
+    }
+    handleaddstudent=()=>{
+
     }
     render() {
         const {StudentID,FullName,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
         return <div>
             <form>
-
                 <label htmlFor="">Search Student</label>
                 <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
                 <label htmlFor="">StudentID</label>
