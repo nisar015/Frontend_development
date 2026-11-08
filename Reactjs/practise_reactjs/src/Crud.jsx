@@ -78,6 +78,7 @@ class CRUD extends Component {
                         <th>lname</th>
                         <th>email</th>
                         <th>mobile num</th>
+                        <th>edit</th>
                         <th>delete</th>
                     </tr>
                 </thead>
