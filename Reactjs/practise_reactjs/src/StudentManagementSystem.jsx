@@ -10,12 +10,12 @@ class StudentManagementSystem extends Component {
                 { StudentID: 3, FullName: "Kiran Kumar", Email: "KiranKumar@gmail.com", MobileNumber: 1245368883, Department: "AIML", YearOfStudy: 4, Gender: "Male" },
             ],
             newstudent:{
-                StudentID:null,
+                StudentID:"",
                 FullName:"",
                 Email:"",
-                MobileNumber:null,
+                MobileNumber:"",
                 Department:"",
-                YearOfStudy:null,
+                YearOfStudy:"",
                 Gender:""
             }
         }
