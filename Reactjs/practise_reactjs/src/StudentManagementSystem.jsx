@@ -16,7 +16,7 @@ class StudentManagementSystem extends Component {
         return <div>
             <form>
                 <label htmlFor=""></label>
-                <input type="text" name="StudentID" onChange={()=>{this.handleinputchange()}} value={StudentID} />
+                <input type="text" name="StudentID" onChange={(event)=>{this.handleinputchange(event)}} value={StudentID} />
             </form>
             <table border={1}>
                 <thead>
