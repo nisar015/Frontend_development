@@ -64,8 +64,8 @@ class StudentManagementSystem extends Component {
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
             <form>
-                {/* <label htmlFor="">Search Student</label>
-                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/> */}
+                <label htmlFor="">Search Student</label>
+                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event) => { this.handleinputchange(event) }} value={StudentID} /><br />
                 <label htmlFor="">FullName</label>
