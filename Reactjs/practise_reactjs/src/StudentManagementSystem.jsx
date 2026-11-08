@@ -46,6 +46,18 @@ class StudentManagementSystem extends Component {
         delstu.splice(index, 1)
         this.setState({ students: delstu })
     }
+    handleclearform = () => {
+        const newstu = {
+            StudentID: "",
+            FullName: "",
+            Email: "",
+            MobileNumber: "",
+            Department: "",
+            YearOfStudy: "",
+            Gender: ""
+        }
+        this.setState = newstu
+    }
     render() {
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
