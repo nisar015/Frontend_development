@@ -65,6 +65,7 @@ class CRUD extends Component {
         const addnewuse=[...this.state.users]
         addnewuse[this.state.editindex]=this.state.newuser
         this.setState({users:addnewuse})
+        this.clearform()
 
     }
     render() {
