@@ -32,8 +32,8 @@ class StudentManagementSystem extends Component {
                 <input type="text" name="YearOfStudy" onChange={(event)=>{this.handleinputchange(event)}} value={YearOfStudy} /><br/>
                 <label htmlFor="">Gender</label>
                 <input type="text" name="Gender" onChange={(event)=>{this.handleinputchange(event)}} value={Gender} /><br/>
-                <button>Add student</button>
-                <button>Update Student</button>
+                <button onClick={()=>{this.handleaddstudent}}>Add student</button>
+                <button onClick={()=>{this.handleaddstudent}}>Update Student</button>
             </form>
             <table border={1}>
                 <thead>
