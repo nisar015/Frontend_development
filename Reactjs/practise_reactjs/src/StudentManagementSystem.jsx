@@ -35,8 +35,8 @@ class StudentManagementSystem extends Component {
         const {StudentID,FullName,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
         return <div>
             <form>
-                <label htmlFor="">Search Student</label>
-                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
+                {/* <label htmlFor="">Search Student</label>
+                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/> */}
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event)=>{this.handleinputchange(event)}} value={StudentID} /><br/>
                 <label htmlFor="">FullName</label>
@@ -51,8 +51,8 @@ class StudentManagementSystem extends Component {
                 <input type="text" name="YearOfStudy" onChange={(event)=>{this.handleinputchange(event)}} value={YearOfStudy} /><br/>
                 <label htmlFor="">Gender</label>
                 <input type="text" name="Gender" onChange={(event)=>{this.handleinputchange(event)}} value={Gender} /><br/>
-                <button onClick={()=>{this.handleaddstudent}}>Add student</button>
-                <button onClick={()=>{this.handleupdatestudent}}>Update Student</button>
+                <button onClick={this.handleaddstudent}>Add student</button>
+                <button onClick={this.handleupdatestudent}>Update Student</button>
             </form>
             <table border={1}>
                 <thead>
@@ -70,7 +70,7 @@ class StudentManagementSystem extends Component {
                 </thead>
                 <tbody>
                     {this.state.students.map((student, index) => {
-                        return <tr>
+                        return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
                             <td>{student.Email}</td>
