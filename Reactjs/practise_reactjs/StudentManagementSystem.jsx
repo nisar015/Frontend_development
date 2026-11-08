@@ -38,8 +38,8 @@ class StudentManagementSystem extends Component {
                             <td>{student.YearOfStudy}</td>
                             <td>{student.Gender}</td>
                             <td>
-                                <button>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={()=>{this.handleedit()}}>Edit</button>
+                                <button onClick={()=>{this.handledelete()}}>Delete</button>
                             </td>
                         </tr>
                     })}
