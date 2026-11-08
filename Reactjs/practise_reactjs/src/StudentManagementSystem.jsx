@@ -40,6 +40,7 @@ class StudentManagementSystem extends Component {
         const updatestu = [...this.state.students]
         updatestu[this.state.editindex] = this.state.newstudent
         this.setState({ students: updatestu, editindex: null })
+        this.handleclearform()
     }
     handledelete = (index) => {
         const delstu = [...this.state.students]
