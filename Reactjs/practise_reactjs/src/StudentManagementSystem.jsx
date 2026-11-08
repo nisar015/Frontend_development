@@ -27,14 +27,24 @@ class StudentManagementSystem extends Component {
         this.setState({ newstudent: inputval })
     }
     handlecreatestudent = () => {
-        console.log(this.state.students);
+        console.log(this.state.newstudent);
         const newstu = [...this.state.students]
         newstu.push(this.state.newstudent)
         this.setState({ students: newstu })
 
     }
-    handleedit = (student, index) => {
-        this.setState({ newstudent: student, editindex: index })
+    handleedit = (student) => {
+        this.setState({ newstudent: student})
+    }
+    handleupdatestudent=()=>{
+        const updatestu=[...this.state.students]
+        updatestu[this.state.editindex]=this.state.newstudent
+        this.setState({students:updatestu,editindex:null})
+    }
+    handledelete=(index)=>{
+        const delstu=[...this.state.students]
+        delstu.splice(index,1)
+        this.setState({students:delstu})
     }
     render() {
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.students
