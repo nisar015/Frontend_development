@@ -62,6 +62,9 @@ class CRUD extends Component {
         this.setState({ newuser: newuser })
     }
     handleupdateuser = () => {
+        const addnewuse=[...this.state.users]
+        addnewuse.push(this.state.newuser)
+        this.setState({users:addnewuse})
 
     }
     render() {
