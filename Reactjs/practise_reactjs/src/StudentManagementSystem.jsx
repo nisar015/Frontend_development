@@ -13,7 +13,7 @@ class StudentManagementSystem extends Component {
     }
     render(){
         return <div>
-            <table>
+            <table border={1}>
                 <thead>
                     <tr>
                         <th>StudentID</th>
