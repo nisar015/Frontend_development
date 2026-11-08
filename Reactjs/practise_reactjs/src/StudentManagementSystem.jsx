@@ -12,14 +12,16 @@ class StudentManagementSystem extends Component {
         }
     }
     render() {
-        const {StudentID,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
+        const {StudentID,FullName,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
         return <div>
             <form>
 
                 <label htmlFor="">Search Student</label>
-                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={StudentID} /><br/>
+                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event)=>{this.handleinputchange(event)}} value={StudentID} /><br/>
+                <label htmlFor="">FullName</label>
+                <input type="text" name="FullName" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
                 <label htmlFor="">Email</label>
                 <input type="text" name="Email" onChange={(event)=>{this.handleinputchange(event)}} value={Email} /><br/>
                 <label htmlFor="">MobileNumber</label>
