@@ -11,7 +11,7 @@ class StudentManagementSystem extends Component {
             ]
         }
     }
-    render(){
+    render() {
         return <div>
             <table border={1}>
                 <thead>
@@ -28,7 +28,7 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.students.map((student,index)=>{
+                    {this.state.students.map((student, index) => {
                         return <tr>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
@@ -38,8 +38,10 @@ class StudentManagementSystem extends Component {
                             <td>{student.YearOfStudy}</td>
                             <td>{student.Gender}</td>
                             <td>
-                                <button onClick={()=>{this.handleedit()}}>Edit</button>
-                                <button onClick={()=>{this.handledelete(index)}}>Delete</button>
+                                <button onClick={() => { this.handleedit() }}>Edit</button>
+                            </td>
+                            <td>
+                                <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
                     })}
