@@ -92,7 +92,6 @@ class CRUD extends Component {
                             <td>{user.Mobilenum}</td>
                             <td><button onClick={()=>{this.handledit(index)}}>edit</button></td>
                             <td><button onClick={()=>{this.handledelete(index)}}>delete</button></td>
-
                         </tr>
                     })}
                 </tbody>
