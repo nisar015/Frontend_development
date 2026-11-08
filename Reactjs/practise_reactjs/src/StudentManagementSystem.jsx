@@ -33,21 +33,21 @@ class StudentManagementSystem extends Component {
         this.setState({ students: newstu })
 
     }
-    handleedit = (student) => {
-        this.setState({ newstudent: student})
+    handleedit = (student, index) => {
+        this.setState({ newstudent: student, editindex: index })
     }
-    handleupdatestudent=()=>{
-        const updatestu=[...this.state.students]
-        updatestu[this.state.editindex]=this.state.newstudent
-        this.setState({students:updatestu,editindex:null})
+    handleupdatestudent = () => {
+        const updatestu = [...this.state.students]
+        updatestu[this.state.editindex] = this.state.newstudent
+        this.setState({ students: updatestu, editindex: null })
     }
-    handledelete=(index)=>{
-        const delstu=[...this.state.students]
-        delstu.splice(index,1)
-        this.setState({students:delstu})
+    handledelete = (index) => {
+        const delstu = [...this.state.students]
+        delstu.splice(index, 1)
+        this.setState({ students: delstu })
     }
     render() {
-        const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.students
+        const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
             <form>
                 {/* <label htmlFor="">Search Student</label>
@@ -93,8 +93,7 @@ class StudentManagementSystem extends Component {
                             <td>{student.Department}</td>
                             <td>{student.YearOfStudy}</td>
                             <td>{student.Gender}</td>
-                            <td>
-                                <button onClick={() => { this.handleedit(student, index) }}>Edit</button>
+                            <td><button onClick={() => { this.handleedit(student, index) }}>Edit</button>
                             </td>
                             <td>
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
