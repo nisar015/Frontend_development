@@ -48,6 +48,9 @@ class CRUD extends Component {
         this.setState({users:createuse})
         this.clearform()
     }
+    handledit=(user)=>{
+        this.setState({user:user})
+    }
     clearform=()=>{
         const newuser={
             fname:"",
@@ -90,7 +93,7 @@ class CRUD extends Component {
                             <td>{user.lname}</td>
                             <td>{user.email}</td>
                             <td>{user.Mobilenum}</td>
-                            <td><button onClick={()=>{this.handledit(index)}}>edit</button></td>
+                            <td><button onClick={()=>{this.handledit(user,index)}}>edit</button></td>
                             <td><button onClick={()=>{this.handledelete(index)}}>delete</button></td>
                         </tr>
                     })}
