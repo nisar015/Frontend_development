@@ -65,7 +65,8 @@ class StudentManagementSystem extends Component {
         return <div>
             <form>
                 <label htmlFor="">Search Student</label>
-                <input type="text" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
+                <input type="text" placeholder="enter student name" name="searchstudent" onChange={(event)=>{this.handleinputchange(event)}} value={FullName} /><br/>
+                <button type="button" onClick={this.handlesearchstudent}></button>
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event) => { this.handleinputchange(event) }} value={StudentID} /><br />
                 <label htmlFor="">FullName</label>
