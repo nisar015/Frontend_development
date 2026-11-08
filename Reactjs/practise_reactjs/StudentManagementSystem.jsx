@@ -11,6 +11,25 @@ class StudentManagementSystem extends Component {
             ]
         }
     }
+    render(){
+        return <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>StudentID</th>
+                        <th>FullName</th>
+                        <th>Email</th>
+                        <th>MobileNumber</th>
+                        <th>Department</th>
+                        <th>YearOfStudy</th>
+                        <th>Gender</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    }
 
 }
 export default StudentManagementSystem
