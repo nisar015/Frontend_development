@@ -49,8 +49,8 @@ class CRUD extends Component {
         this.setState({ users: createuse })
         this.clearform()
     }
-    handledit = (user) => {
-        this.setState({ newuser: user })
+    handledit = (user,index) => {
+        this.setState({ newuser: user,editindex:index })
     }
     clearform = () => {
         const newuser = {
@@ -76,9 +76,9 @@ class CRUD extends Component {
                 <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={email} /> <br />
                 <label htmlFor="">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={Mobilenum} /> <br />
-                {this.state.editindex}
-                <button type="button" onClick={this.handlecreateuser}>Create User</button>
-                <button type="button" onClick={this.handleupdateuser}>Update User</button>
+                {this.state.editindex==null ? 
+                <button type="button" onClick={this.handlecreateuser}>Create User</button> : 
+                <button type="button" onClick={this.handleupdateuser}>Update User</button>}
             </form>
             <table border={1}>
                 <thead>
