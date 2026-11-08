@@ -63,7 +63,7 @@ class CRUD extends Component {
     }
     handleupdateuser = () => {
         const addnewuse=[...this.state.users]
-        addnewuse.push(this.state.newuser)
+        addnewuse[this.state.editindex]=this.state.newuser
         this.setState({users:addnewuse})
 
     }
