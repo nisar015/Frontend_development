@@ -45,7 +45,6 @@ class CRUD extends Component {
         console.log(this.state.newuser);
         const createuse=[...this.state.users]
         createuse.push(this.state.newuser)
-        console.log(this.state.newuser);
         this.setState({users:createuse})
     }
     render() {
