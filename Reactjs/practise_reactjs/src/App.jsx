@@ -5,8 +5,8 @@ import './App.css'
 // import Form from './Form'
 // import ReactForm from './ReactForm'
 // import Form from './Form'
-import CRUD from './CRUD'
-
+// import CRUD from './CRUD'
+import StudentManagementSystem from './StudentManagementSystem'
 function App() {
   return(
     <div>
@@ -19,7 +19,8 @@ function App() {
       {/* <FuncComp1/>
       <FuncComp2/>
       <Xyz/> */}
-      <CRUD />
+      {/* <CRUD /> */}
+      <StudentManagementSystem />
     </div>
   )
 }
