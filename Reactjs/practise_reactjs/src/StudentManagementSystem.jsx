@@ -17,7 +17,8 @@ class StudentManagementSystem extends Component {
                 Department:"",
                 YearOfStudy:"",
                 Gender:""
-            }
+            },
+            editindex:null
         }
     }
     handleinputchange=(event)=>{
@@ -26,10 +27,14 @@ class StudentManagementSystem extends Component {
         this.setState({newstudent:inputval})
     }
     handlecreatestudent=()=>{
+        console.log(this.state.students);
         const newstu=[...this.state.students]
         newstu.push(this.state.newstudent)
         this.setState({students:newstu})
 
+    }
+    handleedit=(student,index)=>{
+        this.setState({newstu:student,editindex:index})
     }
     render() {
         const {StudentID,FullName,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
@@ -51,8 +56,8 @@ class StudentManagementSystem extends Component {
                 <input type="text" name="YearOfStudy" onChange={(event)=>{this.handleinputchange(event)}} value={YearOfStudy} /><br/>
                 <label htmlFor="">Gender</label>
                 <input type="text" name="Gender" onChange={(event)=>{this.handleinputchange(event)}} value={Gender} /><br/>
-                <button onClick={this.handlecreatestudent}>create student</button>
-                <button onClick={this.handleupdatestudent}>Update Student</button>
+                <button type="button" onClick={this.handlecreatestudent}>create student</button>
+                <button type="button" onClick={this.handleupdatestudent}>Update Student</button>
             </form>
             <table border={1}>
                 <thead>
@@ -79,7 +84,7 @@ class StudentManagementSystem extends Component {
                             <td>{student.YearOfStudy}</td>
                             <td>{student.Gender}</td>
                             <td>
-                                <button onClick={() => { this.handleedit() }}>Edit</button>
+                                <button onClick={() => { this.handleedit(student,index) }}>Edit</button>
                             </td>
                             <td>
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
