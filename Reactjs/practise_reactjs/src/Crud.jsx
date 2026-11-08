@@ -49,7 +49,7 @@ class CRUD extends Component {
         this.clearform()
     }
     handledit=(user)=>{
-        this.setState({user:user})
+        this.setState({users:user})
     }
     clearform=()=>{
         const newuser={
