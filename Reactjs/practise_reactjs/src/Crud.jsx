@@ -46,6 +46,16 @@ class CRUD extends Component {
         const createuse=[...this.state.users]
         createuse.push(this.state.newuser)
         this.setState({users:createuse})
+        this.clearform()
+    }
+    clearform=()=>{
+        const newuser={
+            fname:"",
+            lname:"",
+            email:"",
+            Mobilenum:""
+        }
+        this.setState({newuser:newuser})
     }
     render() {
         const {fname,lname,email,Mobilenum}=this.state.newuser
