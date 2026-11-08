@@ -20,6 +20,11 @@ class StudentManagementSystem extends Component {
             }
         }
     }
+    handleinputchange=(event)=>{
+        const inputval={...this.state.newstudent}
+        inputval[event.target.name]=[event.target.value]
+        this.setState({newstudent:inputval})
+    }
     handleaddstudent=()=>{
         const newstu=[...this.state.students]
         newstu.push(this.state.newstudent)
