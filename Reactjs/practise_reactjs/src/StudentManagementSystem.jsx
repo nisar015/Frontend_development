@@ -34,7 +34,7 @@ class StudentManagementSystem extends Component {
 
     }
     handleedit=(student,index)=>{
-        this.setState({newstu:student,editindex:index})
+        this.setState({newstudent:student,editindex:index})
     }
     render() {
         const {StudentID,FullName,Email,MobileNumber,Department,YearOfStudy,Gender}=this.state.students
