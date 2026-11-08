@@ -25,14 +25,14 @@ class StudentManagementSystem extends Component {
     handleinputchange = (event) => {
         const inputval = { ...this.state.newstudent }
         inputval[event.target.name] = event.target.value
-        this.setState({students:inputval})
+        this.setState({newstudent:inputval})
         // this.setState({ searchstudent: event.target.value })
         // console.log(this.state.searchstudent);
     }
     handleiputsearch = (event) => {
         // const inputsearch = { ...this.state.searchstudent }
         // inputsearch[event.target.name] = event.target.value
-        this.setState({ searchstudent: inputsearch })
+        this.setState({ searchstudent: event.target.value })
     }
     handlecreatestudent = () => {
         console.log(this.state.newstudent);
@@ -118,7 +118,22 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredstudent.map((student, index) => {
+                    {filteredstudent.length>0 ? filteredstudent.map((student, index) => {
+                        return <tr key={index}>
+                            <td>{student.StudentID}</td>
+                            <td>{student.FullName}</td>
+                            <td>{student.Email}</td>
+                            <td>{student.MobileNumber}</td>
+                            <td>{student.Department}</td>
+                            <td>{student.YearOfStudy}</td>
+                            <td>{student.Gender}</td>
+                            <td><button onClick={() => { this.handleedit(student, index) }}>Edit</button>
+                            </td>
+                            <td>
+                                <button onClick={() => { this.handledelete(index) }}>Delete</button>
+                            </td>
+                        </tr>
+                    }) : this.state.students.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
