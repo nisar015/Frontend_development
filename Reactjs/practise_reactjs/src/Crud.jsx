@@ -37,18 +37,16 @@ class CRUD extends Component {
     }
     handleinputchange = (event) => {
         console.log(event.target.value);
-        const inputval = {...this.state.users}
+        const inputval = {...this.state.newuser}
         inputval[event.target.name] = event.target.value;
-        this.setState({ users: inputval })
+        this.setState({ newuser: inputval })
     }
     handlecreateuser=()=>{
-        const newuser={
-            fname:"",
-            lname:"",
-            email:"",
-            Mobilenum:""
-        }
-        this.setState({newuser:newuser})
+        console.log(this.state.newuser);
+        const createuse=[...this.state.users]
+        createuse.push(this.state.newuser)
+        console.log(this.state.newuser);
+        this.setState({users:createuse})
     }
     render() {
         const {fname,lname,email,Mobilenum}=this.state.newuser
