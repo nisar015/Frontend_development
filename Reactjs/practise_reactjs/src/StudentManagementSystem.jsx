@@ -58,7 +58,7 @@ class StudentManagementSystem extends Component {
             YearOfStudy: "",
             Gender: ""
         }
-        this.setState = newstu
+        this.setState({newstudent:newstu})
     }
     render() {
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
