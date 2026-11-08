@@ -39,7 +39,7 @@ class StudentManagementSystem extends Component {
                             <td>{student.Gender}</td>
                             <td>
                                 <button onClick={()=>{this.handleedit()}}>Edit</button>
-                                <button onClick={()=>{this.handledelete()}}>Delete</button>
+                                <button onClick={()=>{this.handledelete(index)}}>Delete</button>
                             </td>
                         </tr>
                     })}
