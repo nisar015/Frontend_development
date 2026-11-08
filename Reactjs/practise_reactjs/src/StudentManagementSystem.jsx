@@ -26,7 +26,7 @@ class StudentManagementSystem extends Component {
     handleinputchange = (event) => {
         const inputval = { ...this.state.newstudent }
         inputval[event.target.name] = event.target.value
-        this.setState({newstudent:inputval})
+        this.setState({ newstudent: inputval })
         // this.setState({ searchstudent: event.target.value })
         // console.log(this.state.searchstudent);
     }
@@ -119,7 +119,7 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredstudent.length>0 ? filteredstudent.map((student, index) => {
+                    {filteredstudent.length > 0 ? filteredstudent.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
