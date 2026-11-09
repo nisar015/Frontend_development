@@ -68,7 +68,7 @@ class EmployeeManagementSystem extends Component {
             return emp.EmployeeName.toLowerCase().includes(this.state.searchempbyname.toLowerCase())
         })
         const avgempsalary=this.state.Employees.reduce((a,b)=>{
-            return a + Number(b.Salary) 
+            return a + b.Salary
         },0)
         const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
         return <div>
