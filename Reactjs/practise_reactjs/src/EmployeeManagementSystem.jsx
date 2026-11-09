@@ -29,10 +29,11 @@ class EmployeeManagementSystem extends Component {
         this.setState({Employees:delemp})
     }
     render(){
+        const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
         return <div>
             <form>
                 <label htmlFor="">EmployeeID</label>
-                <input type="text" name="EmployeeID" onChange={()=>{}} value={this.state.} />
+                <input type="text" name="EmployeeID" onChange={()=>{}} value={this.state.employee.EmployeeID} />
             </form>
             <table border={1}>
                 <thead>
