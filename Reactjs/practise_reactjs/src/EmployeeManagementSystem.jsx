@@ -10,6 +10,11 @@ class EmployeeManagementSystem extends Component {
             ]
         }
     }
+    handledelete=(index)=>{
+        const delemp=[...this.state.Employees]
+        delemp.splice(index,1)
+        this.setState({Employees:delemp})
+    }
     render(){
         return <div>
             <table border={1}>
@@ -39,7 +44,7 @@ class EmployeeManagementSystem extends Component {
                             <td>{emp.Salary}</td>
                             <td>{emp.JoiningDate}</td>
                             <td><button onClick={()=>{this.handledit()}}>Edit</button></td>
-                            <td><button onClick={()=>{this.handledelete()}}>Delete</button></td>
+                            <td><button onClick={()=>{this.handledelete(index)}}>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
