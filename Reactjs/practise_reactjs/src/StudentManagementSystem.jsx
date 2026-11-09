@@ -78,7 +78,7 @@ class StudentManagementSystem extends Component {
     }
     render() {
         const filteredstudent = this.state.students.filter((student) => {
-            return (student.FullName).toLowerCase().includes(this.state.searchstudent.toLowerCase());
+            return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase());
         });
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
