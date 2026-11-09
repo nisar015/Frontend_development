@@ -35,7 +35,7 @@ class EmployeeManagementSystem extends Component {
     }
     handleaddemployee=()=>{
         const newemp=[...this.state.Employees]
-        newemp.push(this.state.newemp)
+        newemp.push(this.state.employee)
         this.setState({Employees:newemp})
     }
     render(){
