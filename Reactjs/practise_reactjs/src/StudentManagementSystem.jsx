@@ -21,7 +21,7 @@ class StudentManagementSystem extends Component {
             },
             editindex: null,
             searchstudent: "",
-            searchstudentdepartment:""
+            searchstudentdepartment: ""
         }
     }
     handleinputchange = (event) => {
@@ -36,8 +36,8 @@ class StudentManagementSystem extends Component {
         // inputsearch[event.target.name] = event.target.value
         this.setState({ searchstudent: event.target.value })
     }
-    handleinputdepartment=(event)=>{
-        this.setState({searchstudentdepartment:event.target.value})
+    handleinputdepartment = (event) => {
+        this.setState({ searchstudentdepartment: event.target.value })
     }
     handlecreatestudent = () => {
         console.log(this.state.newstudent);
@@ -84,7 +84,7 @@ class StudentManagementSystem extends Component {
         const searchstudentbyname = this.state.students.filter((student) => {
             return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase())
         });
-        const filterstudentsbydepartment=this.state.students.filter((student)=>{
+        const filterstudentsbydepartment = this.state.students.filter((student) => {
             return student.Department.toLowerCase().includes(this.state.searchstudentdepartment.toLowerCase())
         })
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
@@ -128,7 +128,7 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {searchstudentbyname.length>0 ? searchstudentbyname.map((student, index) => {
+                    {searchstudentbyname.length > 0 ? searchstudentbyname.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
@@ -143,7 +143,7 @@ class StudentManagementSystem extends Component {
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
-                    }) : filterstudentsbydepartment.length>0 ? searchstudentbyname.map((student, index) => {
+                    }) : filterstudentsbydepartment.length > 0 ? searchstudentbyname.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
@@ -158,23 +158,22 @@ class StudentManagementSystem extends Component {
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
-                    }) :
-                     this.state.students.map((student, index) => {
-                        return <tr key={index}>
-                            <td>{student.StudentID}</td>
-                            <td>{student.FullName}</td>
-                            <td>{student.Email}</td>
-                            <td>{student.MobileNumber}</td>
-                            <td>{student.Department}</td>
-                            <td>{student.YearOfStudy}</td>
-                            <td>{student.Gender}</td>
-                            <td><button onClick={() => { this.handleedit(student, index) }}>Edit</button>
-                            </td>
-                            <td>
-                                <button onClick={() => { this.handledelete(index) }}>Delete</button>
-                            </td>
-                        </tr>
-                    }) }
+                    }) : this.state.students.map((student, index) => {
+                            return <tr key={index}>
+                                <td>{student.StudentID}</td>
+                                <td>{student.FullName}</td>
+                                <td>{student.Email}</td>
+                                <td>{student.MobileNumber}</td>
+                                <td>{student.Department}</td>
+                                <td>{student.YearOfStudy}</td>
+                                <td>{student.Gender}</td>
+                                <td><button onClick={() => { this.handleedit(student, index) }}>Edit</button>
+                                </td>
+                                <td>
+                                    <button onClick={() => { this.handledelete(index) }}>Delete</button>
+                                </td>
+                            </tr>
+                        })}
                 </tbody>
             </table>
         </div>
