@@ -21,7 +21,7 @@ class ProductInventoryManagement extends Component{
         }
     }
     handleinputchange=(event)=>{
-        const inputval=[...this.state.Products]
+        const inputval={...this.state.Products}
         inputval[event.target.name]=event.target.value
         this.setState({Product:inputval})
     }
@@ -30,8 +30,8 @@ class ProductInventoryManagement extends Component{
         newpro.push(this.state.Product)
         this.setState({Products:newpro})
     }
-    handledit=(pro,index)=>{
-        this.setState({Product:pro,editindex:index})
+    handledit=(pro)=>{
+        this.setState({Product:pro})
     }
     handledelete=(index)=>{
         const prodel=[...this.state.Products]
@@ -76,7 +76,7 @@ class ProductInventoryManagement extends Component{
                 <tbody>
                     {
                         this.state.Products.map((pro,index)=>{
-                            return <tr>
+                            return <tr key={index}>
                                 <td>{pro.ProductID}</td>
                                 <td>{pro.ProductName}</td>
                                 <td>{pro.Category}</td>
@@ -84,8 +84,8 @@ class ProductInventoryManagement extends Component{
                                 <td>{pro.Quantity}</td>
                                 <td>{pro.Brand}</td>
                                 <td>{pro.Description}</td>
-                                <td><button onClick={this.handledit(pro,index)}>Edit</button></td>
-                                <td><button onClick={this.handledelete(index)}>Delete</button></td>
+                                <td><button onClick={()=>{this.handledit(pro,index)}}>Edit</button></td>
+                                <td><button onClick={()=>{this.handledelete(index)}}>Delete</button></td>
                             </tr>
                         })
                     }
