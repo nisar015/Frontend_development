@@ -36,6 +36,9 @@ class StudentManagementSystem extends Component {
         // inputsearch[event.target.name] = event.target.value
         this.setState({ searchstudent: event.target.value })
     }
+    handleinputdepartment=(event)=>{
+        this.setState({searchstudentdepartment:event.target.value})
+    }
     handlecreatestudent = () => {
         console.log(this.state.newstudent);
         const newstu = [...this.state.students]
@@ -79,7 +82,7 @@ class StudentManagementSystem extends Component {
     }
     render() {
         const searchstudentbyname = this.state.students.filter((student) => {
-            return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase());
+            return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase())
         });
         const filterstudentsbydepartment=this.state.students.filter((student)=>{
             return student.Department.toLowerCase().includes(this.state.searchstudentdepartment.toLowerCase())
@@ -89,6 +92,8 @@ class StudentManagementSystem extends Component {
             <form>
                 <label htmlFor="">Search Student</label>
                 <input type="text" placeholder="enter student name" name="FullName" onChange={(event) => { this.handleiputsearch(event) }} value={this.state.searchstudent} /><br></br>
+                <label htmlFor="">filter by Department</label>
+                <input type="text" placeholder="enter department name" name="Department" onChange={(event) => { this.handleinputdepartment(event) }} value={this.state.searchstudentdepartment} /><br></br>
                 {/* <button type="button" onClick={this.handlesearch}>Search sutdent</button><br /> */}
                 <label htmlFor="">StudentID</label>
                 <input type="text" name="StudentID" onChange={(event) => { this.handleinputchange(event) }} value={StudentID} /><br />
@@ -123,7 +128,7 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {searchstudentbyname || filterstudentsbydepartment ? searchstudentbyname.map((student, index) => {
+                    {searchstudentbyname.length>0 ? searchstudentbyname.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
@@ -138,7 +143,7 @@ class StudentManagementSystem extends Component {
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
-                    }) : this.state.students.map((student, index) => {
+                    }) : filterstudentsbydepartment.length>0 ? searchstudentbyname.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
@@ -153,7 +158,23 @@ class StudentManagementSystem extends Component {
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
-                    })}
+                    }) :
+                     this.state.students.map((student, index) => {
+                        return <tr key={index}>
+                            <td>{student.StudentID}</td>
+                            <td>{student.FullName}</td>
+                            <td>{student.Email}</td>
+                            <td>{student.MobileNumber}</td>
+                            <td>{student.Department}</td>
+                            <td>{student.YearOfStudy}</td>
+                            <td>{student.Gender}</td>
+                            <td><button onClick={() => { this.handleedit(student, index) }}>Edit</button>
+                            </td>
+                            <td>
+                                <button onClick={() => { this.handledelete(index) }}>Delete</button>
+                            </td>
+                        </tr>
+                    }) }
                 </tbody>
             </table>
         </div>
