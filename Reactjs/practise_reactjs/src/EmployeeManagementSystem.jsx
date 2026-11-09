@@ -71,7 +71,7 @@ class EmployeeManagementSystem extends Component {
         return <div>
             <form>
                 <label htmlFor="">Search Employee</label>
-                <input type="text" placeholder="Search here by name" name="EmployeeName" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeName} /><br></br>
+                <input type="text" placeholder="Search here by name" name="EmployeeName" onChange={(event)=>{this.handlesearchname(event)}} value={EmployeeName} /><br></br>
                 <label htmlFor="">EmployeeID</label>
                 <input type="text" name="EmployeeID" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeID} /><br></br>
                 <label htmlFor="">EmployeeName</label>
