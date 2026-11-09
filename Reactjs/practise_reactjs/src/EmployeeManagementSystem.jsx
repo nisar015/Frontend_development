@@ -33,7 +33,21 @@ class EmployeeManagementSystem extends Component {
         return <div>
             <form>
                 <label htmlFor="">EmployeeID</label>
-                <input type="text" name="EmployeeID" onChange={()=>{}} value={this.state.employee.EmployeeID} />
+                <input type="text" name="EmployeeID" onChange={()=>{}} value={EmployeeID} /><br></br>
+                <label htmlFor="">EmployeeName</label>
+                <input type="text" name="EmployeeName" onChange={()=>{}} value={EmployeeName} /><br></br>
+                <label htmlFor="">Email</label>
+                <input type="text" name="Email" onChange={()=>{}} value={Email} /><br></br>
+                <label htmlFor="">PhoneNumber</label>
+                <input type="text" name="PhoneNumber" onChange={()=>{}} value={PhoneNumber} /><br></br>
+                <label htmlFor="">Department</label>
+                <input type="text" name="Department" onChange={()=>{}} value={Department} /><br></br>
+                <label htmlFor="">Designation</label>
+                <input type="text" name="Designation" onChange={()=>{}} value={Designation} /><br></br>
+                <label htmlFor="">Salary</label>
+                <input type="text" name="Salary" onChange={()=>{}} value={Salary} /><br></br>
+                <label htmlFor="">JoiningDate</label>
+                <input type="text" name="JoiningDate" onChange={()=>{}} value={JoiningDate} /><br></br>
             </form>
             <table border={1}>
                 <thead>
