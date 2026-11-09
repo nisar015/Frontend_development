@@ -41,6 +41,21 @@ class ProductInventoryManagement extends Component{
                 <button type="button" onClick={this.handleaddproduct}>Add Product</button><br></br>
                 <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
             </form>
+            <table border={1}>
+                <thead>
+                    <tr>
+                        <th>ProductID</th>
+                        <th>ProductName</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Brand</th>
+                        <th>Description</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     }
 }
