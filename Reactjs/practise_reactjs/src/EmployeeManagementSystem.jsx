@@ -17,7 +17,8 @@ class EmployeeManagementSystem extends Component {
                 Designation:"",
                 Salary:"",
                 JoiningDate:""
-            }
+            },
+            editindex:null
         }
     }
     handleinputchange=(event)=>{
@@ -37,6 +38,11 @@ class EmployeeManagementSystem extends Component {
         const newemp=[...this.state.Employees]
         newemp.push(this.state.employee)
         this.setState({Employees:newemp})
+    }
+    handleupdatemployee=()=>{
+        const updatemp=[...this.state.Employees]
+        updatemp[this.state.editindex]=this.state.employee
+        this.setState({Employees:updatemp})
     }
     render(){
         const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
@@ -87,7 +93,7 @@ class EmployeeManagementSystem extends Component {
                             <td>{emp.Designation}</td>
                             <td>{emp.Salary}</td>
                             <td>{emp.JoiningDate}</td>
-                            <td><button onClick={()=>{this.handledit(emp)}}>Edit</button></td>
+                            <td><button onClick={()=>{this.handledit(emp,index)}}>Edit</button></td>
                             <td><button onClick={()=>{this.handledelete(index)}}>Delete</button></td>
                         </tr>
                     })}
