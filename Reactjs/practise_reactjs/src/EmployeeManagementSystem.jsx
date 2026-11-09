@@ -31,16 +31,16 @@ class EmployeeManagementSystem extends Component {
                 <tbody>
                     {this.state.Employees.map((emp)=>{
                         return <tr>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
-                            <td>{emp.}</td>
+                            <td>{emp.EmployeeID}</td>
+                            <td>{emp.EmployeeName}</td>
+                            <td>{emp.Email}</td>
+                            <td>{emp.PhoneNumber}</td>
+                            <td>{emp.Department}</td>
+                            <td>{emp.Designation}</td>
+                            <td>{emp.Salary}</td>
+                            <td>{emp.JoiningDate}</td>
+                            <td><button onClick={(event)=>{this.handledit(event)}}></button></td>
+                            <td><button onClick={(event)=>{this.handledelete(event)}}></button></td>
                         </tr>
                     })}
                 </tbody>
