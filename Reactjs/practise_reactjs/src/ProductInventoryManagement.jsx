@@ -17,31 +17,39 @@ class ProductInventoryManagement extends Component{
                 Quantity:"",
                 Brand:"",
                 Description:""
-            }
+            },
+            editindex:null
         }
     }
     handleinputchange=(event)=>{
-        const inputval={...this.state.Products}
+        const inputval={...this.state.Product}
         inputval[event.target.name]=event.target.value
         this.setState({Product:inputval})
     }
     handleaddproduct=()=>{
-        const newpro=[...this.state.Product]
+        const newpro=[...this.state.Products]
         newpro.push(this.state.Product)
         this.setState({Products:newpro})
     }
-    handledit=(pro)=>{
-        this.setState({Product:pro})
+    handledit=(pro,index)=>{
+        this.setState({Product:pro,editindex:index})
     }
     handledelete=(index)=>{
         const prodel=[...this.state.Products]
         prodel.splice(index,1)
         this.setState({Products:prodel})
     }
+    handleUpdateproduct=()=>{
+        const updatepro=[...this.state.Products]
+        updatepro[this.state.editindex]=this.state.Product
+        this.setState({Products:updatepro,editindex:null})
+    }
     render(){
         const {ProductID,ProductName,Category,Price,Quantity,Brand,Description}=this.state.Product
         return <div>
             <form>
+                <label htmlFor="">Search by product name</label>
+                <input type="text" name="ProductName" onChange={(event)=>{this.handleinputchange(event)}} value={ProductName} /><br></br>
                 <label htmlFor="">ProductID</label>
                 <input type="text" name="ProductID" onChange={(event)=>{this.handleinputchange(event)}} value={ProductID} /><br></br>
                 <label htmlFor="">ProductName</label>
