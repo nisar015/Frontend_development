@@ -39,8 +39,8 @@ class EmployeeManagementSystem extends Component {
                             <td>{emp.Designation}</td>
                             <td>{emp.Salary}</td>
                             <td>{emp.JoiningDate}</td>
-                            <td><button onClick={(event)=>{this.handledit(event)}}></button></td>
-                            <td><button onClick={(event)=>{this.handledelete(event)}}></button></td>
+                            <td><button onClick={()=>{this.handledit()}}>Edit</button></td>
+                            <td><button onClick={()=>{this.handledelete()}}>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
