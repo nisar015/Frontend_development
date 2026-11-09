@@ -33,21 +33,22 @@ class EmployeeManagementSystem extends Component {
         return <div>
             <form>
                 <label htmlFor="">EmployeeID</label>
-                <input type="text" name="EmployeeID" onChange={()=>{}} value={EmployeeID} /><br></br>
+                <input type="text" name="EmployeeID" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeID} /><br></br>
                 <label htmlFor="">EmployeeName</label>
-                <input type="text" name="EmployeeName" onChange={()=>{}} value={EmployeeName} /><br></br>
+                <input type="text" name="EmployeeName" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeName} /><br></br>
                 <label htmlFor="">Email</label>
-                <input type="text" name="Email" onChange={()=>{}} value={Email} /><br></br>
+                <input type="text" name="Email" onChange={(event)=>{this.handleinputchange(event)}} value={Email} /><br></br>
                 <label htmlFor="">PhoneNumber</label>
-                <input type="text" name="PhoneNumber" onChange={()=>{}} value={PhoneNumber} /><br></br>
+                <input type="text" name="PhoneNumber" onChange={(event)=>{this.handleinputchange(event)}} value={PhoneNumber} /><br></br>
                 <label htmlFor="">Department</label>
-                <input type="text" name="Department" onChange={()=>{}} value={Department} /><br></br>
+                <input type="text" name="Department" onChange={(event)=>{this.handleinputchange(event)}} value={Department} /><br></br>
                 <label htmlFor="">Designation</label>
-                <input type="text" name="Designation" onChange={()=>{}} value={Designation} /><br></br>
+                <input type="text" name="Designation" onChange={(event)=>{this.handleinputchange(event)}} value={Designation} /><br></br>
                 <label htmlFor="">Salary</label>
-                <input type="text" name="Salary" onChange={()=>{}} value={Salary} /><br></br>
+                <input type="text" name="Salary" onChange={(event)=>{this.handleinputchange(event)}} value={Salary} /><br></br>
                 <label htmlFor="">JoiningDate</label>
-                <input type="text" name="JoiningDate" onChange={()=>{}} value={JoiningDate} /><br></br>
+                <input type="text" name="JoiningDate" onChange={(event)=>{this.handleinputchange(event)}} value={JoiningDate} /><br></br>
+                <button type="button" onClick={()=>{this.handleaddemployee}}>AddEmployee</button>
             </form>
             <table border={1}>
                 <thead>
