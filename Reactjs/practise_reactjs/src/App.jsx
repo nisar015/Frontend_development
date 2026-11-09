@@ -1,4 +1,5 @@
 import './App.css'
+import EmployeeManagementSystem from './EmployeeManagementSystem'
 // import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
 // import {FuncComp} from './FuncComp'
 // import Parent from './parent'
@@ -6,7 +7,6 @@ import './App.css'
 // import ReactForm from './ReactForm'
 // import Form from './Form'
 // import CRUD from './CRUD'
-import StudentManagementSystem from './StudentManagementSystem'
 function App() {
   return(
     <div>
@@ -20,7 +20,8 @@ function App() {
       <FuncComp2/>
       <Xyz/> */}
       {/* <CRUD /> */}
-      <StudentManagementSystem />
+      {/* <StudentManagementSystem /> */}
+      <EmployeeManagementSystem/>
     </div>
   )
 }
