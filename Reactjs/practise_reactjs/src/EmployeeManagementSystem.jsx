@@ -20,8 +20,8 @@ class EmployeeManagementSystem extends Component {
             }
         }
     }
-    handledit=()=>{
-        const 
+    handledit=(emp)=>{
+        this.setState({employee:emp})
     }
     handledelete=(index)=>{
         const delemp=[...this.state.Employees]
@@ -61,7 +61,7 @@ class EmployeeManagementSystem extends Component {
                             <td>{emp.Designation}</td>
                             <td>{emp.Salary}</td>
                             <td>{emp.JoiningDate}</td>
-                            <td><button onClick={()=>{this.handledit()}}>Edit</button></td>
+                            <td><button onClick={()=>{this.handledit(emp)}}>Edit</button></td>
                             <td><button onClick={()=>{this.handledelete(index)}}>Delete</button></td>
                         </tr>
                     })}
