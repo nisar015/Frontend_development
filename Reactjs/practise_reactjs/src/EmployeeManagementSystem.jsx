@@ -58,7 +58,8 @@ class EmployeeManagementSystem extends Component {
                 <input type="text" name="Salary" onChange={(event)=>{this.handleinputchange(event)}} value={Salary} /><br></br>
                 <label htmlFor="">JoiningDate</label>
                 <input type="text" name="JoiningDate" onChange={(event)=>{this.handleinputchange(event)}} value={JoiningDate} /><br></br>
-                <button type="button" onClick={()=>{this.handleaddemployee}}>AddEmployee</button>
+                <button type="button" onClick={this.handleaddemployee}>AddEmployee</button>
+                <button type="button" onClick={this.handleupdatemployee}>UpdateEmployee</button>
             </form>
             <table border={1}>
                 <thead>
