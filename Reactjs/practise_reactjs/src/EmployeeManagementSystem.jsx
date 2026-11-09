@@ -70,7 +70,7 @@ class EmployeeManagementSystem extends Component {
         const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
         return <div>
             <form>
-                <label htmlFor=""></label>
+                <label htmlFor="">Search Employee</label>
                 <input type="text" placeholder="Search here by name" name="EmployeeName" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeName} /><br></br>
                 <label htmlFor="">EmployeeID</label>
                 <input type="text" name="EmployeeID" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeID} /><br></br>
