@@ -28,6 +28,11 @@ class EmployeeManagementSystem extends Component {
         delemp.splice(index,1)
         this.setState({Employees:delemp})
     }
+    handleaddemployee=()=>{
+        const newemp=[...this.state.Employees]
+        newemp.push(this.state.newemp)
+        this.setState({Employees:newemp})
+    }
     render(){
         const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
         return <div>
