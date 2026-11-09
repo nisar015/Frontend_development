@@ -20,6 +20,11 @@ class EmployeeManagementSystem extends Component {
             }
         }
     }
+    handleinputchange=(event)=>{
+        const inputval=[...this.state.Employees]
+        inputval[event.target.name]=event.target.value
+        this.setState({employee:inputval})
+    }
     handledit=(emp)=>{
         this.setState({employee:emp})
     }
