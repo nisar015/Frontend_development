@@ -77,9 +77,10 @@ class StudentManagementSystem extends Component {
         console.log(newsearchstu);
     }
     render() {
-        const filteredstudentbyname = this.state.students.filter((student) => {
+        const searchstudentbyname = this.state.students.filter((student) => {
             return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase());
         });
+        const filterstudentsbydepartment=
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
             <form>
@@ -119,7 +120,7 @@ class StudentManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredstudentbyname.length > 0 ? filteredstudentbyname.map((student, index) => {
+                    {searchstudentbyname ? searchstudentbyname.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
