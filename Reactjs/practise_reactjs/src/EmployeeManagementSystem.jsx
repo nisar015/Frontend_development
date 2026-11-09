@@ -18,6 +18,7 @@ class EmployeeManagementSystem extends Component {
                 Salary:"",
                 JoiningDate:""
             },
+            searchempbyname:"",
             editindex:null
         }
     }
@@ -25,6 +26,9 @@ class EmployeeManagementSystem extends Component {
         const inputval={...this.state.employee}
         inputval[event.target.name]=event.target.value
         this.setState({employee:inputval})
+    }
+    handlesearchname=(event)=>{
+        this.setState({searchempbyname:event.target.value})
     }
     handledit=(emp,index)=>{
         this.setState({employee:emp,editindex:index})
@@ -38,16 +42,36 @@ class EmployeeManagementSystem extends Component {
         const newemp=[...this.state.Employees]
         newemp.push(this.state.employee)
         this.setState({Employees:newemp})
+        this.handleclearform()
     }
     handleupdatemployee=()=>{
         const updatemp=[...this.state.Employees]
         updatemp[this.state.editindex]=this.state.employee
         this.setState({Employees:updatemp})
+        this.handleclearform()
+    }
+    handleclearform=()=>{
+        const clremployee={
+                EmployeeID:"",
+                EmployeeName:"",
+                Email:"",
+                PhoneNumber:"",
+                Department:"",
+                Designation:"",
+                Salary:"",
+                JoiningDate:""
+            }
+            this.setState({employee:clremployee})
     }
     render(){
+        const searchbyname=this.state.Employees.filter((emp)=>{
+            return emp.EmployeeName.toLowerCase().includes(this.state.searchempbyname.toLowerCase())
+        })
         const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
         return <div>
             <form>
+                <label htmlFor=""></label>
+                <input type="text" placeholder="Search here by name" name="EmployeeName" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeName} /><br></br>
                 <label htmlFor="">EmployeeID</label>
                 <input type="text" name="EmployeeID" onChange={(event)=>{this.handleinputchange(event)}} value={EmployeeID} /><br></br>
                 <label htmlFor="">EmployeeName</label>
@@ -64,8 +88,8 @@ class EmployeeManagementSystem extends Component {
                 <input type="text" name="Salary" onChange={(event)=>{this.handleinputchange(event)}} value={Salary} /><br></br>
                 <label htmlFor="">JoiningDate</label>
                 <input type="text" name="JoiningDate" onChange={(event)=>{this.handleinputchange(event)}} value={JoiningDate} /><br></br>
-                <button type="button" onClick={this.handleaddemployee}>AddEmployee</button>
-                <button type="button" onClick={this.handleupdatemployee}>UpdateEmployee</button>
+                {this.state.editindex==null ? <button type="button" onClick={this.handleaddemployee}>AddEmployee</button> 
+              :<button type="button" onClick={this.handleupdatemployee}>UpdateEmployee</button>}
             </form>
             <table border={1}>
                 <thead>
@@ -83,7 +107,21 @@ class EmployeeManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.Employees.map((emp,index)=>{
+                    {searchbyname.length>0 ? searchbyname.map((emp,index)=>{
+                        return <tr key={index}>
+                            <td>{emp.EmployeeID}</td>
+                            <td>{emp.EmployeeName}</td>
+                            <td>{emp.Email}</td>
+                            <td>{emp.PhoneNumber}</td>
+                            <td>{emp.Department}</td>
+                            <td>{emp.Designation}</td>
+                            <td>{emp.Salary}</td>
+                            <td>{emp.JoiningDate}</td>
+                            <td><button onClick={()=>{this.handledit(emp,index)}}>Edit</button></td>
+                            <td><button onClick={()=>{this.handledelete(index)}}>Delete</button></td>
+                        </tr>
+                    }) : 
+                    this.state.Employees.map((emp,index)=>{
                         return <tr key={index}>
                             <td>{emp.EmployeeID}</td>
                             <td>{emp.EmployeeName}</td>
