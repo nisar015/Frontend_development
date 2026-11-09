@@ -143,7 +143,7 @@ class StudentManagementSystem extends Component {
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
-                    }) : filterstudentsbydepartment.length > 0 ? searchstudentbyname.map((student, index) => {
+                    }) : filterstudentsbydepartment.length > 0 ? filterstudentsbydepartment.map((student, index) => {
                         return <tr key={index}>
                             <td>{student.StudentID}</td>
                             <td>{student.FullName}</td>
