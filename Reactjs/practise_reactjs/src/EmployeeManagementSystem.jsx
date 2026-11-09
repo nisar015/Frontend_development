@@ -13,7 +13,7 @@ class EmployeeManagementSystem extends Component {
     }
     render(){
         return <div>
-            <table>
+            <table border={1}>
                 <thead>
                     <tr>
                         <th>EmployeeID</th>
@@ -29,8 +29,8 @@ class EmployeeManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.Employees.map((emp)=>{
-                        return <tr>
+                    {this.state.Employees.map((emp,index)=>{
+                        return <tr key={index}>
                             <td>{emp.EmployeeID}</td>
                             <td>{emp.EmployeeName}</td>
                             <td>{emp.Email}</td>
