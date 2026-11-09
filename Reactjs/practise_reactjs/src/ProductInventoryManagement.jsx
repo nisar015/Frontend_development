@@ -20,6 +20,16 @@ class ProductInventoryManagement extends Component{
             }
         }
     }
+    handleinputchange=(event)=>{
+        const inputval=[...this.state.Products]
+        inputval[event.target.name]=event.target.value
+        this.setState({Product:inputval})
+    }
+    handleaddproduct=()=>{
+        const newpro=[...this.state.Product]
+        newpro.push(this.state.Product)
+        this.setState({Products:newpro})
+    }
     render(){
         const {ProductID,ProductName,Category,Price,Quantity,Brand,Description}=this.state.Product
         return <div>
@@ -55,6 +65,23 @@ class ProductInventoryManagement extends Component{
                         <th>Delete</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {
+                        this.state.Products.map((pro,index)=>{
+                            return <tr>
+                                <td>{pro.ProductID}</td>
+                                <td>{pro.ProductName}</td>
+                                <td>{pro.Category}</td>
+                                <td>{pro.Price}</td>
+                                <td>{pro.Quantity}</td>
+                                <td>{pro.Brand}</td>
+                                <td>{pro.Description}</td>
+                                <td><button onClick={this.handledit(pro,index)}>Edit</button></td>
+                                <td><button onClick={this.handledelete(index)}>Delete</button></td>
+                            </tr>
+                        })
+                    }
+                </tbody>
             </table>
         </div>
     }
