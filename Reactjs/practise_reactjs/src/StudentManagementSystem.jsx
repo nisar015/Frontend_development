@@ -20,7 +20,8 @@ class StudentManagementSystem extends Component {
                 Gender: ""
             },
             editindex: null,
-            searchstudent: ""
+            searchstudent: "",
+            searchstudentdepartment:""
         }
     }
     handleinputchange = (event) => {
@@ -80,7 +81,9 @@ class StudentManagementSystem extends Component {
         const searchstudentbyname = this.state.students.filter((student) => {
             return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase());
         });
-        const filterstudentsbydepartment=
+        const filterstudentsbydepartment=this.state.students.filter((student)=>{
+            return student.Department.toLowerCase().includes(this.)
+        })
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
             <form>
