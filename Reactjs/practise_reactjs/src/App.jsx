@@ -1,5 +1,6 @@
 import './App.css'
-import EmployeeManagementSystem from './EmployeeManagementSystem'
+// import EmployeeManagementSystem from './EmployeeManagementSystem'
+import ProductInventoryManagement from './ProductInventoryManagement'
 // import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
 // import {FuncComp} from './FuncComp'
 // import Parent from './parent'
@@ -21,7 +22,8 @@ function App() {
       <Xyz/> */}
       {/* <CRUD /> */}
       {/* <StudentManagementSystem /> */}
-      <EmployeeManagementSystem/>
+      {/* <EmployeeManagementSystem/> */}
+      <ProductInventoryManagement/>
     </div>
   )
 }
