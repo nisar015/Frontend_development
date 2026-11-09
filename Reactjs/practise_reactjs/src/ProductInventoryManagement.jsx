@@ -38,7 +38,7 @@ class ProductInventoryManagement extends Component{
                 <input type="text" name="Brand" onChange={(event)=>{this.handleinputchange(event)}} value={Brand} /><br></br>
                 <label htmlFor="">Description</label>
                 <input type="text" name="Description" onChange={(event)=>{this.handleinputchange(event)}} value={Description} /><br></br>
-                <button type="button" onClick={this.handleaddproduct}>Add Product</button>
+                <button type="button" onClick={this.handleaddproduct}>Add Product</button><br></br>
                 <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
             </form>
         </div>
