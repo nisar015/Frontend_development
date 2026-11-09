@@ -28,6 +28,22 @@ class EmployeeManagementSystem extends Component {
                         <th>Delete</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {this.state.Employees.map((emp)=>{
+                        return <tr>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                            <td>{emp.}</td>
+                        </tr>
+                    })}
+                </tbody>
             </table>
         </div>
     }
