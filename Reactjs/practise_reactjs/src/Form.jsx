@@ -1,5 +1,4 @@
 import { Component } from "react";
-import CRUD from "./CRUD";
 
 class Form extends Component {
     constructor() {
@@ -46,7 +45,7 @@ class Form extends Component {
                 <input type="text" name="email" onChange={(event) => { this.handleinputchange(event) }} value={email} /> <br />
                 <label htmlFor="">Mobilenum</label>
                 <input type="text" name="Mobilenum" onChange={(event) => { this.handleinputchange(event) }} value={Mobilenum} /> <br />
-                <button type="button" onClick={this.handlecreateuser(<CRUD formuser={this.state.users}/>)}>Create User</button>
+                <button type="button" onClick={this.handlecreateuser}>Create User</button>
             </form>
         </div>
     }

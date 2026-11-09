@@ -47,7 +47,7 @@ class EmployeeManagementSystem extends Component {
     handleupdatemployee=()=>{
         const updatemp=[...this.state.Employees]
         updatemp[this.state.editindex]=this.state.employee
-        this.setState({Employees:updatemp})
+        this.setState({Employees:updatemp,editindex:null})
         this.handleclearform()
     }
     handleclearform=()=>{
@@ -67,6 +67,9 @@ class EmployeeManagementSystem extends Component {
         const searchbyname=this.state.Employees.filter((emp)=>{
             return emp.EmployeeName.toLowerCase().includes(this.state.searchempbyname.toLowerCase())
         })
+        const avgempsalary=this.state.Employees.reduce((a,b)=>{
+            return a + b.Salary 
+        },0)
         const {EmployeeID,EmployeeName,Email,PhoneNumber,Department,Designation,Salary,JoiningDate}=this.state.employee
         return <div>
             <form>
@@ -137,6 +140,7 @@ class EmployeeManagementSystem extends Component {
                     })}
                 </tbody>
             </table>
+            <h2>{avgempsalary}</h2>
         </div>
     }
 }
