@@ -30,6 +30,14 @@ class ProductInventoryManagement extends Component{
         newpro.push(this.state.Product)
         this.setState({Products:newpro})
     }
+    handledit=(pro,index)=>{
+        this.setState({Product:pro,editindex:index})
+    }
+    handledelete=(index)=>{
+        const prodel=[...this.state.Products]
+        prodel.splice(index,1)
+        this.setState({Products:prodel})
+    }
     render(){
         const {ProductID,ProductName,Category,Price,Quantity,Brand,Description}=this.state.Product
         return <div>
