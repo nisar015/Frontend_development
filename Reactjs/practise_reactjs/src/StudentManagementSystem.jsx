@@ -84,9 +84,9 @@ class StudentManagementSystem extends Component {
         const searchstudentbyname = this.state.students.filter((student) => {
             return student.FullName.toLowerCase().includes(this.state.searchstudent.toLowerCase())
         });
-        const filterstudentsbydepartment = this.state.students.filter((student) => {
-            return student.Department.toLowerCase().includes(this.state.searchstudentdepartment.toLowerCase())
-        })
+        // const filterstudentsbydepartment = this.state.students.filter((student) => {
+        //     return student.Department.toLowerCase().includes(this.state.searchstudentdepartment.toLowerCase())
+        // })
         const { StudentID, FullName, Email, MobileNumber, Department, YearOfStudy, Gender } = this.state.newstudent
         return <div>
             <form>
@@ -143,22 +143,8 @@ class StudentManagementSystem extends Component {
                                 <button onClick={() => { this.handledelete(index) }}>Delete</button>
                             </td>
                         </tr>
-                    }) : filterstudentsbydepartment.length > 0 ? filterstudentsbydepartment.map((student, index) => {
-                        return <tr key={index}>
-                            <td>{student.StudentID}</td>
-                            <td>{student.FullName}</td>
-                            <td>{student.Email}</td>
-                            <td>{student.MobileNumber}</td>
-                            <td>{student.Department}</td>
-                            <td>{student.YearOfStudy}</td>
-                            <td>{student.Gender}</td>
-                            <td><button onClick={() => { this.handleedit(student, index) }}>Edit</button>
-                            </td>
-                            <td>
-                                <button onClick={() => { this.handledelete(index) }}>Delete</button>
-                            </td>
-                        </tr>
-                    }) : this.state.students.map((student, index) => {
+                    }) :
+                        this.state.students.map((student, index) => {
                             return <tr key={index}>
                                 <td>{student.StudentID}</td>
                                 <td>{student.FullName}</td>
@@ -174,6 +160,7 @@ class StudentManagementSystem extends Component {
                                 </td>
                             </tr>
                         })}
+
                 </tbody>
             </table>
         </div>
