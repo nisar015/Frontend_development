@@ -1,5 +1,4 @@
 import { Component } from "react";
-
 class EmployeeManagementSystem extends Component {
     constructor() {
         super()
