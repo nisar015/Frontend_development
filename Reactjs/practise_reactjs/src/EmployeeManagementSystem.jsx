@@ -26,8 +26,8 @@ class EmployeeManagementSystem extends Component {
         inputval[event.target.name]=event.target.value
         this.setState({employee:inputval})
     }
-    handledit=(emp)=>{
-        this.setState({employee:emp})
+    handledit=(emp,index)=>{
+        this.setState({employee:emp,editindex:index})
     }
     handledelete=(index)=>{
         const delemp=[...this.state.Employees]
