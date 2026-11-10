@@ -53,9 +53,12 @@ class ProductInventoryManagement extends Component {
         this.setState({ Products: updatepro, editindex: null })
     }
     render() {
-        const filterprobyname = this.state.Products.filter((pro) => {
-            return pro.ProductName.toLowerCase().includes(this.state.searchproname.toLowerCase())
+        const filterbycategory=this.state.Products.filter((pro)=>{
+            return  pro.Category==this.state.filterbycat
         })
+        // const filterprobyname = this.state.Products.filter((pro) => {
+        //     return pro.ProductName.toLowerCase().includes(this.state.searchproname.toLowerCase())
+        // })
         const { ProductID, ProductName, Category, Price, Quantity, Brand, Description } = this.state.Product
         return <div>
             <form>
@@ -103,7 +106,7 @@ class ProductInventoryManagement extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filterprobyname.length > 0 ? filterprobyname.map((pro, index) => {
+                    {filterbycategory.length > 0 ? filterbycategory.map((pro, index) => {
                         return <tr key={index}>
                             <td>{pro.ProductID}</td>
                             <td>{pro.ProductName}</td>
