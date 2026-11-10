@@ -23,6 +23,11 @@ class ContactManagementSystem extends Component {
             filterbycontype: ""
         }
     }
+    handleinputchange=(event)=>{
+        const inputval={...this.state.newcontact}
+        inputval[event.target.name]=event.target.value
+        this.setState({newcontact:inputval})
+    }
     render() {
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
@@ -30,7 +35,8 @@ class ContactManagementSystem extends Component {
         // const filterbycontacttype = this.state.Contacts.filter((con) => {
         //     return con.ContactType = this.state.filterbycontype
         // })
-        const { ContactID,
+        const { 
+            ContactID,
             FullName,
             Email,
             PhoneNumb,
