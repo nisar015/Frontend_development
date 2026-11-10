@@ -9,12 +9,14 @@ class TodoTaskManagement extends Component {
                 {TaskID:"102",TaskTitle:"Complete Assignment",Description:"this is description",Priority:"Medium",Status:"Pending",DueDate:"12-11-2026"},
                 {TaskID:"103",TaskTitle:"Practice JavaScript",Description:"this is description",Priority:"Low",Status:"Completed",DueDate:"12-11-2026"},
             ],
+            task:{},
             editindex:null
 
 
         }
     }
     render() {
+        const {TaskID,TaskTitle,Description,Priority,Status,DueDate}=this.state.task
         return <div>
             <form>
                 <label htmlFor="">Search Task</label>
@@ -31,7 +33,7 @@ class TodoTaskManagement extends Component {
                 <input type="text" name="Status" onChange={(event) => { this.handleinputchange(event) }} value={Status} /><br></br>
                 <label htmlFor="">Due Date</label>
                 <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
-                {editindex == null ?
+                {this.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleaddtask}>Add Task</button>}
             </form>
