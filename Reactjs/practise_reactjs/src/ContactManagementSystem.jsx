@@ -31,6 +31,9 @@ class ContactManagementSystem extends Component {
     handlesearchname=(event)=>{
         this.setState({searchbyname:event.target.value})
     }
+    handleinputfilter=(event)=>{
+        this.setState({filterbycontype:event.target.value})
+    }
     render() {
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
