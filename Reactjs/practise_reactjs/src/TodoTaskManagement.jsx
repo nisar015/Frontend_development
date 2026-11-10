@@ -10,12 +10,12 @@ class TodoTaskManagement extends Component {
                 { TaskID: "103", TaskTitle: "Practice JavaScript", Description: "this is description", Priority: "Low", Status: "Completed", DueDate: "12-11-2026" },
             ],
             task: {
-                TaskID:"",
-                TaskTitle:"",
-                Description:"",
-                Priority:"",
-                Status:"",
-                DueDate:""
+                TaskID: "",
+                TaskTitle: "",
+                Description: "",
+                Priority: "",
+                Status: "",
+                DueDate: ""
             },
             editindex: null,
             searchbytask: ""
@@ -23,26 +23,26 @@ class TodoTaskManagement extends Component {
 
         }
     }
-    handleinputchange=(event)=>{
-        const inpval={...this.state.task}
-        inpval[event.target.name]=event.target.value
-        this.setState({task:inpval})
+    handleinputchange = (event) => {
+        const inpval = { ...this.state.task }
+        inpval[event.target.name] = event.target.value
+        this.setState({ task: inpval })
     }
-    handlesearchname=()=>{
+    handlesearchname = () => {
 
     }
-    handledit=(task,index)=>{
-        this.setState({task:task,editindex:index})
+    handledit = (task, index) => {
+        this.setState({ task: task, editindex: index })
     }
-    handledelete=(index)=>{
-        const deltask=[...this.state.Tasks]
-        deltask.splice(index,1)
-        this.setState({Tasks:deltask})
+    handledelete = (index) => {
+        const deltask = [...this.state.Tasks]
+        deltask.splice(index, 1)
+        this.setState({ Tasks: deltask })
     }
-    handleupdatetask=()=>{
-        const uptask=[...this.state.Tasks]
-        uptask[this.state.editindex]=this.state.task
-        this.setState({Tasks:uptask,editindex:null})
+    handleUpdatetask = () => {
+        const uptask = [...this.state.Tasks]
+        uptask[this.state.editindex] = this.state.task
+        this.setState({ Tasks: uptask, editindex: null })
     }
     render() {
         const searchbyname = this.state.Tasks.filter((task) => {
@@ -101,7 +101,7 @@ class TodoTaskManagement extends Component {
                                 <td>{task.TaskTitle}</td>
                                 <td>{task.Description}</td>
                                 <td>{task.Priority}</td>
-                                <td>{task.Status}</td>  
+                                <td>{task.Status}</td>
                                 <td>{task.DueDate}</td>
                                 <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
