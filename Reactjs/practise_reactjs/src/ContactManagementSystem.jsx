@@ -34,6 +34,11 @@ class ContactManagementSystem extends Component {
     handleinputfilter=(event)=>{
         this.setState({filterbycontype:event.target.value})
     }
+    handledelete=(index)=>{
+        const delcontact=[...this.state.Contacts]
+        delcontact.splice(index,1)
+        this.setState({Contacts:delcontact})
+    }
     render() {
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
