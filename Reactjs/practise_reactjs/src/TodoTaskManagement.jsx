@@ -44,6 +44,11 @@ class TodoTaskManagement extends Component {
         uptask[this.state.editindex] = this.state.task
         this.setState({ Tasks: uptask, editindex: null })
     }
+    handleaddtask=()=>{
+        const addtask=[...this.state.Tasks]
+        addtask.push(this.state.task)
+        this.setState({Tasks:addtask})
+    }
     render() {
         const searchbyname = this.state.Tasks.filter((task) => {
             return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
