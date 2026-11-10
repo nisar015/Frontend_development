@@ -53,6 +53,8 @@ class ContactManagementSystem extends Component {
         this.setState({Contacts:updatcon,editindex:null})
     }
     render() {
+        // const mobilepattern=/^\d{1,10}$/
+
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
         })

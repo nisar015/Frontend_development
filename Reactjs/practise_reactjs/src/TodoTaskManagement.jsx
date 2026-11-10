@@ -57,9 +57,9 @@ class TodoTaskManagement extends Component {
         const searchbyname = this.state.Tasks.filter((task) => {
             return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
         })
-        const filterbystatus=this.state.Tasks.filter((task)=>{
-            return task.Status=this.state.filterbystat
-        })
+        // const filterbystatus=this.state.Tasks.filter((task)=>{
+        //     return task.Status=this.state.filterbystat
+        // })
         const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
         return <div>
             <form>
