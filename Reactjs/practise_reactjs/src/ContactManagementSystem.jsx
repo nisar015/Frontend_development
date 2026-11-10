@@ -42,20 +42,25 @@ class ContactManagementSystem extends Component {
                 <input type="text" placeholder="Search Task here" name="TaskTitle" onChange={(event) => { this.handlesearchname(event) }} value={this.state.searchbytask} /><br></br>
                 <label htmlFor="">
                     Choose status:
-                    <select value={this.state.filterbystat} onChange={(event) => { this.handleinputfilter(event) }}></select>
+                    <select value={this.state.filterbycontype} onChange={(event) => { this.handleinputfilter(event) }}>
+                        <option value="Personal">Personal</option>
+                        <option value="Professional">Professional</option>
+                    </select>
                 </label>
-                <label htmlFor="">TaskID</label>
-                <input type="text" name="TaskID" onChange={(event) => { this.handleinputchange(event) }} value={TaskID} /><br></br>
-                <label htmlFor="">TaskTitle</label>
-                <input type="text" name="TaskTitle" onChange={(event) => { this.handleinputchange(event) }} value={TaskTitle} /><br></br>
-                <label htmlFor="">Description</label>
-                <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
-                <label htmlFor="">Priority</label>
-                <input type="text" name="Priority" onChange={(event) => { this.handleinputchange(event) }} value={Priority} /><br></br>
-                <label htmlFor="">Status</label>
-                <input type="text" name="Status" onChange={(event) => { this.handleinputchange(event) }} value={Status} /><br></br>
-                <label htmlFor="">Due Date</label>
-                <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
+                <label htmlFor="">ContactID</label>
+                <input type="text" name="ContactID" onChange={(event) => { this.handleinputchange(event) }} value={ContactID} /><br></br>
+                <label htmlFor="">FullName</label>
+                <input type="text" name="FullName" onChange={(event) => { this.handleinputchange(event) }} value={FullName} /><br></br>
+                <label htmlFor="">Email</label>
+                <input type="text" name="Email" onChange={(event) => { this.handleinputchange(event) }} value={Email} /><br></br>
+                <label htmlFor="">PhoneNumb</label>
+                <input type="text" name="PhoneNumb" onChange={(event) => { this.handleinputchange(event) }} value={PhoneNumb} /><br></br>
+                <label htmlFor="">Address</label>
+                <input type="text" name="Address" onChange={(event) => { this.handleinputchange(event) }} value={Address} /><br></br>
+                <label htmlFor="">Company</label>
+                <input type="text" name="Company" onChange={(event) => { this.handleinputchange(event) }} value={Company} /><br></br>
+                <label htmlFor="">ContactType</label>
+                <input type="text" name="ContactType" onChange={(event) => { this.handleinputchange(event) }} value={ContactType} /><br></br>
                 {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
@@ -63,38 +68,38 @@ class ContactManagementSystem extends Component {
             <table border={1}>
                 <thead>
                     <tr>
-                        <th>TaskID</th>
-                        <th>TaskTitle</th>
-                        <th>Description</th>
-                        <th>Priority</th>
-                        <th>Status</th>
-                        <th>Due Date</th>
+                        <th>ContactID</th>
+                        <th>FullName</th>
+                        <th>Email</th>
+                        <th>PhoneNumb</th>
+                        <th>Address</th>
+                        <th>ContactType</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {searchbyname.length > 0 ? searchbyname.map((task, index) => {
+                    {searchbyname.length > 0 ? searchbyname.map((con, index) => {
                         return <tr key={index}>
-                            <td>{task.TaskID}</td>
-                            <td>{task.TaskTitle}</td>
-                            <td>{task.Description}</td>
-                            <td>{task.Priority}</td>
-                            <td>{task.Status}</td>
-                            <td>{task.DueDate}</td>
-                            <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                            <td>{con.ContactID}</td>
+                            <td>{con.FullName}</td>
+                            <td>{con.Email}</td>
+                            <td>{con.PhoneNumber}</td>
+                            <td>{con.Address}</td>
+                            <td>{con.ContactType}</td>
+                            <td><button onClick={() => { this.handledit(con, index) }}>Edit</button></td>
                             <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                         </tr>
                     }) :
-                        this.state.Tasks.map((task, index) => {
+                        this.state.Contacts.map((con, index) => {
                             return <tr key={index}>
-                                <td>{task.TaskID}</td>
-                                <td>{task.TaskTitle}</td>
-                                <td>{task.Description}</td>
-                                <td>{task.Priority}</td>
-                                <td>{task.Status}</td>
-                                <td>{task.DueDate}</td>
-                                <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                                <td>{con.ContactID}</td>
+                                <td>{con.FullName}</td>
+                                <td>{con.Email}</td>
+                                <td>{con.PhoneNumber}</td>
+                                <td>{con.Address}</td>
+                                <td>{con.ContactType}</td>
+                                <td><button onClick={() => { this.handledit(con, index) }}>Edit</button></td>
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                             </tr>
                         })}
