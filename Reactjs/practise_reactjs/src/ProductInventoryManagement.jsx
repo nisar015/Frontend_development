@@ -51,7 +51,7 @@ class ProductInventoryManagement extends Component {
     render() {
         const { ProductID, ProductName, Category, Price, Quantity, Brand, Description } = this.state.Product
         const filterprobyname=this.state.Products.filter((pro)=>{
-            return pro.ProductName.toLowerCase().includes(this.state.searchproname).toLowerCase()
+            return pro.ProductName.toLowerCase().includes(this.state.searchproname.toLowerCase())
         })
         return <div>
             <form>
