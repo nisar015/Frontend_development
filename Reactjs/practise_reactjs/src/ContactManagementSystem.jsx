@@ -39,6 +39,11 @@ class ContactManagementSystem extends Component {
         delcontact.splice(index,1)
         this.setState({Contacts:delcontact})
     }
+    handleaddtask=()=>{
+        const addcontact=[...this.state.Contacts]
+        addcontact.push(this.state.newcontact)
+        this.setState({Contacts:addcontact})
+    }
     render() {
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
