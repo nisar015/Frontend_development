@@ -40,7 +40,7 @@ class StudentManagementSystem extends Component {
         this.setState({ searchstudentdepartment: event.target.value })
     }
     handlecreatestudent = () => {
-        console.log(this.state.newstudent);
+        // console.log(this.state.newstudent);
         const newstu = [...this.state.students]
         newstu.push(this.state.newstudent)
         this.setState({ students: newstu })
