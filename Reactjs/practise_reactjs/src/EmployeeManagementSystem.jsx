@@ -140,7 +140,8 @@ class EmployeeManagementSystem extends Component {
                     })}
                 </tbody>
             </table><br />
-            <h2>Average Salary is: {avgempsalary}</h2>
+            <h2>Total Employees : {this.state.Employees.length}</h2>
+            <h2>Average Salary : {avgempsalary}</h2>
         </div>
     }
 }
