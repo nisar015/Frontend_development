@@ -5,7 +5,7 @@ class TodoTaskManagement extends Component {
         super()
         this.state = {
             Tasks: [
-                { TaskID: "101", TaskTitle: "Learn React", Description: "this is description", Priority: "High", Status: "In Progress", DueDate: "12-11-2026" },
+                { TaskID: "101", TaskTitle: "Learn React", Description: "this is description", Priority: "High", Status: "InProgress", DueDate: "12-11-2026" },
                 { TaskID: "102", TaskTitle: "Complete Assignment", Description: "this is description", Priority: "Medium", Status: "Pending", DueDate: "12-11-2026" },
                 { TaskID: "103", TaskTitle: "Practice JavaScript", Description: "this is description", Priority: "Low", Status: "Completed", DueDate: "12-11-2026" },
             ],
@@ -67,7 +67,11 @@ class TodoTaskManagement extends Component {
                 <input type="text" placeholder="Search Task here" name="TaskTitle" onChange={(event) => { this.handlesearchname(event) }} value={this.state.searchbytask} /><br></br>
                 <label htmlFor="">
                     Choose status:
-                    <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}></select>
+                    <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}>
+                        <option value="InProgress">InProgress</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                    </select>
                 </label>
                 <label htmlFor="">TaskID</label>
                 <input type="text" name="TaskID" onChange={(event) => { this.handleinputchange(event) }} value={TaskID} /><br></br>
