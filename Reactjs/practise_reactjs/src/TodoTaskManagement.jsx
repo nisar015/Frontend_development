@@ -28,8 +28,8 @@ class TodoTaskManagement extends Component {
         inpval[event.target.name] = event.target.value
         this.setState({ task: inpval })
     }
-    handlesearchname = () => {
-
+    handlesearchname = (event) => {
+        this.setState({searchbytask:event.target.value})
     }
     handledit = (task, index) => {
         this.setState({ task: task, editindex: index })
