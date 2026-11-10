@@ -20,6 +20,7 @@ class ProductInventoryManagement extends Component {
             },
             editindex: null,
             searchproname: "",
+            filterbycat:""
         }
     }
     handleinputchange = (event) => {
@@ -29,6 +30,9 @@ class ProductInventoryManagement extends Component {
     }
     handleinputsearch = (event) => {
         this.setState({ searchproname: event.target.value })
+    }
+    handleinputfilter=(event)=>{
+        this.setState({filterbycat:event.target.value})
     }
     handleaddproduct = () => {
         const newpro = [...this.state.Products]
@@ -57,6 +61,13 @@ class ProductInventoryManagement extends Component {
             <form>
                 <label htmlFor="">Search by product name</label>
                 <input type="text" placeholder="search product here" name="ProductName" onChange={(event) => { this.handleinputsearch(event) }} value={this.state.searchproname} /><br></br>
+                <label>
+                    Choose a Category:
+                    <select value={this.state.filterbycat} onChange={(event) => this.handleinputfilter(event)}>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                </label><br />
                 <label htmlFor="">ProductID</label>
                 <input type="text" name="ProductID" onChange={(event) => { this.handleinputchange(event) }} value={ProductID} /><br></br>
                 <label htmlFor="">ProductName</label>
@@ -72,9 +83,9 @@ class ProductInventoryManagement extends Component {
                 <label htmlFor="">Description</label>
                 <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
 
-                {this.state.editindex == null ? 
-                <button type="button" onClick={this.handleaddproduct}>Add Product</button> : 
-                <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
+                {this.state.editindex == null ?
+                    <button type="button" onClick={this.handleaddproduct}>Add Product</button> :
+                    <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
                 }
             </form>
             <table border={1}>
