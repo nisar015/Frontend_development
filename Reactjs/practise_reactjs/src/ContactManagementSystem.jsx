@@ -41,7 +41,7 @@ class ContactManagementSystem extends Component {
             Email,
             PhoneNumb,
             Address,
-            Company, ContactType } = this.state.Contact
+            Company, ContactType } = this.state.newcontact
         return <div>
             <form>
                 <label htmlFor="">Search Task</label>
