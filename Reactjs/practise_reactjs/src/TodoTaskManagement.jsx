@@ -36,6 +36,11 @@ class TodoTaskManagement extends Component {
         deltask.splice(index,1)
         this.setState({Tasks:deltask})
     }
+    handleaddtask=()=>{
+        const uptask=[...this.state.Tasks]
+        uptask[this.state.editindex]=this.state.task
+        this.setState({Tasks:uptask,editindex:null})
+    }
     render() {
         const searchbyname = this.state.Tasks.map((task) => {
             return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
