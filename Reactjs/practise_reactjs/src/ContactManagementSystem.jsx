@@ -58,7 +58,7 @@ class ContactManagementSystem extends Component {
             ContactID,
             FullName,
             Email,
-            PhoneNumb,
+            PhoneNumber,
             Address,
             Company, ContactType } = this.state.newcontact
         return <div>
@@ -78,8 +78,8 @@ class ContactManagementSystem extends Component {
                 <input type="text" name="FullName" onChange={(event) => { this.handleinputchange(event) }} value={FullName} /><br></br>
                 <label htmlFor="">Email</label>
                 <input type="text" name="Email" onChange={(event) => { this.handleinputchange(event) }} value={Email} /><br></br>
-                <label htmlFor="">PhoneNumb</label>
-                <input type="text" name="PhoneNumb" onChange={(event) => { this.handleinputchange(event) }} value={PhoneNumb} /><br></br>
+                <label htmlFor="">PhoneNumber</label>
+                <input type="text" name="PhoneNumber" onChange={(event) => { this.handleinputchange(event) }} value={PhoneNumber} /><br></br>
                 <label htmlFor="">Address</label>
                 <input type="text" name="Address" onChange={(event) => { this.handleinputchange(event) }} value={Address} /><br></br>
                 <label htmlFor="">Company</label>
