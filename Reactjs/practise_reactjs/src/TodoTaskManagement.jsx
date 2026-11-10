@@ -31,6 +31,11 @@ class TodoTaskManagement extends Component {
     handledit=(task,index)=>{
         this.setState({task:task,editindex:index})
     }
+    handledelete=(index)=>{
+        const deltask=[...this.state.Tasks]
+        deltask.splice(index,1)
+        this.setState({Tasks:deltask})
+    }
     render() {
         const searchbyname = this.state.Tasks.map((task) => {
             return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
