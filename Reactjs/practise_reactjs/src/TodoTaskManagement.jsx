@@ -18,7 +18,8 @@ class TodoTaskManagement extends Component {
                 DueDate: ""
             },
             editindex: null,
-            searchbytask: ""
+            searchbytask: "",
+            filterbystat:""
 
 
         }
@@ -30,6 +31,9 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({searchbytask:event.target.value})
+    }
+    handleinputfilter=(event)=>{
+        this.setState({filterbystat:event.target.value})
     }
     handledit = (task, index) => {
         this.setState({ task: task, editindex: index })
@@ -53,11 +57,18 @@ class TodoTaskManagement extends Component {
         const searchbyname = this.state.Tasks.filter((task) => {
             return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
         })
+        const filterbystatus=this.state.Tasks.filter((task)=>{
+            return task.Status=this.state.filterbystat
+        })
         const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
         return <div>
             <form>
                 <label htmlFor="">Search Task</label>
                 <input type="text" placeholder="Search Task here" name="TaskTitle" onChange={(event) => { this.handlesearchname(event) }} value={this.state.searchbytask} /><br></br>
+                <label htmlFor="">
+                    Choose status:
+                    <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}></select>
+                </label>
                 <label htmlFor="">TaskID</label>
                 <input type="text" name="TaskID" onChange={(event) => { this.handleinputchange(event) }} value={TaskID} /><br></br>
                 <label htmlFor="">TaskTitle</label>
