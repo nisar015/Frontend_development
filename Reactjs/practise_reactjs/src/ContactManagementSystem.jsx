@@ -28,6 +28,9 @@ class ContactManagementSystem extends Component {
         inputval[event.target.name]=event.target.value
         this.setState({newcontact:inputval})
     }
+    handlesearchname=(event)=>{
+        this.setState({searchbyname:event.target.value})
+    }
     render() {
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
@@ -52,7 +55,7 @@ class ContactManagementSystem extends Component {
                         <option value="Personal">Personal</option>
                         <option value="Professional">Professional</option>
                     </select>
-                </label>
+                </label><br />
                 <label htmlFor="">ContactID</label>
                 <input type="text" name="ContactID" onChange={(event) => { this.handleinputchange(event) }} value={ContactID} /><br></br>
                 <label htmlFor="">FullName</label>
