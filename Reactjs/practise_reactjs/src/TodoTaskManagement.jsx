@@ -36,7 +36,7 @@ class TodoTaskManagement extends Component {
         deltask.splice(index,1)
         this.setState({Tasks:deltask})
     }
-    handleaddtask=()=>{
+    handleupdatetask=()=>{
         const uptask=[...this.state.Tasks]
         uptask[this.state.editindex]=this.state.task
         this.setState({Tasks:uptask,editindex:null})
