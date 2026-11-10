@@ -56,7 +56,7 @@ class ProductInventoryManagement extends Component {
         return <div>
             <form>
                 <label htmlFor="">Search by product name</label>
-                <input type="text" placeholder="search product here" name="ProductName" onChange={(event) => { this.handleinputsearch(event) }} value={ProductName} /><br></br>
+                <input type="text" placeholder="search product here" name="ProductName" onChange={(event) => { this.handleinputsearch(event) }} value={this.state.searchproname} /><br></br>
                 <label htmlFor="">ProductID</label>
                 <input type="text" name="ProductID" onChange={(event) => { this.handleinputchange(event) }} value={ProductID} /><br></br>
                 <label htmlFor="">ProductName</label>
