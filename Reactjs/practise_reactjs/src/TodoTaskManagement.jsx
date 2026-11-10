@@ -29,7 +29,7 @@ class TodoTaskManagement extends Component {
         this.setState({task:inpval})
     }
     handlesearchname=()=>{
-        
+
     }
     handledit=(task,index)=>{
         this.setState({task:task,editindex:index})
@@ -45,7 +45,7 @@ class TodoTaskManagement extends Component {
         this.setState({Tasks:uptask,editindex:null})
     }
     render() {
-        const searchbyname = this.state.Tasks.map((task) => {
+        const searchbyname = this.state.Tasks.filter((task) => {
             return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
         })
         const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
@@ -65,7 +65,7 @@ class TodoTaskManagement extends Component {
                 <input type="text" name="Status" onChange={(event) => { this.handleinputchange(event) }} value={Status} /><br></br>
                 <label htmlFor="">Due Date</label>
                 <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
-                {this.editindex == null ?
+                {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
             </form>
