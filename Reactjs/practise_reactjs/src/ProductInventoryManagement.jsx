@@ -18,7 +18,7 @@ class ProductInventoryManagement extends Component {
                 Brand: "",
                 Description: ""
             },
-            searchproname:"",
+            searchproname: "",
             editindex: null
         }
     }
@@ -27,8 +27,8 @@ class ProductInventoryManagement extends Component {
         inputval[event.target.name] = event.target.value
         this.setState({ Product: inputval })
     }
-    handleinputsearch=(event)=>{
-        this.setState({searchproname:event.target.value})
+    handleinputsearch = (event) => {
+        this.setState({ searchproname: event.target.value })
     }
     handleaddproduct = () => {
         const newpro = [...this.state.Products]
@@ -49,14 +49,14 @@ class ProductInventoryManagement extends Component {
         this.setState({ Products: updatepro, editindex: null })
     }
     render() {
-        const { ProductID, ProductName, Category, Price, Quantity, Brand, Description } = this.state.Product
-        const filterprobyname=this.state.Products.filter((pro)=>{
+        const filterprobyname = this.state.Products.filter((pro) => {
             return pro.ProductName.toLowerCase().includes(this.state.searchproname.toLowerCase())
         })
+        const { ProductID, ProductName, Category, Price, Quantity, Brand, Description } = this.state.Product
         return <div>
             <form>
                 <label htmlFor="">Search by product name</label>
-                <input type="text" name="ProductName" onChange={(event) => { this.handleinputsearch(event) }} value={ProductName} /><br></br>
+                <input type="text" placeholder="search product here" name="ProductName" onChange={(event) => { this.handleinputsearch(event) }} value={ProductName} /><br></br>
                 <label htmlFor="">ProductID</label>
                 <input type="text" name="ProductID" onChange={(event) => { this.handleinputchange(event) }} value={ProductID} /><br></br>
                 <label htmlFor="">ProductName</label>
@@ -71,7 +71,7 @@ class ProductInventoryManagement extends Component {
                 <input type="text" name="Brand" onChange={(event) => { this.handleinputchange(event) }} value={Brand} /><br></br>
                 <label htmlFor="">Description</label>
                 <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
-                {this.state.editindex==null ? <button type="button" onClick={this.handleaddproduct}>Add Product</button> : <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
+                {this.state.editindex == null ? <button type="button" onClick={this.handleaddproduct}>Add Product</button> : <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
                 }
             </form>
             <table border={1}>
@@ -89,19 +89,19 @@ class ProductInventoryManagement extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filterprobyname>0 ? filterprobyname.map((pro, index) => {
-                            return <tr key={index}>
-                                <td>{pro.ProductID}</td>
-                                <td>{pro.ProductName}</td>
-                                <td>{pro.Category}</td>
-                                <td>{pro.Price}</td>
-                                <td>{pro.Quantity}</td>
-                                <td>{pro.Brand}</td>
-                                <td>{pro.Description}</td>
-                                <td><button onClick={() => { this.handledit(pro, index) }}>Edit</button></td>
-                                <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
-                            </tr>
-                        }) :
+                    {filterprobyname > 0 ? filterprobyname.map((pro, index) => {
+                        return <tr key={index}>
+                            <td>{pro.ProductID}</td>
+                            <td>{pro.ProductName}</td>
+                            <td>{pro.Category}</td>
+                            <td>{pro.Price}</td>
+                            <td>{pro.Quantity}</td>
+                            <td>{pro.Brand}</td>
+                            <td>{pro.Description}</td>
+                            <td><button onClick={() => { this.handledit(pro, index) }}>Edit</button></td>
+                            <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                        </tr>
+                    }) :
                         this.state.Products.map((pro, index) => {
                             return <tr key={index}>
                                 <td>{pro.ProductID}</td>

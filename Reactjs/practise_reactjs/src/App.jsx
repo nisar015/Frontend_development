@@ -1,6 +1,7 @@
 import './App.css'
 // import EmployeeManagementSystem from './EmployeeManagementSystem'
 import ProductInventoryManagement from './ProductInventoryManagement'
+// import StudentManagementSystem from './StudentManagementSystem'
 // import Xyz, { FuncComp, FuncComp1, FuncComp2 } from './FuncComp'
 // import {FuncComp} from './FuncComp'
 // import Parent from './parent'

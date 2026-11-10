@@ -18,8 +18,8 @@ class EmployeeManagementSystem extends Component {
                 Salary:"",
                 JoiningDate:""
             },
+            editindex:null,
             searchempbyname:"",
-            editindex:null
         }
     }
     handleinputchange=(event)=>{
@@ -110,7 +110,7 @@ class EmployeeManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {searchbyname.length>0 ? searchbyname.map((emp,index)=>{
+                    {searchbyname.length > 0 ? searchbyname.map((emp,index)=>{
                         return <tr key={index}>
                             <td>{emp.EmployeeID}</td>
                             <td>{emp.EmployeeName}</td>
