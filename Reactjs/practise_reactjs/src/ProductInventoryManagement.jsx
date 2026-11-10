@@ -18,6 +18,7 @@ class ProductInventoryManagement extends Component {
                 Brand: "",
                 Description: ""
             },
+            searchproname:"",
             editindex: null
         }
     }
@@ -25,6 +26,9 @@ class ProductInventoryManagement extends Component {
         const inputval = { ...this.state.Product }
         inputval[event.target.name] = event.target.value
         this.setState({ Product: inputval })
+    }
+    handleinputsearch=(event)=>{
+        this.setState({searchproname:event.target.value})
     }
     handleaddproduct = () => {
         const newpro = [...this.state.Products]
@@ -46,10 +50,13 @@ class ProductInventoryManagement extends Component {
     }
     render() {
         const { ProductID, ProductName, Category, Price, Quantity, Brand, Description } = this.state.Product
+        const filterprobyname=this.state.Products.filter((pro)=>{
+            return pro.ProductName.toLowerCase().includes(this.state.searchproname).toLowerCase()
+        })
         return <div>
             <form>
                 <label htmlFor="">Search by product name</label>
-                <input type="text" name="ProductName" onChange={(event) => { this.handleinputchange(event) }} value={ProductName} /><br></br>
+                <input type="text" name="ProductName" onChange={(event) => { this.handleinputsearch(event) }} value={ProductName} /><br></br>
                 <label htmlFor="">ProductID</label>
                 <input type="text" name="ProductID" onChange={(event) => { this.handleinputchange(event) }} value={ProductID} /><br></br>
                 <label htmlFor="">ProductName</label>
