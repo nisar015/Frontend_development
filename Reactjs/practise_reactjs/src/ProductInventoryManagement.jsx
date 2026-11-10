@@ -18,8 +18,8 @@ class ProductInventoryManagement extends Component {
                 Brand: "",
                 Description: ""
             },
+            editindex: null,
             searchproname: "",
-            editindex: null
         }
     }
     handleinputchange = (event) => {
