@@ -4,19 +4,38 @@ class TodoTaskManagement extends Component {
     constructor() {
         super()
         this.state = {
-            Tasks:[
-                {TaskID:"101",TaskTitle:"Learn React",Description:"this is description",Priority:"High",Status:"In Progress",DueDate:"12-11-2026"},
-                {TaskID:"102",TaskTitle:"Complete Assignment",Description:"this is description",Priority:"Medium",Status:"Pending",DueDate:"12-11-2026"},
-                {TaskID:"103",TaskTitle:"Practice JavaScript",Description:"this is description",Priority:"Low",Status:"Completed",DueDate:"12-11-2026"},
+            Tasks: [
+                { TaskID: "101", TaskTitle: "Learn React", Description: "this is description", Priority: "High", Status: "In Progress", DueDate: "12-11-2026" },
+                { TaskID: "102", TaskTitle: "Complete Assignment", Description: "this is description", Priority: "Medium", Status: "Pending", DueDate: "12-11-2026" },
+                { TaskID: "103", TaskTitle: "Practice JavaScript", Description: "this is description", Priority: "Low", Status: "Completed", DueDate: "12-11-2026" },
             ],
-            task:{},
-            editindex:null
+            task: {
+                TaskID:"",
+                TaskTitle:"",
+                Description:"",
+                Priority:"",
+                Status:"",
+                DueDate:""
+            },
+            editindex: null,
+            searchbytask: ""
 
 
         }
     }
+    handleinputchange=(event)=>{
+        const inpval={...this.state.task}
+        inpval[event.target.name]=event.target.value
+        this.setState({task:inpval})
+    }
+    handledit=(task,index)=>{
+        this.setState({task:task,editindex:index})
+    }
     render() {
-        const {TaskID,TaskTitle,Description,Priority,Status,DueDate}=this.state.task
+        const searchbyname = this.state.Tasks.map((task) => {
+            return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
+        })
+        const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
         return <div>
             <form>
                 <label htmlFor="">Search Task</label>
@@ -35,8 +54,48 @@ class TodoTaskManagement extends Component {
                 <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
                 {this.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
-                    <button type="button" onClick={this.handleaddtask}>Add Task</button>}
+                    <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
             </form>
+            <table border={1}>
+                <thead>
+                    <tr>
+                        <th>TaskID</th>
+                        <th>TaskTitle</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {searchbyname.length > 0 ? searchbyname.map((task, index) => {
+                        return <tr key={index}>
+                            <td>{task.TaskID}</td>
+                            <td>{task.TaskTitle}</td>
+                            <td>{task.Description}</td>
+                            <td>{task.Priority}</td>
+                            <td>{task.Status}</td>
+                            <td>{task.DueDate}</td>
+                            <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                            <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                        </tr>
+                    }) :
+                        this.state.Tasks.map((task, index) => {
+                            return <tr key={index}>
+                                <td>{task.TaskID}</td>
+                                <td>{task.TaskTitle}</td>
+                                <td>{task.Description}</td>
+                                <td>{task.Priority}</td>
+                                <td>{task.Status}</td>  
+                                <td>{task.DueDate}</td>
+                                <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                                <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                            </tr>
+                        })}
+                </tbody>
+            </table><br />
         </div>
     }
 }
