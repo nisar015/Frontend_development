@@ -89,7 +89,19 @@ class ProductInventoryManagement extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {
+                    {filterprobyname>0 ? filterprobyname.map((pro, index) => {
+                            return <tr key={index}>
+                                <td>{pro.ProductID}</td>
+                                <td>{pro.ProductName}</td>
+                                <td>{pro.Category}</td>
+                                <td>{pro.Price}</td>
+                                <td>{pro.Quantity}</td>
+                                <td>{pro.Brand}</td>
+                                <td>{pro.Description}</td>
+                                <td><button onClick={() => { this.handledit(pro, index) }}>Edit</button></td>
+                                <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                            </tr>
+                        }) :
                         this.state.Products.map((pro, index) => {
                             return <tr key={index}>
                                 <td>{pro.ProductID}</td>
