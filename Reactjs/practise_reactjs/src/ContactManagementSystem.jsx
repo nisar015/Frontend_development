@@ -34,6 +34,9 @@ class ContactManagementSystem extends Component {
     handleinputfilter=(event)=>{
         this.setState({filterbycontype:event.target.value})
     }
+    handledit=(con,index)=>{
+        this.setState({newcontact:con,editindex:index})
+    }
     handledelete=(index)=>{
         const delcontact=[...this.state.Contacts]
         delcontact.splice(index,1)
