@@ -47,6 +47,11 @@ class ContactManagementSystem extends Component {
         addcontact.push(this.state.newcontact)
         this.setState({Contacts:addcontact})
     }
+    handleUpdatetask=()=>{
+        const updatcon=[...this.state.Contacts]
+        updatcon[this.state.editindex]=this.state.newcontact
+        this.setState({Contacts:updatcon,editindex:null})
+    }
     render() {
         const searchbyname = this.state.Contacts.filter((con) => {
             return con.FullName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
