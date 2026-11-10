@@ -71,7 +71,10 @@ class ProductInventoryManagement extends Component {
                 <input type="text" name="Brand" onChange={(event) => { this.handleinputchange(event) }} value={Brand} /><br></br>
                 <label htmlFor="">Description</label>
                 <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
-                {this.state.editindex == null ? <button type="button" onClick={this.handleaddproduct}>Add Product</button> : <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
+
+                {this.state.editindex == null ? 
+                <button type="button" onClick={this.handleaddproduct}>Add Product</button> : 
+                <button type="button" onClick={this.handleUpdateproduct}>Update Product</button>
                 }
             </form>
             <table border={1}>
@@ -89,7 +92,7 @@ class ProductInventoryManagement extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filterprobyname > 0 ? filterprobyname.map((pro, index) => {
+                    {filterprobyname.length > 0 ? filterprobyname.map((pro, index) => {
                         return <tr key={index}>
                             <td>{pro.ProductID}</td>
                             <td>{pro.ProductName}</td>
