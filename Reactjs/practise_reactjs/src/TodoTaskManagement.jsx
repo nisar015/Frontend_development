@@ -19,7 +19,7 @@ class TodoTaskManagement extends Component {
             },
             editindex: null,
             searchbytask: "",
-            filterbystat:""
+            filterbystat: ""
 
 
         }
@@ -30,18 +30,18 @@ class TodoTaskManagement extends Component {
         this.setState({ task: inpval })
     }
     handlesearchname = (event) => {
-        if (event.target.value.length>0){
-            this.setState({searchbytask:event.target.value})
+        if (event.target.value.length > 0) {
+            this.setState({ searchbytask: event.target.value })
             const searchbyname = this.state.Tasks.filter((task) => {
-                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())>0
+                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) > 0
             })
-            this.setState({filterbystat:searchbyname})
-        }else{
-            this.setState({filterbystat:[]})
+            this.setState({ filterbystat: searchbyname })
+        } else {
+            this.setState({ filterbystat: [] })
         }
     }
-    handleinputfilter=(event)=>{
-        this.setState({filterbystat:event.target.value})
+    handleinputfilter = (event) => {
+        this.setState({ filterbystat: event.target.value })
     }
     handledit = (task, index) => {
         this.setState({ task: task, editindex: index })
@@ -56,13 +56,13 @@ class TodoTaskManagement extends Component {
         uptask[this.state.editindex] = this.state.task
         this.setState({ Tasks: uptask, editindex: null })
     }
-    handleaddtask=()=>{
-        const addtask=[...this.state.Tasks]
+    handleaddtask = () => {
+        const addtask = [...this.state.Tasks]
         addtask.push(this.state.task)
-        this.setState({Tasks:addtask})
+        this.setState({ Tasks: addtask })
     }
     render() {
-        
+
         // const filterbystatus=this.state.Tasks.filter((task)=>{
         //     return task.Status=this.state.filterbystat
         // })
@@ -109,7 +109,7 @@ class TodoTaskManagement extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.filterbystat.length>0 ? this.filterbystat.map((task, index) => {
+                    {this.state.filterbystat.length > 0 ? this.filterbystat.map((task, index) => {
                         return <tr key={index}>
                             <td>{task.TaskID}</td>
                             <td>{task.TaskTitle}</td>
