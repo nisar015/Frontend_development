@@ -65,7 +65,7 @@ class TodoTaskManagement extends Component {
     }
     handlemarkcomplete = (index) => {
         const alltasks = [...this.state.Tasks]
-        alltasks[index].Status == "Completed"
+        alltasks[index].Status === "Completed"
         this.setState({ Tasks: alltasks })
     }
     render() {
