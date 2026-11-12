@@ -6,7 +6,7 @@ class TodoTaskManagement extends Component {
         this.state = {
             Tasks: [
                 { TaskID: "101", TaskTitle: "Learn React", Description: "this is description", Priority: "High", Status: "InProgress", DueDate: "12-11-2026" },
-                { TaskID: "102", TaskTitle: "Complete Assignment", Description: "this is description", Priority: "Medium", Status: "Pending", DueDate: "12-11-2026" },
+                { TaskID: "102", TaskTitle: "Complete Assignment", Description: "this is description", Priority: "Medium", Status: "Completed", DueDate: "12-11-2026" },
                 { TaskID: "103", TaskTitle: "Practice JavaScript", Description: "this is description", Priority: "Low", Status: "Completed", DueDate: "12-11-2026" },
             ],
             task: {
@@ -137,7 +137,7 @@ class TodoTaskManagement extends Component {
                         this.state.Tasks.map((task, index) => {
                             return <tr key={index} style={{
                                 background:task.Status=="Completed" ? "green" : "white",
-                                color:task.Status=="Completed" ? "white" : "black"
+                                color:task.Status==="Completed" ? "white" : "black"
                             }}>
                                 <td>{task.TaskID}</td>
                                 <td>{task.TaskTitle}</td>
