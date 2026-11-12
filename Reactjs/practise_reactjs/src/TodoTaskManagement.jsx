@@ -70,7 +70,7 @@ class TodoTaskManagement extends Component {
         return <div>
             <form>
                 <label htmlFor="">Search Task</label>
-                <input type="text" placeholder="Search Task here" name="TaskTitle" onChange={(event) => { this.handlesearchname(event) }} value={this.state.searchbytask} /><br></br>
+                <input type="text" placeholder="Search Task here" name="searchbytask" onChange={(event) => { this.handlesearchname(event) }}  /><br></br>
                 {/* <label htmlFor="">
                     Choose status:
                     <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}>
