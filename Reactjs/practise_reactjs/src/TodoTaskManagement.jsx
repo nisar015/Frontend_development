@@ -31,10 +31,11 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
-        if (event.target.value.length>-1) {
+        if (event.target.value.length>0) {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
+            console.log(newtask);
             this.setState({ filterbystat: newtask })
         } else {
             this.setState({ filterbystat: [] })
