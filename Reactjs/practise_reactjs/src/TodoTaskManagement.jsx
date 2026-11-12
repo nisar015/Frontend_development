@@ -51,6 +51,7 @@ class TodoTaskManagement extends Component {
         const deltask = [...this.state.Tasks]
         deltask.splice(index, 1)
         this.setState({ Tasks: deltask })
+        this.setState({filterbystat:deltask})
     }
     handleUpdatetask = () => {
         const uptask = [...this.state.Tasks]
@@ -110,7 +111,7 @@ class TodoTaskManagement extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.filterbystat.length > 0 ? this.state.filterbystat.map((task, index) => {
+                    {this.state.filterbystat.length > -1 ? this.state.filterbystat.map((task, index) => {
                         return <tr key={index}>
                             <td>{task.TaskID}</td>
                             <td>{task.TaskTitle}</td>
