@@ -120,8 +120,8 @@ class TodoTaskManagement extends Component {
                 <tbody>
                     {this.state.filterbystat.length > 0 ? this.state.filterbystat.map((task, index) => {
                         return <tr key={index} style={{
-                                background:task.Status=="Completed" ? "green" : "white",
-                                color:task.Status=="Completed" ? "white" : "black"
+                                background:task.Status==="Completed" ? "green" : "white",
+                                color:task.Status==="Completed" ? "white" : "black"
                             }}>
                             <td>{task.TaskID}</td>
                             <td>{task.TaskTitle}</td>
@@ -136,7 +136,7 @@ class TodoTaskManagement extends Component {
                     }) :
                         this.state.Tasks.map((task, index) => {
                             return <tr key={index} style={{
-                                background:task.Status=="Completed" ? "green" : "white",
+                                background:task.Status==="Completed" ? "green" : "white",
                                 color:task.Status==="Completed" ? "white" : "black"
                             }}>
                                 <td>{task.TaskID}</td>
