@@ -30,7 +30,7 @@ class TodoTaskManagement extends Component {
         this.setState({ task: inpval })
     }
     handlesearchname = (event) => {
-        if (event.target.value.length > 0) {
+        if (event.target.value) {
             this.setState({ searchbytask: event.target.value })
             const searchbyname = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
