@@ -31,7 +31,7 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
-        if (event.target.value.length>0) {
+        if (event.target.value.length > 0) {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
@@ -51,7 +51,7 @@ class TodoTaskManagement extends Component {
         const deltask = [...this.state.Tasks]
         deltask.splice(index, 1)
         this.setState({ Tasks: deltask })
-        this.setState({filterbystat:deltask})
+        this.setState({ filterbystat: deltask })
     }
     handleUpdatetask = () => {
         const uptask = [...this.state.Tasks]
@@ -63,10 +63,10 @@ class TodoTaskManagement extends Component {
         addtask.push(this.state.task)
         this.setState({ Tasks: addtask })
     }
-    handlemarkcomplete=(index)=>{
-        const alltasks=[...this.state.Tasks]
-        alltasks[index].Status=="Completed"
-        this.setState({Tasks:alltasks})
+    handlemarkcomplete = (index) => {
+        const alltasks = [...this.state.Tasks]
+        alltasks[index].Status == "Completed"
+        this.setState({ Tasks: alltasks })
     }
     render() {
 
@@ -77,7 +77,7 @@ class TodoTaskManagement extends Component {
         return <div>
             <form>
                 <label htmlFor="">Search Task</label>
-                <input type="text" placeholder="Search Task here" name="searchbytask" onChange={(event) => { this.handlesearchname(event) }}  /><br></br>
+                <input type="text" placeholder="Search Task here" name="searchbytask" onChange={(event) => { this.handlesearchname(event) }} /><br></br>
                 {/* <label htmlFor="">
                     Choose status:
                     <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}>
@@ -101,7 +101,7 @@ class TodoTaskManagement extends Component {
                 {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
-                    {/* <button type="button" onClick={this.handlemarkcomplete}></button>} */}
+                {/* <button type="button" onClick={this.handlemarkcomplete}></button>} */}
             </form>
             <table border={1}>
                 <thead>
@@ -120,9 +120,9 @@ class TodoTaskManagement extends Component {
                 <tbody>
                     {this.state.filterbystat.length > 0 ? this.state.filterbystat.map((task, index) => {
                         return <tr key={index} style={{
-                                background:task.Status==="Completed" ? "green" : "white",
-                                color:task.Status==="Completed" ? "white" : "black"
-                            }}>
+                            background: task.Status === "Completed" ? "green" : "white",
+                            color: task.Status === "Completed" ? "white" : "black"
+                        }}>
                             <td>{task.TaskID}</td>
                             <td>{task.TaskTitle}</td>
                             <td>{task.Description}</td>
@@ -136,8 +136,8 @@ class TodoTaskManagement extends Component {
                     }) :
                         this.state.Tasks.map((task, index) => {
                             return <tr key={index} style={{
-                                background:task.Status==="Completed" ? "green" : "white",
-                                color:task.Status==="Completed" ? "white" : "black"
+                                background: task.Status === "Completed" ? "green" : "white",
+                                color: task.Status === "Completed" ? "white" : "black"
                             }}>
                                 <td>{task.TaskID}</td>
                                 <td>{task.TaskTitle}</td>
