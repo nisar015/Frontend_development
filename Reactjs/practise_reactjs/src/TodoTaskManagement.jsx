@@ -19,7 +19,7 @@ class TodoTaskManagement extends Component {
             },
             editindex: null,
             searchbytask: "",
-            filterbystat: ""
+            filterbystat: []
 
 
         }
@@ -31,9 +31,9 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
-        if (event.target.value) {
+        if (event.target.value.length>0) {
             const newtask = this.state.Tasks.filter((task) => {
-                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
+                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
             this.setState({ filterbystat: newtask })
         } else {
