@@ -63,6 +63,11 @@ class TodoTaskManagement extends Component {
         addtask.push(this.state.task)
         this.setState({ Tasks: addtask })
     }
+    handlemarkcomplete=(index)=>{
+        const alltasks=[...this.state.Tasks]
+        alltasks[index].Status=="Completed"
+        this.setState({Tasks:alltasks})
+    }
     render() {
 
         // const filterbystatus=this.state.Tasks.filter((task)=>{
@@ -96,6 +101,7 @@ class TodoTaskManagement extends Component {
                 {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
+                    {/* <button type="button" onClick={this.handlemarkcomplete}></button>} */}
             </form>
             <table border={1}>
                 <thead>
@@ -108,11 +114,15 @@ class TodoTaskManagement extends Component {
                         <th>Due Date</th>
                         <th>Edit</th>
                         <th>Delete</th>
+                        <th>mark task</th>
                     </tr>
                 </thead>
                 <tbody>
                     {this.state.filterbystat.length > 0 ? this.state.filterbystat.map((task, index) => {
-                        return <tr key={index}>
+                        return <tr key={index} style={{
+                                background:task.Status=="Completed" ? "green" : "white",
+                                color:task.Status=="Completed" ? "white" : "black"
+                            }}>
                             <td>{task.TaskID}</td>
                             <td>{task.TaskTitle}</td>
                             <td>{task.Description}</td>
@@ -121,10 +131,14 @@ class TodoTaskManagement extends Component {
                             <td>{task.DueDate}</td>
                             <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
                             <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                            <td><button onClick={() => { this.handlemarkcomplete(index) }}>mark Complete</button></td>
                         </tr>
                     }) :
                         this.state.Tasks.map((task, index) => {
-                            return <tr key={index}>
+                            return <tr key={index} style={{
+                                background:task.Status=="Completed" ? "green" : "white",
+                                color:task.Status=="Completed" ? "white" : "black"
+                            }}>
                                 <td>{task.TaskID}</td>
                                 <td>{task.TaskTitle}</td>
                                 <td>{task.Description}</td>
@@ -133,6 +147,7 @@ class TodoTaskManagement extends Component {
                                 <td>{task.DueDate}</td>
                                 <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                                <td><button onClick={() => { this.handlemarkcomplete(index) }}>mark Complete</button></td>
                             </tr>
                         })}
                 </tbody>
