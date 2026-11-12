@@ -33,7 +33,7 @@ class TodoTaskManagement extends Component {
         if (event.target.value.length > 0) {
             this.setState({ searchbytask: event.target.value })
             const searchbyname = this.state.Tasks.filter((task) => {
-                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) > 0
+                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
             this.setState({ filterbystat: searchbyname })
         } else {
