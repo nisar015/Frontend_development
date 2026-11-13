@@ -8,6 +8,7 @@ class TodoTaskManagement extends Component {
                 { TaskID: "101", TaskTitle: "Learn React", Description: "this is description", Priority: "High", Status: "InProgress", DueDate: "12-11-2026" },
                 { TaskID: "102", TaskTitle: "Complete Assignment", Description: "this is description", Priority: "Medium", Status: "Pending", DueDate: "12-11-2026" },
                 { TaskID: "103", TaskTitle: "Practice JavaScript", Description: "this is description", Priority: "Low", Status: "Completed", DueDate: "12-11-2026" },
+                { TaskID: "104", TaskTitle: "Frontend", Description: "this is description", Priority: "Low", Status: "InProgress", DueDate: "12-11-2026" },
             ],
             task: {
                 TaskID: "",
