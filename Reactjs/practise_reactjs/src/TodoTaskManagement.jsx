@@ -48,8 +48,6 @@ class TodoTaskManagement extends Component {
         if(!this.state.mobilepattern.test(this.state.mobilenum)){
             alert("Please Enter valid mobile number");
         }
-// log(this.state.mobilenum);
-        
     }
     handleinputfilter = (event) => {
         this.setState({ filterbystat: event.target.value })
