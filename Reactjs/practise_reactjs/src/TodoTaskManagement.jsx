@@ -41,7 +41,7 @@ class TodoTaskManagement extends Component {
             })
             // console.log(newtask);
             this.setState({ filterbystat: newtask })
-        } else if (this.state.mobilenum) {
+        } else if (event.target.value===Number) {
             if(!this.state.mobilepattern.test(this.state.mobilenum)){
                 alert("Please Enter valid mobile number");
 
