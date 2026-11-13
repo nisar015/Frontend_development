@@ -39,13 +39,13 @@ class TodoTaskManagement extends Component {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
-            console.log(newtask);
+            // console.log(newtask);
             this.setState({ filterbystat: newtask })
         } else {
             this.setState({ filterbystat: [] })
         }
         if(!this.state.mobilepattern.test(this.state.mobilenum)){
-            console.log("this is an invalid mobile number pattern");
+            alert("this is an invalid mobile number pattern");
         }
         // console.log(this.state.mobilenum);
         
