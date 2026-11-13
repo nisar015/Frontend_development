@@ -78,9 +78,6 @@ class TodoTaskManagement extends Component {
     }
     render() {
 
-        // const filterbystatus=this.state.Tasks.filter((task)=>{
-        //     return task.Status=this.state.filterbystat
-        // })
         const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
         return <div>
             <form>
