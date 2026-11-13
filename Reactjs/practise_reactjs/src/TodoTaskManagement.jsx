@@ -21,8 +21,8 @@ class TodoTaskManagement extends Component {
             editindex: null,
             searchbytask: "",
             filterbystat: [],
-            mobilepattern: /^\d{1,10}$/,
-            mobilenum: null
+            mobilepattern:/^\d{1,10}$/,
+            mobilenum:null
 
 
         }
@@ -34,29 +34,22 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
-        if(event.target.value===Number){
-            this.state.mobilenum = event.target.value
-            if(!this.state.mobilepattern.test(this.state.mobilenum)){
-                alert("Please Enter valid mobile number");
-
-            }
-            else{
-                this.setState({searchbytask:""})
-            }
-        }
+        this.state.mobilenum=Number(event.target.value)
         if (event.target.value.length > 0) {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
             // console.log(newtask);
             this.setState({ filterbystat: newtask })
-        }
-        else {
+        } else {
             this.setState({ filterbystat: [] })
         }
-
-        // console.log(this.state.mobilenum);
-
+        
+        if(!this.state.mobilepattern.test(this.state.mobilenum)){
+            alert("Please Enter valid mobile number");
+        }
+// log(this.state.mobilenum);
+        
     }
     handleinputfilter = (event) => {
         this.setState({ filterbystat: event.target.value })
