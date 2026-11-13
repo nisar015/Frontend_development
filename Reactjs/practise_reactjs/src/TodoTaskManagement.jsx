@@ -34,14 +34,8 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
-        this.state.mobilenum = event.target.value
-        if (event.target.value.length > 0) {
-            const newtask = this.state.Tasks.filter((task) => {
-                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
-            })
-            // console.log(newtask);
-            this.setState({ filterbystat: newtask })
-        } else if (event.target.value===Number) {
+        if(event.target.value===Number){
+            this.state.mobilenum = event.target.value
             if(!this.state.mobilepattern.test(this.state.mobilenum)){
                 alert("Please Enter valid mobile number");
 
@@ -49,6 +43,13 @@ class TodoTaskManagement extends Component {
             else{
                 this.setState({searchbytask:""})
             }
+        }
+        if (event.target.value.length > 0) {
+            const newtask = this.state.Tasks.filter((task) => {
+                return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
+            })
+            // console.log(newtask);
+            this.setState({ filterbystat: newtask })
         }
         else {
             this.setState({ filterbystat: [] })
