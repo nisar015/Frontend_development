@@ -35,6 +35,7 @@ class TodoTaskManagement extends Component {
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
         this.state.mobilenum=Number(event.target.value)
+        console.log(this.state.mobilenum);
         if (event.target.value.length > 0) {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
@@ -43,9 +44,11 @@ class TodoTaskManagement extends Component {
         } else {
             this.setState({ filterbystat: [] })
         }
-        
-        if(!this.state.mobilepattern.test(this.state.mobilenum)){
-            alert("Please Enter valid mobile number");
+        if(this.state.mobilenum){
+            if(!this.state.mobilepattern.test(this.state.mobilenum)){
+                alert("Please Enter valid mobile number");
+            }
+
         }
     }
     handleinputfilter = (event) => {
