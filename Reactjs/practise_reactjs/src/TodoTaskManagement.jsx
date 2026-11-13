@@ -106,7 +106,6 @@ class TodoTaskManagement extends Component {
                 {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
-                {/* <button type="button" onClick={this.handlemarkcomplete}></button>} */}
             </form>
             <table border={1}>
                 <thead>
