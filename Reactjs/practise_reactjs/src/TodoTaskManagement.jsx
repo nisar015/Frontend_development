@@ -22,7 +22,8 @@ class TodoTaskManagement extends Component {
             searchbytask: "",
             filterbystat: [],
             mobilepattern:/^\d{1,10}$/,
-            mobilenum:null
+            mobilenum:null,
+            totalexpenses:null
 
 
         }
@@ -43,7 +44,7 @@ class TodoTaskManagement extends Component {
             this.setState({ filterbystat: newtask })
         } else {
             this.setState({ filterbystat: [] })
-        }
+        } 
         if(this.state.mobilenum){
             if(!this.state.mobilepattern.test(this.state.mobilenum)){
                 alert("Please Enter valid mobile number");
@@ -79,7 +80,9 @@ class TodoTaskManagement extends Component {
         this.setState({ Tasks: alltasks })
     }
     render() {
-
+        const totexpense=this.state.Tasks.reduce((a,b)=>{
+            return a + b.TaskID
+        },0)
         const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
         return <div>
             <form>
@@ -158,6 +161,7 @@ class TodoTaskManagement extends Component {
                         })}
                 </tbody>
             </table><br />
+            <h2>{totexpense}</h2>
         </div>
     }
 }
