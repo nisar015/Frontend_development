@@ -20,7 +20,9 @@ class TodoTaskManagement extends Component {
             },
             editindex: null,
             searchbytask: "",
-            filterbystat: []
+            filterbystat: [],
+            mobilepattern:/^\d{1,10}$/,
+            mobilenum:null
 
 
         }
@@ -32,6 +34,7 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
+        this.state.mobilenum=event.target.value
         if (event.target.value.length > 0) {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
@@ -41,6 +44,8 @@ class TodoTaskManagement extends Component {
         } else {
             this.setState({ filterbystat: [] })
         }
+        console.log(this.state.mobilenum);
+        
     }
     handleinputfilter = (event) => {
         this.setState({ filterbystat: event.target.value })
