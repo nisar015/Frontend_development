@@ -44,7 +44,7 @@ class TodoTaskManagement extends Component {
         } else {
             this.setState({ filterbystat: [] })
         }
-        if(this.state.mobilepattern.test(this.state.mobilenum)){
+        if(!this.state.mobilepattern.test(this.state.mobilenum)){
             console.log("this is an invalid mobile number pattern");
         }
         // console.log(this.state.mobilenum);
