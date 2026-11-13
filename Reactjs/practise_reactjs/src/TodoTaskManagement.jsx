@@ -81,7 +81,7 @@ class TodoTaskManagement extends Component {
     }
     render() {
         const totexpense=this.state.Tasks.reduce((a,b)=>{
-            return a + b.TaskID
+            return a + Number(b.TaskID)
         },0)
         const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
         return <div>
