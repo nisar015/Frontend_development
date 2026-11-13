@@ -161,7 +161,7 @@ class TodoTaskManagement extends Component {
                         })}
                 </tbody>
             </table><br />
-            <h2>{totexpense}</h2>
+            <h2>total expenses:{totexpense}</h2>
         </div>
     }
 }
