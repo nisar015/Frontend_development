@@ -21,8 +21,8 @@ class TodoTaskManagement extends Component {
             editindex: null,
             searchbytask: "",
             filterbystat: [],
-            mobilepattern:/^\d{1,10}$/,
-            mobilenum:null
+            mobilepattern: /^\d{1,10}$/,
+            mobilenum: null
 
 
         }
@@ -34,61 +34,66 @@ class TodoTaskManagement extends Component {
     }
     handlesearchname = (event) => {
         this.setState({ searchbytask: event.target.value })
-        this.state.mobilenum=event.target.value
+        this.state.mobilenum = event.target.value
         if (event.target.value.length > 0) {
             const newtask = this.state.Tasks.filter((task) => {
                 return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase()) || task.Status.toLowerCase().includes(this.state.searchbytask.toLowerCase())
             })
             // console.log(newtask);
             this.setState({ filterbystat: newtask })
-        }else if(!this.state.mobilepattern.test(this.state.mobilenum)){
-            alert("Please Enter valid mobile number");
-        }
-        else {
+        } else {
             this.setState({ filterbystat: [] })
         }
-        
-        // console.log(this.state.mobilenum);
-        
-    }
-    handleinputfilter = (event) => {
-        this.setState({ filterbystat: event.target.value })
-    }
-    handledit = (task, index) => {
-        this.setState({ task: task, editindex: index })
-    }
-    handledelete = (index) => {
-        const deltask = [...this.state.Tasks]
-        deltask.splice(index, 1)
-        this.setState({ Tasks: deltask })
-        this.setState({ filterbystat: deltask })
-    }
-    handleUpdatetask = () => {
-        const uptask = [...this.state.Tasks]
-        uptask[this.state.editindex] = this.state.task
-        this.setState({ Tasks: uptask, editindex: null })
-    }
-    handleaddtask = () => {
-        const addtask = [...this.state.Tasks]
-        addtask.push(this.state.task)
-        this.setState({ Tasks: addtask })
-    }
-    handlemarkcomplete = (index) => {
-        const alltasks = [...this.state.Tasks]
-        alltasks[index].Status = "Completed"
-        this.setState({ Tasks: alltasks })
-    }
-    render() {
+        if (Number(this.state.mobilenum)) {
+            if (!this.state.mobilepattern.test(this.state.mobilenum)) {
+                alert("Please Enter valid mobile number");
+            } else {
+                this.setState({ searchbytask: "" });
+            }
 
-        // const filterbystatus=this.state.Tasks.filter((task)=>{
-        //     return task.Status=this.state.filterbystat
-        // })
-        const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
-        return <div>
-            <form>
-                <label htmlFor="">Search Task</label>
-                <input type="text" placeholder="Search Task here" name="searchbytask" onChange={(event) => { this.handlesearchname(event) }} /><br></br>
-                {/* <label htmlFor="">
+
+
+            // console.log(this.state.mobilenum);
+
+        }
+        handleinputfilter = (event) => {
+            this.setState({ filterbystat: event.target.value })
+        }
+        handledit = (task, index) => {
+            this.setState({ task: task, editindex: index })
+        }
+        handledelete = (index) => {
+            const deltask = [...this.state.Tasks]
+            deltask.splice(index, 1)
+            this.setState({ Tasks: deltask })
+            this.setState({ filterbystat: deltask })
+        }
+        handleUpdatetask = () => {
+            const uptask = [...this.state.Tasks]
+            uptask[this.state.editindex] = this.state.task
+            this.setState({ Tasks: uptask, editindex: null })
+        }
+        handleaddtask = () => {
+            const addtask = [...this.state.Tasks]
+            addtask.push(this.state.task)
+            this.setState({ Tasks: addtask })
+        }
+        handlemarkcomplete = (index) => {
+            const alltasks = [...this.state.Tasks]
+            alltasks[index].Status = "Completed"
+            this.setState({ Tasks: alltasks })
+        }
+        render() {
+
+            // const filterbystatus=this.state.Tasks.filter((task)=>{
+            //     return task.Status=this.state.filterbystat
+            // })
+            const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
+            return <div>
+                <form>
+                    <label htmlFor="">Search Task</label>
+                    <input type="text" placeholder="Search Task here" name="searchbytask" onChange={(event) => { this.handlesearchname(event) }} /><br></br>
+                    {/* <label htmlFor="">
                     Choose status:
                     <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}>
                         <option value="InProgress">InProgress</option>
@@ -96,55 +101,39 @@ class TodoTaskManagement extends Component {
                         <option value="Completed">Completed</option>
                     </select>
                 </label> */}
-                <label htmlFor="">TaskID</label>
-                <input type="text" name="TaskID" onChange={(event) => { this.handleinputchange(event) }} value={TaskID} /><br></br>
-                <label htmlFor="">TaskTitle</label>
-                <input type="text" name="TaskTitle" onChange={(event) => { this.handleinputchange(event) }} value={TaskTitle} /><br></br>
-                <label htmlFor="">Description</label>
-                <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
-                <label htmlFor="">Priority</label>
-                <input type="text" name="Priority" onChange={(event) => { this.handleinputchange(event) }} value={Priority} /><br></br>
-                <label htmlFor="">Status</label>
-                <input type="text" name="Status" onChange={(event) => { this.handleinputchange(event) }} value={Status} /><br></br>
-                <label htmlFor="">Due Date</label>
-                <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
-                {this.state.editindex == null ?
-                    <button type="button" onClick={this.handleaddtask}>Add Task</button> :
-                    <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
-                {/* <button type="button" onClick={this.handlemarkcomplete}></button>} */}
-            </form>
-            <table border={1}>
-                <thead>
-                    <tr>
-                        <th>TaskID</th>
-                        <th>TaskTitle</th>
-                        <th>Description</th>
-                        <th>Priority</th>
-                        <th>Status</th>
-                        <th>Due Date</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                        <th>mark task</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.state.filterbystat.length > 0 ? this.state.filterbystat.map((task, index) => {
-                        return <tr key={index} style={{
-                            background: task.Status === "Completed" ? "green" : "white",
-                            color: task.Status === "Completed" ? "white" : "black"
-                        }}>
-                            <td>{task.TaskID}</td>
-                            <td>{task.TaskTitle}</td>
-                            <td>{task.Description}</td>
-                            <td>{task.Priority}</td>
-                            <td>{task.Status}</td>
-                            <td>{task.DueDate}</td>
-                            <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
-                            <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
-                            <td><button onClick={() => { this.handlemarkcomplete(index) }}>mark Complete</button></td>
+                    <label htmlFor="">TaskID</label>
+                    <input type="text" name="TaskID" onChange={(event) => { this.handleinputchange(event) }} value={TaskID} /><br></br>
+                    <label htmlFor="">TaskTitle</label>
+                    <input type="text" name="TaskTitle" onChange={(event) => { this.handleinputchange(event) }} value={TaskTitle} /><br></br>
+                    <label htmlFor="">Description</label>
+                    <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
+                    <label htmlFor="">Priority</label>
+                    <input type="text" name="Priority" onChange={(event) => { this.handleinputchange(event) }} value={Priority} /><br></br>
+                    <label htmlFor="">Status</label>
+                    <input type="text" name="Status" onChange={(event) => { this.handleinputchange(event) }} value={Status} /><br></br>
+                    <label htmlFor="">Due Date</label>
+                    <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
+                    {this.state.editindex == null ?
+                        <button type="button" onClick={this.handleaddtask}>Add Task</button> :
+                        <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
+                    {/* <button type="button" onClick={this.handlemarkcomplete}></button>} */}
+                </form>
+                <table border={1}>
+                    <thead>
+                        <tr>
+                            <th>TaskID</th>
+                            <th>TaskTitle</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                            <th>mark task</th>
                         </tr>
-                    }) :
-                        this.state.Tasks.map((task, index) => {
+                    </thead>
+                    <tbody>
+                        {this.state.filterbystat.length > 0 ? this.state.filterbystat.map((task, index) => {
                             return <tr key={index} style={{
                                 background: task.Status === "Completed" ? "green" : "white",
                                 color: task.Status === "Completed" ? "white" : "black"
@@ -159,10 +148,26 @@ class TodoTaskManagement extends Component {
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                                 <td><button onClick={() => { this.handlemarkcomplete(index) }}>mark Complete</button></td>
                             </tr>
-                        })}
-                </tbody>
-            </table><br />
-        </div>
+                        }) :
+                            this.state.Tasks.map((task, index) => {
+                                return <tr key={index} style={{
+                                    background: task.Status === "Completed" ? "green" : "white",
+                                    color: task.Status === "Completed" ? "white" : "black"
+                                }}>
+                                    <td>{task.TaskID}</td>
+                                    <td>{task.TaskTitle}</td>
+                                    <td>{task.Description}</td>
+                                    <td>{task.Priority}</td>
+                                    <td>{task.Status}</td>
+                                    <td>{task.DueDate}</td>
+                                    <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                                    <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
+                                    <td><button onClick={() => { this.handlemarkcomplete(index) }}>mark Complete</button></td>
+                                </tr>
+                            })}
+                    </tbody>
+                </table><br />
+            </div>
+        }
     }
-}
 export default TodoTaskManagement
