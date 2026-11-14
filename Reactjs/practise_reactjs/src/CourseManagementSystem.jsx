@@ -33,11 +33,14 @@ class CourseManagementSystem extends Component{
         const filtered=this.state.Courses.filter((course)=>{
             return course.InstructorName.toLowerCase().includes(this.state.searchbyname.toLowerCase()) || course.CourseName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
         })
+        this.setState({filterbycorsename:filtered})
+    }
+    handletotfee=()=>{
         const totfee=this.state.Courses.reduce((a,b)=>{
             return a+b.CourseFee
         },0)
+            
         this.setState({totalcoursefee:totfee})
-        this.setState({filterbycorsename:filtered})
     }
     render() {
         // const searchbyname = this.state.Tasks.filter((task) => {
@@ -63,7 +66,7 @@ class CourseManagementSystem extends Component{
                 <input type="text" name="Duration" onChange={(event) => { this.handleinputchange(event) }} value={Duration} /><br></br>
                 <label htmlFor="">CourseFee</label>
                 <input type="text" name="CourseFee" onChange={(event) => { this.handleinputchange(event) }} value={CourseFee} /><br></br>
-                <label htmlFor="">CourseCat</label>
+                <label >CourseCat</label>
                 <input type="text" name="CourseCat" onChange={(event) => { this.handleinputchange(event) }} value={CourseCat} /><br></br>
                 {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
@@ -112,7 +115,6 @@ class CourseManagementSystem extends Component{
                         })}
                 </tbody>
             </table><br />
-            <h2>{this.state.totalcoursefee}</h2>
         </div>
     }
 }
