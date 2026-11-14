@@ -30,7 +30,7 @@ class CourseManagementSystem extends Component{
     handlesearchname=(event)=>{
         this.setState({searchbyname:event.target.value})
         const filtered=this.state.Courses.filter((course)=>{
-            return course.CourseName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
+            return course.InstructorName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
         })
         this.setState({filterbycorsename:filtered})
     }
