@@ -19,7 +19,8 @@ class CourseManagementSystem extends Component{
                 CourseCat:""
             },
             searchbyname:"",
-            filterbycorsename:[]
+            filterbycorsename:[],
+            totalcoursefee:""
         }
     }
     handleinputchange=(event)=>{
@@ -32,6 +33,9 @@ class CourseManagementSystem extends Component{
         const filtered=this.state.Courses.filter((course)=>{
             return course.InstructorName.toLowerCase().includes(this.state.searchbyname.toLowerCase()) || course.CourseName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
         })
+        const totfee=this.state.Courses.reduce((a,b)=>{
+            return a+b.CourseFee
+        },0)
         this.setState({filterbycorsename:filtered})
     }
     render() {
