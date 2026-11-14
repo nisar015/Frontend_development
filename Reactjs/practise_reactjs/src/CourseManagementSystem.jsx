@@ -72,10 +72,10 @@ class CourseManagementSystem extends Component{
                             return <tr key={index}>
                                 <td>{course.CourseID}</td>
                                 <td>{course.CourseName}</td>
-                                <td>{course.Description}</td>
-                                <td>{course.Priority}</td>
-                                <td>{course.Status}</td>
-                                <td>{course.DueDate}</td>
+                                <td>{course.CourseCode}</td>
+                                <td>{course.Duration}</td>
+                                <td>{course.CourseFee}</td>
+                                <td>{course.CourseCat}</td>
                                 <td><button onClick={() => { this.handledit(course, index) }}>Edit</button></td>
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                             </tr>
