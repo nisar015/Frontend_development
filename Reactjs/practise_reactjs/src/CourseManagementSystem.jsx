@@ -27,6 +27,13 @@ class CourseManagementSystem extends Component{
         inputval[event.target.name]=event.target.value
         this.setState({newcourse:inputval})
     }
+    handlesearchname=(event)=>{
+        this.setState({searchbyname:event.target.value})
+        const filtered=this.state.Courses.filter((course)=>{
+            return course.CourseName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
+        })
+        this.setState({filterbycorsename:filtered})
+    }
     render() {
         // const searchbyname = this.state.Tasks.filter((task) => {
         //     return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
@@ -72,7 +79,7 @@ class CourseManagementSystem extends Component{
                     </tr>
                 </thead>
                 <tbody>
-                    {searchbyname.length > 0 ? searchbyname.map((course, index) => {
+                    {this.state.filterbycorsename.length > 0 ? this.state.filterbycorsename.map((course, index) => {
                         return <tr key={index}>
                             <td>{course.CourseID}</td>
                             <td>{course.CourseName}</td>
