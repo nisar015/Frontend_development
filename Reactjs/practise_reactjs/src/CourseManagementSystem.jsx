@@ -112,6 +112,7 @@ class CourseManagementSystem extends Component{
                         })}
                 </tbody>
             </table><br />
+            <h2>{this.state.totalcoursefee}</h2>
         </div>
     }
 }
