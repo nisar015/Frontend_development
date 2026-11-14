@@ -8,8 +8,24 @@ class CourseManagementSystem extends Component{
                 {CourseID:"10",CourseName:"Reactjs",CourseCode:1,InstructorName:"Murali",Duration:7,CourseFee:40000,CourseCat:"IT"},
                 {CourseID:"11",CourseName:"Python",CourseCode:4,InstructorName:"krishna",Duration:7,CourseFee:40000,CourseCat:"IT"},
                 {CourseID:"12",CourseName:"Nodejs",CourseCode:5,InstructorName:"Rama",Duration:7,CourseFee:40000,CourseCat:"IT"}
-            ]
+            ],
+            newcourse:{
+                CourseID:"",
+                CourseName:"",
+                CourseCode:"",
+                InstructorName:"",
+                Duration:"",
+                CourseFee:"",
+                CourseCat:""
+            },
+            searchbyname:"",
+            filterbycorsename:[]
         }
+    }
+    handleinputchange=(event)=>{
+        const inputval={...this.state.newcourse}
+        inputval[event.target.name]=event.target.value
+        this.setState({newcourse:inputval})
     }
     render() {
         // const searchbyname = this.state.Tasks.filter((task) => {
