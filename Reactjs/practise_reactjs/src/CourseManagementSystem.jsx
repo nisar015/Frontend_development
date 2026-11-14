@@ -41,7 +41,7 @@ class CourseManagementSystem extends Component{
         // const filterbystatus=this.state.Tasks.filter((task)=>{
         //     return task.Status=this.state.filterbystat
         // })
-        const { CourseID, CourseName, CourseCode, InstructorName, Duration, CourseFee,CourseCat } = this.state.task
+        const { CourseID, CourseName, CourseCode, InstructorName, Duration, CourseFee,CourseCat } = this.state.newcourse
         return <div>
             <form>
                 <label htmlFor="">Search Course</label>
@@ -84,6 +84,7 @@ class CourseManagementSystem extends Component{
                             <td>{course.CourseID}</td>
                             <td>{course.CourseName}</td>
                             <td>{course.CourseCode}</td>
+                            <td>{course.InstructorName}</td>
                             <td>{course.Duration}</td>
                             <td>{course.CourseFee}</td>
                             <td>{course.CourseCat}</td>
@@ -96,6 +97,7 @@ class CourseManagementSystem extends Component{
                                 <td>{course.CourseID}</td>
                                 <td>{course.CourseName}</td>
                                 <td>{course.CourseCode}</td>
+                                <td>{course.InstructorName}</td>
                                 <td>{course.Duration}</td>
                                 <td>{course.CourseFee}</td>
                                 <td>{course.CourseCat}</td>
