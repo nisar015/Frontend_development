@@ -45,7 +45,7 @@ class CourseManagementSystem extends Component{
         return <div>
             <form>
                 <label htmlFor="">Search Course</label>
-                <input type="text" placeholder="Search Task here" name="CourseName" onChange={(event) => { this.handlesearchname(event) }} /><br></br>
+                <input type="text" placeholder="Search Task here" name="searchbyname" onChange={(event) => { this.handlesearchname(event) }} /><br></br>
                 <label htmlFor="">CourseID</label>
                 <input type="text" name="CourseID" onChange={(event) => { this.handleinputchange(event) }} value={CourseID} /><br></br>
                 <label htmlFor="">CourseName</label>
