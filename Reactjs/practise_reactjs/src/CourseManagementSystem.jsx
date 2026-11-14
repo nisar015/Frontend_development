@@ -36,6 +36,7 @@ class CourseManagementSystem extends Component{
         const totfee=this.state.Courses.reduce((a,b)=>{
             return a+b.CourseFee
         },0)
+        this.setState({totalcoursefee:totfee})
         this.setState({filterbycorsename:filtered})
     }
     render() {
