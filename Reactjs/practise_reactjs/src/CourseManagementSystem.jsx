@@ -35,14 +35,11 @@ class CourseManagementSystem extends Component{
         })
         this.setState({filterbycorsename:filtered})
     }
-    handletotfee=()=>{
-        const totfee=this.state.Courses.reduce((a,b)=>{
-            return a+b.CourseFee
-        },0)
-            
-        this.setState({totalcoursefee:totfee})
-    }
+    
     render() {
+        const totfee=this.state.Courses.reduce((a,b)=>{
+            return a+Number(b.CourseFee)
+        },0)
         // const searchbyname = this.state.Tasks.filter((task) => {
         //     return task.TaskTitle.toLowerCase().includes(this.state.searchbytask.toLowerCase())
         // })
@@ -115,6 +112,7 @@ class CourseManagementSystem extends Component{
                         })}
                 </tbody>
             </table><br />
+            <h2>Course Total fee :{totfee}</h2>
         </div>
     }
 }
