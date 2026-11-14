@@ -91,7 +91,7 @@ class CourseManagementSystem extends Component{
                             <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                         </tr>
                     }) :
-                        this.state.Tasks.map((course, index) => {
+                        this.state.Courses.map((course, index) => {
                             return <tr key={index}>
                                 <td>{course.CourseID}</td>
                                 <td>{course.CourseName}</td>
