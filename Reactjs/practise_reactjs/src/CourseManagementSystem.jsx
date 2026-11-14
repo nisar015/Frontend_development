@@ -5,7 +5,9 @@ class CourseManagementSystem extends Component{
         super()
         this.state={
             Courses:[
-                {}
+                {CourseID:"10",CourseName:"Reactjs",CourseCode:1,InstructorName:"Murali",Duration:7,CourseFee:40000,CourseCat:"IT"},
+                {CourseID:"11",CourseName:"Python",CourseCode:4,InstructorName:"krishna",Duration:7,CourseFee:40000,CourseCat:"IT"},
+                {CourseID:"12",CourseName:"Nodejs",CourseCode:5,InstructorName:"Rama",Duration:7,CourseFee:40000,CourseCat:"IT"}
             ]
         }
     }
@@ -16,31 +18,25 @@ class CourseManagementSystem extends Component{
         // const filterbystatus=this.state.Tasks.filter((task)=>{
         //     return task.Status=this.state.filterbystat
         // })
-        const { TaskID, TaskTitle, Description, Priority, Status, DueDate } = this.state.task
+        const { CourseID, CourseName, CourseCode, InstructorName, Duration, CourseFee,CourseCat } = this.state.task
         return <div>
             <form>
                 <label htmlFor="">Search Course</label>
                 <input type="text" placeholder="Search Task here" name="TaskTitle" onChange={(event) => { this.handlesearchname(event) }} value={this.state.searchbytask} /><br></br>
-                <label htmlFor="">
-                    Choose status:
-                    <select value={this.state.filterbystat} onChange={(event)=>{this.handleinputfilter(event)}}>
-                        <option value="InProgress">InProgress</option>
-                        <option value="Pending">Pending</option>
-                        <option value="Completed">Completed</option>
-                    </select>
-                </label>
-                <label htmlFor="">TaskID</label>
-                <input type="text" name="TaskID" onChange={(event) => { this.handleinputchange(event) }} value={TaskID} /><br></br>
-                <label htmlFor="">TaskTitle</label>
-                <input type="text" name="TaskTitle" onChange={(event) => { this.handleinputchange(event) }} value={TaskTitle} /><br></br>
-                <label htmlFor="">Description</label>
-                <input type="text" name="Description" onChange={(event) => { this.handleinputchange(event) }} value={Description} /><br></br>
-                <label htmlFor="">Priority</label>
-                <input type="text" name="Priority" onChange={(event) => { this.handleinputchange(event) }} value={Priority} /><br></br>
-                <label htmlFor="">Status</label>
-                <input type="text" name="Status" onChange={(event) => { this.handleinputchange(event) }} value={Status} /><br></br>
-                <label htmlFor="">Due Date</label>
-                <input type="text" name="DueDate" onChange={(event) => { this.handleinputchange(event) }} value={DueDate} /><br></br>
+                <label htmlFor="">CourseID</label>
+                <input type="text" name="CourseID" onChange={(event) => { this.handleinputchange(event) }} value={CourseID} /><br></br>
+                <label htmlFor="">CourseName</label>
+                <input type="text" name="CourseName" onChange={(event) => { this.handleinputchange(event) }} value={CourseName} /><br></br>
+                <label htmlFor="">CourseCode</label>
+                <input type="text" name="CourseCode" onChange={(event) => { this.handleinputchange(event) }} value={CourseCode} /><br></br>
+                <label htmlFor="">InstructorName</label>
+                <input type="text" name="InstructorName" onChange={(event) => { this.handleinputchange(event) }} value={InstructorName} /><br></br>
+                <label htmlFor="">Duration</label>
+                <input type="text" name="Duration" onChange={(event) => { this.handleinputchange(event) }} value={Duration} /><br></br>
+                <label htmlFor="">CourseFee</label>
+                <input type="text" name="CourseFee" onChange={(event) => { this.handleinputchange(event) }} value={CourseFee} /><br></br>
+                <label htmlFor="">CourseCat</label>
+                <input type="text" name="CourseCat" onChange={(event) => { this.handleinputchange(event) }} value={CourseCat} /><br></br>
                 {this.state.editindex == null ?
                     <button type="button" onClick={this.handleaddtask}>Add Task</button> :
                     <button type="button" onClick={this.handleUpdatetask}>Update Task</button>}
@@ -48,38 +44,39 @@ class CourseManagementSystem extends Component{
             <table border={1}>
                 <thead>
                     <tr>
-                        <th>TaskID</th>
-                        <th>TaskTitle</th>
-                        <th>Description</th>
-                        <th>Priority</th>
-                        <th>Status</th>
-                        <th>Due Date</th>
+                        <th>CourseID</th>
+                        <th>CourseName</th>
+                        <th>CourseCode</th>
+                        <th>InstructorName</th>
+                        <th>Duration</th>
+                        <th>CourseFee</th>
+                        <th>CourseCat</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {searchbyname.length > 0 ? searchbyname.map((task, index) => {
+                    {searchbyname.length > 0 ? searchbyname.map((course, index) => {
                         return <tr key={index}>
-                            <td>{task.TaskID}</td>
-                            <td>{task.TaskTitle}</td>
-                            <td>{task.Description}</td>
-                            <td>{task.Priority}</td>
-                            <td>{task.Status}</td>
-                            <td>{task.DueDate}</td>
-                            <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                            <td>{course.CourseID}</td>
+                            <td>{course.CourseName}</td>
+                            <td>{course.CourseCode}</td>
+                            <td>{course.Duration}</td>
+                            <td>{course.CourseFee}</td>
+                            <td>{course.CourseCat}</td>
+                            <td><button onClick={() => { this.handledit(course, index) }}>Edit</button></td>
                             <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                         </tr>
                     }) :
-                        this.state.Tasks.map((task, index) => {
+                        this.state.Tasks.map((course, index) => {
                             return <tr key={index}>
-                                <td>{task.TaskID}</td>
-                                <td>{task.TaskTitle}</td>
-                                <td>{task.Description}</td>
-                                <td>{task.Priority}</td>
-                                <td>{task.Status}</td>
-                                <td>{task.DueDate}</td>
-                                <td><button onClick={() => { this.handledit(task, index) }}>Edit</button></td>
+                                <td>{course.CourseID}</td>
+                                <td>{course.CourseName}</td>
+                                <td>{course.Description}</td>
+                                <td>{course.Priority}</td>
+                                <td>{course.Status}</td>
+                                <td>{course.DueDate}</td>
+                                <td><button onClick={() => { this.handledit(course, index) }}>Edit</button></td>
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                             </tr>
                         })}
