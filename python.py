@@ -562,3 +562,9 @@ print(c2.company,c2.mil,c2.wheels)
 # OOPs 
 # Python supports OOP, procedure oriented programming and functional programming
 # procedure means while writing a code it is divided into modules as functions 
+# everything in this world is object a company obj needs an employee obj and the emp obj needs laptop obj
+# every obj has attribute/varirables and behavior
+# if person is an obj then,
+# attribute - his height,weight,age,name etc.
+# behavior-iam talking,dancing etc
+# functions in oops are called as methods
