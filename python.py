@@ -568,3 +568,8 @@ print(c2.company,c2.mil,c2.wheels)
 # attribute - his height,weight,age,name etc.
 # behavior-iam talking,dancing etc
 # functions in oops are called as methods
+# -obj
+# -class
+# -encapsulation
+# -polymorphism
+# -abstraction
