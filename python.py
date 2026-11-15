@@ -560,3 +560,4 @@ print(c1.company,c1.mil,c1.wheels)
 print(c2.company,c2.mil,c2.wheels)
 
 # OOPs 
+# Python supports OOP, procedure oriented programming and functional programming
