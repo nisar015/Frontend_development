@@ -163,25 +163,34 @@
 # x=smart_div(div) #returns inner not a number when we call x(2,4) we get a/b value
 # print(x)
 # x(2,4)
-class Computer:
+# class Computer:
+#     def __init__(self):
+#         self.name="Nisar"
+#         self.age=24
+#     def updateage(self):
+#         self.age=23
+#         self.name="ahmmed"
+#     def compare(self,c2):
+#         if self.name == c2.name:
+#             return True
+#         else:
+#             return False
+# c1=Computer()
+# c2=Computer()
+# c2.updateage()
+# print(c1.age)
+# print(c2.age)
+# print(c2.name)
+# if c1.compare(c2):
+#     print("age is correct")
+# else:
+#     print("age is wrong")
+class Car:
+    wheels=5
     def __init__(self):
-        self.name="Nisar"
-        self.age=24
-    def updateage(self):
-        self.age=23
-        self.name="ahmmed"
-    def compare(self,c2):
-        if self.name == c2.name:
-            return True
-        else:
-            return False
-c1=Computer()
-c2=Computer()
-c2.updateage()
-print(c1.age)
-print(c2.age)
-print(c2.name)
-if c1.compare(c2):
-    print("age is correct")
-else:
-    print("age is wrong")
+        self.mileage=24
+        self.company="Range Rover"
+c1=Car()
+c2=Car()
+c1.wheels=10
+print(c1.mileage,c1.company,c1.wheels)
