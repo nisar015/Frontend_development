@@ -496,8 +496,8 @@ if __name__=="__main__":
 # attribute - his height,weight,age,name etc.
 # behavior-iam talking,dancing etc
 # functions in oops are called as methods
-#object-mean anything a person,car,bus etc(instance or real object or entities)
-#class- [for example there is a mobile manufacturing company and the design is a class and the design is manufactured multiple times(Design or blueprint)]
+# class(Design)- [for example there is a mobile manufacturing company and the design is a class and the design is manufactured multiple times(Design or blueprint)]
+# object(Instance)-mean anything a person,car,bus etc(instance or real object or entities)
 # Encapsulation
 # Abstraction
 # Polymorphism
