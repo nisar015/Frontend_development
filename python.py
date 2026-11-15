@@ -493,8 +493,8 @@ if __name__=="__main__":
 # everything in this world is object a company obj needs an employee obj and the emp obj needs laptop obj
 # every obj has attribute/varirables and behavior
 # if person is an obj then,
-# attribute - his height,weight,age,name etc.
-# behavior-iam talking,dancing etc
+# attribute/var - his height,weight,age,name etc.
+# behavior/Funcions/methods-iam talking,dancing etc
 # functions in oops are called as methods
 # class(Design)- [for example there is a mobile manufacturing company and the design is a class and the design is manufactured multiple times(Design or blueprint)]
 # object(Instance)-mean anything a person,car,bus etc(instance or real object or entities)
