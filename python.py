@@ -488,6 +488,14 @@ if __name__=="__main__":
     main()
 
 #OOPs
+# Python supports OOP, procedure oriented programming and functional programming
+# procedure means while writing a code it is divided into modules as functions 
+# everything in this world is object a company obj needs an employee obj and the emp obj needs laptop obj
+# every obj has attribute/varirables and behavior
+# if person is an obj then,
+# attribute - his height,weight,age,name etc.
+# behavior-iam talking,dancing etc
+# functions in oops are called as methods
 #object-mean anything a person,car,bus etc(instance or real object or entities)
 #class- [for example there is a mobile manufacturing company and the design is a class and the design is manufactured multiple times(Design or blueprint),
         #  function in a class is called as a method]
@@ -558,18 +566,3 @@ c1.mileage=8
 Car.wheels=5
 print(c1.company,c1.mil,c1.wheels)
 print(c2.company,c2.mil,c2.wheels)
-
-# OOPs 
-# Python supports OOP, procedure oriented programming and functional programming
-# procedure means while writing a code it is divided into modules as functions 
-# everything in this world is object a company obj needs an employee obj and the emp obj needs laptop obj
-# every obj has attribute/varirables and behavior
-# if person is an obj then,
-# attribute - his height,weight,age,name etc.
-# behavior-iam talking,dancing etc
-# functions in oops are called as methods
-# -obj
-# -class
-# -encapsulation
-# -polymorphism
-# -abstraction
