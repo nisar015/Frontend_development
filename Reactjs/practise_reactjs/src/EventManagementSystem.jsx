@@ -77,7 +77,7 @@ class EventManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {filterbyname.length > 0 ? filterbyname.map((eve, index) => {
+                    {this.filterevent.length > 0 ? this.filterevent.map((eve, index) => {
                         return <tr key={index}>
                             <td>{eve.EventID}</td>
                             <td>{eve.EventName}</td>
