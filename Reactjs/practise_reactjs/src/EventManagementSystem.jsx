@@ -19,7 +19,8 @@ class EventManagementSystem extends Component {
                 EventDate: "",
                 MaxParticipants: "",
                 RegistrationFee: ""
-            }
+            },
+            searchbyname:"",
         }
 
     }
@@ -27,6 +28,8 @@ class EventManagementSystem extends Component {
         const { EventName, EventID, Organizer, EventCategory, Location, EventDate, MaxParticipants, RegistrationFee } = this.state.newevent
         return <div>
             <form>
+                <label htmlFor="searchbyname">searchbyname</label><br />
+                <input type="text" placeholder="enter evetn name here" name="searchbyname"/><br />
                 <label htmlFor="EventName">EventName</label><br />
                 <input type="text" name="EventName" value={EventName} /><br />
                 <label htmlFor="EventID">EventID</label><br />
@@ -49,7 +52,7 @@ class EventManagementSystem extends Component {
             <table border={1}>
                 <thead>
                     <tr>
-                        <th>ContactID</th>
+                        <th>EventID</th>
                         <th>FullName</th>
                         <th>Email</th>
                         <th>PhoneNumb</th>
@@ -60,27 +63,31 @@ class EventManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {searchbyname.length > 0 ? searchbyname.map((con, index) => {
+                    {searchbyname.length > 0 ? searchbyname.map((eve, index) => {
                         return <tr key={index}>
-                            <td>{con.ContactID}</td>
-                            <td>{con.FullName}</td>
-                            <td>{con.Email}</td>
-                            <td>{con.PhoneNumber}</td>
-                            <td>{con.Address}</td>
-                            <td>{con.ContactType}</td>
-                            <td><button onClick={() => { this.handledit(con, index) }}>Edit</button></td>
+                            <td>{eve.EventID}</td>
+                            <td>{eve.EventName}</td>
+                            <td>{eve.Organizer}</td>
+                            <td>{eve.EventCategory}</td>
+                            <td>{eve.Location}</td>
+                            <td>{eve.EventDate}</td>
+                            <td>{eve.MaxParticipants}</td>
+                            <td>{eve.RegistrationFee}</td>
+                            <td><button onClick={() => { this.handledit(eve, index) }}>Edit</button></td>
                             <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                         </tr>
                     }) :
-                        this.state.Contacts.map((con, index) => {
+                        this.state.events.map((eve, index) => {
                             return <tr key={index}>
-                                <td>{con.ContactID}</td>
-                                <td>{con.FullName}</td>
-                                <td>{con.Email}</td>
-                                <td>{con.PhoneNumber}</td>
-                                <td>{con.Address}</td>
-                                <td>{con.ContactType}</td>
-                                <td><button onClick={() => { this.handledit(con, index) }}>Edit</button></td>
+                                <td>{eve.EventID}</td>
+                                <td>{eve.EventName}</td>
+                                <td>{eve.Organizer}</td>
+                                <td>{eve.EventCategory}</td>
+                                <td>{eve.Location}</td>
+                                <td>{eve.EventDate}</td>
+                                <td>{eve.MaxParticipants}</td>
+                                <td>{eve.RegistrationFee}</td>
+                                <td><button onClick={() => { this.handledit(eve, index) }}>Edit</button></td>
                                 <td><button onClick={() => { this.handledelete(index) }}>Delete</button></td>
                             </tr>
                         })}
