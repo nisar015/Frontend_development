@@ -60,8 +60,8 @@ class EventManagementSystem extends Component {
                 <input type="text" name="MaxParticipants" onChange={(e)=>{this.handleinputchange(e)}} value={MaxParticipants} /><br />
                 <label htmlFor="RegistrationFee">EventID</label><br />
                 <input type="text" name="RegistrationFee" onChange={(e)=>{this.handleinputchange(e)}} value={RegistrationFee} /><br />
-                <button type="button" onClick={this.handledit()}>Edit</button>
-                <button type="button" onClick={this.handledelete()}>Delete</button>
+                {/* <button type="button" onClick={this.handledit()}>Edit</button>
+                <button type="button" onClick={this.handledelete()}>Delete</button> */}
             </form>
             <table border={1}>
                 <thead>
@@ -77,7 +77,7 @@ class EventManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.filterevent.length > 0 ? this.filterevent.map((eve, index) => {
+                    {this.state.filterevent.length > 0 ? this.state.filterevent.map((eve, index) => {
                         return <tr key={index}>
                             <td>{eve.EventID}</td>
                             <td>{eve.EventName}</td>
