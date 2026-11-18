@@ -21,11 +21,21 @@ class EventManagementSystem extends Component {
                 RegistrationFee: ""
             },
             searchbyname:"",
+            filterevent:[]
         }
 
     }
     handlesearchbyname=(e)=>{
         this.setState({searchbyname:e.target.value})
+        if(e.target.value.length>0){
+            const filterbyname=this.state.events.filter((eve)=>{
+                return eve.EventName.toLowerCase().includes(this.state.searchbyname.toLowerCase())
+            })
+            this.setState({filterevent:filterbyname})
+        }
+        else{
+            this.setState({filterevent:[]})
+        }
     }
 
     render() {
@@ -67,7 +77,7 @@ class EventManagementSystem extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {searchbyname.length > 0 ? searchbyname.map((eve, index) => {
+                    {filterbyname.length > 0 ? filterbyname.map((eve, index) => {
                         return <tr key={index}>
                             <td>{eve.EventID}</td>
                             <td>{eve.EventName}</td>
