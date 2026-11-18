@@ -43,7 +43,7 @@ class EventManagementSystem extends Component {
         return <div>
             <form>
                 <label htmlFor="searchbyname">searchbyname</label>
-                <input type="text" placeholder="enter evetn name here" name="searchbyname" onChange={()=>{this.handlesearchbyname()}}/><br />
+                <input type="text" placeholder="enter evetn name here" name="searchbyname" onChange={(e)=>{this.handlesearchbyname(e)}}/><br />
                 <label htmlFor="EventName">EventName</label>
                 <input type="text" name="EventName" onChange={(e)=>{this.handleinputchange(e)}} value={EventName} /><br />
                 <label htmlFor="EventID">EventID</label>
