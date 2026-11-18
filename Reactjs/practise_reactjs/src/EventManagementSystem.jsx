@@ -42,13 +42,13 @@ class EventManagementSystem extends Component {
         const { EventName, EventID, Organizer, EventCategory, Location, EventDate, MaxParticipants, RegistrationFee } = this.state.newevent
         return <div>
             <form>
-                <label htmlFor="searchbyname">searchbyname</label><br />
+                <label htmlFor="searchbyname">searchbyname</label>
                 <input type="text" placeholder="enter evetn name here" name="searchbyname" onChange={()=>{this.handlesearchbyname()}}/><br />
-                <label htmlFor="EventName">EventName</label><br />
+                <label htmlFor="EventName">EventName</label>
                 <input type="text" name="EventName" onChange={(e)=>{this.handleinputchange(e)}} value={EventName} /><br />
-                <label htmlFor="EventID">EventID</label><br />
+                <label htmlFor="EventID">EventID</label>
                 <input type="text" name="EventID" onChange={(e)=>{this.handleinputchange(e)}} value={EventID} /><br />
-                <label htmlFor="Organizer">EventID</label><br />
+                <label htmlFor="Organizer">EventID</label>
                 <input type="text" name="Organizer" onChange={(e)=>{this.handleinputchange(e)}} value={Organizer} /><br />
                 <label htmlFor="EventCategory">EventID</label><br />
                 <input type="text" name="EventCategory" onChange={(e)=>{this.handleinputchange(e)}} value={EventCategory} /><br />
