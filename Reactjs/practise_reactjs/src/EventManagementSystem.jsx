@@ -24,6 +24,9 @@ class EventManagementSystem extends Component {
         }
 
     }
+    handlesearchbyname=(e)=>{
+        this.setState({searchbyname:e.target.value})
+    }
 
     render() {
         const { EventName, EventID, Organizer, EventCategory, Location, EventDate, MaxParticipants, RegistrationFee } = this.state.newevent
