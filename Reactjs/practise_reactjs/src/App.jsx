@@ -1,5 +1,6 @@
 import './App.css'
-import CourseManagementSystem from './CourseManagementSystem'
+import EventManagementSystem from './EventManagementSystem'
+// import CourseManagementSystem from './CourseManagementSystem'
 // import ContactManagementSystem from './ContactManagementSystem'
 // import TodoTaskManagement from './TodoTaskManagement'
 // import EmployeeManagementSystem from './EmployeeManagementSystem'
@@ -29,7 +30,8 @@ function App() {
       {/* <EmployeeManagementSystem/> */}
       {/* <ProductInventoryManagement/> */}
       {/* <TodoTaskManagement/> */}
-      <CourseManagementSystem/>
+      {/* <CourseManagementSystem/> */}
+      <EventManagementSystem/>
       {/* <ContactManagementSystem/> */}
     </div>
   )
