@@ -27,6 +27,8 @@ class ExpenseTrackerTable extends Component {
                             <td>{expense.PaymentMethod}</td>
                             <td>{expense.Date}</td>
                             <td>{expense.Description}</td>
+                            <td><button>Edit</button></td>
+                            <td><button>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
