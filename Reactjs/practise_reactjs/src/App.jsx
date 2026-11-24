@@ -1,5 +1,6 @@
 import './App.css'
-import EventManagementSystem from './EventManagementSystem'
+// import EventManagementSystem from './EventManagementSystem'
+import ExpenseTracker from './ExpenseTracker'
 // import CourseManagementSystem from './CourseManagementSystem'
 // import ContactManagementSystem from './ContactManagementSystem'
 // import TodoTaskManagement from './TodoTaskManagement'
@@ -31,7 +32,8 @@ function App() {
       {/* <ProductInventoryManagement/> */}
       {/* <TodoTaskManagement/> */}
       {/* <CourseManagementSystem/> */}
-      <EventManagementSystem/>
+      {/* <EventManagementSystem/> */}
+      <ExpenseTracker/>
       {/* <ContactManagementSystem/> */}
     </div>
   )
