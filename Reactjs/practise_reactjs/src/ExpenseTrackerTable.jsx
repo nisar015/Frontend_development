@@ -27,8 +27,8 @@ class ExpenseTrackerTable extends Component {
                             <td>{expense.PaymentMethod}</td>
                             <td>{expense.Date}</td>
                             <td>{expense.Description}</td>
-                            <td><button>Edit</button></td>
-                            <td><button>Delete</button></td>
+                            <td><button onClick={()=>{this.handledit()}}>Edit</button></td>
+                            <td><button onClick={()=>{this.handleDelete()}}>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
