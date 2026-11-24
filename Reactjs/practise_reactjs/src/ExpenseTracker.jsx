@@ -22,7 +22,7 @@ class ExpenseTracker extends Component {
     }
     render(){
         return <div>
-            <ExpenseTrackerTable />
+            <ExpenseTrackerTable expensedata={this.state.Expenses}/>
         </div>
     }
 }

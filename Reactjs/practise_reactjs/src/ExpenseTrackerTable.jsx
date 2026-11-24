@@ -3,7 +3,7 @@ import { Component } from "react";
 class ExpenseTrackerTable extends Component {
     render() {
         return <div>
-            <table>
+            <table border={1}>
                 <thead>
                     <tr>
                         <th>ExpenseID</th>
