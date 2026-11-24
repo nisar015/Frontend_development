@@ -19,7 +19,7 @@ class ExpenseTrackerTable extends Component {
                 </thead>
                 <tbody>
                     {this.props.expensedata.map((expense) => {
-                        <tr>
+                        return <tr>
                             <td>{expense.ExpenseID}</td>
                             <td>{expense.ExpenseTitle}</td>
                             <td>{expense.Category}</td>
