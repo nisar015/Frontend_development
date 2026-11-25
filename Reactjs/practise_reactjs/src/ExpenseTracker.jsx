@@ -38,7 +38,7 @@ class ExpenseTracker extends Component {
     render(){
         return <div>
 
-            <ExpenseForm varhandlechange={this.handleinputchange}/>
+            <ExpenseForm varnewExpense={this.state.newExpense} varhandlechange={this.handleinputchange}/>
             <ExpenseTrackerTable varedit={this.handleedit} expensedata={this.state.Expenses} vardel={this.handleDelete}/>
         </div>
 
