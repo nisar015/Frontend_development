@@ -33,12 +33,13 @@ class ExpenseTracker extends Component {
         this.setState({newExpense:newExpense})
     }
     handleedit=(Expense,index)=>{
-        this.setState({Expenses:Expense,Editindex:index})
+        this.setState({newExpense:Expense,Editindex:index})
     }
     render(){
         return <div>
+
             <ExpenseForm varhandlechange={this.handleinputchange}/>
-            <ExpenseTrackerTable expensedata={this.state.Expenses} vardel={this.handleDelete}/>
+            <ExpenseTrackerTable varedit={this.handleedit} expensedata={this.state.Expenses} vardel={this.handleDelete}/>
         </div>
 
     }
