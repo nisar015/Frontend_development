@@ -21,7 +21,7 @@ class ExpenseTracker extends Component {
         }
     }
     handleDelete=(index)=>{
-        const newexpense=[...this.Expenses]
+        const newexpense=[...this.state.Expenses]
         newexpense.splice(index,1)
         this.setState({Expenses:newexpense})
     }
