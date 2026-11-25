@@ -12,11 +12,11 @@ class ExpenseTracker extends Component {
                 { ExpenseID: 8, ExpenseTitle: "Lunch", Category: "Dining", Amount:500,PaymentMethod: "UPI", Date: 12 / 15 / 2023, Description: "desc" },
             ],
             newExpense: {
-                ExpenseID: null,
+                ExpenseID: "",
                 ExpenseTitle: "",
                 Category: "",
                 PaymentMethod: "",
-                Date: null,
+                Date: "",
                 Description: ""
             },
             Editindex:null
