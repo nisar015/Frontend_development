@@ -2,6 +2,7 @@ import { Component } from "react";
 
 class ExpenseTrackerTable extends Component {
     render() {
+        
         return <div>
             <table border={1}>
                 <thead>
@@ -28,7 +29,7 @@ class ExpenseTrackerTable extends Component {
                             <td>{expense.Date}</td>
                             <td>{expense.Description}</td>
                             <td><button onClick={() => { this.handledit(expense,index) }}>Edit</button></td>
-                            <td><button onClick={() => { this.handleDelete(index) }}>Delete</button></td>
+                            <td><button onClick={() => { this.props.vardel(index) }}>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
