@@ -1,5 +1,6 @@
 import { Component } from "react";
 import ExpenseTrackerTable from './ExpenseTrackerTable'
+import ExpenseForm from "./ExpenseForm";
 class ExpenseTracker extends Component {
     constructor() {
         super()
@@ -25,10 +26,17 @@ class ExpenseTracker extends Component {
         newexpense.splice(index,1)
         this.setState({Expenses:newexpense})
     }
+    handleinputchange=(e)=>{
+        const newExpense={...this.state.newExpense}
+        newExpense[e.target.name]=e.target.value
+        this.setState({newExpense:newExpense})
+    }
     render(){
         return <div>
+            <ExpenseForm varhandlechange={this.handleinputchange}/>
             <ExpenseTrackerTable expensedata={this.state.Expenses} vardel={this.handleDelete}/>
         </div>
+
     }
 }
 export default ExpenseTracker
