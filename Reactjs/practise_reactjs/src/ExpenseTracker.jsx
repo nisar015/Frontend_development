@@ -18,7 +18,8 @@ class ExpenseTracker extends Component {
                 PaymentMethod: "",
                 Date: null,
                 Description: ""
-            }
+            },
+            Editindex:null
         }
     }
     handleDelete=(index)=>{
@@ -30,6 +31,9 @@ class ExpenseTracker extends Component {
         const newExpense={...this.state.newExpense}
         newExpense[e.target.name]=e.target.value
         this.setState({newExpense:newExpense})
+    }
+    handleedit=(Expense,index)=>{
+        this.setState({Expenses:Expense,Editindex:index})
     }
     render(){
         return <div>
