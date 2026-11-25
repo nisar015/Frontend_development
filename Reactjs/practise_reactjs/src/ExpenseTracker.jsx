@@ -20,6 +20,11 @@ class ExpenseTracker extends Component {
             }
         }
     }
+    handleDelete=(index)=>{
+        const newexpense=[...this.Expenses]
+        newexpense.splice(index,1)
+        this.setState({Expenses:newexpense})
+    }
     render(){
         return <div>
             <ExpenseTrackerTable expensedata={this.state.Expenses}/>
