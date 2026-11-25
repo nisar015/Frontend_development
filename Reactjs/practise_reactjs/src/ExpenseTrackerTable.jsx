@@ -18,7 +18,7 @@ class ExpenseTrackerTable extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.expensedata.map((expense) => {
+                    {this.props.expensedata.map((expense,index) => {
                         return <tr>
                             <td>{expense.ExpenseID}</td>
                             <td>{expense.ExpenseTitle}</td>
@@ -27,8 +27,8 @@ class ExpenseTrackerTable extends Component {
                             <td>{expense.PaymentMethod}</td>
                             <td>{expense.Date}</td>
                             <td>{expense.Description}</td>
-                            <td><button onClick={()=>{this.handledit()}}>Edit</button></td>
-                            <td><button onClick={()=>{this.handleDelete()}}>Delete</button></td>
+                            <td><button onClick={() => { this.handledit(expense,index) }}>Edit</button></td>
+                            <td><button onClick={() => { this.handleDelete(index) }}>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
@@ -36,4 +36,4 @@ class ExpenseTrackerTable extends Component {
         </div>
     }
 }
-            export default ExpenseTrackerTable 
+export default ExpenseTrackerTable 
