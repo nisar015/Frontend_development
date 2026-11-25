@@ -28,7 +28,7 @@ class ExpenseTrackerTable extends Component {
                             <td>{expense.PaymentMethod}</td>
                             <td>{expense.Date}</td>
                             <td>{expense.Description}</td>
-                            <td><button onClick={() => { this.handledit(expense,index) }}>Edit</button></td>
+                            <td><button onClick={() => { this.props.varedit(expense,index) }}>Edit</button></td>
                             <td><button onClick={() => { this.props.vardel(index) }}>Delete</button></td>
                         </tr>
                     })}
